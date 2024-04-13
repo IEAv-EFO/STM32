@@ -45,9 +45,17 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
+
 GPIO_PinState pinState;
-char buffer[32];
+char buffer[64];
 float frequency;
+float dutyCycle = 0.0;
+const uint16_t duty = 50;
+
+uint32_t period_new;
+uint32_t high_time_new;
+uint32_t low_time_new;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,7 +106,7 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // 96 MHz max (not 100 MHz due to USB 48 MHz bus)
-	TIM3->CCR1 = 50;
+	TIM3->CCR1 = duty;
 
 	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // 48 MHz max (not 50 MHz due to USB 48 MHz bus)
   /* USER CODE END 2 */
@@ -111,13 +119,12 @@ int main(void)
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
 		if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET) {
-			updateARR(100);
-		}
-		else {
 			updateARR(200);
+		} else {
+			updateARR(400);
 		}
 
-		sprintf(buffer, "Frequency: %.2f Hz\n", frequency);
+		sprintf(buffer, "Frequency: %.2f Hz --- Duty Cycle: %.2f \%\n", frequency, dutyCycle);
 		CDC_Transmit_FS(buffer, sizeof(buffer));
 
 		HAL_Delay(500);
@@ -218,7 +225,7 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
   sConfigIC.ICFilter = 0;
@@ -252,7 +259,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 480-1;
+  htim3.Init.Prescaler = 48-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 100-1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -330,21 +337,67 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
-	if (htim->Instance == TIM2) {
-		static uint32_t lastCapture = 0;
-		uint32_t currentCapture = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
-		uint32_t period = currentCapture - lastCapture;
-		lastCapture = currentCapture;
-		uint32_t currentLevel = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
+    if (htim->Instance == TIM2) {
+        static uint32_t lastRisingEdge = 0;
+        static uint32_t lastFallingEdge = 0;
+        static uint32_t period = 0;
 
-		frequency = HAL_RCC_GetPCLK1Freq() / (float) period;
-	}
+        uint32_t currentCapture = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+        uint32_t pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);  // Adjust port and pin as needed
+
+        // Check if this is a rising edge
+        if (pinState == GPIO_PIN_SET) {
+            if (lastRisingEdge != 0) {
+                period = currentCapture - lastRisingEdge;
+
+                // Calculate frequency
+                frequency = HAL_RCC_GetPCLK1Freq() / (float)period;
+
+                // Use frequency as needed (e.g., display or process)
+            }
+            lastRisingEdge = currentCapture;
+        } else {
+            // It is a falling edge
+            lastFallingEdge = currentCapture;
+
+            if (lastRisingEdge != 0 && lastFallingEdge > lastRisingEdge) {
+                // Calculate high time duration
+                uint32_t highTime = lastFallingEdge - lastRisingEdge;
+
+                // Now calculate the duty cycle as a percentage
+                dutyCycle = (float)highTime / (float)period * 100.0f;
+
+                // Use dutyCycle as needed (e.g., display or process)
+            }
+        }
+    }
 }
 
-void updateARR(uint32_t period) {
-    __HAL_TIM_SET_AUTORELOAD(&htim3, period - 1);
-    HAL_TIM_GenerateEvent(&htim3, TIM_EVENTSOURCE_UPDATE);  // Force an update event
+
+void updateARR(uint32_t ARR) {
+	__HAL_TIM_SET_AUTORELOAD(&htim3, ARR - 1);
+	//__HAL_TIM_SET_COUNTER(&htim3, 0); // Reset the counter to apply the ARR change immediately
+	HAL_TIM_GenerateEvent(&htim3, TIM_EVENTSOURCE_UPDATE); // Force an update event
+
+	uint32_t newDuty = ARR * 0.5;
+	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, newDuty);
 }
+
+// Function to update CCRx value to maintain a consistent duty cycle when changing ARR
+void updateCCRxDutyCycle(TIM_HandleTypeDef *htim, uint32_t new_ARR) {
+    // Read the current CCRx value
+    uint32_t current_CCRx = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+
+    // Calculate the current duty cycle
+    float current_duty_cycle = ((float)current_CCRx / (float)(htim->Instance->ARR + 1)) * 100.0f;
+
+    // Calculate the new CCRx value to maintain the same duty cycle
+    uint32_t new_CCRx = (uint32_t)((current_duty_cycle / 100.0f) * (float)(new_ARR + 1));
+
+    // Update the CCRx register with the new value
+    __HAL_TIM_SET_COMPARE(htim, TIM_CHANNEL_1, new_CCRx);
+}
+
 
 /* USER CODE END 4 */
 
