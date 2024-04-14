@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,14 +47,20 @@ TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN PV */
 
 GPIO_PinState pinState;
-char buffer[64];
+char buffer[256];
+uint32_t periodPrint;
 float frequency;
 float dutyCycle = 0.0;
 const uint16_t duty = 50;
 
+uint32_t PSC, ARR, CCR;
+
 uint32_t period_new;
 uint32_t high_time_new;
 uint32_t low_time_new;
+
+uint32_t sourceClock, timerClock;
+uint32_t currentCCR, lastCCR;
 
 /* USER CODE END PV */
 
@@ -105,29 +111,38 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // 96 MHz max (not 100 MHz due to USB 48 MHz bus)
-	TIM3->CCR1 = duty;
+
+/*	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // 96 MHz max (not 100 MHz due to USB 48 MHz bus)
+	TIM3->CCR1 = duty;*/
 
 	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // 48 MHz max (not 50 MHz due to USB 48 MHz bus)
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		// pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
 
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
+		// Frequency Generator using timer3
 		if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET) {
-			updateARR(200);
+			freqGen(&htim3, 15000, 1);
 		} else {
-			updateARR(400);
+			freqGen(&htim3, 20000, 1);
 		}
 
-		sprintf(buffer, "Frequency: %.2f Hz --- Duty Cycle: %.2f \%\n", frequency, dutyCycle);
+		sprintf(buffer,
+				"Source Clock: %d Hz\n\rTimer Clock: %d Hz\n\rActual CCR: %d\n\rLast CCR: %d\n\rDiff CCR: %d\n\rFrequency: %.2f Hz\n\rDuty Cycle: %.2f %%\n\r\n\r",
+				sourceClock, timerClock, currentCCR, lastCCR, periodPrint,
+				frequency, dutyCycle);
 		CDC_Transmit_FS(buffer, sizeof(buffer));
 
-		HAL_Delay(500);
+/*		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
+		sprintf(buffer, "%d\n", pinState);
+		CDC_Transmit_FS(buffer, strlen(buffer));*/
+
+		HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
@@ -201,7 +216,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 0;
+  htim2.Init.Prescaler = 1-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 4294967295;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -259,9 +274,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 48-1;
+  htim3.Init.Prescaler = 1-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 100-1;
+  htim3.Init.Period = 1-1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -337,67 +352,88 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
-    if (htim->Instance == TIM2) {
-        static uint32_t lastRisingEdge = 0;
-        static uint32_t lastFallingEdge = 0;
-        static uint32_t period = 0;
+	if (htim->Instance == TIM2) {
+		static uint32_t lastCCRRisingEdge = 0;
+		static uint32_t lastCCRFallingEdge = 0;
+		static uint32_t period = 0;
 
-        uint32_t currentCapture = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
-        uint32_t pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);  // Adjust port and pin as needed
+		//sourceClock = HAL_RCC_GetSysClockFreq(); // Aqui não pode (TIMER3--> clock = 50 MHZ (25 MHz no HSE)
+		sourceClock = HAL_RCC_GetPCLK1Freq();
+		PSC = htim->Instance->PSC + 1;
+		ARR = htim->Instance->ARR;
+		timerClock = sourceClock / PSC;
+		currentCCR = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 
-        // Check if this is a rising edge
-        if (pinState == GPIO_PIN_SET) {
-            if (lastRisingEdge != 0) {
-                period = currentCapture - lastRisingEdge;
-
-                // Calculate frequency
-                frequency = HAL_RCC_GetPCLK1Freq() / (float)period;
-
-                // Use frequency as needed (e.g., display or process)
-            }
-            lastRisingEdge = currentCapture;
-        } else {
-            // It is a falling edge
-            lastFallingEdge = currentCapture;
-
-            if (lastRisingEdge != 0 && lastFallingEdge > lastRisingEdge) {
-                // Calculate high time duration
-                uint32_t highTime = lastFallingEdge - lastRisingEdge;
-
-                // Now calculate the duty cycle as a percentage
-                dutyCycle = (float)highTime / (float)period * 100.0f;
-
-                // Use dutyCycle as needed (e.g., display or process)
-            }
-        }
-    }
+		uint32_t pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0); // PA0 - Port de Entrada do Timer2 Ch1
+		// Se borda alta - na subida
+		if (pinState == GPIO_PIN_SET) {
+			if (lastCCRRisingEdge != 0) {
+				period = currentCCR - lastCCRRisingEdge;
+				periodPrint = period;
+				// Calcula a frequência
+				frequency = sourceClock / (float) period;
+			}
+			lastCCR = lastCCRRisingEdge;     // Manter essa linha sempre antes da próxima
+			lastCCRRisingEdge = currentCCR;  // pois lastCCRRisingEdge é static
+		}
+		// Se borda baixa - na descida
+		else {
+			lastCCRFallingEdge = currentCCR;
+			if (lastCCRRisingEdge != 0
+					&& lastCCRFallingEdge > lastCCRRisingEdge) {
+				// Tempo com valor alto
+				uint32_t highTime = lastCCRFallingEdge - lastCCRRisingEdge;
+				// Calcula o duty cycle
+				dutyCycle = (float) highTime / (float) period * 100.0f;
+			}
+		}
+	}
 }
 
+void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 
-void updateARR(uint32_t ARR) {
-	__HAL_TIM_SET_AUTORELOAD(&htim3, ARR - 1);
-	//__HAL_TIM_SET_COUNTER(&htim3, 0); // Reset the counter to apply the ARR change immediately
-	HAL_TIM_GenerateEvent(&htim3, TIM_EVENTSOURCE_UPDATE); // Force an update event
+	// Retrieve the timer clock frequency
+	uint32_t timerClockFreq = HAL_RCC_GetPCLK1Freq();
 
-	uint32_t newDuty = ARR * 0.5;
-	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, newDuty);
+	// Calculates ARR value
+	uint32_t arr = (timerClockFreq / prescalar / freq) - 1;
+
+	// Calculates CCR value for 50% duty cycle
+	uint32_t ccr = (arr + 1) / 2;
+
+	__HAL_TIM_SET_AUTORELOAD(&htim3, arr);
+	__HAL_TIM_SET_PRESCALER(&htim3, prescalar - 1);
+	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, ccr);
+
+
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // 96 MHz max (not 100 MHz due to USB 48 MHz bus)
 }
+
+/*void updateARR(uint32_t ARR) {
+ __HAL_TIM_SET_AUTORELOAD(&htim3, ARR - 1);
+ //__HAL_TIM_SET_COUNTER(&htim3, 0); // Reset the counter to apply the ARR change immediately
+ HAL_TIM_GenerateEvent(&htim3, TIM_EVENTSOURCE_UPDATE); // Force an update event
+
+ uint32_t newDuty = ARR * 0.5;
+ __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, newDuty);
+ }*/
 
 // Function to update CCRx value to maintain a consistent duty cycle when changing ARR
-void updateCCRxDutyCycle(TIM_HandleTypeDef *htim, uint32_t new_ARR) {
-    // Read the current CCRx value
-    uint32_t current_CCRx = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+/*void updateCCRxDutyCycle(TIM_HandleTypeDef *htim, uint32_t new_ARR) {
+ // Read the current CCRx value
+ uint32_t current_CCRx = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 
-    // Calculate the current duty cycle
-    float current_duty_cycle = ((float)current_CCRx / (float)(htim->Instance->ARR + 1)) * 100.0f;
+ // Calculate the current duty cycle
+ float current_duty_cycle = ((float) current_CCRx
+ / (float) (htim->Instance->ARR + 1)) * 100.0f;
 
-    // Calculate the new CCRx value to maintain the same duty cycle
-    uint32_t new_CCRx = (uint32_t)((current_duty_cycle / 100.0f) * (float)(new_ARR + 1));
+ // Calculate the new CCRx value to maintain the same duty cycle
+ uint32_t new_CCRx = (uint32_t) ((current_duty_cycle / 100.0f)
+ * (float) (new_ARR + 1));
 
-    // Update the CCRx register with the new value
-    __HAL_TIM_SET_COMPARE(htim, TIM_CHANNEL_1, new_CCRx);
-}
-
+ // Update the CCRx register with the new value
+ __HAL_TIM_SET_COMPARE(htim, TIM_CHANNEL_1, new_CCRx);
+ }*/
 
 /* USER CODE END 4 */
 

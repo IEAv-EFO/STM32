@@ -1,1 +1,910 @@
-2024-04-13 00:52:48,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-14 16:10:05,679 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-14 16:10:08,100 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 3566mS.
+2024-04-14 16:10:08,102 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 16:10:08,112 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 16:10:12,381 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 16:12:55,602 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 16:16:51,440 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 305488720 Bytes (701497344)
+2024-04-14 16:16:52,704 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 327012520 Bytes (701497344)
+2024-04-14 16:16:52,968 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 375743216 Bytes (701497344)
+2024-04-14 16:16:53,185 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 16:16:53,186 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 16:16:53,187 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 16:16:53,188 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 16:16:53,215 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:16:53,215 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:16:53,215 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:16:53,354 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 16:16:53,517 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 16:16:53,546 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 16:16:53,674 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 16:16:53,707 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 16:16:53,736 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 16:16:53,869 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 16:16:53,875 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 16:16:53,974 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 16:16:53,974 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 16:16:54,098 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 16:16:54,103 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 16:16:54,216 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 16:16:54,362 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:16:54,381 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:16:54,412 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 16:16:54,534 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 16:16:54,545 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 16:16:54,653 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 16:16:54,663 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 16:16:54,764 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 16:16:54,783 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 16:16:54,901 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 16:16:54,910 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 16:16:54,995 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 16:16:55,015 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 16:16:55,132 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 16:16:55,141 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 16:16:55,221 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 16:16:55,239 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 16:16:55,367 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 16:16:55,402 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 16:16:55,513 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 16:16:55,522 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 16:16:55,598 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 16:16:55,635 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 16:16:55,749 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 16:16:55,755 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 16:16:55,829 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 16:16:55,853 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 16:16:55,979 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 16:16:56,019 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 16:16:56,020 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 16:16:56,046 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 16:16:56,139 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 16:16:56,158 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 16:16:56,315 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 16:16:56,823 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 293mS.
+2024-04-14 16:16:56,832 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 16:16:56,921 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 16:16:57,996 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1163mS.
+2024-04-14 16:16:57,997 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 16:16:58,006 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 16:29:18,605 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 16:29:22,734 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 363446376 Bytes (701497344)
+2024-04-14 16:29:25,219 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 382320744 Bytes (701497344)
+2024-04-14 16:29:26,817 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 443664488 Bytes (701497344)
+2024-04-14 16:29:27,165 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 16:29:27,165 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 16:29:27,165 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:29:27,165 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:29:27,166 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 16:29:27,166 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 16:29:27,166 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 16:29:27,166 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 16:29:27,167 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 16:29:27,183 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:29:27,183 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:29:27,183 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:29:27,262 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 16:29:27,382 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 16:29:27,405 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 16:29:27,509 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 16:29:27,534 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 16:29:27,546 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 16:29:27,663 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 16:29:27,669 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 16:29:27,739 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 16:29:27,745 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 16:29:27,844 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 16:29:27,850 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 16:29:27,949 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 16:29:28,051 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:29:28,066 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:29:28,094 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 16:29:28,208 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 16:29:28,219 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 16:29:28,307 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 16:29:28,316 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 16:29:28,409 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 16:29:28,427 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 16:29:28,542 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 16:29:28,551 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 16:29:28,627 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 16:29:28,645 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 16:29:28,762 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 16:29:28,771 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 16:29:28,847 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 16:29:28,865 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 16:29:28,982 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 16:29:29,013 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 16:29:29,105 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 16:29:29,114 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 16:29:29,189 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 16:29:29,220 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 16:29:29,332 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 16:29:29,339 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 16:29:29,408 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 16:29:29,434 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 16:29:29,550 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 16:29:29,592 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 16:29:29,593 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 16:29:29,619 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 16:29:29,712 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 16:29:29,731 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 16:29:29,885 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 16:29:30,483 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 296mS.
+2024-04-14 16:29:30,492 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 16:29:30,582 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 16:29:31,921 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1430mS.
+2024-04-14 16:29:31,923 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 16:29:31,933 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 16:30:47,030 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 16:31:33,768 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 522929424 Bytes (780140544)
+2024-04-14 16:31:36,429 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 546520336 Bytes (780140544)
+2024-04-14 16:31:39,580 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 581123344 Bytes (780140544)
+2024-04-14 16:31:39,901 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 16:31:39,901 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 16:31:39,901 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:31:39,901 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:31:39,901 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 16:31:39,902 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 16:31:39,902 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 16:31:39,902 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 16:31:39,903 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 16:31:39,937 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:31:39,937 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:31:39,937 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:31:40,010 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 16:31:40,133 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 16:31:40,155 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 16:31:40,269 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 16:31:40,299 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 16:31:40,310 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 16:31:40,422 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 16:31:40,431 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 16:31:40,501 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 16:31:40,509 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 16:31:40,604 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 16:31:40,611 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 16:31:40,706 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 16:31:40,790 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:31:40,797 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:31:40,820 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 16:31:40,916 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 16:31:40,932 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 16:31:41,006 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 16:31:41,014 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 16:31:41,090 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 16:31:41,110 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 16:31:41,227 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 16:31:41,236 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 16:31:41,310 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 16:31:41,329 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 16:31:41,447 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 16:31:41,459 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 16:31:41,535 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 16:31:41,553 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 16:31:41,668 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 16:31:41,698 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 16:31:41,793 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 16:31:41,800 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 16:31:41,874 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 16:31:41,904 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 16:31:42,019 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 16:31:42,026 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 16:31:42,099 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 16:31:42,129 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 16:31:42,241 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 16:31:42,275 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 16:31:42,275 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 16:31:42,297 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 16:31:42,383 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 16:31:42,403 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 16:31:42,554 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 16:31:43,048 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 294mS.
+2024-04-14 16:31:43,057 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 16:31:43,148 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 16:31:44,224 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1166mS.
+2024-04-14 16:31:44,225 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 16:31:44,233 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 16:42:31,225 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 16:42:36,662 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 426276968 Bytes (780140544)
+2024-04-14 16:42:36,765 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 442531944 Bytes (780140544)
+2024-04-14 16:42:37,003 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 491815016 Bytes (780140544)
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 16:42:37,213 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 16:42:37,214 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 16:42:37,214 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 16:42:37,216 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 16:42:37,238 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:42:37,238 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:42:37,239 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 16:42:37,351 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 16:42:37,496 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 16:42:37,525 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 16:42:37,655 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 16:42:37,686 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 16:42:37,696 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 16:42:37,814 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 16:42:37,820 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 16:42:37,896 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 16:42:37,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 16:42:38,011 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 16:42:38,017 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 16:42:38,127 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 16:42:38,213 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:42:38,219 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 16:42:38,243 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 16:42:38,338 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 16:42:38,348 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 16:42:38,432 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 16:42:38,451 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 16:42:38,538 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 16:42:38,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 16:42:38,682 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 16:42:38,692 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 16:42:38,769 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 16:42:38,790 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 16:42:38,901 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 16:42:38,910 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 16:42:38,985 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 16:42:39,006 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 16:42:39,136 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 16:42:39,171 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 16:42:39,291 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 16:42:39,301 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 16:42:39,392 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 16:42:39,425 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 16:42:39,555 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 16:42:39,564 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 16:42:39,666 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 16:42:39,692 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 16:42:39,819 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 16:42:39,853 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 16:42:39,854 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 16:42:39,880 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 16:42:39,981 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 16:42:40,003 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 16:42:40,168 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 16:42:40,848 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 326mS.
+2024-04-14 16:42:40,859 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 16:42:40,972 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 16:42:42,016 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1157mS.
+2024-04-14 16:42:42,017 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 16:42:42,026 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 18:44:51,570 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 18:45:01,962 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 18:45:02,013 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 18:45:07,200 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 655485224 Bytes (780140544)
+2024-04-14 18:45:07,258 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 670515248 Bytes (780140544)
+2024-04-14 18:45:07,984 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 275348272 Bytes (780140544)
+2024-04-14 18:45:08,312 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 18:45:08,313 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 18:45:08,315 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 18:45:08,332 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:08,332 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:08,332 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:08,399 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 18:45:08,535 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 18:45:08,559 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 18:45:08,682 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 18:45:08,710 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 18:45:08,722 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 18:45:08,838 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 18:45:08,844 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 18:45:08,922 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 18:45:08,927 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 18:45:09,040 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 18:45:09,045 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 18:45:09,158 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 18:45:09,236 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:45:09,242 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:45:09,268 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 18:45:09,370 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 18:45:09,389 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 18:45:09,481 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 18:45:09,501 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 18:45:09,592 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 18:45:09,612 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 18:45:09,728 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 18:45:09,740 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 18:45:09,822 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 18:45:09,843 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 18:45:09,956 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 18:45:09,975 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 18:45:10,066 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 18:45:10,087 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 18:45:10,194 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 18:45:10,225 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 18:45:10,444 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 18:45:10,463 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 18:45:10,560 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 18:45:10,594 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 18:45:10,746 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 18:45:10,755 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 18:45:10,833 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 18:45:10,856 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 18:45:10,979 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 18:45:11,010 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 18:45:11,011 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 18:45:11,038 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 18:45:11,144 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 18:45:11,164 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 18:45:11,318 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 18:45:11,953 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 344mS.
+2024-04-14 18:45:11,964 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 18:45:12,067 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 18:45:13,249 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1285mS.
+2024-04-14 18:45:13,251 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 18:45:13,262 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 18:45:15,495 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 18:45:23,638 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 531884856 Bytes (780140544)
+2024-04-14 18:45:24,398 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 553904952 Bytes (780140544)
+2024-04-14 18:45:25,111 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 613147448 Bytes (780140544)
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 18:45:25,432 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 18:45:25,432 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 18:45:25,456 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:25,456 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:25,456 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:45:25,532 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 18:45:25,682 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 18:45:25,715 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 18:45:25,849 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 18:45:25,865 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 18:45:25,882 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 18:45:25,982 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 18:45:25,982 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 18:45:26,050 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 18:45:26,065 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 18:45:26,165 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 18:45:26,165 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 18:45:26,270 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 18:45:26,342 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:45:26,347 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:45:26,372 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 18:45:26,477 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 18:45:26,486 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 18:45:26,565 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 18:45:26,575 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 18:45:26,664 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 18:45:26,686 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 18:45:26,813 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 18:45:26,824 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 18:45:26,899 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 18:45:26,919 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 18:45:27,036 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 18:45:27,047 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 18:45:27,124 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 18:45:27,144 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 18:45:27,260 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 18:45:27,287 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 18:45:27,373 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 18:45:27,381 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 18:45:27,456 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 18:45:27,491 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 18:45:27,595 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 18:45:27,602 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 18:45:27,671 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 18:45:27,697 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 18:45:27,814 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 18:45:27,844 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 18:45:27,845 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 18:45:27,868 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 18:45:27,965 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 18:45:27,985 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 18:45:28,134 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 18:45:28,632 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 283mS.
+2024-04-14 18:45:28,632 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 18:45:28,716 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 18:45:29,773 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1139mS.
+2024-04-14 18:45:29,775 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 2mS.
+2024-04-14 18:45:29,787 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 18:59:43,103 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 18:59:46,072 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 435261096 Bytes (780140544)
+2024-04-14 18:59:46,805 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 456758952 Bytes (780140544)
+2024-04-14 18:59:47,513 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 503418536 Bytes (780140544)
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 18:59:47,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 18:59:47,915 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 18:59:47,915 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 18:59:47,916 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 18:59:47,934 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:59:47,934 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:59:47,934 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 18:59:48,007 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 18:59:48,125 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 18:59:48,148 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 18:59:48,252 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 18:59:48,276 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 18:59:48,288 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 18:59:48,403 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 18:59:48,408 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 18:59:48,480 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 18:59:48,485 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 18:59:48,585 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 18:59:48,590 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 18:59:48,692 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 18:59:48,766 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:59:48,772 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 18:59:48,796 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 18:59:48,894 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 18:59:48,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 18:59:48,989 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 18:59:49,001 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 18:59:49,086 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 18:59:49,107 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 18:59:49,225 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 18:59:49,236 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 18:59:49,310 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 18:59:49,328 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 18:59:49,446 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 18:59:49,457 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 18:59:49,531 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 18:59:49,548 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 18:59:49,658 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 18:59:49,688 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 18:59:49,891 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 18:59:49,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 18:59:50,019 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 18:59:50,059 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 18:59:50,208 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 18:59:50,216 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 18:59:50,286 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 18:59:50,312 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 18:59:50,434 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 18:59:50,464 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 18:59:50,466 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 18:59:50,488 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 18:59:50,588 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 18:59:50,607 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 18:59:50,755 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 18:59:51,328 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 303mS.
+2024-04-14 18:59:51,336 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 18:59:51,421 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 18:59:52,344 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1008mS.
+2024-04-14 18:59:52,346 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 18:59:52,355 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 19:00:34,763 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:00:35,917 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 497941400 Bytes (780140544)
+2024-04-14 19:00:35,980 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 513143704 Bytes (780140544)
+2024-04-14 19:00:36,689 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 578155416 Bytes (780140544)
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 19:00:37,002 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 19:00:37,003 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 19:00:37,003 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 19:00:37,005 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 19:00:37,024 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:00:37,024 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:00:37,024 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:00:37,095 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 19:00:37,226 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 19:00:37,251 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 19:00:37,349 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 19:00:37,382 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 19:00:37,391 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 19:00:37,493 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 19:00:37,498 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 19:00:37,568 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 19:00:37,575 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 19:00:37,671 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 19:00:37,676 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 19:00:37,769 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 19:00:37,841 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:00:37,847 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:00:37,870 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 19:00:37,957 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 19:00:37,966 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 19:00:38,052 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 19:00:38,059 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 19:00:38,134 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 19:00:38,153 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 19:00:38,267 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 19:00:38,276 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 19:00:38,348 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 19:00:38,366 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 19:00:38,479 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 19:00:38,489 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 19:00:38,564 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 19:00:38,582 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 19:00:38,690 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 19:00:38,722 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 19:00:38,818 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 19:00:38,827 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 19:00:38,907 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 19:00:38,939 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 19:00:39,041 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 19:00:39,048 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 19:00:39,118 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 19:00:39,144 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 19:00:39,268 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 19:00:39,296 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 19:00:39,297 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 19:00:39,317 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 19:00:39,407 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 19:00:39,424 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 19:00:39,573 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 19:00:40,159 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 290mS.
+2024-04-14 19:00:40,167 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 19:00:40,251 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 19:00:41,139 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 971mS.
+2024-04-14 19:00:41,140 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 19:00:41,150 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 19:01:16,765 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:01:16,819 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:01:21,916 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:01:25,196 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 617755744 Bytes (780140544)
+2024-04-14 19:01:25,968 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 640567160 Bytes (780140544)
+2024-04-14 19:01:26,684 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 292625448 Bytes (780140544)
+2024-04-14 19:01:27,065 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 19:01:27,065 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 19:01:27,066 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 19:01:27,068 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 19:01:27,086 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:01:27,086 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:01:27,086 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:01:27,158 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 19:01:27,264 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 19:01:27,280 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 19:01:27,389 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 19:01:27,405 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 19:01:27,420 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 19:01:27,514 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 19:01:27,514 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 19:01:27,592 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 19:01:27,592 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 19:01:27,686 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 19:01:27,702 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 19:01:27,796 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 19:01:27,858 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:01:27,858 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:01:27,889 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 19:01:27,983 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 19:01:27,999 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 19:01:28,077 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 19:01:28,077 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 19:01:28,155 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 19:01:28,171 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 19:01:28,300 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 19:01:28,309 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 19:01:28,384 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 19:01:28,401 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 19:01:28,516 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 19:01:28,524 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 19:01:28,596 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 19:01:28,613 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 19:01:28,731 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 19:01:28,763 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 19:01:28,865 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 19:01:28,874 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 19:01:28,955 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 19:01:28,984 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 19:01:29,105 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 19:01:29,111 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 19:01:29,179 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 19:01:29,205 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 19:01:29,327 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 19:01:29,358 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 19:01:29,358 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 19:01:29,374 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 19:01:29,467 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 19:01:29,483 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 19:01:29,644 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 19:01:30,113 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 281mS.
+2024-04-14 19:01:30,129 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 19:01:30,238 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 19:01:31,224 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1095mS.
+2024-04-14 19:01:31,225 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 19:01:31,236 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 19:02:35,689 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:02:36,692 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 19:02:40,568 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 342926936 Bytes (780140544)
+2024-04-14 19:02:41,327 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 365995608 Bytes (780140544)
+2024-04-14 19:02:42,015 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 412659288 Bytes (780140544)
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 19:02:42,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 19:02:42,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 19:02:42,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 19:02:42,421 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 19:02:42,445 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:02:42,445 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:02:42,445 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 19:02:42,532 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 19:02:42,654 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 19:02:42,680 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 19:02:42,781 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 19:02:42,809 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 19:02:42,820 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 19:02:42,927 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 19:02:42,935 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 19:02:43,005 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 19:02:43,012 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 19:02:43,107 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 19:02:43,113 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 19:02:43,207 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 19:02:43,276 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:02:43,283 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 19:02:43,310 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 19:02:43,396 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 19:02:43,405 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 19:02:43,477 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 19:02:43,484 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 19:02:43,558 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 19:02:43,577 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 19:02:43,694 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 19:02:43,704 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 19:02:43,777 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 19:02:43,798 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 19:02:43,913 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 19:02:43,923 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 19:02:43,998 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 19:02:44,019 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 19:02:44,134 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 19:02:44,160 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 19:02:44,260 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 19:02:44,264 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 19:02:44,358 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 19:02:44,389 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 19:02:44,499 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 19:02:44,499 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 19:02:44,577 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 19:02:44,608 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 19:02:44,717 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 19:02:44,749 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 19:02:44,749 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 19:02:44,780 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 19:02:44,858 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 19:02:44,874 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 19:02:45,030 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 19:02:45,522 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 289mS.
+2024-04-14 19:02:45,530 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 19:02:45,640 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 19:02:46,720 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1190mS.
+2024-04-14 19:02:46,722 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 19:02:46,733 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 20:29:31,189 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,883x438,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 20:29:35,768 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 20:29:39,662 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 345582472 Bytes (877658112)
+2024-04-14 20:29:40,302 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 367602568 Bytes (877658112)
+2024-04-14 20:29:40,989 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 396962696 Bytes (877658112)
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 20:29:41,307 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 20:29:41,308 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 20:29:41,308 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 20:29:41,310 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 20:29:41,324 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:29:41,324 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:29:41,324 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:29:41,399 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 20:29:41,506 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 20:29:41,530 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 20:29:41,640 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 20:29:41,665 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 20:29:41,674 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 20:29:41,787 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 20:29:41,794 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 20:29:41,876 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 20:29:41,882 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 20:29:42,000 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 20:29:42,005 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 20:29:42,141 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 20:29:42,224 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:29:42,229 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:29:42,252 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 20:29:42,354 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 20:29:42,363 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 20:29:42,455 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 20:29:42,464 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 20:29:42,562 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 20:29:42,580 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 20:29:42,698 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 20:29:42,719 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 20:29:42,800 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 20:29:42,819 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 20:29:42,933 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 20:29:42,951 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 20:29:43,035 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 20:29:43,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 20:29:43,165 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 20:29:43,195 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 20:29:43,426 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 20:29:43,435 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 20:29:43,533 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 20:29:43,566 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 20:29:43,710 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 20:29:43,718 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 20:29:43,803 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 20:29:43,833 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 20:29:43,946 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 20:29:43,979 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 20:29:43,980 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 20:29:44,006 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 20:29:44,124 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 20:29:44,147 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 20:29:44,314 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 20:29:44,930 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 359mS.
+2024-04-14 20:29:44,938 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 20:29:45,023 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 20:29:46,014 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1077mS.
+2024-04-14 20:29:46,015 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 20:29:46,024 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 20:33:51,613 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 20:33:58,732 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 20:34:02,214 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 402782192 Bytes (877658112)
+2024-04-14 20:34:02,900 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 425813096 Bytes (877658112)
+2024-04-14 20:34:07,120 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 492395624 Bytes (877658112)
+2024-04-14 20:34:07,468 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 20:34:07,468 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 20:34:07,468 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:34:07,468 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:34:07,468 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 20:34:07,469 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 20:34:07,469 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 20:34:07,469 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 20:34:07,470 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 20:34:07,485 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:34:07,486 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:34:07,486 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:34:07,553 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 20:34:07,657 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 20:34:07,678 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 20:34:07,786 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 20:34:07,808 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 20:34:07,822 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 20:34:07,925 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 20:34:07,930 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 20:34:07,998 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 20:34:08,004 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 20:34:08,105 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 20:34:08,112 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 20:34:08,207 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 20:34:08,280 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:34:08,285 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:34:08,304 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 20:34:08,397 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 20:34:08,404 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 20:34:08,479 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 20:34:08,487 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 20:34:08,560 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 20:34:08,578 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 20:34:08,697 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 20:34:08,705 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 20:34:08,781 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 20:34:08,800 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 20:34:08,912 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 20:34:08,922 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 20:34:09,012 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 20:34:09,030 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 20:34:09,139 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 20:34:09,170 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 20:34:09,260 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 20:34:09,270 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 20:34:09,348 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 20:34:09,384 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 20:34:09,490 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 20:34:09,496 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 20:34:09,565 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 20:34:09,591 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 20:34:09,716 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 20:34:09,748 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 20:34:09,749 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 20:34:09,773 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 20:34:09,864 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 20:34:09,884 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 20:34:10,038 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 20:34:10,651 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 339mS.
+2024-04-14 20:34:10,659 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 20:34:10,752 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 20:34:11,711 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1052mS.
+2024-04-14 20:34:11,712 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 20:34:11,720 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 20:50:06,181 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-14 20:50:10,664 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 508482344 Bytes (877658112)
+2024-04-14 20:50:11,251 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 530502440 Bytes (877658112)
+2024-04-14 20:50:11,933 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 584502056 Bytes (877658112)
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-14 20:50:12,366 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-14 20:50:12,367 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-14 20:50:12,367 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-14 20:50:12,368 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\
+2024-04-14 20:50:12,384 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:50:12,385 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:50:12,385 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-14 20:50:12,464 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp_save
+2024-04-14 20:50:12,565 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\license.tmp
+2024-04-14 20:50:12,584 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp_save
+2024-04-14 20:50:12,685 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\gpio.tmp
+2024-04-14 20:50:12,706 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-14 20:50:12,716 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-14 20:50:12,822 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-14 20:50:12,829 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-14 20:50:12,897 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-14 20:50:12,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-14 20:50:13,003 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-14 20:50:13,012 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-14 20:50:13,110 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-14 20:50:13,184 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:50:13,189 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-14 20:50:13,213 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c_save
+2024-04-14 20:50:13,315 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.c
+2024-04-14 20:50:13,323 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h_save
+2024-04-14 20:50:13,431 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usb_device.h
+2024-04-14 20:50:13,449 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-14 20:50:13,528 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.h
+2024-04-14 20:50:13,546 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-14 20:50:13,669 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\Target\usbd_conf.c
+2024-04-14 20:50:13,681 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h_save
+2024-04-14 20:50:13,752 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.h
+2024-04-14 20:50:13,769 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c_save
+2024-04-14 20:50:13,884 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_desc.c
+2024-04-14 20:50:13,895 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-14 20:50:13,977 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-14 20:50:13,997 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-14 20:50:14,108 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-14 20:50:14,136 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c_save
+2024-04-14 20:50:14,297 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_it.c
+2024-04-14 20:50:14,306 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h_save
+2024-04-14 20:50:14,380 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_it.h
+2024-04-14 20:50:14,413 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-14 20:50:14,525 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\stm32f4xx_hal_msp.c
+2024-04-14 20:50:14,531 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp_save
+2024-04-14 20:50:14,599 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\MXTmpFiles\system.tmp
+2024-04-14 20:50:14,626 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-14 20:50:14,747 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-14 20:50:14,775 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-14 20:50:14,776 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-14 20:50:14,800 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h_save
+2024-04-14 20:50:14,894 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Inc\main.h
+2024-04-14 20:50:14,915 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c_save
+2024-04-14 20:50:15,088 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\Core\Src\main.c
+2024-04-14 20:50:15,583 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 287mS.
+2024-04-14 20:50:15,591 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-14 20:50:15,676 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-14 20:50:16,551 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 960mS.
+2024-04-14 20:50:16,553 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-14 20:50:16,561 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-14 20:56:32,759 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
