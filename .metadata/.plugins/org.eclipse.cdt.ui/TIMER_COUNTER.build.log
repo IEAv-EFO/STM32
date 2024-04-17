@@ -1,100 +1,100 @@
-23:56:20 **** Incremental Build of configuration Debug for project TIMER_COUNTER ****
-make -j8 all 
+16:37:58 **** Incremental Build of configuration Debug for project TIMER_COUNTER ****
+make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:9: warning: implicit declaration of function 'freqGen'; did you mean 'freopen'? [-Wimplicit-function-declaration]
-  111 |         freqGen(&htim3, 55000, PSC);
+../Core/Src/main.c:109:9: warning: implicit declaration of function 'freqGen'; did you mean 'freopen'? [-Wimplicit-function-declaration]
+  109 |         freqGen(&htim3, 50000, PSC);
       |         ^~~~~~~
       |         freopen
-../Core/Src/main.c:129:17: warning: implicit declaration of function 'convVariables' [-Wimplicit-function-declaration]
-  129 |                 convVariables(); // Turns Hz into KHz, MHz or GHz
-      |                 ^~~~~~~~~~~~~
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:127:17: warning: implicit declaration of function 'convFreq2Multiples' [-Wimplicit-function-declaration]
+  127 |                 convFreq2Multiples(); // Turns Hz into KHz, MHz or GHz
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  137 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+  135 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
       |                                 ~~~
       |                                 |
       |                                 uint32_t {aka long unsigned int}
-../Core/Src/main.c:132:40: note: format string is defined here
-  132 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
+../Core/Src/main.c:130:40: note: format string is defined here
+  130 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
       |                                       ~^
       |                                        |
       |                                        int
       |                                       %ld
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  137 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+  135 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
       |                                      ~~~
       |                                      |
       |                                      uint32_t {aka long unsigned int}
-../Core/Src/main.c:132:51: note: format string is defined here
-  132 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
+../Core/Src/main.c:130:51: note: format string is defined here
+  130 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
       |                                                  ~^
       |                                                   |
       |                                                   int
       |                                                  %ld
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  137 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+  135 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
       |                                           ~~~
       |                                           |
       |                                           uint32_t {aka long unsigned int}
-../Core/Src/main.c:132:62: note: format string is defined here
-  132 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
+../Core/Src/main.c:130:62: note: format string is defined here
+  130 |                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
       |                                                             ~^
       |                                                              |
       |                                                              int
       |                                                             %ld
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 8 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 8 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  137 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+  135 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
       |                                                                  ~~~~~~~~~~
       |                                                                  |
       |                                                                  uint32_t {aka long unsigned int}
-../Core/Src/main.c:134:66: note: format string is defined here
-  134 |                                 "Timer Clock: %s\n\rActual CCR: %d\n\r"
+../Core/Src/main.c:132:66: note: format string is defined here
+  132 |                                 "Timer Clock: %s\n\rActual CCR: %d\n\r"
       |                                                                 ~^
       |                                                                  |
       |                                                                  int
       |                                                                 %ld
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 9 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 9 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  137 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+  135 |                                 PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
       |                                                                              ~~~~~~~
       |                                                                              |
       |                                                                              uint32_t {aka long unsigned int}
-../Core/Src/main.c:135:45: note: format string is defined here
-  135 |                                 "Last CCR: %d\n\rDiff CCR (T in timer clock pulses): %d\n\r"
+../Core/Src/main.c:133:45: note: format string is defined here
+  133 |                                 "Last CCR: %d\n\rDiff CCR (T in timer clock pulses): %d\n\r"
       |                                            ~^
       |                                             |
       |                                             int
       |                                            %ld
-../Core/Src/main.c:130:33: warning: format '%d' expects argument of type 'int', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  130 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+../Core/Src/main.c:128:33: warning: format '%d' expects argument of type 'int', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  128 |                 sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ......
-  138 |                                 periodPrint, bufferFreq, dutyCycle);
+  136 |                                 periodPrint, bufferFreq, dutyCycle);
       |                                 ~~~~~~~~~~~
       |                                 |
       |                                 uint32_t {aka long unsigned int}
-../Core/Src/main.c:135:87: note: format string is defined here
-  135 |                                 "Last CCR: %d\n\rDiff CCR (T in timer clock pulses): %d\n\r"
+../Core/Src/main.c:133:87: note: format string is defined here
+  133 |                                 "Last CCR: %d\n\rDiff CCR (T in timer clock pulses): %d\n\r"
       |                                                                                      ~^
       |                                                                                       |
       |                                                                                       int
       |                                                                                      %ld
-../Core/Src/main.c:139:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
-  139 |                 CDC_Transmit_FS(buffer, sizeof(buffer));
+../Core/Src/main.c:137:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  137 |                 CDC_Transmit_FS(buffer, sizeof(buffer));
       |                                 ^~~~~~
       |                                 |
       |                                 char *
@@ -102,36 +102,29 @@ arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -D
    68 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
       |                                ~~~~~~~~~^~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:389:6: warning: conflicting types for 'freqGen'; have 'void(TIM_HandleTypeDef *, uint32_t,  uint32_t)' {aka 'void(TIM_HandleTypeDef *, long unsigned int,  long unsigned int)'}
-  389 | void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
+../Core/Src/main.c:374:6: warning: conflicting types for 'freqGen'; have 'void(TIM_HandleTypeDef *, uint32_t,  uint32_t)' {aka 'void(TIM_HandleTypeDef *, long unsigned int,  long unsigned int)'}
+  374 | void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
       |      ^~~~~~~
-../Core/Src/main.c:111:9: note: previous implicit declaration of 'freqGen' with type 'void(TIM_HandleTypeDef *, uint32_t,  uint32_t)' {aka 'void(TIM_HandleTypeDef *, long unsigned int,  long unsigned int)'}
-  111 |         freqGen(&htim3, 55000, PSC);
+../Core/Src/main.c:109:9: note: previous implicit declaration of 'freqGen' with type 'void(TIM_HandleTypeDef *, uint32_t,  uint32_t)' {aka 'void(TIM_HandleTypeDef *, long unsigned int,  long unsigned int)'}
+  109 |         freqGen(&htim3, 50000, PSC);
       |         ^~~~~~~
-../Core/Src/main.c:494:6: warning: conflicting types for 'convVariables'; have 'void()'
-  494 | void convVariables() {
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:129:17: note: previous implicit declaration of 'convVariables' with type 'void()'
-  129 |                 convVariables(); // Turns Hz into KHz, MHz or GHz
-      |                 ^~~~~~~~~~~~~
-../Core/Src/main.c: In function 'HAL_TIM_IC_CaptureCallback':
-../Core/Src/main.c:366:55: warning: 'arr' may be used uninitialized [-Wmaybe-uninitialized]
-  366 |                                         period = (arr + currentCCR) - lastCCRRisingEdge + 1;
-      |                                                  ~~~~~^~~~~~~~~~~~~
-../Core/Src/main.c:353:26: note: 'arr' was declared here
-  353 |                 uint32_t arr;
-      |                          ^~~
-arm-none-eabi-gcc -o "TIMER_COUNTER.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER_COUNTER.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:480:6: warning: conflicting types for 'convFreq2Multiples'; have 'void()'
+  480 | void convFreq2Multiples() {
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:127:17: note: previous implicit declaration of 'convFreq2Multiples' with type 'void()'
+  127 |                 convFreq2Multiples(); // Turns Hz into KHz, MHz or GHz
+      |                 ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "TIMER_COUNTER.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\TIMER_COUNTER\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER_COUNTER.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: TIMER_COUNTER.elf
  
 arm-none-eabi-size  TIMER_COUNTER.elf 
 arm-none-eabi-objdump -h -S TIMER_COUNTER.elf  > "TIMER_COUNTER.list"
    text	   data	    bss	    dec	    hex	filename
-  50896	    708	   9700	  61304	   ef78	TIMER_COUNTER.elf
+  50928	    708	   9700	  61336	   ef98	TIMER_COUNTER.elf
 Finished building: default.size.stdout
  
 Finished building: TIMER_COUNTER.list
  
 
-23:56:23 Build Finished. 0 errors, 12 warnings. (took 2s.271ms)
+16:38:00 Build Finished. 0 errors, 11 warnings. (took 1s.764ms)
 
