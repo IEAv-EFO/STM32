@@ -107,6 +107,9 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // 48 MHz max (not 50 MHz due to USB 48 MHz bus)
+	PSC = 1;
+	freqGen(&htim3, 55000, PSC);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -116,31 +119,29 @@ int main(void)
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
 		// Frequency Generator using timer3 (48 MHz due to USB = 48 MHz)
-		PSC = 12;
-		if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET) {
-			freqGen(&htim3, 50000, PSC);
-		} else {
-			freqGen(&htim3, 30000, PSC);
-		}
+		/*		PSC = 60;
+		 if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET) {
+		 freqGen(&htim3, 50000, PSC);
+		 } else {
+		 freqGen(&htim3, 30000, PSC);
+		 }*/
 
 		convVariables(); // Turns Hz into KHz, MHz or GHz
-		sprintf(buffer,
-				"### Frequency Genearator (Timer 3) ###\n\r"
+		sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
 				"Frequency: %s\n\r"
 				"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r\n\r"
 				"### Frequency Counter (Timer2) ###\n\r"
 				"Timer Clock: %s\n\rActual CCR: %d\n\r"
 				"Last CCR: %d\n\rDiff CCR (T in timer clock pulses): %d\n\r"
-				"Frequency: %s\n\rDuty Cycle: %.2f %%\n\r\n\r",
-				bufferGenFreq, PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR, periodPrint,
-				bufferFreq, dutyCycle);
+				"Frequency: %s\n\rDuty Cycle: %.2f %%\n\r\n\r", bufferGenFreq,
+				PSC, ARR, CCR, bufferTimerClock, currentCCR, lastCCR,
+				periodPrint, bufferFreq, dutyCycle);
 		CDC_Transmit_FS(buffer, sizeof(buffer));
 
 		/*		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 		 sprintf(buffer, "%d\n", pinState);
 		 CDC_Transmit_FS(buffer, strlen(buffer));*/
 		//__HAL_TIM_SET_COUNTER(&htim2,0);
-
 		HAL_Delay(1000);
 
     /* USER CODE END WHILE */
@@ -217,7 +218,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 1-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 4294967295;
+  htim2.Init.Period = 230400-1;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -338,12 +339,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -355,6 +350,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 		static uint32_t lastCCRRisingEdge = 0;
 		static uint32_t lastCCRFallingEdge = 0;
 		static uint32_t period = 0;
+		uint32_t arr;
 
 		//systemClock = HAL_RCC_GetSysClockFreq(); // Aqui não pode (TIMER3--> clock = 50 MHZ (25 MHz no HSE)
 		timerClock = HAL_RCC_GetPCLK1Freq();
@@ -364,7 +360,11 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 		// Se borda alta - na subida
 		if (pinState == GPIO_PIN_SET) {
 			if (lastCCRRisingEdge != 0) {
-				period = currentCCR - lastCCRRisingEdge;
+				if (currentCCR >= lastCCRRisingEdge) {
+					period = currentCCR - lastCCRRisingEdge;
+				} else {
+					period = (arr + currentCCR) - lastCCRRisingEdge + 1;
+				}
 				periodPrint = period;
 				// Calcula a frequência
 				frequency = timerClock / (float) period;
@@ -375,7 +375,8 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 		// Se borda baixa - na descida
 		else {
 			lastCCRFallingEdge = currentCCR;
-			if (lastCCRRisingEdge != 0 && lastCCRFallingEdge > lastCCRRisingEdge) {
+			if (lastCCRRisingEdge != 0
+					&& lastCCRFallingEdge > lastCCRRisingEdge) {
 				// Tempo com valor alto
 				uint32_t highTime = lastCCRFallingEdge - lastCCRRisingEdge;
 				// Calcula o duty cycle
@@ -385,8 +386,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 	}
 }
 
-
-
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 
 	genFreq = freq;
@@ -395,7 +394,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 
 	// Calculates ARR value
 	uint32_t arr = (timerClockFreq / prescalar / freq) - 1;
-	ARR = arr + 1;
+	ARR = arr;
 
 	// Calculates CCR value for 50% duty cycle
 	uint32_t ccr = (arr + 1) / 2;
@@ -409,91 +408,90 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 }
 
 void genFreqConv() {
-    int orderOfMagnitude = 0;
-    float freq = genFreq;
+	int orderOfMagnitude = 0;
+	float freq = genFreq;
 
-    while (freq >= 1000.0) {
-    	freq /= 1000.0;
-        orderOfMagnitude++;
-    }
+	while (freq >= 1000.0) {
+		freq /= 1000.0;
+		orderOfMagnitude++;
+	}
 
-    switch (orderOfMagnitude) {
-        case 0:
-            sprintf(bufferGenFreq, "%.2f Hz", freq);
-            break;
-        case 1:
-            sprintf(bufferGenFreq, "%.2f KHz", freq);
-            break;
-        case 2:
-            sprintf(bufferGenFreq, "%.2f MHz", freq);
-            break;
-        case 3:
-            sprintf(bufferGenFreq, "%.2f GHz", freq);
-            break;
-        default:
-            sprintf(bufferGenFreq, "Out of range");
-            break;
-    }
+	switch (orderOfMagnitude) {
+	case 0:
+		sprintf(bufferGenFreq, "%.2f Hz", freq);
+		break;
+	case 1:
+		sprintf(bufferGenFreq, "%.2f KHz", freq);
+		break;
+	case 2:
+		sprintf(bufferGenFreq, "%.2f MHz", freq);
+		break;
+	case 3:
+		sprintf(bufferGenFreq, "%.2f GHz", freq);
+		break;
+	default:
+		sprintf(bufferGenFreq, "Out of range");
+		break;
+	}
 }
 
-
 void freqConv() {
-    int orderOfMagnitude = 0;
-    float freq = frequency;
+	int orderOfMagnitude = 0;
+	float freq = frequency;
 
-    while (freq >= 1000.0) {
-    	freq /= 1000.0;
-        orderOfMagnitude++;
-    }
+	while (freq >= 1000.0) {
+		freq /= 1000.0;
+		orderOfMagnitude++;
+	}
 
-    switch (orderOfMagnitude) {
-        case 0:
-            sprintf(bufferFreq, "%.2f Hz", freq);
-            break;
-        case 1:
-            sprintf(bufferFreq, "%.2f KHz", freq);
-            break;
-        case 2:
-            sprintf(bufferFreq, "%.2f MHz", freq);
-            break;
-        case 3:
-            sprintf(bufferFreq, "%.2f GHz", freq);
-            break;
-        default:
-            sprintf(bufferFreq, "Out of range");
-            break;
-    }
+	switch (orderOfMagnitude) {
+	case 0:
+		sprintf(bufferFreq, "%.2f Hz", freq);
+		break;
+	case 1:
+		sprintf(bufferFreq, "%.2f KHz", freq);
+		break;
+	case 2:
+		sprintf(bufferFreq, "%.2f MHz", freq);
+		break;
+	case 3:
+		sprintf(bufferFreq, "%.2f GHz", freq);
+		break;
+	default:
+		sprintf(bufferFreq, "Out of range");
+		break;
+	}
 }
 
 void timerClockConv() {
-    int orderOfMagnitude = 0;
-    float tClock = (float)timerClock;
+	int orderOfMagnitude = 0;
+	float tClock = (float) timerClock;
 
-    while (tClock >= 1000.0) {
-    	tClock /= 1000.0;
-        orderOfMagnitude++;
-    }
+	while (tClock >= 1000.0) {
+		tClock /= 1000.0;
+		orderOfMagnitude++;
+	}
 
-    switch (orderOfMagnitude) {
-        case 0:
-            sprintf(bufferTimerClock, "%.2f Hz", tClock);
-            break;
-        case 1:
-            sprintf(bufferTimerClock, "%.2f KHz", tClock);
-            break;
-        case 2:
-            sprintf(bufferTimerClock, "%.2f MHz", tClock);
-            break;
-        case 3:
-            sprintf(bufferTimerClock, "%.2f GHz", tClock);
-            break;
-        default:
-            sprintf(bufferTimerClock, "Out of range");
-            break;
-    }
+	switch (orderOfMagnitude) {
+	case 0:
+		sprintf(bufferTimerClock, "%.2f Hz", tClock);
+		break;
+	case 1:
+		sprintf(bufferTimerClock, "%.2f KHz", tClock);
+		break;
+	case 2:
+		sprintf(bufferTimerClock, "%.2f MHz", tClock);
+		break;
+	case 3:
+		sprintf(bufferTimerClock, "%.2f GHz", tClock);
+		break;
+	default:
+		sprintf(bufferTimerClock, "Out of range");
+		break;
+	}
 }
 
-void convVariables(){
+void convVariables() {
 	genFreqConv();
 	freqConv();
 	timerClockConv();
