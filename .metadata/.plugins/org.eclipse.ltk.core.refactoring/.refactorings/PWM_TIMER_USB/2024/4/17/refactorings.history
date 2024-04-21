@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Inc, Src, Startup&apos; to &apos;PWM_TIMER_USB&apos;" description="Move 3 resources to &apos;PWM_TIMER_USB&apos;" destination="/PWM_TIMER_USB" element1="/Core/Inc" element2="/Core/Src" element3="/Core/Startup" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1713707697749" updateReferences="true"/>
+</session>

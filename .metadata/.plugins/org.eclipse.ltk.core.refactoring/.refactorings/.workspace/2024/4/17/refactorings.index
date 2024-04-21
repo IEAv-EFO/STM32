@@ -1,3 +1,8 @@
 1713662009060	Rename resource 'BLE_CC2541'
 1713662049054	Delete resource 'HM-10_CC2541_ZS-040/BLE_CC2541 Debug.launch'
 1713662057200	Delete resource 'HM-10_CC2541_ZS-040/Debug'
+1713665538613	Rename resource 'HM-10_CC2541_ZS-040'
+1713665556318	Delete resource 'BLE_HM10/HM-10_CC2541_ZS-040 Debug.launch'
+1713665562729	Delete resource 'BLE_HM10/Debug'
+1713665598402	Delete resource 'BLE_HM10'
+1713707701643	Delete resource 'Core'

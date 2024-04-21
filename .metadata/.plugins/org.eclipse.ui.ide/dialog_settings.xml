@@ -9,6 +9,13 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\BLE_HM10"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\PWM_TIMER_USB"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\PWM_TIMER"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\PWM_Delay"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\ModoADCSincrono"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\ADCDCAExternalInterrupt"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\ADCDAInternalInterrupt"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\PWM_TIMER_USB"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\PWM_TIMER"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\PWM_Delay"/>
