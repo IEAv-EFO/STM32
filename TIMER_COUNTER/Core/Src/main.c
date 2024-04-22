@@ -56,7 +56,7 @@ float genFreq, frequency, freqPrint;
 float dutyCycle = 0.0;
 uint32_t PSC, ARR, CCR;
 uint32_t timerClock;
-uint32_t currentCCR, lastCCR;
+uint32_t period, currentCount, lastCountPrint, lastCount = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,7 +67,7 @@ static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 uint16_t calcPSC(uint32_t desired_freq);
-void freqConv(char bufTClock[], char bufFreq[], char bufGenFreq[]);
+void freqConv(float freq, char Buf[]);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -107,7 +107,8 @@ int main(void) {
 	MX_TIM2_Init();
 	MX_TIM3_Init();
 	/* USER CODE BEGIN 2 */
-	uint32_t desiredFreq = 120000;
+	timerClock = HAL_RCC_GetPCLK1Freq();
+	uint32_t desiredFreq = 110000;
 	PSC = calcPSC(desiredFreq);
 	freqGen(&htim3, desiredFreq, PSC);
 	/* USER CODE END 2 */
@@ -118,31 +119,27 @@ int main(void) {
 
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
-		// Frequency Generator using timer3 (48 MHz due to USB = 48 MHz)
-		/*		PSC = 60;
-		 if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == GPIO_PIN_SET) {
-		 freqGen(&htim3, 50000, PSC);
-		 } else {
-		 freqGen(&htim3, 30000, PSC);
-		 }*/
+		freqConv((float)timerClock, bufferTimerClock);
+		freqConv(frequency, bufferFreq);
+		freqConv(genFreq, bufferGenFreq);
 
-		freqConv(bufferTimerClock, bufferFreq, bufferGenFreq);
-		sprintf(buffer,	"### Frequency Genearator (Timer 3) ###\n\r"
-						"Frequency: %s\n\r"
-						"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
-						"Duty cycle: %.2f %%\n\r\n\r"
-						"### Frequency Counter (Timer2) ###\n\r"
-						"Timer Clock: %s\n\rActual CCR: %d\n\r"
-						"Last CCR: %d\n\rDiff CCR (Period in timer clock pulses): %d\n\r"
-						"Frequency: %s\n\r\n\r", bufferGenFreq, PSC, ARR, CCR,
-				(CCR / (float) ARR) * 100.0, bufferTimerClock, currentCCR,
-				lastCCR, periodPrint, bufferFreq);
+		sprintf(buffer, "### Frequency Genearator (Timer 3) ###\n\r"
+				"Frequency: %s\n\r"
+				"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+				"Duty cycle: %.2f %%\n\r\n\r"
+				"### Frequency Counter (Timer2) ###\n\r"
+				"Timer Clock: %s\n\rNew CCR: %d\n\r"
+				"Old CCR: %d\n\rDiff CCR (Period in timer clock pulses): %d\n\r"
+				"Frequency: %s\n\r\n\r", bufferGenFreq, PSC, ARR, CCR,
+				(CCR / (float) ARR) * 100.0, bufferTimerClock, currentCount,
+				lastCountPrint, period, bufferFreq);
 		CDC_Transmit_FS(buffer, sizeof(buffer));
 
 		/*		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 		 sprintf(buffer, "%d\n", pinState);
 		 CDC_Transmit_FS(buffer, strlen(buffer));*/
 		//__HAL_TIM_SET_COUNTER(&htim2,0);
+
 		HAL_Delay(500);
 
 		/* USER CODE END WHILE */
@@ -327,132 +324,17 @@ static void MX_GPIO_Init(void) {
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+	/*Configure GPIO pin : PA8 */
+	GPIO_InitStruct.Pin = GPIO_PIN_8;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
 	/* USER CODE BEGIN MX_GPIO_Init_2 */
 	/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
-	if (htim->Instance == TIM2) {
-		static uint32_t lastCount = 0;
-		static uint32_t period = 0;
-		uint32_t arr = TIM3->ARR;
-
-		timerClock = HAL_RCC_GetPCLK1Freq();
-		currentCCR = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
-
-		if (lastCount != 0) {
-			if (currentCCR >= lastCount) {
-				period = currentCCR - lastCount;
-			} else {
-				period = (arr + currentCCR) - lastCount + 1;
-			}
-			periodPrint = period;
-			frequency = timerClock / (float) period;
-		}
-		lastCCR = lastCount; 	// Manter essa linha sempre antes da próxima
-		lastCount = currentCCR;
-	}
-}
-
-void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
-	if (htim->Instance == TIM3) {
-		genFreq = (float) freq;
-		// Retrieve the timer clock frequency
-		uint32_t timerClockFreq = HAL_RCC_GetPCLK1Freq();
-
-		// Calculates ARR value
-		uint32_t arr = (timerClockFreq / prescalar / freq) - 1;
-		ARR = arr;
-
-		// Calculates CCR value for 50% duty cycle
-		uint32_t ccr = (arr + 1) / 2;
-		CCR = ccr;
-
-		__HAL_TIM_SET_AUTORELOAD(&htim3, arr);
-		__HAL_TIM_SET_PRESCALER(&htim3, prescalar - 1);
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, ccr);
-
-		HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1); // 48 MHz max (not 50 MHz due to USB 48 MHz bus)
-	}
-	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
-}
-
-void freqConv(char bufTClock[], char bufFreq[], char bufGFreq[]) {
-
-	uint16_t oMagnitudeTClock = 0, oMagnitudeFreq = 0, oMagnitudeGFreq = 0;
-	float tClock = (float) timerClock, freq = frequency, gFreq = genFreq;
-
-	while (tClock >= 1000) {
-		tClock /= 1000.0;
-		oMagnitudeTClock++;
-	}
-
-	switch (oMagnitudeTClock) {
-	case 0:
-		sprintf(bufTClock, "%.2f Hz", tClock);
-		break;
-	case 1:
-		sprintf(bufTClock, "%.2f KHz", tClock);
-		break;
-	case 2:
-		sprintf(bufTClock, "%.2f MHz", tClock);
-		break;
-	case 3:
-		sprintf(bufTClock, "%.2f GHz", tClock);
-		break;
-	default:
-		sprintf(bufTClock, "Out of range");
-		break;
-	}
-
-	while (freq >= 1000.0) {
-		freq /= 1000.0;
-		oMagnitudeFreq++;
-	}
-
-	switch (oMagnitudeFreq) {
-	case 0:
-		sprintf(bufFreq, "%.2f Hz", freq);
-		break;
-	case 1:
-		sprintf(bufFreq, "%.2f KHz", freq);
-		break;
-	case 2:
-		sprintf(bufFreq, "%.2f MHz", freq);
-		break;
-	case 3:
-		sprintf(bufFreq, "%.2f GHz", freq);
-		break;
-	default:
-		sprintf(bufTClock, "Out of range");
-		break;
-	}
-
-	while (gFreq >= 1000.0) {
-		gFreq /= 1000.0;
-		oMagnitudeGFreq++;
-	}
-
-	switch (oMagnitudeGFreq) {
-	case 0:
-		sprintf(bufGFreq, "%.2f Hz", gFreq);
-		break;
-	case 1:
-		sprintf(bufGFreq, "%.2f KHz", gFreq);
-		break;
-	case 2:
-		sprintf(bufGFreq, "%.2f MHz", gFreq);
-		break;
-	case 3:
-		sprintf(bufGFreq, "%.2f GHz", gFreq);
-		break;
-	default:
-		sprintf(bufGFreq, "Out of range");
-		break;
-	}
-}
 
 uint16_t calcPSC(uint32_t desiredFreq) {
 	uint32_t tClock, arr, psc = 1;
@@ -465,6 +347,70 @@ uint16_t calcPSC(uint32_t desiredFreq) {
 		psc++;
 	}
 	return psc;
+}
+
+void freqConv(float freq, char Buf[]) {
+	uint16_t oMagnitude = 0;
+	while (freq >= 1000) {
+		freq /= 1000.0;
+		oMagnitude++;
+	}
+
+	switch (oMagnitude) {
+	case 0:
+		sprintf(Buf, "%.2f Hz", freq);
+		break;
+	case 1:
+		sprintf(Buf, "%.2f KHz", freq);
+		break;
+	case 2:
+		sprintf(Buf, "%.2f MHz", freq);
+		break;
+	case 3:
+		sprintf(Buf, "%.2f GHz", freq);
+		break;
+	default:
+		sprintf(Buf, "Out of range");
+		break;
+	}
+}
+
+void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
+	if (htim->Instance == TIM3) {
+		genFreq = (float) freq;
+		ARR =  timerClock / prescalar / freq - 1;
+		CCR = (ARR + 1) / 2;
+
+		TIM3->ARR = ARR;
+		TIM3->PSC = prescalar - 1;
+		TIM3->CCR1 = CCR;
+
+		/*
+		 __HAL_TIM_SET_AUTORELOAD(&htim3, arr);
+		 __HAL_TIM_SET_PRESCALER(&htim3, prescalar - 1);
+		 __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, ccr);
+		 */
+
+		HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1); // 48 MHz max (not 50 MHz due to USB 48 MHz bus)
+	}
+	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
+}
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
+	if (htim->Instance == TIM2) {
+		uint32_t arr = TIM3->ARR;
+		currentCount = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+		if (lastCount != 0) {
+			if (currentCount >= lastCount) {
+				period = currentCount - lastCount;
+			} else {
+				period = (arr + currentCount) - lastCount + 1;
+			}
+			frequency = timerClock / (float) period;
+		}
+		lastCountPrint = lastCount; // Salva em lastCountPrint para mandar pela USB
+		lastCount = currentCount;
+	}
 }
 
 /* USER CODE END 4 */
