@@ -172,8 +172,8 @@ int main(void)
 		//__HAL_TIM_SET_COUNTER(&htim2,0);
 
 		// Reset timer2 counter. A variável flag é alterada na
-		// função de chamada de interrupção do timer2logo depois
-		// que o valor do contador do timer2 é armazenado.
+		// função de chamada de interrupção (callback) do timer2
+		// logo depois que o valor do contador do timer2 é salvo.
 		if (flag) {
 			TIM2->CNT = 0;
 			//__HAL_TIM_SET_COUNTER(&htim2, 0);
