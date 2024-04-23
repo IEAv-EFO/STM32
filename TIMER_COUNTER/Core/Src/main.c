@@ -47,19 +47,21 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+uint32_t counter = 0;
 GPIO_PinState pinState;
 char bufferCDC[500];
 char bufferBT[500];
 char bufferGenFreq[20];
 char bufferFreq[20];
 char bufferTimerClock[20];
-const uint16_t duty = 50;
+uint8_t flag = 0, USB = 1, BT = 1;
+uint16_t duty = 50;
 uint32_t periodPrint;
-float genFreq, frequency, freqPrint;
-float dutyCycle = 0.0;
 uint32_t PSC, ARR, CCR;
 uint32_t timerClock;
 uint32_t period, currentCount, lastCountPrint, lastCount = 0;
+float genFreq, frequency, freqPrint;
+float dutyCycle = 0.0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,7 +74,8 @@ static void MX_USART2_UART_Init(void);
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 uint16_t calcPSC(uint32_t desired_freq);
 void freqConv(float freq, char Buf[]);
-void btSend(char *Buf);
+void sendChar(char *c);
+void btSendString(char *Buf);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -115,7 +118,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	timerClock = HAL_RCC_GetPCLK1Freq();
-	uint32_t desiredFreq = 110000;
+	uint32_t desiredFreq = 120000;
 	PSC = calcPSC(desiredFreq);
 	freqGen(&htim3, desiredFreq, PSC);
   /* USER CODE END 2 */
@@ -123,43 +126,62 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-
+		counter++;
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
-		freqConv((float)timerClock, bufferTimerClock);
+		freqConv((float) timerClock, bufferTimerClock);
 		freqConv(frequency, bufferFreq);
 		freqConv(genFreq, bufferGenFreq);
 
-		sprintf(bufferCDC, "### Frequency Generator (Timer 3) ###\n\r"
-				"Frequency: %s\n\r"
-				"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
-				"Duty cycle: %.2f %%\n\r\n\r"
-				"### Frequency Counter (Timer2) ###\n\r"
-				"Timer Clock: %s\n\rNew CCR: %d\n\r"
-				"Old CCR: %d\n\rDiff CCR (Period in timer clock pulses): %d\n\r"
-				"Frequency: %s\n\r\n\r", bufferGenFreq, PSC, ARR, CCR,
-				(CCR / (float) ARR) * 100.0, bufferTimerClock, currentCount,
-				lastCountPrint, period, bufferFreq);
-		CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
-
-		sprintf(bufferBT, "### Frequency Generator (Timer 3) ###\n"
-				"Frequency: %s\n"
-				"PSC: %d\nARR: %d\nCCR: %d\n"
-				"Duty cycle: %.2f %%\n\n"
-				"### Frequency Counter (Timer2) ###\n"
-				"Timer Clock: %s\nNew CCR: %d\n"
-				"Old CCR: %d\nDiff CCR (Period in clock pulses): %d\n"
-				"Frequency: %s\n\n", bufferGenFreq, PSC, ARR, CCR,
-				(CCR / (float) ARR) * 100.0, bufferTimerClock, currentCount,
-				lastCountPrint, period, bufferFreq);
-		btSend(bufferBT);
+		USB = 1;
+		if (USB) {
+			//BufferCDC com CRLF para a porta USB
+			sprintf(bufferCDC,
+			"%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+			"Frequency: %s\n\r"
+			"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+			"Duty cycle (CCR / (ARR+1)): %.2f %%\n\r\n\r"
+			"Frequency Counter (Timer2)\n\r"
+			"Timer Clock: %s\n\rNew CCR: %d\n\r"
+			"Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r"
+			"Frequency: %s\n\r#########################\n\r\n\r", counter,
+			bufferGenFreq, PSC, ARR, CCR, (CCR / (float)(ARR+1)) * 100.0,
+			bufferTimerClock, currentCount, lastCountPrint, period, bufferFreq);
+			CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+		}
+		BT = 1;
+		if (BT) {
+			//BufferBT com LF para o bluetooth
+			sprintf(bufferBT,
+			"%d\n#########################\nFrequency Generator (Timer 3)\n"
+			"Frequency: %s\n"
+			"PSC: %d\nARR: %d\nCCR: %d\n"
+			"Duty cycle: (CCR / (ARR+1)) %.2f %%\n\n"
+			"Frequency Counter (Timer2)\n"
+			"Timer Clock: %s\nNew CCR: %d\n"
+			"Old CCR: %d\nDiff CCR (T in clock pulses): %d\n"
+			"Frequency: %s\n#########################\n\n", counter,
+			bufferGenFreq, PSC, ARR, CCR, (CCR / (float)(ARR+1)) * 100.0,
+			bufferTimerClock, currentCount, lastCountPrint, period, bufferFreq);
+			btSendString(bufferBT);
+		}
 
 		/*		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 		 sprintf(buffer, "%d\n", pinState);
 		 CDC_Transmit_FS(buffer, strlen(buffer));*/
 		//__HAL_TIM_SET_COUNTER(&htim2,0);
 
-		HAL_Delay(500);
+		// Reset timer2 counter. A variável flag é alterada na
+		// função de chamada de interrupção do timer2logo depois
+		// que o valor do contador do timer2 é armazenado.
+		if (flag) {
+			TIM2->CNT = 0;
+			//__HAL_TIM_SET_COUNTER(&htim2, 0);
+			// TIM->CNT=0 <--> __HAL_TIM_SET_COUNTER(&htim2, 0)
+			flag = 0;
+		}
+
+		HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
@@ -389,12 +411,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -443,7 +459,7 @@ void freqConv(float freq, char Buf[]) {
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 	if (htim->Instance == TIM3) {
 		genFreq = (float) freq;
-		ARR =  timerClock / prescalar / freq - 1;
+		ARR = timerClock / prescalar / freq - 1;
 		CCR = (ARR + 1) / 2;
 
 		TIM3->ARR = ARR;
@@ -463,6 +479,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint32_t prescalar) {
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM2) {
+		flag = 1;
 		uint32_t arr = TIM3->ARR;
 		currentCount = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 		if (lastCount != 0) {
@@ -479,19 +496,19 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 }
 
 /*void btSend(char Buf[], uint16_t timeOut) {
-    HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
-}*/
+ HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+ }*/
 
-void sendChar(char * c) {
+void sendChar(char *c) {
 	HAL_UART_Transmit(&huart2, &c, 1, 10);
 }
 
-void btSend(char* Buf) {
-    // Loop through each character in the string until the null terminator
-    while(*Buf) {
-        sendChar((uint8_t)*Buf++);
-        HAL_Delay(10);
-    }
+void btSendString(char *Buf) {
+	// Loop through each character in the string until the null terminator
+	while (*Buf) {
+		sendChar((uint8_t) *Buf++);
+		HAL_Delay(2);
+	}
 }
 
 /* USER CODE END 4 */
@@ -522,7 +539,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+     ex: printf("Wrong parameters value: file %s on line %d\n\r", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
