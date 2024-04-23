@@ -5718,3 +5718,6 @@ java.lang.Exception: Resource '/TIMER_COUNTER_INTERNO' does not exist.
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-23 11:22:08.394
+!MESSAGE Indexed 'SIGNALTX_BLE' (19 sources, 81 headers) in 1.85 sec: 4,294 declarations; 18,110 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0089%)
