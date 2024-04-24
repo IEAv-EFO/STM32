@@ -56,7 +56,7 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 uint32_t adc_valor, resto, A, B, V;
 float valor;
-char buffer[32], V_string[6], valor_string[11];
+char V_string[6], valor_string[11];
 uint8_t buf[2];
 /* USER CODE END PV */
 
@@ -129,18 +129,18 @@ int main(void)
 		else
 			HAL_GPIO_WritePin(GPIOC, LED_Pin, 1);
 
-		lcd_send_cmd(Linha_1);
-		lcd_send_string("Valor da Tensao");
-		lcd_send_cmd(Linha_2);
-		lcd_send_string(" =");
-		lcd_send_cmd(Linha_2 + 3);
-
 		valor = count2volt(ADCRES, adc_valor);
-		sprintf(valor_string, "%.4f [V]", valor);
+		sprintf(valor_string, "%.3f [V]", valor);
+
+		lcd_send_cmd(Linha_1);
+		lcd_send_string("Tensao = ");
+		lcd_send_cmd(Linha_1 + 9);
 		lcd_send_string(valor_string);
+
 		HAL_Delay(100);
-		sprintf(buffer, "Tensão: %.4f [V]\n", valor);
-		btSendString(buffer);
+
+		sprintf(valor_string, "Tensão: %.3f [V]\n", valor);
+		btSendString(valor_string);
 		HAL_Delay(500);
 		HAL_ADC_Start_IT(&hadc1);
     /* USER CODE END WHILE */

@@ -1146,3 +1146,1003 @@ Finished building: default.size.stdout
  
 Finished building: ADC_IT.list
  
+11:03:27 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40740	    496	   2272	  43508	   a9f4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:08:49 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:09:24 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:10:53 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  136 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:141:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  141 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:387:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  387 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:390:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  390 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:141:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  141 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:393:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  393 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:386:21: note: expected 'char *' but argument is of type 'unsigned char'
+  386 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:11:34 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  136 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:141:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  141 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:387:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  387 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:390:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  390 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:141:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  141 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:393:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  393 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:386:21: note: expected 'char *' but argument is of type 'unsigned char'
+  386 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:14:07 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  129 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:139:30: error: 'linha_1' undeclared (first use in this function); did you mean 'Linha_1'?
+  139 |                 lcd_send_cmd(linha_1);
+      |                              ^~~~~~~
+      |                              Linha_1
+../Core/Src/main.c:139:30: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:143:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:392:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  392 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:143:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+11:14:19 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  129 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:143:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:392:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  392 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:143:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:14:23 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-size  ADC_IT.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+11:15:32 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  129 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:143:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:392:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  392 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:143:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  143 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40756	    496	   2272	  43524	   aa04	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:16:55 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:17:24 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:18:33 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40732	    496	   2272	  43500	   a9ec	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:19:11 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:25: warning: implicit declaration of function 'count2volt' [-Wimplicit-function-declaration]
+  135 |                 valor = count2volt(ADCRES, adc_valor);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'btSendString' [-Wimplicit-function-declaration]
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:386:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  386 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:389:6: warning: conflicting types for 'btSendString'; have 'void(char *)'
+  389 | void btSendString(char *Buf) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:140:17: note: previous implicit declaration of 'btSendString' with type 'void(char *)'
+  140 |                 btSendString(buffer);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:392:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  392 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:385:21: note: expected 'char *' but argument is of type 'unsigned char'
+  385 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40740	    496	   2272	  43508	   a9f4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:20:05 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40740	    496	   2272	  43508	   a9f4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:20:33 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40740	    496	   2272	  43508	   a9f4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:20:58 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40732	    496	   2272	  43500	   a9ec	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:21:22 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:21:48 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:22:28 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:22:53 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    496	   2272	  43484	   a9dc	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:24:29 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:48: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 2 [-Wformat-overflow=]
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                                                ^~~~
+../Core/Src/main.c:142:39: note: assuming directive output of 4 bytes
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:142:17: note: 'sprintf' output between 18 and 328 bytes into a destination of size 11
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40708	    496	   2240	  43444	   a9b4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:25:06 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:48: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 2 [-Wformat-overflow=]
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                                                ^~~~
+../Core/Src/main.c:142:39: note: assuming directive output of 4 bytes
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:142:17: note: 'sprintf' output between 18 and 328 bytes into a destination of size 11
+  142 |                 sprintf(valor_string, "Tensão: %.2f [V]\n", valor);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40708	    496	   2240	  43444	   a9b4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
+11:26:23 **** Incremental Build of configuration Debug for project ADC_IT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'sendChar':
+../Core/Src/main.c:389:36: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |         HAL_UART_Transmit(&huart1, &c, 1, 10);
+      |                                    ^~
+      |                                    |
+      |                                    char **
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char **'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:395:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  395 |                 sendChar((uint8_t) *Buf++);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          unsigned char
+../Core/Src/main.c:388:21: note: expected 'char *' but argument is of type 'unsigned char'
+  388 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:48: warning: '%.3f' directive writing between 3 and 314 bytes into a region of size 2 [-Wformat-overflow=]
+  142 |                 sprintf(valor_string, "Tensão: %.3f [V]\n", valor);
+      |                                                ^~~~
+../Core/Src/main.c:142:39: note: assuming directive output of 5 bytes
+  142 |                 sprintf(valor_string, "Tensão: %.3f [V]\n", valor);
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:142:17: note: 'sprintf' output between 18 and 329 bytes into a destination of size 11
+  142 |                 sprintf(valor_string, "Tensão: %.3f [V]\n", valor);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADC_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\ADC_IT\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: ADC_IT.elf has a LOAD segment with RWX permissions
+Finished building target: ADC_IT.elf
+ 
+arm-none-eabi-size  ADC_IT.elf 
+arm-none-eabi-objdump -h -S ADC_IT.elf  > "ADC_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  40708	    496	   2240	  43444	   a9b4	ADC_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_IT.list
+ 
