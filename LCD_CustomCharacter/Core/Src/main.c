@@ -107,6 +107,8 @@ int main(void) {
 	char cc7[] = { 0x0E, 0x10, 0x17, 0x12, 0x12, 0x12, 0x10, 0x0E };  // CT
 	char cc8[] = { 0x04, 0x04, 0x1F, 0x04, 0x04, 0x00, 0x1F, 0x00 };  // +-
 
+	/*
+
 	// store the chars into the CGRAM
 	lcd_send_cmd(0x40);
 	for (int i = 0; i < 8; i++)
@@ -140,9 +142,38 @@ int main(void) {
 	for (int i = 0; i < 8; i++)
 		lcd_send_data(cc8[i]);
 
-	lcd_put_cur(1, 0);
-	for (int i = 0; i < 8; i++)
-		lcd_send_data(i);
+*/
+
+	lcd_clear();
+
+	for(int i = 0; i < 20; i++) {
+		lcd_put_cur(0,i);
+		lcd_send_data(0xFF);
+		lcd_put_cur(3,i);
+		lcd_send_data(0xFF);
+	}
+
+	for(int i = 1; i < 3; i++) {
+		lcd_put_cur(i,0);
+		lcd_send_data(0xFF);
+		lcd_put_cur(i, 19);
+		lcd_send_data(0xFF);
+	}
+
+	// A tabela de caracteres da CGROM é a ASCII 32=space [33,126] numbers, letters and some especial
+	// characters
+	for(int row = 1; row < 3; row++) {
+		for(int column = 1; column < 19; column++) {
+			for(int character = 33; character <= 90; character++) {
+				lcd_put_cur(row, column);
+				lcd_send_data(character);
+				HAL_Delay(50);
+			}
+			lcd_put_cur(row, column);
+			lcd_send_data(32);
+		}
+	}
+
 
 	/* USER CODE END 2 */
 

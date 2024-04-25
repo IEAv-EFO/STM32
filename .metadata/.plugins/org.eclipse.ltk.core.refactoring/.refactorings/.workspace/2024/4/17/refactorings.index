@@ -19,3 +19,5 @@
 1714054778875	Delete resource 'LCD_CustomCharacter/Core/Inc/LCD_I2C.h'
 1714054783055	Delete resource 'LCD_CustomCharacter/Core/Src/LCD_I2C.c'
 1714058137114	Delete resource 'lcd160.2_CUSTOM_CHARS'
+1714065653274	Delete resource 'stm32_i2cLcd'
+1714065874487	Delete resource 'LCD_CustomCharacter'

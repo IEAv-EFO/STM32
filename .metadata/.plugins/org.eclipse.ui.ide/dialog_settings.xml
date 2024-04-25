@@ -20,6 +20,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\LCD_CustomCharacter"/>
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\stm32_i2cLcd"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\BLE_HM10"/>
 			<item value="D:\STM\SOLUÇÃO DOS EXERCÍCIOS\ADC_IT"/>
 			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\SIGNALTX_BLE"/>

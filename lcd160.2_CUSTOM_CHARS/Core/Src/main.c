@@ -110,7 +110,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   lcd_init ();
-  lcd_put_cur(0, 0);
+  lcd_put_cur(2, 0);
   lcd_send_string("custom chars!!");
 
 // display the predefined characters

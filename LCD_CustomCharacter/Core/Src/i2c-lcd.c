@@ -43,19 +43,28 @@ void lcd_clear (void)
 
 void lcd_put_cur(int row, int col)
 {
+
+/*
+#define Linha_1 (0x80 | 0x00)
+#define Linha_2 (0x80 | 0x40)
+#define Linha_3 (0x80 | 0x14)
+#define Linha_4 (0x80 | 0x54)
+*/
+
     switch (row)
     {
         case 0:
-            col |= 0x80;
+
+            col += (0x00|0x80);
             break;
         case 1:
-            col |= 0x94;
+            col += (0x40|0x80);
             break;
         case 2:
-        	col |= 0xA8;
+        	col += (0x14|0x80);
         	break;
         case 3:
-        	col |= 0xBC;
+        	col += (0x54|0x80);
         	break;
     }
 

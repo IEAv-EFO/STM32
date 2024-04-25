@@ -1,30 +1,54 @@
-12:06:49 **** Incremental Build of configuration Debug for project LCD_CustomCharacter ****
-make -j4 all 
+17:38:13 **** Incremental Build of configuration Debug for project LCD_CustomCharacter ****
+make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:98:9: warning: implicit declaration of function 'lcd_init' [-Wimplicit-function-declaration]
    98 |         lcd_init();
       |         ^~~~~~~~
-../Core/Src/main.c:111:9: warning: implicit declaration of function 'lcd_send_cmd' [-Wimplicit-function-declaration]
-  111 |         lcd_send_cmd(0x40);
-      |         ^~~~~~~~~~~~
-../Core/Src/main.c:113:17: warning: implicit declaration of function 'lcd_send_data' [-Wimplicit-function-declaration]
-  113 |                 lcd_send_data(cc1[i]);
+../Core/Src/main.c:147:9: warning: implicit declaration of function 'lcd_clear' [-Wimplicit-function-declaration]
+  147 |         lcd_clear();
+      |         ^~~~~~~~~
+../Core/Src/main.c:150:17: warning: implicit declaration of function 'lcd_put_cur' [-Wimplicit-function-declaration]
+  150 |                 lcd_put_cur(0,i);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:151:17: warning: implicit declaration of function 'lcd_send_data' [-Wimplicit-function-declaration]
+  151 |                 lcd_send_data(0xFF);
       |                 ^~~~~~~~~~~~~
-../Core/Src/main.c:143:9: warning: implicit declaration of function 'lcd_put_cur' [-Wimplicit-function-declaration]
-  143 |         lcd_put_cur(1, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "LCD_CustomCharacter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\LCD_CustomCharacter\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_CustomCharacter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:108:14: warning: unused variable 'cc8' [-Wunused-variable]
+  108 |         char cc8[] = { 0x04, 0x04, 0x1F, 0x04, 0x04, 0x00, 0x1F, 0x00 };  // +-
+      |              ^~~
+../Core/Src/main.c:107:14: warning: unused variable 'cc7' [-Wunused-variable]
+  107 |         char cc7[] = { 0x0E, 0x10, 0x17, 0x12, 0x12, 0x12, 0x10, 0x0E };  // CT
+      |              ^~~
+../Core/Src/main.c:106:14: warning: unused variable 'cc6' [-Wunused-variable]
+  106 |         char cc6[] = { 0x00, 0x0E, 0x11, 0x11, 0x11, 0x0A, 0x1B, 0x00 };  // omega
+      |              ^~~
+../Core/Src/main.c:105:14: warning: unused variable 'cc5' [-Wunused-variable]
+  105 |         char cc5[] = { 0x00, 0x00, 0x0A, 0x15, 0x11, 0x0E, 0x04, 0x00 };  // Heart
+      |              ^~~
+../Core/Src/main.c:104:14: warning: unused variable 'cc4' [-Wunused-variable]
+  104 |         char cc4[] = { 0x00, 0x04, 0x0E, 0x0E, 0x0E, 0x1F, 0x04, 0x00 };  // bell
+      |              ^~~
+../Core/Src/main.c:103:14: warning: unused variable 'cc3' [-Wunused-variable]
+  103 |         char cc3[] = { 0x08, 0x0C, 0x0E, 0x0F, 0x0E, 0x0C, 0x08, 0x00 };  // arrow
+      |              ^~~
+../Core/Src/main.c:102:14: warning: unused variable 'cc2' [-Wunused-variable]
+  102 |         char cc2[] = { 0x0E, 0x0E, 0x04, 0x0E, 0x15, 0x04, 0x0A, 0x0A };  // Robo
+      |              ^~~
+../Core/Src/main.c:101:14: warning: unused variable 'cc1' [-Wunused-variable]
+  101 |         char cc1[] = { 0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00 };  // smiley
+      |              ^~~
+arm-none-eabi-gcc -o "LCD_CustomCharacter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\LCD_CustomCharacter\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_CustomCharacter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LCD_CustomCharacter.elf
  
 arm-none-eabi-size  LCD_CustomCharacter.elf 
 arm-none-eabi-objdump -h -S LCD_CustomCharacter.elf  > "LCD_CustomCharacter.list"
    text	   data	    bss	    dec	    hex	filename
-  30984	    252	   8796	  40032	   9c60	LCD_CustomCharacter.elf
+  30856	    252	   8796	  39904	   9be0	LCD_CustomCharacter.elf
 Finished building: default.size.stdout
  
 Finished building: LCD_CustomCharacter.list
  
 
-12:06:50 Build Finished. 0 errors, 4 warnings. (took 1s.547ms)
+17:38:15 Build Finished. 0 errors, 12 warnings. (took 1s.535ms)
 
