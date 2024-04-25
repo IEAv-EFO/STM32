@@ -18,11 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "string.h"
 #include "LCD_I2C.h"
+#include "count2volt.h"
 #include "stdio.h"
 /* USER CODE END Includes */
 
@@ -56,8 +58,9 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 uint32_t adc_valor, resto, A, B, V;
 float valor;
-char V_string[6], valor_string[11];
+char V_string[20], valor_string[20];
 uint8_t buf[2];
+uint32_t counter = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,9 +70,15 @@ static void MX_ADC1_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_USART1_UART_Init(void);
+extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 void sendChar(char *c);
 void btSendString(char *Buf);
-extern float count2volt(int res, int count);
+void lcd_send_nibble(char nibble);
+void lcd_send_cmd (char cmd);
+void lcd_send_dado (char dado);
+void lcd_init (void);
+void lcd_send_string(char *str);
+void lcd_clear(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -112,6 +121,7 @@ int main(void)
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 	lcd_init();
 	HAL_ADC_Start_IT(&hadc1);
@@ -141,6 +151,9 @@ int main(void)
 
 		sprintf(valor_string, "Tensão: %.3f [V]\n", valor);
 		btSendString(valor_string);
+		HAL_Delay(10);
+		sprintf(valor_string, "Tensão: %.3f [V]\n\r", valor);
+		CDC_Transmit_FS(valor_string, strlen(valor_string));
 		HAL_Delay(500);
 		HAL_ADC_Start_IT(&hadc1);
     /* USER CODE END WHILE */
@@ -219,7 +232,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;

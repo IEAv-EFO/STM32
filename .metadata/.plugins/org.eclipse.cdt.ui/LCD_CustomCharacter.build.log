@@ -1,0 +1,30 @@
+12:06:49 **** Incremental Build of configuration Debug for project LCD_CustomCharacter ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:9: warning: implicit declaration of function 'lcd_init' [-Wimplicit-function-declaration]
+   98 |         lcd_init();
+      |         ^~~~~~~~
+../Core/Src/main.c:111:9: warning: implicit declaration of function 'lcd_send_cmd' [-Wimplicit-function-declaration]
+  111 |         lcd_send_cmd(0x40);
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:113:17: warning: implicit declaration of function 'lcd_send_data' [-Wimplicit-function-declaration]
+  113 |                 lcd_send_data(cc1[i]);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/main.c:143:9: warning: implicit declaration of function 'lcd_put_cur' [-Wimplicit-function-declaration]
+  143 |         lcd_put_cur(1, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_CustomCharacter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\LCD_CustomCharacter\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_CustomCharacter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_CustomCharacter.elf
+ 
+arm-none-eabi-size  LCD_CustomCharacter.elf 
+arm-none-eabi-objdump -h -S LCD_CustomCharacter.elf  > "LCD_CustomCharacter.list"
+   text	   data	    bss	    dec	    hex	filename
+  30984	    252	   8796	  40032	   9c60	LCD_CustomCharacter.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_CustomCharacter.list
+ 
+
+12:06:50 Build Finished. 0 errors, 4 warnings. (took 1s.547ms)
+
