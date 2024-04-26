@@ -1,0 +1,10 @@
+20:12:18 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+make -j8 all 
+arm-none-eabi-size  OUTPUT_COMPARE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
+Finished building: default.size.stdout
+ 
+
+20:12:18 Build Finished. 0 errors, 0 warnings. (took 456ms)
+

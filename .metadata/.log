@@ -8548,3 +8548,39 @@ java.lang.Exception: The project description file (.project) for 'LCD_CustomChar
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-04-25 14:24:58.511
 !MESSAGE Indexed 'LCD_CustomCharacter' (36 sources, 138 headers) in 4.36 sec: 14,217 declarations; 59,722 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.32%)
+!SESSION 2024-04-26 12:13:47.444 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-26 12:14:13.079
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-26 12:14:13.089
+!MESSAGE Log4j2 initialized with config file C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-26 12:14:28.007
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2024-04-26 12:27:36.220
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\ACER\AppData\Local\Temp\STM32CubeIDE_690d9ed3-cc71-4b61-ab74-858e9bef5902
+!SESSION 2024-04-26 12:27:54.915 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/ACER/STM32CubeIDE/workspace_1.14.1/
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-26 12:28:04.704
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-26 12:28:04.707
+!MESSAGE Log4j2 initialized with config file C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-26 12:28:15.483
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-26 12:31:33.455
+!MESSAGE Indexed 'OUTPUT_COMPARE' (19 sources, 81 headers) in 4.84 sec: 4,294 declarations; 18,110 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0089%)
