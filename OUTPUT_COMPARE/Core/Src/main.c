@@ -46,6 +46,7 @@ TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
 GPIO_PinState pinState;
+uint8_t shift;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,33 +106,50 @@ int main(void)
   HAL_TIM_OC_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_OC_Start(&htim1, TIM_CHANNEL_4);
 
+  shift = 10;
+
   lcd_init();
   lcd_clear();
 
   HAL_Delay(20);
-  lcd_put_cur(0, 1);
-  lcd_send_data(49);
+
+  lcd_put_cur(0, 0);
+  lcd_send_string("Channel ");
+  lcd_put_cur(0, 8);
+  lcd_send_data(126); //0x7E or 126 in CGROM. In ASCII = ~
+
+  HAL_Delay(2);
+
+  lcd_put_cur(3, 0);
+  lcd_send_string("Output ");
+  lcd_put_cur(3, 8);
+  lcd_send_data(126); //0x7E or 126 in CGROM. In ASCII = ~
+
+  HAL_Delay(2);
+
+  lcd_put_cur(0, 0+shift);
+  lcd_send_data('1');
   HAL_Delay(4);
 
-  lcd_put_cur(1, 1);
-  lcd_send_data(78);
+  lcd_put_cur(1, 0+shift);
+  lcd_send_data('N');
   HAL_Delay(4);
 
-  lcd_put_cur(0, 3);
-  lcd_send_data(49);
+  lcd_put_cur(0, 2+shift);
+  lcd_send_data('1');
   HAL_Delay(4);
 
-  lcd_put_cur(0, 5);
-  lcd_send_data(50);
+  lcd_put_cur(0, 4+shift);
+  lcd_send_data('2');
   HAL_Delay(4);
 
-  lcd_put_cur(0, 7);
-  lcd_send_data(51);
+  lcd_put_cur(0, 6+shift);
+  lcd_send_data('3');
   HAL_Delay(4);
 
-  lcd_put_cur(0, 9);
-  lcd_send_data(52);
-  HAL_Delay(4);
+  lcd_put_cur(0, 8+shift);
+  lcd_send_data('4');
+  HAL_Delay(20);
 
   /* USER CODE END 2 */
 
@@ -141,63 +159,63 @@ int main(void)
   {
 	  pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7); // ; = alt+059
 	  if (pinState == GPIO_PIN_SET) {
-		  lcd_put_cur(2, 1);
-		  lcd_send_data(0xFF); // All 5x8 pixels on
+		  lcd_put_cur(3, 0+shift);
+		  lcd_send_data('1'); // All 5x8 pixels on
 	  }
 	  else {
-		  lcd_put_cur(2, 1);
-		  lcd_send_data(0x20); // All 5x8 pixels off
+		  lcd_put_cur(3, 0+shift);
+		  lcd_send_data('0'); // All 5x8 pixels off (space)
 	  }
 
-	  HAL_Delay(4);
+	  HAL_Delay(2);
 
 	  pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
 	  if (pinState == GPIO_PIN_SET) {
-		  lcd_put_cur(2, 3);
-		  lcd_send_data(0xFF);
+		  lcd_put_cur(3, 2+shift);
+		  lcd_send_data('1');
 	  }
 	  else {
-		  lcd_put_cur(2, 3);
-		  lcd_send_data(0x20);
+		  lcd_put_cur(3, 2+shift);
+		  lcd_send_data('0');
 	  }
 
-	  HAL_Delay(4);
+	  HAL_Delay(2);
 
 	  pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9);
 	  if (pinState == GPIO_PIN_SET) {
-		  lcd_put_cur(2, 5);
-		  lcd_send_data(0xFF);
+		  lcd_put_cur(3, 4+shift);
+		  lcd_send_data('1');
 	  }
 	  else {
-		  lcd_put_cur(2, 5);
-		  lcd_send_data(0x20);
+		  lcd_put_cur(3, 4+shift);
+		  lcd_send_data('0');
 	  }
 
-	  HAL_Delay(4);
+	  HAL_Delay(2);
 
 	  pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 	  if (pinState == GPIO_PIN_SET) {
-		  lcd_put_cur(2, 7);
-		  lcd_send_data(0xFF);
+		  lcd_put_cur(3, 6+shift);
+		  lcd_send_data('1');
 	  }
 	  else {
-		  lcd_put_cur(2, 7);
-		  lcd_send_data(0x20);
+		  lcd_put_cur(3, 6+shift);
+		  lcd_send_data('0');
 	  }
 
-	  HAL_Delay(4);
+	  HAL_Delay(2);
 
 	  pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11);
 	  if (pinState == GPIO_PIN_SET) {
-		  lcd_put_cur(2, 9);
-		  lcd_send_data(0xFF);
+		  lcd_put_cur(3, 8+shift);
+		  lcd_send_data('1');
 	  }
 	  else {
-		  lcd_put_cur(2, 9);
-		  lcd_send_data(0x20);
+		  lcd_put_cur(3, 8+shift);
+		  lcd_send_data('0');
 	  }
 
-	  HAL_Delay(4);
+	  HAL_Delay(2);
 
     /* USER CODE END WHILE */
 
@@ -335,16 +353,16 @@ static void MX_TIM1_Init(void)
   sConfigOC.OCMode = TIM_OCMODE_TOGGLE;
   sConfigOC.Pulse = 2000-1;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_LOW;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
-  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_SET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
   if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
   sConfigOC.Pulse = 4000-1;
-  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();

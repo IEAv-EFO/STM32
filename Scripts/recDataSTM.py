@@ -79,12 +79,12 @@ def update_max_data_points(val):
     data_points = deque(data_points, maxlen=max_data_points)
 
 # Initialize serial port
-port = input("Enter the communication port (default: COM5): ")
-port = port if port else "COM5"  # Set default value if empty
+port = input("Enter the communication port (default: COM3): ")
+port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
-max_data_points = input("Enter the max data points (default: 100): ")
-max_data_points = int(max_data_points) if max_data_points else 100
+max_data_points = input("Enter the max data points (default: 1000): ")
+max_data_points = int(max_data_points) if max_data_points else 1000
 ser = init_serial(port, baudrate)
 
 # Initialize plot
@@ -109,7 +109,7 @@ ani = FuncAnimation(fig, update, frames=None, interval=0.1, cache_frame_data=Fal
 
 # Create a slider to change max_data_points
 slider_ax = plt.axes([0.93, 0.3, 0.03, 0.35], facecolor='red')  # Define slider position and size
-slider = Slider(slider_ax, 'H', 2, 60, valinit=max_data_points, color='lightgreen', orientation='vertical')
+slider = Slider(slider_ax, 'H', 2, 5000, valinit=max_data_points, color='lightgreen', orientation='vertical')
 slider.on_changed(update_max_data_points)  # Set slider update action
 
 plt.show()

@@ -3,6 +3,7 @@ forwardDeclare.enums=true
 forwardDeclare.externalVariables=true
 forwardDeclare.functions=true
 forwardDeclare.templates=true
+markOccurrences=false
 scalability.detect=false
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true

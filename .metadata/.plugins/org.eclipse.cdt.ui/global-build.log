@@ -1,414 +1,166 @@
-19:41:01 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:25:11 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
    text	   data	    bss	    dec	    hex	filename
-  13368	     12	   1732	  15112	   3b08	OUTPUT_COMPARE.elf
+  53788	    708	   9148	  63644	   f89c	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-Finished building: OUTPUT_COMPARE.list
- 
-19:41:06 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:25:19 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
    text	   data	    bss	    dec	    hex	filename
-  13368	     12	   1732	  15112	   3b08	OUTPUT_COMPARE.elf
+  53788	    708	   9148	  63644	   f89c	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-19:41:23 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:28:37 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
+ 
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  13368	     12	   1732	  15112	   3b08	OUTPUT_COMPARE.elf
+  54596	    712	   9144	  64452	   fbc4	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-19:42:33 **** Incremental Build of configuration Debug for project LCD_CustomCharacter ****
+Finished building: EXERCICIO_AULA6.list
+ 
+01:29:34 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-size  LCD_CustomCharacter.elf 
-   text	   data	    bss	    dec	    hex	filename
-  30856	    252	   8796	  39904	   9be0	LCD_CustomCharacter.elf
-Finished building: default.size.stdout
- 
-19:44:21 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13368	     12	   1732	  15112	   3b08	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-19:49:16 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13372	     12	   1732	  15116	   3b0c	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-19:50:47 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13368	     12	   1732	  15112	   3b08	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-19:51:35 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13384	     12	   1732	  15128	   3b18	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-19:52:54 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13512	     12	   1732	  15256	   3b98	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-19:53:59 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13512	     12	   1732	  15256	   3b98	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-19:57:46 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  111 |   lcd_send_data("1");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:113:3: warning: statement with no effect [-Wunused-value]
-  113 |   lcd_send_data"N";
-      |   ^~~~~~~~~~~~~
-../Core/Src/main.c:113:16: error: expected ';' before string constant
-  113 |   lcd_send_data"N";
-      |                ^~~
-      |                ;
-../Core/Src/main.c:116:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  116 |   lcd_send_data("1");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:119:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  119 |   lcd_send_data("2");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:122:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  122 |   lcd_send_data("3");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:125:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  125 |   lcd_send_data("4");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-19:58:30 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
+ 
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
+   text	   data	    bss	    dec	    hex	filename
+  54756	    712	   9144	  64612	   fc64	EXERCICIO_AULA6.elf
+Finished building: default.size.stdout
+ 
+Finished building: EXERCICIO_AULA6.list
+ 
+01:32:36 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  111 |   lcd_send_data("1");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:113:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  113 |   lcd_send_data("N");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:116:17: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  116 |   lcd_send_data((uint8_t)"1");
-      |                 ^
-../Core/Src/main.c:119:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  119 |   lcd_send_data("2");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:122:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  122 |   lcd_send_data("3");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:125:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  125 |   lcd_send_data("4");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
  
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  13644	     12	   1732	  15388	   3c1c	OUTPUT_COMPARE.elf
+  54596	    708	   9148	  64452	   fbc4	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-Finished building: OUTPUT_COMPARE.list
+Finished building: EXERCICIO_AULA6.list
  
-19:58:40 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:34:41 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  111 |   lcd_send_data("1");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:113:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  113 |   lcd_send_data("N");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:116:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  116 |   lcd_send_data("1");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:119:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  119 |   lcd_send_data("2");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:122:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  122 |   lcd_send_data("3");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-../Core/Src/main.c:125:17: warning: passing argument 1 of 'lcd_send_data' makes integer from pointer without a cast [-Wint-conversion]
-  125 |   lcd_send_data("4");
-      |                 ^~~
-      |                 |
-      |                 char *
-../Core/Src/main.c:58:26: note: expected 'char' but argument is of type 'char *'
-   58 | void lcd_send_data (char data);
-      |                     ~~~~~^~~~
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
  
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  13644	     12	   1732	  15388	   3c1c	OUTPUT_COMPARE.elf
+  54748	    712	   9144	  64604	   fc5c	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-Finished building: OUTPUT_COMPARE.list
+Finished building: EXERCICIO_AULA6.list
  
-20:00:55 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:37:17 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
  
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  13580	     12	   1732	  15324	   3bdc	OUTPUT_COMPARE.elf
+  54756	    712	   9144	  64612	   fc64	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-Finished building: OUTPUT_COMPARE.list
+Finished building: EXERCICIO_AULA6.list
  
-20:02:05 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:42:12 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-20:03:06 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-20:04:34 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-20:04:56 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-20:06:55 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-20:09:02 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
- 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-Finished building: OUTPUT_COMPARE.list
- 
-20:09:26 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
- 
-20:11:48 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f411ceux.d" -MT"Core/Startup/startup_stm32f411ceux.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f411ceux.o" "../Core/Startup/startup_stm32f411ceux.s"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Startup/startup_stm32f411ceux.s: Assembler messages:
-../Core/Startup/startup_stm32f411ceux.s:61: Error: bad instruction `i ldr sp,=_estack'
-make: *** [Core/Startup/subdir.mk:19: Core/Startup/startup_stm32f411ceux.o] Error 1
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:30: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+  100 |         HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
+      |                              ^~~~~
+      |                              htim1
+../Core/Src/main.c:100:30: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 make: *** Waiting for unfinished jobs....
 "make -j8 all" terminated with exit code 2. Build might be incomplete.
-20:12:15 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+01:42:41 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f411ceux.d" -MT"Core/Startup/startup_stm32f411ceux.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f411ceux.o" "../Core/Startup/startup_stm32f411ceux.s"
-arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: OUTPUT_COMPARE.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 char *
+../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+      |                                ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA6.elf
  
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-arm-none-eabi-objdump -h -S OUTPUT_COMPARE.elf  > "OUTPUT_COMPARE.list"
+arm-none-eabi-size  EXERCICIO_AULA6.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
+  54924	    712	   9144	  64780	   fd0c	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
-Finished building: OUTPUT_COMPARE.list
- 
-20:12:18 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
-make -j8 all 
-arm-none-eabi-size  OUTPUT_COMPARE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13616	     12	   1732	  15360	   3c00	OUTPUT_COMPARE.elf
-Finished building: default.size.stdout
+Finished building: EXERCICIO_AULA6.list
  

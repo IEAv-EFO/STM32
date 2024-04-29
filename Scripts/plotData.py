@@ -62,8 +62,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.curve = self.plot.plot(pen='y')
 
-        # Serial port setup. Adjust 'COM5' and 9600 to match your configuration.
-        self.default_com_port = 'COM5'
+        # Serial port setup. Adjust 'COM3' and 9600 to match your configuration.
+        self.default_com_port = 'COM3'
         self.default_baudrate = 9600
 
         self.com_port_label = QtWidgets.QLabel("COM Port:")

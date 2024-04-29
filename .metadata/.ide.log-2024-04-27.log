@@ -1,0 +1,1050 @@
+2024-04-29 00:07:35,235 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:07:39,273 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:07:41,012 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 774495144 Bytes (1025507328)
+2024-04-29 00:07:42,020 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 800695744 Bytes (1025507328)
+2024-04-29 00:07:42,874 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 889866168 Bytes (1025507328)
+2024-04-29 00:07:43,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:07:43,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:07:43,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:07:43,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:07:43,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:07:43,033 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:07:43,033 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:07:43,034 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:07:43,052 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:07:43,052 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:07:43,052 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:07:43,162 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:07:43,296 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:07:43,324 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:07:43,440 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:07:43,466 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:07:43,475 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:07:43,598 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:07:43,604 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:07:43,688 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:07:43,694 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:07:43,808 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:07:43,814 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:07:43,916 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:07:43,980 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:07:43,985 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:07:44,013 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:07:44,126 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:07:44,137 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:07:44,217 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:07:44,227 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:07:44,309 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:07:44,327 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:07:44,454 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:07:44,474 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:07:44,568 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:07:44,587 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:07:44,706 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:07:44,716 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:07:44,797 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:07:44,816 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:07:44,939 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:07:44,973 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:07:45,164 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:07:45,185 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:07:45,289 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:07:45,324 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:07:45,435 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:07:45,441 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:07:45,521 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:07:45,549 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:07:45,688 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:07:45,721 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:07:45,721 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:07:45,746 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:07:45,871 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:07:45,892 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:07:46,049 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:07:46,575 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 305mS.
+2024-04-29 00:07:46,583 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:07:46,677 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:07:47,873 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1290mS.
+2024-04-29 00:07:47,877 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 4mS.
+2024-04-29 00:07:47,887 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 00:09:29,789 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:09:31,707 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:09:34,133 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:09:43,516 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:09:45,832 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:09:51,003 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:13:05,722 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 788081040 Bytes (1025507328)
+2024-04-29 00:13:05,811 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 804328552 Bytes (1025507328)
+2024-04-29 00:13:06,137 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 852040808 Bytes (1025507328)
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:13:06,297 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:13:06,299 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:13:06,327 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:13:06,327 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:13:06,327 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:13:06,440 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:13:06,591 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:13:06,618 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:13:06,745 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:13:06,767 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:13:06,777 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:13:06,870 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:13:06,876 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:13:06,945 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:13:06,951 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:13:07,047 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:13:07,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:13:07,146 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:13:07,201 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:13:07,206 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:13:07,228 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:13:07,311 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:13:07,318 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:13:07,389 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:13:07,397 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:13:07,474 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:13:07,494 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:13:07,620 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:13:07,642 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:13:07,719 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:13:07,737 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:13:07,851 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:13:07,860 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:13:07,933 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:13:07,954 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:13:08,067 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:13:08,095 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:13:08,185 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:13:08,205 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:13:08,290 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:13:08,324 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:13:08,424 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:13:08,431 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:13:08,511 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:13:08,536 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:13:08,652 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:13:08,683 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:13:08,684 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:13:08,703 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:13:08,795 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:13:08,815 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:13:08,962 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:13:09,494 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 340mS.
+2024-04-29 00:13:09,504 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:13:09,603 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:13:10,522 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1018mS.
+2024-04-29 00:13:10,523 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:13:10,532 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 00:14:09,295 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:14:15,235 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:14:20,655 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:14:30,446 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 439026696 Bytes (1025507328)
+2024-04-29 00:14:31,186 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 461573128 Bytes (1025507328)
+2024-04-29 00:14:31,948 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 526058504 Bytes (1025507328)
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:14:32,082 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:14:32,083 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:14:32,103 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:14:32,103 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:14:32,103 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:14:32,184 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:14:32,285 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:14:32,312 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:14:32,415 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:14:32,438 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:14:32,447 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:14:32,545 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:14:32,550 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:14:32,617 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:14:32,621 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:14:32,724 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:14:32,729 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:14:32,826 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:14:32,885 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:14:32,889 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:14:32,914 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:14:33,000 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:14:33,009 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:14:33,085 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:14:33,094 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:14:33,170 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:14:33,188 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:14:33,307 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:14:33,325 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:14:33,398 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:14:33,419 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:14:33,529 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:14:33,538 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:14:33,613 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:14:33,632 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:14:33,749 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:14:33,780 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:14:33,865 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:14:33,883 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:14:33,964 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:14:33,997 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:14:34,100 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:14:34,106 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:14:34,185 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:14:34,213 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:14:34,334 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:14:34,365 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:14:34,365 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:14:34,387 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:14:34,472 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:14:34,491 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:14:34,634 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:14:35,116 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 283mS.
+2024-04-29 00:14:35,141 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:14:35,263 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:14:36,350 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1209mS.
+2024-04-29 00:14:36,352 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:14:36,361 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 00:18:55,644 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:19:04,061 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:19:07,893 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:19:13,448 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 380831920 Bytes (1025507328)
+2024-04-29 00:19:14,220 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 403378352 Bytes (1025507328)
+2024-04-29 00:19:14,963 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 490932400 Bytes (1025507328)
+2024-04-29 00:19:15,106 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:19:15,107 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:19:15,109 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:19:15,134 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:19:15,134 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:19:15,134 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:19:15,236 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:19:15,369 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:19:15,419 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:19:15,542 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:19:15,565 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:19:15,573 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:19:15,677 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:19:15,682 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:19:15,750 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:19:15,755 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:19:15,854 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:19:15,861 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:19:15,958 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:19:16,016 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:19:16,020 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:19:16,044 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:19:16,131 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:19:16,139 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:19:16,213 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:19:16,221 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:19:16,295 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:19:16,314 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:19:16,435 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:19:16,454 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:19:16,529 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:19:16,549 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:19:16,669 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:19:16,678 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:19:16,752 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:19:16,770 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:19:16,885 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:19:16,916 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:19:17,006 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:19:17,027 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:19:17,111 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:19:17,144 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:19:17,245 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:19:17,251 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:19:17,332 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:19:17,363 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:19:17,483 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:19:17,515 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:19:17,515 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:19:17,534 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:19:17,620 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:19:17,638 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:19:17,763 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:19:18,259 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 299mS.
+2024-04-29 00:19:18,267 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:19:18,357 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:19:19,303 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1035mS.
+2024-04-29 00:19:19,304 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:19:19,313 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 00:53:40,869 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:53:45,877 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:53:57,214 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:54:08,949 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:54:14,967 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:54:16,535 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:54:25,653 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 796124192 Bytes (1025507328)
+2024-04-29 00:54:25,714 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 809755680 Bytes (1025507328)
+2024-04-29 00:54:30,941 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 886823968 Bytes (1025507328)
+2024-04-29 00:54:31,086 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:54:31,086 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:54:31,086 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:54:31,086 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:54:31,087 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:54:31,087 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:54:31,087 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:54:31,088 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:54:31,101 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:54:31,101 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:54:31,101 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:54:31,185 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:54:31,305 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:54:31,325 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:54:31,438 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:54:31,462 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:54:31,470 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:54:31,580 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:54:31,586 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:54:31,654 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:54:31,661 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:54:31,762 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:54:31,769 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:54:31,876 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:54:31,936 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:54:31,941 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:54:31,962 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:54:32,054 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:54:32,072 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:54:32,150 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:54:32,168 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:54:32,253 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:54:32,271 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:54:32,385 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:54:32,405 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:54:32,490 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:54:32,508 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:54:32,626 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:54:32,635 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:54:32,719 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:54:32,737 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:54:32,852 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:54:32,882 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:54:33,035 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:54:33,054 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:54:33,144 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:54:33,178 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:54:33,292 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:54:33,298 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:54:33,380 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:54:33,406 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:54:33,527 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:54:33,559 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:54:33,559 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:54:33,583 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:54:33,682 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:54:33,701 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:54:33,847 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:54:34,344 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 294mS.
+2024-04-29 00:54:34,352 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:54:34,444 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:54:35,545 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1193mS.
+2024-04-29 00:54:35,546 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:54:35,557 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:58:08,847 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:58:16,224 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:58:25,265 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 00:58:45,867 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 647468896 Bytes (1073741824)
+2024-04-29 00:58:45,932 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 663197536 Bytes (1073741824)
+2024-04-29 00:58:46,761 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 728209248 Bytes (1073741824)
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 00:58:46,882 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 00:58:46,883 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 00:58:46,898 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:58:46,898 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:58:46,898 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 00:58:46,981 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 00:58:47,081 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 00:58:47,101 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 00:58:47,198 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 00:58:47,218 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 00:58:47,227 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 00:58:47,322 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 00:58:47,328 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 00:58:47,413 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 00:58:47,419 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 00:58:47,514 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 00:58:47,518 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 00:58:47,616 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 00:58:47,689 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:58:47,693 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 00:58:47,716 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 00:58:47,812 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 00:58:47,821 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 00:58:47,893 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 00:58:47,900 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 00:58:47,974 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 00:58:47,992 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 00:58:48,107 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 00:58:48,129 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 00:58:48,201 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 00:58:48,219 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 00:58:48,334 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 00:58:48,345 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 00:58:48,419 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 00:58:48,436 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 00:58:48,548 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 00:58:48,579 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 00:58:48,666 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 00:58:48,685 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 00:58:48,764 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 00:58:48,793 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 00:58:48,896 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 00:58:48,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 00:58:48,982 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 00:58:49,006 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 00:58:49,122 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 00:58:49,151 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 00:58:49,152 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 00:58:49,177 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 00:58:49,259 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 00:58:49,278 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 00:58:49,416 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 00:58:49,887 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 279mS.
+2024-04-29 00:58:49,895 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 00:58:49,982 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 00:58:50,892 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 997mS.
+2024-04-29 00:58:50,894 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 00:58:50,903 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:00:11,988 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:01:54,478 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 674751992 Bytes (1073741824)
+2024-04-29 01:01:55,286 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 697820664 Bytes (1073741824)
+2024-04-29 01:01:56,074 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 760735224 Bytes (1073741824)
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:01:56,196 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:01:56,198 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:01:56,214 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:01:56,214 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:01:56,214 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:01:56,289 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:01:56,398 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:01:56,420 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:01:56,523 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:01:56,546 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:01:56,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:01:56,672 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:01:56,679 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:01:56,747 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:01:56,754 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:01:56,856 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:01:56,862 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:01:56,957 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:01:57,034 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:01:57,038 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:01:57,065 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:01:57,154 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:01:57,164 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:01:57,236 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:01:57,245 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:01:57,318 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:01:57,338 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:01:57,453 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:01:57,473 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:01:57,546 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:01:57,564 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:01:57,679 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:01:57,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:01:57,762 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:01:57,781 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:01:57,895 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:01:57,922 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:01:58,026 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:01:58,043 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:01:58,125 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:01:58,154 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:01:58,255 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:01:58,262 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:01:58,342 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:01:58,367 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:01:58,484 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:01:58,515 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:01:58,516 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:01:58,542 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:01:58,628 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:01:58,645 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:01:58,784 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:01:59,275 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 294mS.
+2024-04-29 01:01:59,283 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:01:59,380 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:02:00,377 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1094mS.
+2024-04-29 01:02:00,378 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:02:00,386 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:03:16,278 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:03:26,616 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 783458768 Bytes (1073741824)
+2024-04-29 01:03:26,696 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 799187408 Bytes (1073741824)
+2024-04-29 01:03:27,602 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 865247696 Bytes (1073741824)
+2024-04-29 01:03:27,741 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:03:27,741 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:03:27,741 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:03:27,741 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:03:27,741 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:03:27,742 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:03:27,742 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:03:27,743 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:03:27,759 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:03:27,760 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:03:27,760 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:03:27,874 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:03:28,003 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:03:28,029 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:03:28,165 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:03:28,195 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:03:28,232 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:03:28,350 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:03:28,357 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:03:28,439 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:03:28,445 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:03:28,554 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:03:28,562 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:03:28,663 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:03:28,730 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:03:28,735 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:03:28,760 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:03:28,850 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:03:28,858 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:03:28,943 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:03:28,950 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:03:29,040 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:03:29,060 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:03:29,186 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:03:29,207 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:03:29,287 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:03:29,306 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:03:29,426 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:03:29,438 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:03:29,520 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:03:29,543 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:03:29,663 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:03:29,692 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:03:29,799 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:03:29,817 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:03:29,914 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:03:29,947 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:03:30,059 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:03:30,065 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:03:30,158 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:03:30,185 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:03:30,317 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:03:30,350 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:03:30,351 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:03:30,374 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:03:30,476 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:03:30,495 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:03:30,648 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:03:31,176 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 302mS.
+2024-04-29 01:03:31,184 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:03:31,296 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:03:32,260 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1076mS.
+2024-04-29 01:03:32,261 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:03:32,270 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:05:08,618 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:05:13,240 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:05:46,852 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 379050104 Bytes (1073741824)
+2024-04-29 01:05:47,826 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 401596536 Bytes (1073741824)
+2024-04-29 01:05:48,666 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 465559672 Bytes (1073741824)
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:05:48,795 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:05:48,797 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:05:48,813 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:05:48,813 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:05:48,813 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:05:48,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:05:49,013 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:05:49,036 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:05:49,141 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:05:49,164 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:05:49,175 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:05:49,293 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:05:49,300 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:05:49,380 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:05:49,386 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:05:49,492 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:05:49,498 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:05:49,597 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:05:49,663 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:05:49,668 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:05:49,689 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:05:49,783 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:05:49,793 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:05:49,873 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:05:49,881 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:05:49,963 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:05:49,984 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:05:50,112 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:05:50,133 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:05:50,212 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:05:50,230 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:05:50,352 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:05:50,362 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:05:50,444 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:05:50,463 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:05:50,592 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:05:50,624 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:05:50,720 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:05:50,738 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:05:50,830 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:05:50,864 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:05:50,975 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:05:50,981 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:05:51,072 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:05:51,098 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:05:51,229 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:05:51,262 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:05:51,263 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:05:51,286 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:05:51,398 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:05:51,423 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:05:51,578 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:05:52,118 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 314mS.
+2024-04-29 01:05:52,128 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:05:52,229 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:05:53,352 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1224mS.
+2024-04-29 01:05:53,353 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:05:53,372 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:06:43,784 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:06:49,535 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 451172960 Bytes (1073741824)
+2024-04-29 01:06:49,633 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 466901600 Bytes (1073741824)
+2024-04-29 01:06:49,984 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 515136096 Bytes (1073741824)
+2024-04-29 01:06:50,138 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:06:50,138 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:06:50,138 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:06:50,138 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:06:50,138 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:06:50,139 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:06:50,139 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:06:50,140 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:06:50,164 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:06:50,164 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:06:50,164 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:06:50,269 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:06:50,415 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:06:50,467 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:06:50,596 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:06:50,623 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:06:50,634 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:06:50,758 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:06:50,765 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:06:50,845 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:06:50,850 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:06:50,980 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:06:50,986 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:06:51,098 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:06:51,167 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:06:51,174 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:06:51,198 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:06:51,303 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:06:51,313 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:06:51,400 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:06:51,409 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:06:51,496 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:06:51,519 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:06:51,655 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:06:51,679 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:06:51,770 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:06:51,793 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:06:51,919 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:06:51,930 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:06:52,018 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:06:52,039 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:06:52,167 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:06:52,198 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:06:52,346 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:06:52,364 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:06:52,466 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:06:52,498 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:06:52,644 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:06:52,651 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:06:52,734 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:06:52,763 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:06:52,878 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:06:52,910 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:06:52,910 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:06:52,931 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:06:53,019 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:06:53,039 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:06:53,158 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:06:53,645 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 284mS.
+2024-04-29 01:06:53,653 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:06:53,736 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:06:54,629 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 976mS.
+2024-04-29 01:06:54,630 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:06:54,639 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:28:25,679 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:28:28,410 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 559618592 Bytes (1073741824)
+2024-04-29 01:28:29,164 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 581638688 Bytes (1073741824)
+2024-04-29 01:28:29,913 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 668670496 Bytes (1073741824)
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:28:30,035 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:28:30,036 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:28:30,054 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:28:30,054 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:28:30,054 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:28:30,125 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:28:30,250 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:28:30,273 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:28:30,385 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:28:30,409 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:28:30,418 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:28:30,533 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:28:30,539 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:28:30,607 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:28:30,619 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:28:30,727 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:28:30,732 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:28:30,825 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:28:30,881 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:28:30,885 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:28:30,910 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:28:31,009 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:28:31,016 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:28:31,093 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:28:31,101 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:28:31,189 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:28:31,208 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:28:31,338 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:28:31,358 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:28:31,434 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:28:31,453 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:28:31,568 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:28:31,578 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:28:31,652 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:28:31,672 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:28:31,805 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:28:31,836 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:28:32,024 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:28:32,043 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:28:32,145 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:28:32,176 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:28:32,287 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:28:32,293 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:28:32,372 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:28:32,401 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:28:32,521 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:28:32,549 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:28:32,550 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:28:32,571 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:28:32,678 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:28:32,698 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:28:32,817 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:28:33,299 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 284mS.
+2024-04-29 01:28:33,308 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:28:33,392 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:28:34,320 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1011mS.
+2024-04-29 01:28:34,321 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:28:34,334 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:34:20,963 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:34:25,398 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:34:26,883 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 830550144 Bytes (1073741824)
+2024-04-29 01:34:26,958 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 845756544 Bytes (1073741824)
+2024-04-29 01:34:28,307 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 391204304 Bytes (1073741824)
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:34:28,467 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:34:28,469 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:34:28,492 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:34:28,492 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:34:28,492 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:34:28,581 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:34:28,704 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:34:28,731 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:34:28,889 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:34:28,913 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:34:28,924 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:34:29,024 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:34:29,030 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:34:29,097 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:34:29,101 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:34:29,195 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:34:29,201 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:34:29,296 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:34:29,357 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:34:29,361 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:34:29,385 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:34:29,476 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:34:29,483 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:34:29,560 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:34:29,568 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:34:29,646 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:34:29,666 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:34:29,786 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:34:29,805 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:34:29,885 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:34:29,905 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:34:30,018 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:34:30,028 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:34:30,114 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:34:30,131 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:34:30,246 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:34:30,278 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:34:30,371 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:34:30,389 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:34:30,474 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:34:30,511 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:34:30,612 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:34:30,618 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:34:30,698 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:34:30,727 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:34:30,846 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:34:30,881 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:34:30,881 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:34:30,903 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:34:30,991 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:34:31,013 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:34:31,155 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:34:31,656 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 305mS.
+2024-04-29 01:34:31,664 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:34:31,753 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:34:32,729 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1065mS.
+2024-04-29 01:34:32,731 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:34:32,740 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:36:05,782 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:36:42,324 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:36:47,768 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:36:50,063 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 622653544 Bytes (1073741824)
+2024-04-29 01:36:50,932 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 644673640 Bytes (1073741824)
+2024-04-29 01:36:51,741 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 706539624 Bytes (1073741824)
+2024-04-29 01:36:51,864 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:36:51,864 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:36:51,864 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:36:51,864 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:36:51,864 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:36:51,865 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:36:51,865 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:36:51,866 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:36:51,888 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:36:51,889 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:36:51,889 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:36:51,971 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:36:52,098 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:36:52,123 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:36:52,228 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:36:52,250 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:36:52,262 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:36:52,357 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:36:52,362 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:36:52,431 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:36:52,438 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:36:52,534 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:36:52,541 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:36:52,640 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:36:52,699 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:36:52,703 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:36:52,725 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:36:52,816 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:36:52,825 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:36:52,907 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:36:52,916 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:36:52,991 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:36:53,014 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:36:53,130 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:36:53,149 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:36:53,241 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:36:53,258 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:36:53,367 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:36:53,378 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:36:53,451 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:36:53,472 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:36:53,583 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:36:53,611 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:36:53,719 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:36:53,737 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:36:53,822 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:36:53,850 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:36:53,955 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:36:53,961 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:36:54,040 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:36:54,066 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:36:54,183 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:36:54,213 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:36:54,213 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:36:54,233 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:36:54,324 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:36:54,344 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:36:54,469 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:36:55,045 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 339mS.
+2024-04-29 01:36:55,096 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:36:55,213 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:36:56,116 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1021mS.
+2024-04-29 01:36:56,117 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:36:56,137 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:39:37,019 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:39:39,365 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:39:45,806 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:39:47,179 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:39:52,305 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:39:54,616 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:40:04,289 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:40:12,394 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:40:14,158 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 821720464 Bytes (1073741824)
+2024-04-29 01:40:14,244 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 383489184 Bytes (1073741824)
+2024-04-29 01:40:15,598 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 404966896 Bytes (1073741824)
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:40:15,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:40:15,764 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:40:15,764 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:40:15,765 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:40:15,796 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:40:15,796 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:40:15,796 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:40:15,889 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:40:16,036 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:40:16,060 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:40:16,171 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:40:16,197 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:40:16,206 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:40:16,301 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:40:16,306 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:40:16,388 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:40:16,394 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:40:16,491 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:40:16,496 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:40:16,592 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:40:16,672 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:40:16,677 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:40:16,696 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:40:16,786 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:40:16,805 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:40:16,878 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:40:16,887 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:40:16,959 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:40:16,979 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:40:17,098 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:40:17,118 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:40:17,194 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:40:17,214 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:40:17,327 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:40:17,337 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:40:17,412 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:40:17,431 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:40:17,553 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:40:17,580 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:40:17,684 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:40:17,703 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:40:17,782 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:40:17,817 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:40:17,952 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:40:17,960 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:40:18,041 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:40:18,070 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:40:18,184 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:40:18,210 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:40:18,211 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:40:18,231 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:40:18,329 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:40:18,348 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:40:18,500 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:40:18,983 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 287mS.
+2024-04-29 01:40:18,991 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:40:19,075 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:40:19,976 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 985mS.
+2024-04-29 01:40:19,977 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-04-29 01:40:19,987 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:41:41,259 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,669x259,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:41:49,472 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-29 01:41:58,874 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 470225240 Bytes (1073741824)
+2024-04-29 01:41:59,728 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 492570232 Bytes (1073741824)
+2024-04-29 01:42:00,478 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 580128376 Bytes (1073741824)
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-29 01:42:00,630 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-29 01:42:00,632 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-04-29 01:42:00,653 [WARN] IP:2120 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:42:00,654 [WARN] IP:2120 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:42:00,654 [WARN] IP:2120 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-04-29 01:42:00,758 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp_save
+2024-04-29 01:42:00,893 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\license.tmp
+2024-04-29 01:42:00,919 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp_save
+2024-04-29 01:42:01,083 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\gpio.tmp
+2024-04-29 01:42:01,117 [WARN] IPConfigManager:2982 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-04-29 01:42:01,133 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2024-04-29 01:42:01,252 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_vars.tmp
+2024-04-29 01:42:01,259 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2024-04-29 01:42:01,331 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_inc.tmp
+2024-04-29 01:42:01,337 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2024-04-29 01:42:01,439 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2024-04-29 01:42:01,444 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2024-04-29 01:42:01,542 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\usb_otg_fs_Msp.tmp
+2024-04-29 01:42:01,601 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:42:01,606 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-04-29 01:42:01,627 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c_save
+2024-04-29 01:42:01,722 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.c
+2024-04-29 01:42:01,729 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h_save
+2024-04-29 01:42:01,801 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usb_device.h
+2024-04-29 01:42:01,810 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h_save
+2024-04-29 01:42:01,884 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.h
+2024-04-29 01:42:01,906 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c_save
+2024-04-29 01:42:02,032 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\Target\usbd_conf.c
+2024-04-29 01:42:02,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h_save
+2024-04-29 01:42:02,126 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.h
+2024-04-29 01:42:02,144 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c_save
+2024-04-29 01:42:02,258 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_desc.c
+2024-04-29 01:42:02,267 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h_save
+2024-04-29 01:42:02,343 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.h
+2024-04-29 01:42:02,362 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c_save
+2024-04-29 01:42:02,481 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\USB_DEVICE\App\usbd_cdc_if.c
+2024-04-29 01:42:02,514 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c_save
+2024-04-29 01:42:02,631 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_it.c
+2024-04-29 01:42:02,649 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h_save
+2024-04-29 01:42:02,758 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_it.h
+2024-04-29 01:42:02,789 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c_save
+2024-04-29 01:42:02,926 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\stm32f4xx_hal_msp.c
+2024-04-29 01:42:02,932 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp_save
+2024-04-29 01:42:03,010 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\MXTmpFiles\system.tmp
+2024-04-29 01:42:03,034 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-04-29 01:42:03,158 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\stm32f4xx_hal_conf.h
+2024-04-29 01:42:03,187 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-04-29 01:42:03,188 [WARN] CodeGenerator:3951 - IP not found : null
+2024-04-29 01:42:03,209 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h_save
+2024-04-29 01:42:03,295 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Inc\main.h
+2024-04-29 01:42:03,314 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c_save
+2024-04-29 01:42:03,462 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\Core\Src\main.c
+2024-04-29 01:42:03,968 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 292mS.
+2024-04-29 01:42:03,976 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-04-29 01:42:04,062 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-04-29 01:42:05,089 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1113mS.
+2024-04-29 01:42:05,090 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-04-29 01:42:05,100 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.

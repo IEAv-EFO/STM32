@@ -21,3 +21,7 @@
 1714058137114	Delete resource 'lcd160.2_CUSTOM_CHARS'
 1714065653274	Delete resource 'stm32_i2cLcd'
 1714065874487	Delete resource 'LCD_CustomCharacter'
+1714223849183	Delete resource 'TIMER_COUNTER'
+1714223858253	Delete resource 'BLE_HM10'
+1714224093059	Delete resource 'OUTPUT_COMPARE/Core/Src/LCD_I2C.c'
+1714224098422	Delete resource 'OUTPUT_COMPARE/Core/Inc/LCD_I2C.h'

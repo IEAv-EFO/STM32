@@ -1,7 +1,7 @@
 import serial
 
-# Serial port setup. Adjust 'COM4' and 9600 to match your configuration.
-ser = serial.Serial('COM4', 9600)
+# Serial port setup. Adjust 'COM3' and 9600 to match your configuration.
+ser = serial.Serial('COM3', 9600)
 
 def print_data():
     try:
