@@ -16,7 +16,7 @@ def receive_data(ser):
     return line_filtered.split('\t')  # Split data by tabs
 
 # Global variables
-max_data_points = 100  # Adjust as needed
+max_data_points = 340  # Adjust as needed
 data_points1 = deque(maxlen=max_data_points)
 data_points2 = deque(maxlen=max_data_points)
 data_points3 = deque(maxlen=max_data_points)
@@ -67,7 +67,7 @@ port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
 max_data_points = input("Enter the max data points (default: 1000): ")
-max_data_points = int(max_data_points) if max_data_points else 1000
+max_data_points = int(max_data_points) if max_data_points else 300
 ser = init_serial(port, baudrate)
 
 # Initialize plot

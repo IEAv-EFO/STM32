@@ -1,0 +1,10 @@
+14:24:32 **** Incremental Build of configuration Debug for project Test4TimerOC ****
+make -j8 all 
+arm-none-eabi-size  Test4TimerOC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33868	    332	   9180	  43380	   a974	Test4TimerOC.elf
+Finished building: default.size.stdout
+ 
+
+14:24:32 Build Finished. 0 errors, 0 warnings. (took 686ms)
+

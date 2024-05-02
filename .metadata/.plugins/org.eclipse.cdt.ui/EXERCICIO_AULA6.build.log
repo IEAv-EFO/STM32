@@ -1,14 +1,14 @@
-01:42:41 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
+21:19:56 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:119:33: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
-  119 |                 CDC_Transmit_FS(buffer, strlen(buffer));
-      |                                 ^~~~~~
-      |                                 |
-      |                                 char *
-../Core/Src/main.c:60:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   60 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+../Core/Src/main.c:116:41: warning: pointer targets in passing argument 1 of 'CDC_Transmit_FS' differ in signedness [-Wpointer-sign]
+  116 |                         CDC_Transmit_FS(buffer, strlen(buffer));
+      |                                         ^~~~~~
+      |                                         |
+      |                                         char *
+../Core/Src/main.c:58:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   58 | extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
       |                                ~~~~~~~~~^~~
 arm-none-eabi-gcc -o "EXERCICIO_AULA6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: EXERCICIO_AULA6.elf
@@ -16,11 +16,11 @@ Finished building target: EXERCICIO_AULA6.elf
 arm-none-eabi-size  EXERCICIO_AULA6.elf 
 arm-none-eabi-objdump -h -S EXERCICIO_AULA6.elf  > "EXERCICIO_AULA6.list"
    text	   data	    bss	    dec	    hex	filename
-  54924	    712	   9144	  64780	   fd0c	EXERCICIO_AULA6.elf
+  54508	    708	   9188	  64404	   fb94	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
 Finished building: EXERCICIO_AULA6.list
  
 
-01:42:43 Build Finished. 0 errors, 1 warnings. (took 1s.706ms)
+21:19:58 Build Finished. 0 errors, 1 warnings. (took 2s.49ms)
 
