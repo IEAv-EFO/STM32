@@ -9127,3 +9127,24 @@ java.lang.Exception: The project description file (.project) for 'EXERCICIO_AULA
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-05-03 13:08:35.525
 !MESSAGE Indexed 'EXERCICIO_AULA6' (32 sources, 133 headers) in 6.8 sec: 13,834 declarations; 66,059 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.3%)
+!SESSION 2024-05-04 19:19:36.902 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-04 19:20:10.514
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-04 19:20:10.531
+!MESSAGE Log4j2 initialized with config file C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-04 19:20:28.441
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 20:03:44.122
+!MESSAGE Indexed 'TIMER_COUNTER' (33 sources, 136 headers) in 8.69 sec: 15,197 declarations; 72,830 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 20:07:06.153
+!MESSAGE Indexed 'OUTPUT_COMPARE' (25 sources, 124 headers) in 5.46 sec: 13,525 declarations; 68,892 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.29%)
