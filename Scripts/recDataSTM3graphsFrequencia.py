@@ -36,9 +36,9 @@ def update(frame):
         if line_data:
             # Extract values from the received data
             value1, value2, value3 = map(int, line_data)
-            data_points1.appendleft(value1)  # Appendleft instead of append
-            data_points2.appendleft(value2)
-            data_points3.appendleft(value3)
+            data_points1.append(value1)  # Append instead of appendleft
+            data_points2.append(value2)
+            data_points3.append(value3)
 
             # Update the plots with the new data points
             line1.set_data(range(len(data_points1)), list(data_points1))  # Convert deque to list for plotting
@@ -59,7 +59,7 @@ def update(frame):
                     frequencies.append(frequency)
                     if len(frequencies) == frequencies.maxlen:
                         avg_frequency = sum(frequencies) / len(frequencies)
-                        avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
+                        avg_frequency_text.set_text('Frequency: {:.2f} Hz'.format(avg_frequency))
                         ax3.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))  # Format frequency with two decimal places
             last_value1 = value1
             last_time = current_time
@@ -92,14 +92,14 @@ ser = init_serial(port, baudrate)
 # Initialize plot
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(8, 6))
 ax1.set_xlabel('Index')
-ax1.set_ylabel('Value 1')
-ax1.set_title('Data Plot 1')
+ax1.set_ylabel('Value')
+ax1.set_title('Current data is always to the right. Left is past\nChannel 1')
 ax2.set_xlabel('Index')
-ax2.set_ylabel('Value 2')
-ax2.set_title('Data Plot 2')
+ax2.set_ylabel('Value')
+ax2.set_title('Channel 2')
 ax3.set_xlabel('Index')
-ax3.set_ylabel('Value 3')
-ax3.set_title('Data Plot 3')
+ax3.set_ylabel('Value')
+ax3.set_title('Channel 3')
 
 # Initialize empty data points deque with a maximum length
 data_points1 = deque(maxlen=max_data_points)
