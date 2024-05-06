@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib.widgets import Slider, Button
 from collections import deque
+import time
 
 # Initialize serial port
 def init_serial(port, baudrate):
@@ -21,18 +22,22 @@ data_points1 = deque(maxlen=max_data_points)
 data_points2 = deque(maxlen=max_data_points)
 data_points3 = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
+last_value1 = None
+last_transition_time = None
+frequencies = deque(maxlen=10)
+avg_frequency_text = None  # Variable to hold the text object for average frequency display
 
 # Function to update the plot
 def update(frame):
-    global data_points1, data_points2, data_points3
+    global data_points1, data_points2, data_points3, last_value1, last_transition_time, avg_frequency_text
     if not paused:
         line_data = receive_data(ser)
         if line_data:
             # Extract values from the received data
             value1, value2, value3 = map(int, line_data)
-            data_points1.appendleft(value1)  # Use appendleft to add new data to the left
-            data_points2.appendleft(value2)  # Use appendleft to add new data to the left
-            data_points3.appendleft(value3)  # Use appendleft to add new data to the left
+            data_points1.append(value1)  # Append instead of appendleft
+            data_points2.append(value2)
+            data_points3.append(value3)
 
             # Update the plots with the new data points
             line1.set_data(range(len(data_points1)), list(data_points1))  # Convert deque to list for plotting
@@ -45,19 +50,25 @@ def update(frame):
             ax3.relim()
             ax3.autoscale_view()
 
-            # Update x-axis to move from left to right
-            ax1.set_xlim(0, max_data_points)
-            ax2.set_xlim(0, max_data_points)
-            ax3.set_xlim(0, max_data_points)
+            current_time = time.time()
+            if last_value1 is not None and last_value1 != value1:
+                if last_transition_time is not None:
+                    period = (current_time - last_transition_time) * 2  # Multiply by 2 to correct for alternating transitions
+                    frequency = 1 / period
+                    frequencies.append(frequency)
+                    if len(frequencies) == frequencies.maxlen:
+                        avg_frequency = sum(frequencies) / len(frequencies)
+                        avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
+            last_value1 = value1
+            last_transition_time = current_time
 
-    return line1, line2, line3
-
+    return line1, line2, line3, avg_frequency_text
 
 # Function to toggle pause/resume
 def toggle_pause(event):
     global paused
     paused = not paused
-    button.label.set_text('Resume' if paused else 'Pause')
+    button_pause.label.set_text('Resume' if paused else 'Pause')
 
 # Function to update max_data_points
 def update_max_data_points(val):
@@ -98,6 +109,9 @@ line1, = ax1.plot([], [])
 line2, = ax2.plot([], [])
 line3, = ax3.plot([], [])
 
+# Create text for average frequency display
+avg_frequency_text = ax1.text(0.985, 0.8, '', transform=ax1.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
+
 # Create animation with a smaller interval for closer to real-time plotting
 ani = FuncAnimation(fig, update, frames=None, interval=0.1, blit=True)
 
@@ -107,9 +121,9 @@ slider = Slider(slider_ax, 'H', 2, 1000, valinit=max_data_points, color='lightgr
 slider.on_changed(update_max_data_points)  # Set slider update action
 
 # Create a button to pause/resume animation
-button_ax = plt.axes([0.8, 0.9, 0.1, 0.05])  # Define button position and size
-button = Button(button_ax, 'Pause', color='lightblue', hovercolor='skyblue')
-button.on_clicked(toggle_pause)  # Set button click action
+button_pause_ax = plt.axes([0.8, 0.9, 0.1, 0.05])  # Define button position and size
+button_pause = Button(button_pause_ax, 'Pause', color='lightblue', hovercolor='skyblue')
+button_pause.on_clicked(toggle_pause)  # Set button click action
 
 # Adjust vertical spacing between subplots
 plt.subplots_adjust(hspace=0.8)
@@ -118,3 +132,4 @@ plt.show()
 
 # Close serial port after plotting is finished
 ser.close()
+
