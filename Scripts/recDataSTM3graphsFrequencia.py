@@ -2,7 +2,6 @@ import serial
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib.widgets import Slider, Button
-from matplotlib.ticker import FormatStrFormatter  # Importe a classe FormatStrFormatter
 from collections import deque
 import time
 
@@ -24,13 +23,13 @@ data_points2 = deque(maxlen=max_data_points)
 data_points3 = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
 last_value1 = None
-last_time = None
+last_transition_time = None
 frequencies = deque(maxlen=10)
 avg_frequency_text = None  # Variable to hold the text object for average frequency display
 
 # Function to update the plot
 def update(frame):
-    global data_points1, data_points2, data_points3, last_value1, last_time, avg_frequency_text
+    global data_points1, data_points2, data_points3, last_value1, last_transition_time, avg_frequency_text
     if not paused:
         line_data = receive_data(ser)
         if line_data:
@@ -53,16 +52,15 @@ def update(frame):
 
             current_time = time.time()
             if last_value1 is not None and last_value1 != value1:
-                period = current_time - last_time
-                if period > 0:  # Avoid division by zero
+                if last_transition_time is not None:
+                    period = (current_time - last_transition_time) * 2  # Multiply by 2 to correct for alternating transitions
                     frequency = 1 / period
                     frequencies.append(frequency)
                     if len(frequencies) == frequencies.maxlen:
                         avg_frequency = sum(frequencies) / len(frequencies)
-                        avg_frequency_text.set_text('Frequency: {:.2f} Hz'.format(avg_frequency))
-                        ax3.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))  # Format frequency with two decimal places
+                        avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
             last_value1 = value1
-            last_time = current_time
+            last_transition_time = current_time
 
     return line1, line2, line3, avg_frequency_text
 
@@ -92,14 +90,14 @@ ser = init_serial(port, baudrate)
 # Initialize plot
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(8, 6))
 ax1.set_xlabel('Index')
-ax1.set_ylabel('Value')
-ax1.set_title('Current data is always to the right. Left is past\nChannel 1')
+ax1.set_ylabel('Value 1')
+ax1.set_title('Data Plot 1')
 ax2.set_xlabel('Index')
-ax2.set_ylabel('Value')
-ax2.set_title('Channel 2')
+ax2.set_ylabel('Value 2')
+ax2.set_title('Data Plot 2')
 ax3.set_xlabel('Index')
-ax3.set_ylabel('Value')
-ax3.set_title('Channel 3')
+ax3.set_ylabel('Value 3')
+ax3.set_title('Data Plot 3')
 
 # Initialize empty data points deque with a maximum length
 data_points1 = deque(maxlen=max_data_points)

@@ -60,8 +60,8 @@ all: main-build
 main-build: OUTPUT_COMPARE.elf secondary-outputs
 
 # Tool invocations
-OUTPUT_COMPARE.elf OUTPUT_COMPARE.map: $(OBJS) $(USER_OBJS) C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+OUTPUT_COMPARE.elf OUTPUT_COMPARE.map: $(OBJS) $(USER_OBJS) C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "OUTPUT_COMPARE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
