@@ -17,7 +17,7 @@ def receive_data(ser):
     return line_filtered.split('\t')  # Split data by tabs
 
 # Global variables
-max_data_points = 340  # Adjust as needed
+max_data_points = 300  # Adjust as needed
 data_points1 = deque(maxlen=max_data_points)
 data_points2 = deque(maxlen=max_data_points)
 data_points3 = deque(maxlen=max_data_points)
@@ -52,13 +52,14 @@ def update(frame):
 
             current_time = time.time()
             if last_value1 is not None and last_value1 != value1:
-                if last_transition_time is not None:
-                    period = (current_time - last_transition_time) * 2  # Multiply by 2 to correct for alternating transitions
-                    frequency = 1 / period
-                    frequencies.append(frequency)
-                    if len(frequencies) == frequencies.maxlen:
-                        avg_frequency = sum(frequencies) / len(frequencies)
-                        avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
+                if last_transition_time is not None and last_transition_time != current_time:
+                    period = (current_time - last_transition_time) * 2
+                    if period != 0:
+                        frequency = 1 / period
+                        frequencies.append(frequency)
+                        if len(frequencies) == frequencies.maxlen:
+                          avg_frequency = sum(frequencies) / len(frequencies)
+                          avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
             last_value1 = value1
             last_transition_time = current_time
 
