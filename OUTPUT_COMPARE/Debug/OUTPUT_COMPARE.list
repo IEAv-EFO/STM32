@@ -758,7 +758,7 @@ int main(void)
  800073c:	2108      	movs	r1, #8
  800073e:	2003      	movs	r0, #3
  8000740:	f7ff ff3a 	bl	80005b8 <lcd_put_cur>
-  lcd_send_data(126); //0x7E or 126 in CGROM. In ASCII = ~
+  lcd_send_data(126); //0x7E or 126 in CGROM (Right arrow). In ASCII = ~
  8000744:	207e      	movs	r0, #126	@ 0x7e
  8000746:	f7ff feef 	bl	8000528 <lcd_send_data>
 

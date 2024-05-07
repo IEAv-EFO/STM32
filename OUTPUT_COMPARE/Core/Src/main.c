@@ -123,7 +123,7 @@ int main(void)
   lcd_put_cur(3, 0);
   lcd_send_string("Output ");
   lcd_put_cur(3, 8);
-  lcd_send_data(126); //0x7E or 126 in CGROM. In ASCII = ~
+  lcd_send_data(126); //0x7E or 126 in CGROM (Right arrow). In ASCII = ~
 
   HAL_Delay(2);
 
