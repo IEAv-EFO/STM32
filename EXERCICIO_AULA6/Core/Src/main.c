@@ -33,7 +33,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 //#define COUNTER
-#define GRAPH
+//#define GRAPH
+#define FREQLCD
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -47,6 +48,7 @@ TIM_HandleTypeDef htim1;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RET;
 uint16_t pinStateCH1, pinStateCH2, pinStateCH3;
+float frequency;
 char buffer[64];
 /* USER CODE END PV */
 
@@ -110,13 +112,6 @@ int main(void) {
 			if (HAL_TIM_OC_Start(&htim1, TIM_CHANNEL_3) == HAL_OK)
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
-	HAL_Delay(100);
-
-	lcd_put_cur(0, 0);
-	lcd_send_string("Freq CH 1: ");
-
-	HAL_Delay(20);
-
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -132,6 +127,15 @@ int main(void) {
 			pinStateCH3 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 			sprintf(buffer, "%d\t%d\t%d\n", pinStateCH1, pinStateCH2, pinStateCH3);
 			CDC_Transmit_FS(buffer, strlen(buffer));
+		#elif defined(FREQLCD)
+			lcd_put_cur(0, 0);
+			lcd_send_string("FREQ CH1: ");
+			HAL_Delay(40);
+			frequency = (float)HAL_RCC_GetPCLK2Freq() / (TIM1->PSC + 1)/ (TIM1->ARR+1) / 2;
+			sprintf(buffer, "%.2f Hz", frequency);
+			lcd_put_cur(0, 10);
+			lcd_send_string(buffer);
+			HAL_Delay(50);
 		#endif
 		/* USER CODE END WHILE */
 
