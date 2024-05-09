@@ -1,4 +1,4 @@
-11:36:44 **** Incremental Build of configuration Debug for project TIMER_COUNTER ****
+12:45:34 **** Build of configuration Debug for project TIMER_COUNTER ****
 make -j4 all 
 arm-none-eabi-size  TIMER_COUNTER.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  TIMER_COUNTER.elf
 Finished building: default.size.stdout
  
 
-11:36:44 Build Finished. 0 errors, 0 warnings. (took 572ms)
+12:45:35 Build Finished. 0 errors, 0 warnings. (took 698ms)
 

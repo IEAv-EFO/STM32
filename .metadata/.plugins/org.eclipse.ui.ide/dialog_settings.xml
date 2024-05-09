@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\fariaslcfs\Documents\EFO-S\STM\SOLUÇÃO DOS EXERCÍCIOS\FREQUENCIMETRO"/>
 			<item value="C:\Users\fariaslcfs\Downloads\lcd160.2_CUSTOM_CHARS\lcd160.2_CUSTOM_CHARS"/>
 			<item value="D:\STM\SOLUÇÃO DOS EXERCÍCIOS\ADC_IT"/>
 		</list>
@@ -20,6 +21,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SIGNALTX_BLE"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE\Core"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE"/>
 			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\OUTPUT_COMPARE"/>

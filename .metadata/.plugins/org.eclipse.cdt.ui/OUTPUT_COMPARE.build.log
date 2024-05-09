@@ -1,4 +1,4 @@
-10:22:55 **** Incremental Build of configuration Debug for project OUTPUT_COMPARE ****
+12:41:39 **** Build of configuration Debug for project OUTPUT_COMPARE ****
 make -j4 all 
 arm-none-eabi-size  OUTPUT_COMPARE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  OUTPUT_COMPARE.elf
 Finished building: default.size.stdout
  
 
-10:22:56 Build Finished. 0 errors, 0 warnings. (took 483ms)
+12:41:40 Build Finished. 0 errors, 0 warnings. (took 476ms)
 
