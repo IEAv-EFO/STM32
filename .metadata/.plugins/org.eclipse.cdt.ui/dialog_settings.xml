@@ -54,4 +54,10 @@
 		<item key="width" value="432"/>
 		<item key="height" value="663"/>
 	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="1340"/>
+		<item key="height" value="578"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
 </section>

@@ -100,26 +100,31 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	HAL_Delay(5000);	// Just to make sure it initialized correctly and to not send not desired characters to the
+	HAL_Delay(3000);	// Just to make sure it initializes correctly and
+						// does not send undesired characters to the
 						// to the UART that is to the BLE.
 
-	/* Esse módulo HM-10 já fica automaticamente no modo de comandos AT.
+	/*
+	 * Esse módulo HM-10 já fica automaticamente no modo de comandos AT.
 	 * (led piscando). Quando há conexão bluetooth com dispotivo remoto,
-	 * o mode de comandos AT fica desabilitado (led acesso continuamente).
+	 * o modo de comandos AT fica desabilitado (led acesso continuamente).
 	 */
 
 	/* ########### Send AT command and receive response to a char buffer ########### */
 	sendATCommand("AT\r\n", 100); 				// Check if module is responsive
 	//sendATCommand("AT+NAMEBT5\r\n", 100); 	// Set module name
 	sendATCommand("AT+NAME\r\n", 100);			// Query module name
+	sendATCommand("AT+PIN\r\n", 100);
+	sendATCommand("AT+LADDR\r\n", 100);
+	sendATCommand("AT+ROLE\r\n", 100);
 	sendATCommand("AT+VERSION\r\n", 100); 		// Query the device version
 	sendATCommand("AT+BAUD\r\n", 100); 			// Query BaudRate
-	sendATCommand("AT+PWRM\r\n", 100);			// Get/Set Power On mode
 	sendATCommand("AT+POWE\r\n", 100);			// Get/Set RF transmit power
-												//Powers = 0: -23dbm,1: -6dbm, 2: 0dbm, 3: 6dbm
-	//sendATCommand("AT+HELP\r\n", 5000);		    // Query available commands
+	sendATCommand("AT+UUID\r\n", 100);			//Powers = 0: -23dbm,1: -6dbm, 2: 0dbm, 3: 6dbm
+	sendATCommand("AT+INQ\r\n", 100);
+	sendATCommand("AT+TYPE\r\n", 100);
+	sendATCommand("AT+HELP\r\n", 5000);		    // Query available commands
 	//sendATCommand("AT+BAUD8\r\n");			// BAUD1=1200, BAUD2=2400, ..., BARD7=57600, BAUD8=115200, ..., BAUD12=132400 bps.
-	//sendATCommand("AT+BAUD\r\n"); 			// Query BaudRate
 	/* ############################################################################# */
 
   /* USER CODE END 2 */

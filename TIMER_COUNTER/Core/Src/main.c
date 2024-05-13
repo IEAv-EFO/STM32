@@ -117,8 +117,8 @@ int main(void)
   MX_TIM3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-	timerClock = HAL_RCC_GetPCLK1Freq();
-	uint32_t desiredFreq = 120000;
+	timerClock = HAL_RCC_GetPCLK2Freq();
+	uint32_t desiredFreq = 121000;
 	PSC = calcPSC(desiredFreq);
 	freqGen(&htim3, desiredFreq, PSC);
   /* USER CODE END 2 */
@@ -255,7 +255,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 0;
+  htim2.Init.Prescaler = 1-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 4294967295;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -418,10 +418,9 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 uint16_t calcPSC(uint32_t desiredFreq) {
-	uint32_t tClock, arr, psc = 1;
-	tClock = HAL_RCC_GetPCLK1Freq();
+	uint32_t arr, psc = 1;
 	while (1) {
-		arr = tClock / (desiredFreq * psc);
+		arr = timerClock / (desiredFreq * psc);
 		if (arr <= ARRMAX) {
 			break;
 		}
