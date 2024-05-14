@@ -1,4 +1,4 @@
-+.+/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
  ******************************************************************************
  * @file           : main.c
@@ -37,7 +37,8 @@
 //#define GRAPH
 //#define FREQLCD
 //#define PHASELCD
-#define BLE
+//#define BLE
+#define FREQCOUNTER
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -160,6 +161,10 @@ int main(void)
 			pinStateCH3 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 			sprintf(buffer, "%d %d %d\r\n", pinStateCH1, pinStateCH2, pinStateCH3);
 			HAL_UART_Transmit(&huart1, buffer, strlen(buffer), 100);
+		#elif defined(FREQCOUNTER)
+			pinStateCH1 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
+			sprintf(buffer, "%d\n", pinStateCH1);
+			CDC_Transmit_FS(buffer, strlen(buffer));
 		#endif
     /* USER CODE END WHILE */
 

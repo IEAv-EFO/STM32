@@ -90,9 +90,9 @@ def move_grid_right(event):
     ax.figure.canvas.draw_idle()  # Redraw the plot
 
 # Ask user for COM port, baud rate, and update interval
-default_com_port = "COM15"
-default_baudrate = 9600
-default_interval = 0.001  # Microsecond
+default_com_port = "COM3"
+default_baudrate = 115200
+default_interval = 0.1  # Microsecond
 default_grid_interval = 1 # Second
 default_step_size = 0.1 # Second
 

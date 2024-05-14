@@ -8,7 +8,7 @@ def init_serial(port, baudrate):
 
 # Function to receive and process data
 def receive_data(ser):
-    line = ser.readline()#.strip().decode()
+    line = ser.readline().strip().decode()
     return line
 
 # Initialize serial port

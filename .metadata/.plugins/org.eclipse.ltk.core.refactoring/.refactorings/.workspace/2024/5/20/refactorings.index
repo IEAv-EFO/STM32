@@ -1,3 +1,7 @@
 1715690430364	Rename resource '100HzSquareSignal'
 1715697304753	Rename resource 'SquareWaveGenerator'
 1715710547962	Delete resource 'SQUAREWAVEGENERATOR'
+1715725011598	Delete 10 resources
+1715726986736	Delete resource 'SQUAREWAVEGENERATOR/100HzSquareSignal Debug.launch'
+1715726989837	Delete resource 'SQUAREWAVEGENERATOR/SquareWaveGenerator Debug.launch'
+1715726993778	Delete resource 'SQUAREWAVEGENERATOR/Debug'

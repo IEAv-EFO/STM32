@@ -1,16 +1,10 @@
-15:16:32 **** Build of configuration Debug for project SQUAREWAVEGENERATOR ****
-make -j4 all 
-arm-none-eabi-gcc -o "SQUAREWAVEGENERATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: SQUAREWAVEGENERATOR.elf
- 
+20:11:42 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+make -j8 all 
 arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
-arm-none-eabi-objdump -h -S SQUAREWAVEGENERATOR.elf  > "SQUAREWAVEGENERATOR.list"
    text	   data	    bss	    dec	    hex	filename
-  34332	    332	   9148	  43812	   ab24	SQUAREWAVEGENERATOR.elf
+  34328	    332	   9124	  43784	   ab08	SQUAREWAVEGENERATOR.elf
 Finished building: default.size.stdout
  
-Finished building: SQUAREWAVEGENERATOR.list
- 
 
-15:16:34 Build Finished. 0 errors, 0 warnings. (took 1s.807ms)
+20:11:43 Build Finished. 0 errors, 0 warnings. (took 593ms)
 
