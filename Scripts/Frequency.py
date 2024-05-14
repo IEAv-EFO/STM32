@@ -8,14 +8,14 @@ def init_serial(port, baudrate):
 
 # Function to receive and process data
 def receive_data(ser):
-    line = ser.readline().strip().decode()
+    line = ser.readline()#.strip().decode()
     return line
 
 # Initialize serial port
 port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
-baudrate = input("Enter the baudrate (default: 9600): ")
-baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
+baudrate = input("Enter the baudrate (default: 115200): ")
+baudrate = int(baudrate) if baudrate else 115200  # Set default value if empty
 ser = init_serial(port, baudrate)
 
 # Variables for frequency calculation
@@ -30,7 +30,8 @@ try:
         line_data = receive_data(ser)
         if line_data:
             # Extract value from the received data
-            value1 = int(line_data[0])
+            #value1 = int(line_data[0])
+            value1 = line_data
 
             # Calculate frequency if there's a transition in the signal
             if last_value1 is not None and last_value1 != value1:

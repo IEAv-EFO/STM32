@@ -13,8 +13,7 @@ def init_serial(port, baudrate):
 # Function to receive and process data
 def receive_data(ser):
     line = ser.readline().strip().decode()
-    #line_filtered = ''.join(filter(lambda x: x.isdigit() or x in '.-', line))  # Filter numeric characters and tabs
-    return line#_filtered  # Split data by tabs
+    return line  # Split data by tabs
 
 # Global variables
 max_data_points = 300  # Adjust as needed
@@ -22,8 +21,8 @@ data_points = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
 last_value1 = None
 last_transition_time = None
-frequencies = deque(maxlen=1)
-frequency_text = None  # Variable to hold the text object for average frequency display
+frequencies = deque(maxlen=10)
+avg_frequency_text = None  # Variable to hold the text object for average frequency display
 
 # Function to update the plot
 def update(frame):
@@ -46,15 +45,14 @@ def update(frame):
                     period = (current_time - last_transition_time) * 2
                     if period != 0:
                         frequency = 1 / period
-                        #frequencies.append(frequency)
-                        #if len(frequencies) == frequencies.maxlen:
-                        #  avg_frequency = sum(frequencies) / len(frequencies)
-                        #  avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
-                        frequency_text.set_text('Frequency: {:.2f} Hz'.format(frequency))
+                        frequencies.append(frequency)
+                        if len(frequencies) == frequencies.maxlen:
+                          avg_frequency = sum(frequencies) / len(frequencies)
+                          avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
             last_value1 = value1
             last_transition_time = current_time
 
-    return line, frequency_text
+    return line, avg_frequency_text
 
 # Function to toggle pause/resume
 def toggle_pause(event):
@@ -71,8 +69,8 @@ def update_max_data_points(val):
 # Initialize serial port
 port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
-baudrate = input("Enter the baudrate (default: 9600): ")
-baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
+baudrate = input("Enter the baudrate (default: 115200): ")
+baudrate = int(baudrate) if baudrate else 115200  # Set default value if empty
 max_data_points = input("Enter the max data points (default: 1000): ")
 max_data_points = int(max_data_points) if max_data_points else 300
 ser = init_serial(port, baudrate)
@@ -90,7 +88,7 @@ data_points = deque(maxlen=max_data_points)
 line, = ax.plot([], [])
 
 # Create text for average frequency display
-frequency_text = ax.text(0.985, 0.8, '', transform=ax.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
+avg_frequency_text = ax.text(0.985, 0.8, '', transform=ax.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
 
 # Create animation with a smaller interval for closer to real-time plotting
 ani = FuncAnimation(fig, update, frames=None, interval=0.1, blit=True, save_count=1000)

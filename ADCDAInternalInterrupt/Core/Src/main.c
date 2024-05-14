@@ -77,6 +77,7 @@ double count2volt(int res, int count);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -155,6 +156,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 }
   /* USER CODE END 3 */
+}
 
 /**
   * @brief System Clock Configuration
