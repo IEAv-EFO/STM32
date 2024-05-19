@@ -64,8 +64,8 @@ all: main-build
 main-build: BLE_HM10.elf secondary-outputs
 
 # Tool invocations
-BLE_HM10.elf BLE_HM10.map: $(OBJS) $(USER_OBJS) C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\BLE_HM10\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BLE_HM10.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\BLE_HM10\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_HM10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BLE_HM10.elf BLE_HM10.map: $(OBJS) $(USER_OBJS) C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\BLE_HM10\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BLE_HM10.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\BLE_HM10\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_HM10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
