@@ -214,11 +214,11 @@ void sendATCommand(const char *command, uint32_t timeOut) {
     HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
     if (strstr(rxBuffer, "OK") != NULL) {
         char buffer[PRINT_BUFFER_SIZE];
-        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - Response: %s\n", huart1.Init.BaudRate, rxBuffer);
+        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - Response: %s\r\n", huart1.Init.BaudRate, rxBuffer);
         CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
     } else {
         char buffer[PRINT_BUFFER_SIZE];
-        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response or incorrect response\n", huart1.Init.BaudRate);
+        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response\r\n", huart1.Init.BaudRate);
         CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
     }
 }

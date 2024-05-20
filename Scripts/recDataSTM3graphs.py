@@ -25,7 +25,7 @@ paused = False  # Variable to track pause/resume state
 last_value1 = None
 last_transition_time = None
 frequencies = deque(maxlen=10)
-avg_frequency_text = None  # Variable to hold the text object for average frequency display
+#avg_frequency_text = None  # Variable to hold the text object for average frequency display
 
 # Function to update the plot
 def update(frame):
@@ -50,19 +50,19 @@ def update(frame):
             ax3.relim()
             ax3.autoscale_view()
 
-            current_time = time.time()
-            if last_value1 is not None and last_value1 != value1:
-                if last_transition_time is not None:
-                    period = (current_time - last_transition_time) * 2  # Multiply by 2 to correct for alternating transitions
-                    frequency = 1 / period
-                    frequencies.append(frequency)
-                    if len(frequencies) == frequencies.maxlen:
-                        avg_frequency = sum(frequencies) / len(frequencies)
-                        avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
-            last_value1 = value1
-            last_transition_time = current_time
+            #current_time = time.time()
+            #if last_value1 is not None and last_value1 != value1:
+            #    if last_transition_time is not None:
+            #        period = (current_time - last_transition_time) * 2  # Multiply by 2 to correct for alternating transitions
+            #       frequency = 1 / period
+            #       frequencies.append(frequency)
+            #        if len(frequencies) == frequencies.maxlen:
+            #            avg_frequency = sum(frequencies) / len(frequencies)
+            #            avg_frequency_text.set_text('Average Frequency: {:.2f} Hz'.format(avg_frequency))
+            #last_value1 = value1
+            #last_transition_time = current_time
 
-    return line1, line2, line3, avg_frequency_text
+    return line1, line2, line3#, avg_frequency_text
 
 # Function to toggle pause/resume
 def toggle_pause(event):
@@ -110,10 +110,10 @@ line2, = ax2.plot([], [])
 line3, = ax3.plot([], [])
 
 # Create text for average frequency display
-avg_frequency_text = ax1.text(0.985, 0.8, '', transform=ax1.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
+#avg_frequency_text = ax1.text(0.985, 0.8, '', transform=ax1.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
 
 # Create animation with a smaller interval for closer to real-time plotting
-ani = FuncAnimation(fig, update, frames=None, interval=0.1, blit=True)
+ani = FuncAnimation(fig, update, frames=None, interval=100, blit=True, cache_frame_data=False)
 
 # Create a slider to change max_data_points
 slider_ax = plt.axes([0.93, 0.3, 0.03, 0.35], facecolor='red')  # Define slider position and size

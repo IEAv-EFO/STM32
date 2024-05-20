@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         00007f78  080001a0  080001a0  000011a0  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       000000f4  08008118  08008118  00009118  2**2
+  2 .rodata       000000e0  08008118  08008118  00009118  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  0800820c  0800820c  0000a16c  2**0
+  3 .ARM.extab    00000000  080081f8  080081f8  0000a16c  2**0
                   CONTENTS
-  4 .ARM          00000008  0800820c  0800820c  0000920c  2**2
+  4 .ARM          00000008  080081f8  080081f8  000091f8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08008214  08008214  0000a16c  2**0
+  5 .preinit_array 00000000  08008200  08008200  0000a16c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08008214  08008214  00009214  2**2
+  6 .init_array   00000004  08008200  08008200  00009200  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .fini_array   00000004  08008218  08008218  00009218  2**2
+  7 .fini_array   00000004  08008204  08008204  00009204  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         0000016c  20000000  0800821c  0000a000  2**2
+  8 .data         0000016c  20000000  08008208  0000a000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00001dfc  2000016c  08008388  0000a16c  2**2
+  9 .bss          00001dfc  2000016c  08008374  0000a16c  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  20001f68  08008388  0000af68  2**0
+ 10 ._user_heap_stack 00000600  20001f68  08008374  0000af68  2**0
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000a16c  2**0
                   CONTENTS, READONLY
@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000125eb  00000000  00000000  00037d37  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00089c5f  00000000  00000000  0004a322  2**0
+ 18 .debug_str    00089c65  00000000  00000000  0004a322  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d3f81  2**0
+ 19 .comment      00000043  00000000  00000000  000d3f87  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003c54  00000000  00000000  000d3fc4  2**2
+ 20 .debug_frame  00003c54  00000000  00000000  000d3fcc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006c  00000000  00000000  000d7c18  2**0
+ 21 .debug_line_str 00000072  00000000  00000000  000d7c20  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -776,7 +776,7 @@ void sendATCommand(const char *command, uint32_t timeOut) {
  8000792:	2b00      	cmp	r3, #0
  8000794:	d017      	beq.n	80007c6 <sendATCommand+0x72>
         char buffer[PRINT_BUFFER_SIZE];
-        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - Response: %s\n", huart1.Init.BaudRate, rxBuffer);
+        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - Response: %s\r\n", huart1.Init.BaudRate, rxBuffer);
  8000796:	4b19      	ldr	r3, [pc, #100]	@ (80007fc <sendATCommand+0xa8>)
  8000798:	685b      	ldr	r3, [r3, #4]
  800079a:	f107 0008 	add.w	r0, r7, #8
@@ -797,12 +797,12 @@ void sendATCommand(const char *command, uint32_t timeOut) {
  80007c0:	f006 fb82 	bl	8006ec8 <CDC_Transmit_FS>
     } else {
         char buffer[PRINT_BUFFER_SIZE];
-        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response or incorrect response\n", huart1.Init.BaudRate);
+        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response\r\n", huart1.Init.BaudRate);
         CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
     }
 }
  80007c4:	e014      	b.n	80007f0 <sendATCommand+0x9c>
-        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response or incorrect response\n", huart1.Init.BaudRate);
+        snprintf(buffer, PRINT_BUFFER_SIZE, "Baudrate: %ld - No response\r\n", huart1.Init.BaudRate);
  80007c6:	4b0d      	ldr	r3, [pc, #52]	@ (80007fc <sendATCommand+0xa8>)
  80007c8:	685b      	ldr	r3, [r3, #4]
  80007ca:	f107 0008 	add.w	r0, r7, #8
@@ -1389,7 +1389,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  8000a3c:	2000016c 	.word	0x2000016c
   ldr r2, =_sidata
- 8000a40:	0800821c 	.word	0x0800821c
+ 8000a40:	08008208 	.word	0x08008208
   ldr r2, =_sbss
  8000a44:	2000016c 	.word	0x2000016c
   ldr r4, =_ebss
@@ -7124,7 +7124,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  8002bee:	bf00      	nop
  8002bf0:	40023c00 	.word	0x40023c00
  8002bf4:	40023800 	.word	0x40023800
- 8002bf8:	080081c0 	.word	0x080081c0
+ 8002bf8:	080081ac 	.word	0x080081ac
  8002bfc:	20000020 	.word	0x20000020
  8002c00:	20000024 	.word	0x20000024
 
@@ -7379,7 +7379,7 @@ uint32_t HAL_RCC_GetPCLK1Freq(void)
  8002dc4:	4618      	mov	r0, r3
  8002dc6:	bd80      	pop	{r7, pc}
  8002dc8:	40023800 	.word	0x40023800
- 8002dcc:	080081d0 	.word	0x080081d0
+ 8002dcc:	080081bc 	.word	0x080081bc
 
 08002dd0 <HAL_RCC_GetPCLK2Freq>:
   * @note   Each time PCLK2 changes, this function must be called to update the
@@ -7405,7 +7405,7 @@ uint32_t HAL_RCC_GetPCLK2Freq(void)
  8002dec:	4618      	mov	r0, r3
  8002dee:	bd80      	pop	{r7, pc}
  8002df0:	40023800 	.word	0x40023800
- 8002df4:	080081d0 	.word	0x080081d0
+ 8002df4:	080081bc 	.word	0x080081bc
 
 08002df8 <HAL_UART_Init>:
   * @param  huart  Pointer to a UART_HandleTypeDef structure that contains
@@ -18450,7 +18450,7 @@ uint8_t * USBD_FS_ProductStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length
  8006fb0:	bd80      	pop	{r7, pc}
  8006fb2:	bf00      	nop
  8006fb4:	2000151c 	.word	0x2000151c
- 8006fb8:	08008178 	.word	0x08008178
+ 8006fb8:	08008164 	.word	0x08008164
 
 08006fbc <USBD_FS_ManufacturerStrDescriptor>:
   * @param  speed : Current device speed
@@ -18479,7 +18479,7 @@ uint8_t * USBD_FS_ManufacturerStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *l
  8006fd8:	46bd      	mov	sp, r7
  8006fda:	bd80      	pop	{r7, pc}
  8006fdc:	2000151c 	.word	0x2000151c
- 8006fe0:	08008190 	.word	0x08008190
+ 8006fe0:	0800817c 	.word	0x0800817c
 
 08006fe4 <USBD_FS_SerialStrDescriptor>:
   * @param  speed : Current device speed
@@ -18558,7 +18558,7 @@ uint8_t * USBD_FS_ConfigStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
  8007038:	bd80      	pop	{r7, pc}
  800703a:	bf00      	nop
  800703c:	2000151c 	.word	0x2000151c
- 8007040:	080081a4 	.word	0x080081a4
+ 8007040:	08008190 	.word	0x08008190
 
 08007044 <USBD_FS_InterfaceStrDescriptor>:
   * @param  speed : Current device speed
@@ -18602,7 +18602,7 @@ uint8_t * USBD_FS_InterfaceStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *leng
  8007074:	bd80      	pop	{r7, pc}
  8007076:	bf00      	nop
  8007078:	2000151c 	.word	0x2000151c
- 800707c:	080081b0 	.word	0x080081b0
+ 800707c:	0800819c 	.word	0x0800819c
 
 08007080 <Get_SerialNum>:
   * @brief  Create the serial number string descriptor
@@ -19971,10 +19971,10 @@ USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status)
  800784e:	4798      	blx	r3
  8007850:	3601      	adds	r6, #1
  8007852:	e7f2      	b.n	800783a <__libc_init_array+0x1e>
- 8007854:	08008214 	.word	0x08008214
- 8007858:	08008214 	.word	0x08008214
- 800785c:	08008214 	.word	0x08008214
- 8007860:	08008218 	.word	0x08008218
+ 8007854:	08008200 	.word	0x08008200
+ 8007858:	08008200 	.word	0x08008200
+ 800785c:	08008200 	.word	0x08008200
+ 8007860:	08008204 	.word	0x08008204
 
 08007864 <__retarget_lock_acquire_recursive>:
  8007864:	4770      	bx	lr
@@ -20480,11 +20480,11 @@ USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status)
  8007cec:	4638      	mov	r0, r7
  8007cee:	f000 f879 	bl	8007de4 <_printf_i>
  8007cf2:	e7ed      	b.n	8007cd0 <_svfiprintf_r+0x1c0>
- 8007cf4:	080081d8 	.word	0x080081d8
- 8007cf8:	080081e2 	.word	0x080081e2
+ 8007cf4:	080081c4 	.word	0x080081c4
+ 8007cf8:	080081ce 	.word	0x080081ce
  8007cfc:	00000000 	.word	0x00000000
  8007d00:	08007a59 	.word	0x08007a59
- 8007d04:	080081de 	.word	0x080081de
+ 8007d04:	080081ca 	.word	0x080081ca
 
 08007d08 <_printf_common>:
  8007d08:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
@@ -20815,8 +20815,8 @@ USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status)
  8008014:	f104 0619 	add.w	r6, r4, #25
  8008018:	e7f5      	b.n	8008006 <_printf_i+0x222>
  800801a:	bf00      	nop
- 800801c:	080081e9 	.word	0x080081e9
- 8008020:	080081fa 	.word	0x080081fa
+ 800801c:	080081d5 	.word	0x080081d5
+ 8008020:	080081e6 	.word	0x080081e6
 
 08008024 <memmove>:
  8008024:	4288      	cmp	r0, r1
