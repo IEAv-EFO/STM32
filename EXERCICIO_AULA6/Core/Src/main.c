@@ -34,11 +34,11 @@
 /* USER CODE BEGIN PD */
 #define RESPONSE_BUFFER_SIZE 5000
 //#define COUNTER
-//#define GRAPH
+#define GRAPH
 //#define FREQLCD
 //#define PHASELCD
 //#define BLE
-#define FREQCOUNTER
+//#define FREQCOUNTER
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

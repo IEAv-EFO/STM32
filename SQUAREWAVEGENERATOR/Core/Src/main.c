@@ -33,8 +33,9 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
-#define CALLBACK
-//#define MAINLOOP
+//#define CALLBACK //For frequency measurement
+#define MAINLOOP
+#define ONLYGEN
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -109,6 +110,10 @@ int main(void)
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
 		#endif
+
+		#if defined(ONLYGEN)
+		#endif
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -272,7 +277,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		#if defined(CALLBACK)
 				Ret = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
 		#elif defined(MAINLOOP)
-				Ret = HAL_TIM_PWM_Star(htim, TIM_CHANNEL_1);
+				Ret = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 		#endif
 
 		if (Ret == HAL_OK) {

@@ -17,14 +17,14 @@ def receive_data(ser):
     return line_filtered.split('\t')  # Split data by tabs
 
 # Global variables
-max_data_points = 340  # Adjust as needed
+max_data_points = 200  # Adjust as needed
 data_points1 = deque(maxlen=max_data_points)
 data_points2 = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
 last_value1 = None
 last_transition_time = None
 frequencies = deque(maxlen=10)
-avg_frequency_text = None  # Variable to hold the text object for average frequency display
+#avg_frequency_text = None  # Variable to hold the text object for average frequency display
 
 # Function to update the plot
 def update(frame):
@@ -77,8 +77,10 @@ port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
-max_data_points = input("Enter the max data points (default: 1000): ")
-max_data_points = int(max_data_points) if max_data_points else 300
+max_data_points = input("Enter the max data points (default: 200): ")
+max_data_points = int(max_data_points) if max_data_points else 200
+update_interval = input("Enter the interval in miliseconds (defalut: 100): ")
+update_interval = float(update_interval) if update_interval else 100
 ser = init_serial(port, baudrate)
 
 # Initialize plot
@@ -102,7 +104,7 @@ line2, = ax2.plot([], [])
 # avg_frequency_text = ax1.text(0.985, 0.8, '', transform=ax1.transAxes, ha='right', va='bottom', color='red')  # Adjust position and color
 
 # Create animation with a smaller interval for closer to real-time plotting
-ani = FuncAnimation(fig, update, frames=None, interval=100, blit=True, cache_frame_data=False)
+ani = FuncAnimation(fig, update, frames=None, interval=update_interval, blit=True, cache_frame_data=False)
 
 # Create a slider to change max_data_points
 slider_ax = plt.axes([0.93, 0.3, 0.03, 0.35], facecolor='red')  # Define slider position and size

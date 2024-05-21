@@ -1,7 +1,6 @@
-../Core/Src/main.c:72:5:main	1
-../Core/Src/main.c:123:6:SystemClock_Config	3
-../Core/Src/main.c:169:13:MX_TIM3_Init	6
-../Core/Src/main.c:228:13:MX_GPIO_Init	1
-../Core/Src/main.c:254:6:freqGen	5
-../Core/Src/main.c:290:2:HAL_TIM_PWM_PulseFinishedCallback	2
-../Core/Src/main.c:304:6:Error_Handler	1
+../Core/Src/main.c:73:5:main	1
+../Core/Src/main.c:128:6:SystemClock_Config	3
+../Core/Src/main.c:174:13:MX_TIM3_Init	6
+../Core/Src/main.c:233:13:MX_GPIO_Init	1
+../Core/Src/main.c:259:6:freqGen	5
+../Core/Src/main.c:309:6:Error_Handler	1

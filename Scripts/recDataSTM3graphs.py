@@ -83,7 +83,7 @@ port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
-max_data_points = input("Enter the max data points (default: 1000): ")
+max_data_points = input("Enter the max data points (default: 300): ")
 max_data_points = int(max_data_points) if max_data_points else 300
 ser = init_serial(port, baudrate)
 
