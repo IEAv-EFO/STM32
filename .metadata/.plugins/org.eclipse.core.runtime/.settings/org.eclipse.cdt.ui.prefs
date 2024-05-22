@@ -6,5 +6,6 @@ forwardDeclare.templates=true
 markOccurrences=false
 scalability.detect=false
 spelling_locale_initialized=true
+spelling_user_dictionary_encoding=Cp1252
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

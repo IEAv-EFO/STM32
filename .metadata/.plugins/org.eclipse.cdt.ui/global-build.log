@@ -1,4 +1,47 @@
-16:42:05 **** Incremental Build of configuration Debug for project EXERCICIO_AULA7 ****
+14:35:50 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:44: warning: '
+   ' directive writing 1 byte into a region of size between 0 and 2 [-Wformat-overflow=]
+  110 |                         sprintf(buffer, "%d\n", pinState);
+      |                                            ^~
+../Core/Src/main.c:110:25: note: 'sprintf' output between 3 and 5 bytes into a destination of size 3
+  110 |                         sprintf(buffer, "%d\n", pinState);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SQUAREWAVEGENERATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SQUAREWAVEGENERATOR.elf
+ 
+arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
+arm-none-eabi-objdump -h -S SQUAREWAVEGENERATOR.elf  > "SQUAREWAVEGENERATOR.list"
+   text	   data	    bss	    dec	    hex	filename
+  34980	    332	   9124	  44436	   ad94	SQUAREWAVEGENERATOR.elf
+Finished building: default.size.stdout
+ 
+Finished building: SQUAREWAVEGENERATOR.list
+ 
+14:35:56 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+make -j4 all 
+arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34980	    332	   9124	  44436	   ad94	SQUAREWAVEGENERATOR.elf
+Finished building: default.size.stdout
+ 
+14:38:57 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc -o "SQUAREWAVEGENERATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SQUAREWAVEGENERATOR.elf
+ 
+arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
+arm-none-eabi-objdump -h -S SQUAREWAVEGENERATOR.elf  > "SQUAREWAVEGENERATOR.list"
+   text	   data	    bss	    dec	    hex	filename
+  34980	    332	   9124	  44436	   ad94	SQUAREWAVEGENERATOR.elf
+Finished building: default.size.stdout
+ 
+Finished building: SQUAREWAVEGENERATOR.list
+ 
+14:41:09 **** Build of configuration Debug for project EXERCICIO_AULA7 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "EXERCICIO_AULA7.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA7\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,15 +50,113 @@ Finished building target: EXERCICIO_AULA7.elf
 arm-none-eabi-size  EXERCICIO_AULA7.elf 
 arm-none-eabi-objdump -h -S EXERCICIO_AULA7.elf  > "EXERCICIO_AULA7.list"
    text	   data	    bss	    dec	    hex	filename
-  34588	    332	   9172	  44092	   ac3c	EXERCICIO_AULA7.elf
+  34616	    332	   9172	  44120	   ac58	EXERCICIO_AULA7.elf
 Finished building: default.size.stdout
  
 Finished building: EXERCICIO_AULA7.list
  
-16:42:17 **** Incremental Build of configuration Debug for project EXERCICIO_AULA7 ****
+14:47:06 **** Incremental Build of configuration Debug for project EXERCICIO_AULA7 ****
 make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:1: error: expected identifier or '(' before ',' token
+    1 | ,0
+      | ^
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:154,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:21:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:134:3: warning: data definition has no type or storage class
+  134 | } IRQn_Type;
+      |   ^~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:134:3: warning: type defaults to 'int' in declaration of 'IRQn_Type' [-Wimplicit-int]
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:140:
+../Drivers/CMSIS/Include/core_cm4.h:1684:39: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1684 | __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
+      |                                       ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1703:46: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1703 | __STATIC_INLINE uint32_t __NVIC_GetEnableIRQ(IRQn_Type IRQn)
+      |                                              ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1722:40: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1722 | __STATIC_INLINE void __NVIC_DisableIRQ(IRQn_Type IRQn)
+      |                                        ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1741:47: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1741 | __STATIC_INLINE uint32_t __NVIC_GetPendingIRQ(IRQn_Type IRQn)
+      |                                               ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1760:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1760 | __STATIC_INLINE void __NVIC_SetPendingIRQ(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1775:45: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1775 | __STATIC_INLINE void __NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1792:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1792 | __STATIC_INLINE uint32_t __NVIC_GetActive(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1814:41: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1814 | __STATIC_INLINE void __NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+      |                                         ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1836:45: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1836 | __STATIC_INLINE uint32_t __NVIC_GetPriority(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1911:39: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1911 | __STATIC_INLINE void __NVIC_SetVector(IRQn_Type IRQn, uint32_t vector)
+      |                                       ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1927:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1927 | __STATIC_INLINE uint32_t __NVIC_GetVector(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h: In function 'SysTick_Config':
+../Drivers/CMSIS/Include/core_cm4.h:1617:39: warning: implicit declaration of function '__NVIC_SetPriority'; did you mean 'NVIC_SetPriority'? [-Wimplicit-function-declaration]
+ 1617 |   #define NVIC_SetPriority            __NVIC_SetPriority
+      |                                       ^~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:2030:3: note: in expansion of macro 'NVIC_SetPriority'
+ 2030 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |   ^~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:2030:21: error: 'SysTick_IRQn' undeclared (first use in this function); did you mean 'SysTick_Type'?
+ 2030 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |                     ^~~~~~~~~~~~
+      |                     SysTick_Type
+../Drivers/CMSIS/Include/core_cm4.h:2030:21: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:291:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h: At top level:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:261:27: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  261 | void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority);
+      |                           ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:262:25: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  262 | void HAL_NVIC_EnableIRQ(IRQn_Type IRQn);
+      |                         ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:263:26: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  263 | void HAL_NVIC_DisableIRQ(IRQn_Type IRQn);
+      |                          ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:275:27: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  275 | void HAL_NVIC_GetPriority(IRQn_Type IRQn, uint32_t PriorityGroup, uint32_t* pPreemptPriority, uint32_t* pSubPriority);
+      |                           ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:276:33: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  276 | uint32_t HAL_NVIC_GetPendingIRQ(IRQn_Type IRQn);
+      |                                 ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:277:29: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  277 | void HAL_NVIC_SetPendingIRQ(IRQn_Type IRQn);
+      |                             ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:278:31: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  278 | void HAL_NVIC_ClearPendingIRQ(IRQn_Type IRQn);
+      |                               ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:279:29: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  279 | uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn);
+      |                             ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:47:14 **** Incremental Build of configuration Debug for project EXERCICIO_AULA7 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "EXERCICIO_AULA7.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\EXERCICIO_AULA7\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXERCICIO_AULA7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXERCICIO_AULA7.elf
+ 
 arm-none-eabi-size  EXERCICIO_AULA7.elf 
+arm-none-eabi-objdump -h -S EXERCICIO_AULA7.elf  > "EXERCICIO_AULA7.list"
    text	   data	    bss	    dec	    hex	filename
-  34588	    332	   9172	  44092	   ac3c	EXERCICIO_AULA7.elf
+  34616	    332	   9172	  44120	   ac58	EXERCICIO_AULA7.elf
 Finished building: default.size.stdout
+ 
+Finished building: EXERCICIO_AULA7.list
  

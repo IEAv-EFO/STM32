@@ -35,7 +35,7 @@
 #define ARRMAX 65535
 //#define CALLBACK //For frequency measurement
 #define MAINLOOP
-#define ONLYGEN
+//#define ONLYGEN
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

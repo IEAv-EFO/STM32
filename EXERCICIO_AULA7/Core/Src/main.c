@@ -32,8 +32,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-//#define ONEGRAPH
-#define TWOGRAPHS
+#define ONEGRAPH
+//#define TWOGRAPHS
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,6 +45,7 @@
 TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
+HAL_StatusTypeDef Ret;
 GPIO_PinState extTrigger, outTimer2;
 char buffer[50];
 /* USER CODE END PV */
@@ -94,7 +95,10 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+  Ret = HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+  if (Ret == HAL_OK) {
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -111,6 +115,7 @@ int main(void)
 			sprintf(buffer, "%d\t%d\n", extTrigger, outTimer2);
 			CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
 		#endif
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

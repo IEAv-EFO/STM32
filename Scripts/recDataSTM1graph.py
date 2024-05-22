@@ -87,7 +87,7 @@ button_pause = Button(button_pause_ax, 'Pause', color='lightblue', hovercolor='s
 button_pause.on_clicked(toggle_pause)  # Set button click action
 
 # Adjust vertical spacing between subplots
-plt.subplots_adjust(hspace=0.8)
+#plt.subplots_adjust(hspace=0.8)
 
 plt.show()
 

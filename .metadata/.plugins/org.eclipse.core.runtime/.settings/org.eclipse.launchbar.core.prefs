@@ -19,6 +19,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BLE_HM10\ Debug/activeLaunchTar
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA6\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA6\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA7\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA7\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FREQUENCIMETRO\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HM-10_CC2541_ZS-040\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HM-10_CC2541_ZS-040\ Debug/activeLaunchTarget=null\:---
@@ -28,6 +29,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OUTPUT_COMPARE\ Debug/activeLau
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OUTPUT_COMPARE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLAVE_MODE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLAVE_MODE\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SQUAREWAVEGENERATOR\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SQUAREWAVEGENERATOR/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TIMER_COUNTER\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TIMER_COUNTER\ Debug/activeLaunchTarget=null\:---
