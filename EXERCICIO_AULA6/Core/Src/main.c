@@ -34,10 +34,10 @@
 /* USER CODE BEGIN PD */
 #define RESPONSE_BUFFER_SIZE 5000
 //#define COUNTER
-#define GRAPH
+//#define GRAPH
 //#define FREQLCD
 //#define PHASELCD
-//#define BLE
+#define BLE
 //#define FREQCOUNTER
 /* USER CODE END PD */
 
@@ -160,7 +160,7 @@ int main(void)
 			pinStateCH2 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9);
 			pinStateCH3 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 			sprintf(buffer, "%d %d %d\r\n", pinStateCH1, pinStateCH2, pinStateCH3);
-			HAL_UART_Transmit(&huart1, buffer, strlen(buffer), 100);
+			HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 50);
 		#elif defined(FREQCOUNTER)
 			pinStateCH1 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
 			sprintf(buffer, "%d\n", pinStateCH1);
