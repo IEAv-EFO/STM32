@@ -34,10 +34,10 @@
 /* USER CODE BEGIN PD */
 #define RESPONSE_BUFFER_SIZE 5000
 //#define COUNTER
-//#define GRAPH
+#define GRAPH
 //#define FREQLCD
 //#define PHASELCD
-#define BLE
+//#define BLE
 //#define FREQCOUNTER
 /* USER CODE END PD */
 
@@ -48,7 +48,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
+
 TIM_HandleTypeDef htim1;
+
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
@@ -137,7 +139,7 @@ int main(void)
 			pinStateCH2 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9);
 			pinStateCH3 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
 			sprintf(buffer, "%d\t%d\t%d\n", pinStateCH1, pinStateCH2, pinStateCH3);
-			CDC_Transmit_FS(buffer, strlen(buffer));
+			CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
 		#elif defined(FREQLCD)
 			lcd_put_cur(0, 0);
 			lcd_send_string("FREQ CH1: ");
@@ -164,7 +166,7 @@ int main(void)
 		#elif defined(FREQCOUNTER)
 			pinStateCH1 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
 			sprintf(buffer, "%d\n", pinStateCH1);
-			CDC_Transmit_FS(buffer, strlen(buffer));
+			CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
 		#endif
     /* USER CODE END WHILE */
 
@@ -299,7 +301,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_TOGGLE;
-  sConfigOC.Pulse = 9375;
+  sConfigOC.Pulse = 9375-1;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -309,13 +311,13 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.Pulse = 3125;
+  sConfigOC.Pulse = 3125-1;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigOC.Pulse = 15625;
+  sConfigOC.Pulse = 15625-1;
   if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
