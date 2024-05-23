@@ -44,7 +44,7 @@ def enviaEmail(subject, userfrom, userto, p, svr, port, msg):
     print('###### E-MAIL ENVIADO ######')
     
 ###### Config Serial ######  
-ser = serial.Serial('COM7', 19200)
+ser = serial.Serial('COM6', 19200)
 rl = ReadLine(ser)
 src = "sensorTempHum.log"
 

@@ -48,7 +48,14 @@ UART_HandleTypeDef huart1;
 char *command;
 char rxBuffer[128];
 char received_char;
-
+char *commands[] = {
+    "AT\r\n",
+    "AT+RESET\r\n",
+    "AT+ROLE0\r\n",
+    "AT+RESET\r\n",
+    "AT+NAMEBT05\r\n",
+    "AT+PIN1234\r\n" // Define o PIN como 1234
+};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,9 +117,11 @@ int main(void)
 
 	// Send AT command and receive response to a char buffer
 	sendATCommand("AT\r\n", 100); 				// Check if module is responsive
-	sendATCommand("AT+PIN\r\n", 100);
-	sendATCommand("AT+ROLE\r\n", 100);
-	sendATCommand("AT+HELP\r\n", 5000);
+	sendATCommand("AT+NAME\r\n", 100);
+    sendATCommand("AT+PIN\r\n", 100);
+    sendATCommand("AT+TYPE\r\n", 100);
+    sendATCommand("AT+ROLE\r\n", 100);
+    //sendATCommand("AT+HELP\r\n", 6000);
 	//sendATCommand("AT+BAUD8\r\n", 100);// BAUD1=1200, BAUD2=2400, ..., BARD7=57600, BAUD8=115200, ..., BAUD12=132400 bps.
 
 	/*
@@ -122,7 +131,6 @@ int main(void)
 	 sendATCommand("AT+PIN\r\n", 100);
 	 sendATCommand("AT+LADDR\r\n", 100);
 	 sendATCommand("AT+ROLE\r\n", 100);
-	 sendATCommand("AT+VERSION\r\n", 100); 		// Query the device version
 	 sendATCommand("AT+BAUD\r\n", 100); 			// Query BaudRate
 	 sendATCommand("AT+POWE\r\n", 100);			// Get/Set RF transmit power
 	 sendATCommand("AT+UUID\r\n", 100);			//Powers = 0: -23dbm,1: -6dbm, 2: 0dbm, 3: 6dbm
@@ -139,14 +147,14 @@ int main(void)
 
 	while (1) {
 
-		// Check if data is available in USART2 receive buffer
+/*		// Check if data is available in USART2 receive buffer
 		if (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_RXNE) == SET) {
 			// Read the received character
 			received_char = USART_ReceiveChar();
 
 			// Echo back the received character
 			USART_SendChar(received_char);
-		}
+		}*/
 
     /* USER CODE END WHILE */
 
