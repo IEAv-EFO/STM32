@@ -21,6 +21,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SLAVE_MODE"/>
 			<item value="C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\BAUDRATEDETECTION"/>

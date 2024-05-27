@@ -1,0 +1,1606 @@
+2024-05-27 00:00:27,550 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,567 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,600 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:27,617 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:50,785 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:52,046 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:00:53,221 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,443 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:01:09,495 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,498 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,499 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,499 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,499 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,499 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:09,523 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,800 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,850 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:22,867 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:01:30,742 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 485026944 Bytes (771751936)
+2024-05-27 00:01:30,816 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 500755584 Bytes (771751936)
+2024-05-27 00:01:31,894 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 567864448 Bytes (771751936)
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:01:32,026 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:01:32,028 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:01:32,032 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:01:32,032 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:01:32,032 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:01:32,032 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:01:32,033 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:01:32,033 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:01:32,033 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:01:32,034 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:01:32,036 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:01:32,037 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:01:32,126 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:01:32,232 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:01:32,254 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:01:32,362 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:01:32,481 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:01:32,594 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:01:32,601 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:01:32,673 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:01:32,704 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:01:32,810 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:01:32,819 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:01:32,900 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:01:32,927 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:01:33,076 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:01:33,083 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:01:33,158 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:01:33,186 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:01:33,311 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:01:33,342 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:01:33,343 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:01:33,369 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:01:33,470 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:01:33,490 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:01:33,660 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:01:34,192 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 256mS.
+2024-05-27 00:01:34,196 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:01:34,310 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:01:35,230 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1033mS.
+2024-05-27 00:01:35,231 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 00:01:35,236 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:02:24,274 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:02:24,326 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,328 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,329 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:24,355 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:02:48,652 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:03:03,303 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:03:36,705 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:03:44,309 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:04:15,951 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:04:17,517 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:04:19,395 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 369844576 Bytes (771751936)
+2024-05-27 00:04:19,467 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 385046880 Bytes (771751936)
+2024-05-27 00:04:20,529 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 452682080 Bytes (771751936)
+2024-05-27 00:04:20,653 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:04:20,653 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:04:20,653 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:04:20,654 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:04:20,654 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:04:20,654 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:04:20,654 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:04:20,654 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:04:20,655 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:04:20,659 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:04:20,660 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:04:20,661 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:04:20,661 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:04:20,661 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:04:20,661 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:04:20,661 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:04:20,662 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:04:20,662 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:04:20,744 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:04:20,851 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:04:20,867 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:04:20,967 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:04:21,067 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:04:21,184 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:04:21,184 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:04:21,267 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:04:21,284 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:04:21,385 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:04:21,401 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:04:21,502 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:04:21,517 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:04:21,683 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:04:21,684 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:04:21,767 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:04:21,784 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:04:21,917 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:04:21,950 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:04:21,950 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:04:21,967 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:04:22,067 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:04:22,084 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:04:22,251 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:04:22,818 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 301mS.
+2024-05-27 00:04:22,818 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:04:22,917 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:04:23,856 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1037mS.
+2024-05-27 00:04:23,857 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:04:23,861 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:23:05,889 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:23:05,889 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:23:10,041 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,501x368,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:23:12,810 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:23:12,810 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:23:21,552 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:23:21,552 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:16,752 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:16,752 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:16,752 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:16,752 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:19,585 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 383980848 Bytes (788529152)
+2024-05-27 00:24:19,652 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 399183152 Bytes (788529152)
+2024-05-27 00:24:20,322 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 424875312 Bytes (788529152)
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:24:20,462 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:24:20,464 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:24:20,468 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:24:20,469 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:24:20,469 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:24:20,469 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:24:20,469 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:24:20,470 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:24:20,472 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:20,472 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:24:20,570 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:24:20,696 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:24:20,717 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:24:20,831 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:24:20,923 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:24:21,041 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:24:21,048 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:24:21,123 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:24:21,155 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:24:21,355 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:24:21,363 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:24:21,443 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:24:21,472 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:24:21,627 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:24:21,634 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:24:21,712 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:24:21,742 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:24:21,867 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:24:21,902 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:24:21,902 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:24:21,919 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:24:22,035 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:24:22,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:24:22,235 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:24:22,685 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 249mS.
+2024-05-27 00:24:22,685 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:24:22,769 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:24:23,749 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1064mS.
+2024-05-27 00:24:23,750 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 00:24:23,755 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:31:18,836 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,852 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,870 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,908 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,909 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,910 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,911 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,911 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,911 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,933 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:18,942 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:31:32,780 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,781 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,781 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,781 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,781 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,782 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,782 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,782 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,782 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,793 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,793 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,793 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,793 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,793 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,802 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,804 [INFO] ADCParametersView:321 - Can not make a Row selection. Row index : 15 out of range.
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,805 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,806 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,814 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,814 [INFO] ADCParametersView:321 - Can not make a Row selection. Row index : 15 out of range.
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,823 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,836 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,913 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:31:32,967 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,967 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,968 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,977 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:32,993 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:33,001 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:33,315 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:31:34,753 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:31:41,458 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,459 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,480 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,480 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,480 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,480 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,481 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,500 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,501 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:41,521 [INFO] ADCParametersView:116 -                Rank 1 : false
+2024-05-27 00:31:52,783 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:32:33,120 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:33:04,219 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,686 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,719 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,720 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,736 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,770 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,786 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:21,820 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,370 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,420 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:33:31,453 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:34:10,891 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 653660608 Bytes (788529152)
+2024-05-27 00:34:11,550 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 676207040 Bytes (788529152)
+2024-05-27 00:34:12,222 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 306509536 Bytes (788529152)
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:34:12,364 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:34:12,366 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:34:12,373 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:34:12,373 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:34:12,373 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:34:12,373 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:34:12,373 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:34:12,373 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:34:12,373 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:34:12,373 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:34:12,373 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:34:12,373 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:34:12,374 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:34:12,375 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:34:12,376 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:34:12,376 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:34:12,480 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:34:12,591 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:34:12,611 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:34:12,723 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:34:12,814 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:34:12,918 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:34:12,925 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:34:12,995 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:34:13,028 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:34:13,123 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:34:13,132 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:34:13,221 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:34:13,249 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:34:13,401 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:34:13,408 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:34:13,492 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:34:13,518 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:34:13,640 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:34:13,671 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:34:13,672 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:34:13,696 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:34:13,788 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:34:13,808 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:34:13,961 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:34:14,429 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 257mS.
+2024-05-27 00:34:14,433 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:34:14,522 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:34:15,436 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1003mS.
+2024-05-27 00:34:15,438 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 2mS.
+2024-05-27 00:34:15,443 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 00:35:25,011 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:36:24,534 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:36:29,139 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:37:00,464 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:37:06,327 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 637736704 Bytes (788529152)
+2024-05-27 00:37:06,987 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 659230464 Bytes (788529152)
+2024-05-27 00:37:07,684 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 284394432 Bytes (788529152)
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:37:07,829 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:37:07,837 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:37:07,838 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:37:07,838 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:37:07,838 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:37:07,993 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:37:08,152 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:37:08,171 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:37:08,270 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:37:08,363 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:37:08,467 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:37:08,473 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:37:08,545 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:37:08,575 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:37:08,668 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:37:08,677 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:37:08,756 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:37:08,784 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:37:08,927 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:37:08,935 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:37:09,008 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:37:09,037 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:37:09,160 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:37:09,191 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:37:09,192 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:37:09,214 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:37:09,311 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:37:09,332 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:37:09,488 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:37:09,945 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 254mS.
+2024-05-27 00:37:09,949 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:37:10,043 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:37:11,002 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1053mS.
+2024-05-27 00:37:11,003 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 00:37:11,007 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:38:54,529 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 418023456 Bytes (788529152)
+2024-05-27 00:38:54,595 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 433225760 Bytes (788529152)
+2024-05-27 00:38:55,690 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 500334624 Bytes (788529152)
+2024-05-27 00:38:55,835 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 00:38:55,836 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 00:38:55,838 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 00:38:55,844 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:38:55,844 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 00:38:55,844 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:38:55,844 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:38:55,844 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:38:55,844 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 00:38:55,844 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:38:55,844 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 00:38:55,845 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 00:38:55,846 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 00:38:55,846 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 00:38:55,970 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 00:38:56,129 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 00:38:56,151 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 00:38:56,259 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 00:38:56,358 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 00:38:56,475 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 00:38:56,479 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 00:38:56,556 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 00:38:56,570 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 00:38:56,679 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 00:38:56,679 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 00:38:56,773 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 00:38:56,789 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 00:38:56,950 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 00:38:56,959 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 00:38:57,030 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 00:38:57,056 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 00:38:57,181 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 00:38:57,212 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 00:38:57,213 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 00:38:57,237 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 00:38:57,336 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 00:38:57,356 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 00:38:57,518 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 00:38:57,980 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 254mS.
+2024-05-27 00:38:57,984 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 00:38:58,096 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 00:38:59,008 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1024mS.
+2024-05-27 00:38:59,009 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 00:38:59,014 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 00:59:34,411 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,714x114,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,217 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,248 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,280 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 00:59:50,311 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:30,969 [INFO] SpinnerEditorADC:65 - is string kkkk
+2024-05-27 01:01:32,217 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:32,295 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,790 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:01:37,835 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,836 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,837 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:01:37,857 [INFO] ADCParametersView:116 -                Rank 1 : true
+2024-05-27 01:02:34,009 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 646701064 Bytes (788529152)
+2024-05-27 01:02:34,674 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 668721160 Bytes (788529152)
+2024-05-27 01:02:35,313 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 298780856 Bytes (788529152)
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 01:02:35,484 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 01:02:35,485 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 01:02:35,492 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 01:02:35,492 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:02:35,492 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:02:35,492 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 01:02:35,493 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 01:02:35,494 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:02:35,495 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:02:35,615 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 01:02:35,761 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 01:02:35,782 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 01:02:35,893 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 01:02:35,989 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 01:02:36,096 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 01:02:36,100 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 01:02:36,178 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 01:02:36,208 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 01:02:36,382 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 01:02:36,402 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 01:02:36,482 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 01:02:36,512 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 01:02:36,667 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 01:02:36,675 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 01:02:36,763 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 01:02:36,790 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 01:02:36,917 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 01:02:36,946 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 01:02:36,947 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 01:02:36,958 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 01:02:37,075 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 01:02:37,093 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 01:02:37,265 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 01:02:37,743 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 250mS.
+2024-05-27 01:02:37,748 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 01:02:37,826 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 01:02:38,779 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1031mS.
+2024-05-27 01:02:38,780 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:02:38,785 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
+2024-05-27 01:18:52,260 [INFO] MainUpdater:2873 - connection check result : 10
+2024-05-27 01:18:52,260 [INFO] MainUpdater:2873 - connection check result : 10
+2024-05-27 01:18:52,286 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-05-27 01:18:52,286 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.111
+2024-05-27 01:18:52,308 [ERROR] ProjectManagerView:394 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$10.caretUpdate(ProjectChoiceTab.java:2504) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:412) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4491) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4513) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:842) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1313) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1212) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1193) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1789) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:226) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:780) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:739) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:698) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1729) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:944) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3475) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1816) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:544) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:391) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:900) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:776) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:315) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:293) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:247) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.11.1.202404110753/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.11.1.202404110753/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.11.1.202404110753/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.11.1.202404110753/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.11.1.202404110753/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2024-05-27 01:18:52,310 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2024-05-27 01:18:52,310 [INFO] ThirdParty:873 - entering critical section [close project]
+2024-05-27 01:18:52,310 [INFO] ThirdParty:883 - exiting critical section [close project]
+2024-05-27 01:18:52,311 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-05-27 01:18:52,317 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2024-05-27 01:18:52,322 [WARN] MainPanel:272 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2024-05-27 01:18:52,326 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 660193096 Bytes (788529152)
+2024-05-27 01:18:52,327 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-05-27 01:18:52,327 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.111
+2024-05-27 01:18:52,327 [INFO] OpenFileManager:312 - Change cursor
+2024-05-27 01:18:52,361 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-05-27 01:18:52,374 [INFO] Mcu:2021 - Initializing MCU STM32F411C(C-E)Ux STM32F411CEUx STM32F411CEU6TR
+2024-05-27 01:18:53,521 [INFO] Context:663 - Trying to add GPIOservice into a context  which must be forbidden
+2024-05-27 01:18:53,779 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2024-05-27 01:18:53,779 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2024-05-27 01:18:53,779 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2024-05-27 01:18:53,780 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2024-05-27 01:18:53,780 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2024-05-27 01:18:53,782 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:Audio HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,782 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:Audio HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:CDC HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:CDC HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:MSC HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:MSC HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:HID HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:HID HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:MTP HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,783 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_HOST:1.0.0:STMicroelectronics:USB::USB Host:MTP HS::1.0:USB_HOST_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,786 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,787 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:Audio HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:Audio HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:CDC HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:CDC HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:DFU HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:DFU HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:HID HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:HID HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:Custom HID HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:Custom HID HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:182 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:MSC HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,853 [WARN] ModelIntegratedComponent:188 - Modes not found for component STMicroelectronics:USB_DEVICE:1.0.0:STMicroelectronics:USB::USB Device:MSC HS::1.0:USB_DEVICE_1_0_RESTRICTED_HS
+2024-05-27 01:18:53,866 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-05-27 01:18:54,164 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Channel) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (ADC1) currently not set
+2024-05-27 01:18:54,175 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (ADC1) currently not set
+2024-05-27 01:18:54,176 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (48MHZClocksFreq_Value) has invalid value (50000000)
+2024-05-27 01:18:54,176 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (12500000)
+2024-05-27 01:18:54,464 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 306441080 Bytes (788529152)
+2024-05-27 01:18:54,490 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2024-05-27 01:18:54,490 [INFO] ThirdParty:835 - entering critical section [change project]
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.6
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.1
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.2
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2024-05-27 01:18:54,491 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.1
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2024-05-27 01:18:54,492 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-05-27 01:18:54,493 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.1
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.2.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-05-27 01:18:54,494 [INFO] ThirdParty:841 - exiting critical section [change project]
+2024-05-27 01:18:54,660 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-05-27 01:18:54,660 [INFO] PinOutPanel:1561 - setPackage(STM32F411CEUx,UFQFPN48)
+2024-05-27 01:18:54,886 [INFO] UtilMem:75 - Before build in PCC Used Memory: 469053360 Bytes (788529152)
+2024-05-27 01:18:55,106 [INFO] UtilMem:75 - After build in PCC Used Memory: 512044976 Bytes (788529152)
+2024-05-27 01:18:55,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,130 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,131 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,132 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,132 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,132 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,132 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,132 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,134 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,134 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,134 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,135 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,135 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,135 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-05-27 01:18:55,160 [INFO] ApiDbMcu:508 - Load IP Config File for PDM2PCM
+2024-05-27 01:18:55,161 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:18:55,161 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:18:55,209 [INFO] CADModel:165 - CPN selected for project levelSTM32F411CEU6TR
+2024-05-27 01:18:55,209 [INFO] CADModel:114 - Register for checkConnection events
+2024-05-27 01:18:55,254 [INFO] OpenFileManager:343 - Restore cursor
+2024-05-27 01:18:55,342 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:18:55,342 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:18:55,343 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:18:55,343 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:46:19,288 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:46:23,221 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:46:25,507 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 346417768 Bytes (788529152)
+2024-05-27 01:46:26,789 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 389409592 Bytes (788529152)
+2024-05-27 01:46:27,740 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 448129696 Bytes (788529152)
+2024-05-27 01:46:27,938 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 01:46:27,938 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 01:46:27,938 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 01:46:27,938 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 01:46:27,939 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 01:46:27,939 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 01:46:27,939 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 01:46:27,939 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 01:46:27,940 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 01:46:27,948 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 01:46:27,948 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:46:27,948 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 01:46:27,948 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 01:46:27,949 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 01:46:27,950 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:46:27,950 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:46:28,093 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 01:46:28,252 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 01:46:28,296 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 01:46:28,410 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 01:46:28,505 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 01:46:28,610 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 01:46:28,615 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 01:46:28,706 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 01:46:28,735 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 01:46:28,946 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 01:46:28,963 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 01:46:29,071 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 01:46:29,100 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 01:46:29,279 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 01:46:29,296 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 01:46:29,379 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 01:46:29,407 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 01:46:29,542 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 01:46:29,577 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 01:46:29,578 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 01:46:29,601 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 01:46:29,733 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 01:46:29,751 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 01:46:29,923 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 01:46:30,385 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 254mS.
+2024-05-27 01:46:30,389 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 01:46:30,479 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 01:46:30,483 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-05-27 01:46:30,489 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-05-27 01:46:30,491 [INFO] ApiDbMcu:508 - Load IP Config File for LIBJPEG
+2024-05-27 01:46:30,496 [INFO] ApiDbMcu:508 - Load IP Config File for MBEDTLS
+2024-05-27 01:46:30,517 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-05-27 01:46:30,520 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2024-05-27 01:46:31,371 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 982mS.
+2024-05-27 01:46:31,372 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:46:31,377 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:50:53,172 [INFO] SpinnerEditorADC:65 - is string kkkk
+2024-05-27 01:50:54,637 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:50:54,703 [INFO] SpinnerEditorADC:65 - is string kkkk
+2024-05-27 01:51:20,612 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:51:24,602 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 451630688 Bytes (788529152)
+2024-05-27 01:51:25,237 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 475221600 Bytes (788529152)
+2024-05-27 01:51:25,414 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 493573728 Bytes (788529152)
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 01:51:25,554 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 01:51:25,555 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 01:51:25,561 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 01:51:25,561 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:51:25,561 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:51:25,561 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 01:51:25,562 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:51:25,562 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:51:25,562 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 01:51:25,563 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 01:51:25,564 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:51:25,564 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:51:25,679 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 01:51:25,822 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 01:51:25,847 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 01:51:25,971 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 01:51:26,061 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 01:51:26,166 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 01:51:26,172 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 01:51:26,244 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 01:51:26,275 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 01:51:26,369 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 01:51:26,378 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 01:51:26,456 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 01:51:26,484 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 01:51:26,637 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 01:51:26,645 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 01:51:26,729 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 01:51:26,758 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 01:51:26,879 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 01:51:26,910 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 01:51:26,912 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 01:51:26,936 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 01:51:27,032 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 01:51:27,053 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 01:51:27,217 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 01:51:27,681 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 251mS.
+2024-05-27 01:51:27,685 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 01:51:27,779 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 01:51:28,672 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 987mS.
+2024-05-27 01:51:28,673 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:51:28,679 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:54:47,767 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-27 01:55:16,556 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 493692984 Bytes (796917760)
+2024-05-27 01:55:17,195 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 516761656 Bytes (796917760)
+2024-05-27 01:55:17,399 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 560801848 Bytes (796917760)
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-27 01:55:17,524 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-27 01:55:17,526 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.1.202404110753\\db\
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-05-27 01:55:17,531 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : Instancevalue: DMA2_Stream0
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Initvalue: null
+2024-05-27 01:55:17,531 [INFO] Argument:327 - 	 sub Args: 
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:55:17,531 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-05-27 01:55:17,531 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : Statevalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : Statevalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-05-27 01:55:17,532 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-05-27 01:55:17,533 [WARN] IP:2120 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2024-05-27 01:55:17,533 [WARN] IP:2120 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2024-05-27 01:55:17,636 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp_save
+2024-05-27 01:55:17,750 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\license.tmp
+2024-05-27 01:55:17,772 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp_save
+2024-05-27 01:55:17,891 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\gpio.tmp
+2024-05-27 01:55:18,051 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp_save
+2024-05-27 01:55:18,172 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma.tmp
+2024-05-27 01:55:18,178 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp_save
+2024-05-27 01:55:18,254 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\dma_GV.tmp
+2024-05-27 01:55:18,285 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c_save
+2024-05-27 01:55:18,374 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_it.c
+2024-05-27 01:55:18,382 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h_save
+2024-05-27 01:55:18,460 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_it.h
+2024-05-27 01:55:18,488 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c_save
+2024-05-27 01:55:18,633 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\stm32f4xx_hal_msp.c
+2024-05-27 01:55:18,639 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp_save
+2024-05-27 01:55:18,713 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\MXTmpFiles\system.tmp
+2024-05-27 01:55:18,742 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-05-27 01:55:18,864 [INFO] CodeEngine:335 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\stm32f4xx_hal_conf.h
+2024-05-27 01:55:18,896 [WARN] IPConfigManager:3513 - IP not found : TIM
+2024-05-27 01:55:18,897 [WARN] CodeGenerator:3951 - IP not found : null
+2024-05-27 01:55:18,917 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h_save
+2024-05-27 01:55:19,021 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Inc\main.h
+2024-05-27 01:55:19,040 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c_save
+2024-05-27 01:55:19,220 [INFO] CodeEngine:279 - Generated code: C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\Core\Src\main.c
+2024-05-27 01:55:19,819 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 264mS.
+2024-05-27 01:55:19,823 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-05-27 01:55:19,917 [INFO] ConfigFileManager:1503 - The Die is : DIE431
+2024-05-27 01:55:20,768 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 945mS.
+2024-05-27 01:55:20,769 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-05-27 01:55:20,773 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.

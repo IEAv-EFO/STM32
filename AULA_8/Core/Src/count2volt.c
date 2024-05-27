@@ -5,7 +5,7 @@
 
 int max_count;
 
-float count2volt(int res, int count){
+float count2volt(uint16_t res, uint16_t count){
 
 	    max_count = pow(2, res) - 1;
 

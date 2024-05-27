@@ -1,10 +1,10 @@
-11:46:45 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
-make -j4 all 
+01:44:04 **** Incremental Build of configuration Debug for project EXERCICIO_AULA6 ****
+make -j8 all 
 arm-none-eabi-size  EXERCICIO_AULA6.elf 
    text	   data	    bss	    dec	    hex	filename
   58812	    708	   9348	  68868	  10d04	EXERCICIO_AULA6.elf
 Finished building: default.size.stdout
  
 
-11:46:46 Build Finished. 0 errors, 0 warnings. (took 634ms)
+01:44:04 Build Finished. 0 errors, 0 warnings. (took 556ms)
 
