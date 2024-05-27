@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -56,11 +57,8 @@ TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState extTrigger, PWMOutput;
-uint16_t counts;
-char bufferCDC[32];
-char valor_string[6];
-uint16_t bufferValue[ADCBUFFERSIZE];
-uint16_t buffer[ADCBUFFERSIZE];
+char bufferCDC[32]; // for debug purposes
+uint16_t counts, buffer[32], bufferADC[ADCBUFFERSIZE];
 float adcValue, l1avg, l2avg, avgDiff, evenAcc, oddAcc;
 
 /* USER CODE END PV */
@@ -123,12 +121,13 @@ int main(void)
   MX_TIM2_Init();
   MX_ADC1_Init();
   MX_I2C1_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 	lcd_init();
 	lcd_clear();
 
 	RetTimer = HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-	RetADC = HAL_ADC_Start_DMA(&hadc1, bufferValue, ADCBUFFERSIZE);
+	RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
 	if (RetTimer == HAL_OK && RetADC == HAL_OK) {
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 	} else {
@@ -146,17 +145,17 @@ int main(void)
         	sprintf(bufferCDC, "%d\t%d\n", extTrigger, PWMOutput);
         	CDC_Transmit_FS((uint8_t*) bufferCDC, strlen(bufferCDC));
 		#elif defined(MAINLOOP)
-			counts = bufferValue[2];
+			counts = bufferADC[0];
 			adcValue = count2volt(ADCRES, counts);
 			lcd_put_cur(0, 0);
 			HAL_Delay(20);
 			lcd_send_string("Nivel1 = ");
 			HAL_Delay(20);
 			lcd_put_cur(0, 9);
-			sprintf((char*) bufferValue, "%1.4f", adcValue);
-			lcd_send_string((char*) bufferValue);
+			sprintf(buffer, "%1.4f", adcValue);
+			lcd_send_string(buffer);
 			HAL_Delay(20);
-			counts = bufferValue[3];
+			counts = bufferADC[1];
 			adcValue = count2volt(ADCRES, counts);
 			lcd_put_cur(1, 0);
 			HAL_Delay(20);
@@ -164,8 +163,29 @@ int main(void)
 			HAL_Delay(20);
 			lcd_put_cur(1, 9);
 			HAL_Delay(20);
-			sprintf((char*) bufferValue, "%1.4f", adcValue);
-			lcd_send_string((char*) bufferValue);
+			sprintf(buffer, "%1.4f", adcValue);
+			lcd_send_string(buffer);
+
+			counts = bufferADC[2];
+			adcValue = count2volt(ADCRES, counts);
+			lcd_put_cur(2, 0);
+			HAL_Delay(20);
+			lcd_send_string("Nivel3 = ");
+			HAL_Delay(20);
+			lcd_put_cur(2, 9);
+			sprintf(buffer, "%1.4f", adcValue);
+			lcd_send_string(buffer);
+			HAL_Delay(20);
+			counts = bufferADC[3];
+			adcValue = count2volt(ADCRES, counts);
+			lcd_put_cur(3, 0);
+			HAL_Delay(20);
+			lcd_send_string("Nivel4 = ");
+			HAL_Delay(20);
+			lcd_put_cur(3, 9);
+			HAL_Delay(20);
+			sprintf(buffer, "%1.4f", adcValue);
+			lcd_send_string(buffer);
 
 			HAL_Delay(2000);
 		#endif
@@ -317,7 +337,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 100-1;
+  htim2.Init.Prescaler = 96-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 2550-1;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -421,31 +441,29 @@ void printLCD() {
 	lcd_put_cur(0, 0);
 	lcd_send_string("Nivel1 = ");
 	lcd_put_cur(0, 9);
-	sprintf(bufferValue, "%.2f", l1avg);
-	lcd_send_string(bufferValue);
+	sprintf(buffer, "%1.4f", l1avg);
+	lcd_send_string(buffer);
 
 	lcd_put_cur(1, 0);
 	lcd_send_string("Nivel2 = ");
 	lcd_put_cur(1, 9);
-	sprintf(bufferValue, "%.2f", l2avg);
-	lcd_send_string(bufferValue);
+	sprintf(buffer, "%1.4f", l2avg);
+	lcd_send_string(buffer);
 
 	lcd_put_cur(3, 0);
 	lcd_send_string("N1-N2 = ");
 	lcd_put_cur(3, 8);
-	sprintf(bufferValue, "%.2f", avgDiff);
-	lcd_send_string(bufferValue);
+	sprintf(buffer, "%1.4f", avgDiff);
+	lcd_send_string(buffer);
 }
 
 #if defined(CALLBACK)
 	void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
-		printLCD();
-		// This function is called when the buffer is completely filled
 		if (hadc->Instance == ADC1) {
 			evenAcc = 0.0;
 			oddAcc = 0.0;
 			for (int i = 0; i < ADCBUFFERSIZE; i++) {
-				counts = buffer[i];
+				counts = bufferADC[i];
 				adcValue = count2volt(ADCRES, counts);
 				if (i % 2 == 0) {
 					evenAcc += adcValue;
@@ -455,7 +473,7 @@ void printLCD() {
 			}
 			l1avg = evenAcc / 10.0;
 			l2avg = oddAcc / 10.0;
-			avgDiff = l1avg - l2avg;
+			avgDiff = fabs(l1avg - l2avg);
 			printLCD();
 		}
 	}
