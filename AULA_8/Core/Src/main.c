@@ -36,8 +36,8 @@
 /* USER CODE BEGIN PD */
 #define ADCRES 12
 #define ADCBUFFERSIZE 20
-//#define CALLBACK
-#define MAINLOOP
+#define CALLBACK
+//#define MAINLOOP
 //#define GRAPH
 /* USER CODE END PD */
 
@@ -58,9 +58,8 @@ TIM_HandleTypeDef htim2;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState extTrigger, PWMOutput;
 char bufferCDC[32]; // for debug purposes
-uint16_t counts, buffer[32], bufferADC[ADCBUFFERSIZE];
+uint16_t counts, line, buffer[32], bufferADC[ADCBUFFERSIZE];
 float adcValue, l1avg, l2avg, avgDiff, evenAcc, oddAcc;
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,7 +72,7 @@ static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 void lcd_init();
-void lcd_clear();
+uint16_t lcd_clear();
 float count2volt(uint16_t res, uint16_t count);
 void lcd_send_cmd(char cmd);
 void lcd_send_data(char data);
@@ -124,7 +123,9 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 	lcd_init();
+	HAL_Delay(100);
 	lcd_clear();
+	HAL_Delay(100);
 
 	RetTimer = HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 	RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
@@ -145,48 +146,23 @@ int main(void)
         	sprintf(bufferCDC, "%d\t%d\n", extTrigger, PWMOutput);
         	CDC_Transmit_FS((uint8_t*) bufferCDC, strlen(bufferCDC));
 		#elif defined(MAINLOOP)
-			counts = bufferADC[0];
-			adcValue = count2volt(ADCRES, counts);
-			lcd_put_cur(0, 0);
-			HAL_Delay(20);
-			lcd_send_string("Nivel1 = ");
-			HAL_Delay(20);
-			lcd_put_cur(0, 9);
-			sprintf(buffer, "%1.4f", adcValue);
-			lcd_send_string(buffer);
-			HAL_Delay(20);
-			counts = bufferADC[1];
-			adcValue = count2volt(ADCRES, counts);
-			lcd_put_cur(1, 0);
-			HAL_Delay(20);
-			lcd_send_string("Nivel2 = ");
-			HAL_Delay(20);
-			lcd_put_cur(1, 9);
-			HAL_Delay(20);
-			sprintf(buffer, "%1.4f", adcValue);
-			lcd_send_string(buffer);
+        	line = 0;
+        	for(int i = 0; i < 10; i++) {
+        		counts = bufferADC[i];
+				adcValue = count2volt(ADCRES, counts);
+				lcd_put_cur(line, 0);
+				sprintf(buffer,"Nivel%d = ", i);
+				lcd_send_string(buffer);
+				lcd_put_cur(line, 9);
+				sprintf(buffer, "%1.4f", adcValue);
+				lcd_send_string(buffer);
+				HAL_Delay(750);
+				line++;
 
-			counts = bufferADC[2];
-			adcValue = count2volt(ADCRES, counts);
-			lcd_put_cur(2, 0);
-			HAL_Delay(20);
-			lcd_send_string("Nivel3 = ");
-			HAL_Delay(20);
-			lcd_put_cur(2, 9);
-			sprintf(buffer, "%1.4f", adcValue);
-			lcd_send_string(buffer);
-			HAL_Delay(20);
-			counts = bufferADC[3];
-			adcValue = count2volt(ADCRES, counts);
-			lcd_put_cur(3, 0);
-			HAL_Delay(20);
-			lcd_send_string("Nivel4 = ");
-			HAL_Delay(20);
-			lcd_put_cur(3, 9);
-			HAL_Delay(20);
-			sprintf(buffer, "%1.4f", adcValue);
-			lcd_send_string(buffer);
-
+				if (line == 4) {
+					line = 0;
+				}
+        	}
 			HAL_Delay(2000);
 		#endif
 
@@ -451,8 +427,8 @@ void printLCD() {
 	lcd_send_string(buffer);
 
 	lcd_put_cur(3, 0);
-	lcd_send_string("N1-N2 = ");
-	lcd_put_cur(3, 8);
+	lcd_send_string("|N1-N2| = ");
+	lcd_put_cur(3, 10);
 	sprintf(buffer, "%1.4f", avgDiff);
 	lcd_send_string(buffer);
 }

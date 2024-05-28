@@ -39,6 +39,7 @@ void lcd_clear (void)
 	{
 		lcd_send_data (' ');
 	}
+	return 0;
 }
 
 void lcd_put_cur(int row, int col)
