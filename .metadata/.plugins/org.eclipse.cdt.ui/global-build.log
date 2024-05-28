@@ -9010,3 +9010,2282 @@ Finished building: default.size.stdout
  
 Finished building: AULA_8.list
  
+15:24:21 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-size  AULA_8.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66196	    728	   9504	  76428	  12a8c	AULA_8.elf
+Finished building: default.size.stdout
+ 
+15:25:18 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:154:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  154 |                                 sprintf(buffer,"Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:155:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  155 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:79:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   79 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:157:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  157 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:158:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  158 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:79:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   79 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:420:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  420 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:421:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  421 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:79:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   79 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:426:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  426 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:427:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  427 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:79:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   79 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:432:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  432 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:433:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  433 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:79:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   79 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  65980	    728	   9488	  76196	  129a4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:00:30 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:132:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  132 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:143:17: error: 'pinState' undeclared (first use in this function)
+  143 |                 pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2);
+      |                 ^~~~~~~~
+../Core/Src/main.c:143:17: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:159:44: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:159:44: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:159:44: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:216:1: error: expected identifier or '(' before '}' token
+  216 | }
+      | ^
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:468:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  468 | sprintf(buffer, "%1.4f", l1avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:469:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  469 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:474:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  474 | sprintf(buffer, "%1.4f", l2avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:475:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  475 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:480:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  480 | sprintf(buffer, "%1.4f", avgDiff);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:481:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  481 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:01:44 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:132:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  132 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:159:44: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:159:44: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:159:44: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:216:1: error: expected identifier or '(' before '}' token
+  216 | }
+      | ^
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:468:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  468 | sprintf(buffer, "%1.4f", l1avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:469:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  469 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:474:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  474 | sprintf(buffer, "%1.4f", l2avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:475:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  475 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:480:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  480 | sprintf(buffer, "%1.4f", avgDiff);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:481:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  481 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:02:05 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:132:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  132 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:159:44: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:159:44: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  159 |                                  avgDiff = fabs(l1avg - l2avg);
+      |                                            ^~~~
+../Core/Src/main.c:159:44: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:467:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  467 | sprintf(buffer, "%1.4f", l1avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:468:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  468 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:473:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  473 | sprintf(buffer, "%1.4f", l2avg);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:474:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  474 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:479:9: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  479 | sprintf(buffer, "%1.4f", avgDiff);
+      |         ^~~~~~
+      |         |
+      |         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:480:17: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  480 | lcd_send_string(buffer);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66532	    728	   9512	  76772	  12be4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:03:27 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-size  AULA_8.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66532	    728	   9512	  76772	  12be4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+16:19:30 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:158:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  158 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:158:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  158 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:158:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:167:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  167 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:168:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  168 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:450:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  450 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:451:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  451 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:456:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  456 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:457:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  457 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:462:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  462 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:463:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  463 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66532	    728	   9512	  76772	  12be4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:20:44 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:159:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  159 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:159:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  159 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:159:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:452:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  452 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:453:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  453 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:458:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  458 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:459:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  459 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:464:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  464 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:465:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  465 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:21:28 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:429:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:430:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:435:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:436:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:441:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:442:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:22:14 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:162:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  162 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:162:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  162 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:162:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:175:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  175 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:176:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  176 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:431:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:432:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  432 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:437:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:438:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  438 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:443:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:444:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  444 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66548	    728	   9512	  76788	  12bf4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:24:05 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:162:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  162 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:162:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  162 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:162:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:175:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  175 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:176:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  176 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:431:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:432:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  432 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:437:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:438:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  438 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:443:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:444:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  444 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66548	    728	   9512	  76788	  12bf4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:25:53 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:429:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:430:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:435:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:436:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:441:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:442:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:26:58 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:430:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:431:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:436:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:437:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:442:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:443:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66548	    728	   9512	  76788	  12bf4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:27:43 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:430:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:431:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:436:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:437:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:442:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:443:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:34:43 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:431:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:432:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  432 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:437:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:438:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  438 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:443:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:444:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  444 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66548	    728	   9512	  76788	  12bf4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:35:27 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:160:43: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:22:1: note: include '<math.h>' or provide a declaration of 'fabs'
+   21 | #include "usb_device.h"
+  +++ |+#include <math.h>
+   22 | 
+../Core/Src/main.c:160:43: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
+  160 |                                 avgDiff = fabs(l1avg - l2avg);
+      |                                           ^~~~
+../Core/Src/main.c:160:43: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/main.c:170:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:171:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:173:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:174:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:430:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:431:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  431 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:436:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:437:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  437 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:442:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:443:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  443 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:80:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   80 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:39:08 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:168:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  168 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:169:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:171:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:172:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:428:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  428 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:429:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:434:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  434 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:435:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:440:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  440 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:441:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:40:10 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:429:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:430:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:435:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:436:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:441:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:442:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:41:17 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:429:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:430:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  430 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:435:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:436:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  436 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:441:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:442:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  442 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:42:27 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:169:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:170:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  170 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:172:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:173:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  173 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:428:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  428 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:429:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  429 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:434:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  434 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:435:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  435 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:440:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  440 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:441:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  441 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66540	    728	   9512	  76780	  12bec	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
+16:43:29 **** Incremental Build of configuration Debug for project AULA_8 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:129:44: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  129 |         RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
+      |                                            ^~~~~~~~~
+      |                                            |
+      |                                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:168:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  168 |                                 sprintf(buffer, "Nivel%d = ", i);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
+                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
+                 from ../USB_DEVICE/App/usb_device.h:32,
+                 from ../Core/Src/main.c:21:
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:169:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  169 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:171:41: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |                                 sprintf(buffer, "%1.4f", adcValue);
+      |                                         ^~~~~~
+      |                                         |
+      |                                         uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:172:49: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  172 |                                 lcd_send_string(buffer);
+      |                                                 ^~~~~~
+      |                                                 |
+      |                                                 uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c: In function 'printLCD':
+../Core/Src/main.c:427:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  427 |         sprintf(buffer, "%1.4f", l1avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:428:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  428 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:433:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  433 |         sprintf(buffer, "%1.4f", l2avg);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:434:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  434 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:439:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  439 |         sprintf(buffer, "%1.4f", avgDiff);
+      |                 ^~~~~~
+      |                 |
+      |                 uint16_t * {aka short unsigned int *}
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+../Core/Src/main.c:440:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
+  440 |         lcd_send_string(buffer);
+      |                         ^~~~~~
+      |                         |
+      |                         uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   78 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AULA_8.elf
+ 
+arm-none-eabi-size  AULA_8.elf 
+arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
+   text	   data	    bss	    dec	    hex	filename
+  66532	    728	   9512	  76772	  12be4	AULA_8.elf
+Finished building: default.size.stdout
+ 
+Finished building: AULA_8.list
+ 
