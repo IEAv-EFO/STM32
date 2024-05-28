@@ -58,7 +58,7 @@ GPIO_PinState extTrigger, PWMOutput, pinState;
 char bufferCDC[32]; // for debug purposes
 uint16_t counts, line, flag = 0;
 uint16_t buffer[32], bufferADC[ADCBUFFERSIZE];
-float adcValue, l1avg, l2avg, avgDiff, evenAcc, oddAcc;
+float adcValue, l1avg, l2avg, diff, evenAcc, oddAcc;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -77,7 +77,8 @@ void lcd_send_cmd(char cmd);
 void lcd_send_data(char data);
 void lcd_send_string(char *str);
 void lcd_put_cur(int row, int col);
-void printLCD();
+void seqLevels();
+void avgDiff();
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 /* USER CODE END PFP */
 
@@ -129,8 +130,7 @@ int main(void) {
 	RetADC = HAL_ADC_Start_DMA(&hadc1, bufferADC, ADCBUFFERSIZE);
 	if (RetTimer == HAL_OK && RetADC == HAL_OK) {
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-	}
-	else {
+	} else {
 		Error_Handler();
 	}
 	/* USER CODE END 2 */
@@ -139,44 +139,17 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 	while (1) {
 		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2);
-		if (pinState) {
+		if (pinState == GPIO_PIN_SET) {
 			if (flag) {
-				evenAcc = 0.0;
-				oddAcc = 0.0;
-				for (int i = 0; i < ADCBUFFERSIZE; i++) {
-					counts = bufferADC[i];
-					adcValue = count2volt(ADCRES, counts);
-					if (i % 2 == 0) {
-						evenAcc += adcValue;
-					} else {
-						oddAcc += adcValue;
-					}
-				}
-				l1avg = evenAcc / 10.0;
-				l2avg = oddAcc / 10.0;
-				avgDiff = l1avg - l2avg;
-				printLCD();
+				avgDiff();
 				flag = 0;
 			}
 		}
 		else {
-			line = 0;
-			for (int i = 0; i < 10; i++) {
-				counts = bufferADC[i];
-				adcValue = count2volt(ADCRES, counts);
-				lcd_put_cur(line, 0);
-				sprintf(buffer, "Nivel%d = ", i);
-				lcd_send_string(buffer);
-				lcd_put_cur(line, 9);
-				sprintf(buffer, "%1.4f", adcValue);
-				lcd_send_string(buffer);
-				HAL_Delay(750);
-				line++;
-				if (line == 4) {
-					line = 0;
-				}
-			}
-			HAL_Delay(2000);
+			seqLevels();
+			lcd_init();
+			lcd_clear();
+			HAL_Delay(1000);
 		}
 	}
 	/*
@@ -420,7 +393,49 @@ static void MX_GPIO_Init(void) {
 
 /* USER CODE BEGIN 4 */
 
-void printLCD() {
+void seqLevels() {
+	line = 0;
+	for (int i = 0; i < 20; i++) {
+		counts = bufferADC[i];
+		adcValue = count2volt(ADCRES, counts);
+		lcd_put_cur(line, 0);
+		sprintf(buffer, "Nivel%d = ", i);
+		lcd_send_string(buffer);
+		if (i > 9) {
+			lcd_put_cur(line, 10);
+		}
+		else {
+			lcd_put_cur(line, 9);
+		}
+		sprintf(buffer, "%1.4f", adcValue);
+		lcd_send_string(buffer);
+		HAL_Delay(1000);
+		line++;
+		if (line == 4) {
+			line = 0;
+		}
+	}
+	HAL_Delay(1000);
+}
+
+void avgDiff() {
+	evenAcc = 0.0;
+	oddAcc = 0.0;
+
+	for (int i = 0; i < ADCBUFFERSIZE; i++) {
+		counts = bufferADC[i];
+		adcValue = count2volt(ADCRES, counts);
+		if (i % 2 == 0) {
+			evenAcc += adcValue;
+		} else {
+			oddAcc += adcValue;
+		}
+	}
+
+	l1avg = evenAcc / 10.0;
+	l2avg = oddAcc / 10.0;
+	diff = l1avg - l2avg;
+
 	lcd_put_cur(0, 0);
 	lcd_send_string("Nivel1 = ");
 	lcd_put_cur(0, 9);
@@ -436,30 +451,29 @@ void printLCD() {
 	lcd_put_cur(3, 0);
 	lcd_send_string("N1-N2 = ");
 	lcd_put_cur(3, 8);
-	sprintf(buffer, "%1.4f", avgDiff);
+	sprintf(buffer, "%1.4f", diff);
 	lcd_send_string(buffer);
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 	if (hadc->Instance == ADC1) {
 		flag = 1;
-		lcd_clear();
 	}
 }
-	/* USER CODE END 4 */
+/* USER CODE END 4 */
 
-	/**
-	 * @brief  This function is executed in case of error occurrence.
-	 * @retval None
-	 */
-	void Error_Handler(void) {
-		/* USER CODE BEGIN Error_Handler_Debug */
-		/* User can add his own implementation to report the HAL error return state */
-		__disable_irq();
-		while (1) {
-		}
-		/* USER CODE END Error_Handler_Debug */
+/**
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
+void Error_Handler(void) {
+	/* USER CODE BEGIN Error_Handler_Debug */
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
 	}
+	/* USER CODE END Error_Handler_Debug */
+}
 
 #ifdef  USE_FULL_ASSERT
 /**
