@@ -1,3 +1,4 @@
+
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
@@ -56,7 +57,7 @@ TIM_HandleTypeDef htim2;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState extTrigger, PWMOutput, pinState;
 char bufferCDC[32]; // for debug purposes
-uint16_t counts, line, flag = 0;
+uint16_t counts, line, flag = 0, flagAVG = 1, flagLevels = 1;
 uint16_t buffer[32], bufferADC[ADCBUFFERSIZE];
 float adcValue, l1avg, l2avg, diff, evenAcc, oddAcc;
 /* USER CODE END PV */
@@ -140,14 +141,35 @@ int main(void) {
 	while (1) {
 		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2);
 		if (pinState == GPIO_PIN_SET) {
+			if (flagAVG) {
+				lcd_clear();
+				lcd_put_cur(1, 3);
+				lcd_send_string("AVG DIFF MODE");
+				HAL_Delay(1000);
+				lcd_clear();
+				flagAVG = 0;
+				flagLevels = 1;
+			}
 			if (flag) {
 				avgDiff();
 				flag = 0;
 			}
 		}
 		else {
-			seqLevels();
-			lcd_init();
+			lcd_clear();
+			HAL_Delay(1000);
+			if (flagLevels) {
+				lcd_put_cur(1, 3);
+				lcd_send_string("LEVELS SEQ MODE");
+				HAL_Delay(1000);
+				flagLevels = 0;
+				flagAVG = 1;
+			}
+			lcd_clear();
+			if (flag) {
+				seqLevels();
+				flag = 0;
+			}
 			lcd_clear();
 			HAL_Delay(1000);
 		}
