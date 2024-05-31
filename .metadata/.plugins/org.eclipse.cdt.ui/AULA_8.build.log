@@ -1,103 +1,10 @@
-14:16:28 **** Incremental Build of configuration Debug for project AULA_8 ****
+13:28:45 **** Incremental Build of configuration Debug for project AULA_8 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'avgDiff':
-../Core/Src/main.c:464:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  464 |         sprintf(buffer, "%1.4f", l1avg);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../USB_DEVICE/App/usb_device.h:32,
-                 from ../Core/Src/main.c:21:
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:465:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
-  465 |         lcd_send_string(buffer);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   78 | void lcd_send_string(char *str);
-      |                      ~~~~~~^~~
-../Core/Src/main.c:470:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  470 |         sprintf(buffer, "%1.4f", l2avg);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:471:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
-  471 |         lcd_send_string(buffer);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   78 | void lcd_send_string(char *str);
-      |                      ~~~~~~^~~
-../Core/Src/main.c:476:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  476 |         sprintf(buffer, "%1.4f", diff);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:477:25: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
-  477 |         lcd_send_string(buffer);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   78 | void lcd_send_string(char *str);
-      |                      ~~~~~~^~~
-../Core/Src/main.c: In function 'seqLevels':
-../Core/Src/main.c:499:25: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  499 |                 sprintf(buffer, "Nivel%d = ", i);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:500:33: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
-  500 |                 lcd_send_string(buffer);
-      |                                 ^~~~~~
-      |                                 |
-      |                                 uint16_t * {aka short unsigned int *}
-../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   78 | void lcd_send_string(char *str);
-      |                      ~~~~~~^~~
-../Core/Src/main.c:501:25: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  501 |                 sprintf(buffer, "%1.4f", adcValue);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:502:33: warning: passing argument 1 of 'lcd_send_string' from incompatible pointer type [-Wincompatible-pointer-types]
-  502 |                 lcd_send_string(buffer);
-      |                                 ^~~~~~
-      |                                 |
-      |                                 uint16_t * {aka short unsigned int *}
-../Core/Src/main.c:78:28: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-   78 | void lcd_send_string(char *str);
-      |                      ~~~~~~^~~
-arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AULA_8.elf
- 
 arm-none-eabi-size  AULA_8.elf 
-arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
    text	   data	    bss	    dec	    hex	filename
-  66876	    728	   9512	  77116	  12d3c	AULA_8.elf
+  66884	    728	   9512	  77124	  12d44	AULA_8.elf
 Finished building: default.size.stdout
  
-Finished building: AULA_8.list
- 
 
-14:16:29 Build Finished. 0 errors, 10 warnings. (took 1s.639ms)
+13:28:45 Build Finished. 0 errors, 0 warnings. (took 549ms)
 

@@ -152,8 +152,8 @@ int main(void)
 		if (pinState == GPIO_PIN_SET) {
 			if (flagAVG) {
 				lcd_clear();
-				lcd_put_cur(0, 4);
-				lcd_send_string("AVERAGE DIFF");
+				lcd_put_cur(0, 1);
+				lcd_send_string("MEDIAS E DIFERENCA");
 				HAL_Delay(1500);
 				lcd_clear();
 				flagAVG = 0;
@@ -168,8 +168,8 @@ int main(void)
 			lcd_clear();
 			HAL_Delay(1000);
 			if (flagLevels) {
-				lcd_put_cur(0, 2);
-				lcd_send_string("LEVELS SEQUENCE");
+				lcd_put_cur(0, 0);
+				lcd_send_string("SEQUENCIA DE  NIVEIS");
 				HAL_Delay(1500);
 				flagLevels = 0;
 				flagAVG = 1;
