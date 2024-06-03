@@ -32,9 +32,12 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
-//#define CALLBACK //For frequency measurement.It is needed to add the OTG_FS_UBS
-//#define COUNTERCHECK // For debug purposes
+#define TWOVOLTS 1350
+#define THREEVOLTS 3870
+//#define GRAPH 		//For frequency measurement.It is needed to add the OTG_FS_UBS
+//#define COUNTERCHECK 	// For debug purposes
 //#define MAINLOOP
+#define EXERCICIO8
 #define ONLYTIMER
 /* USER CODE END PD */
 
@@ -44,12 +47,18 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
+I2C_HandleTypeDef hi2c2;
+
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
-HAL_StatusTypeDef Ret;
+HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
 char buffer[3], bufferCounter[40];
+int countsDAC;
+uint8_t buf[2];
 
 /* USER CODE END PV */
 
@@ -57,6 +66,8 @@ char buffer[3], bufferCounter[40];
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
@@ -97,6 +108,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM3_Init();
+  MX_ADC1_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	freqGen(&htim3, 100); // Frequency in Hz
   /* USER CODE END 2 */
@@ -105,7 +118,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		#if defined(MAINLOOP)
+		#if defined(EXERCICIO8)
+			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
+			if (pinState) {
+				countsDAC = THREEVOLTS;
+			}
+			else {
+				countsDAC = TWOVOLTS;
+			}
+
+			buf[0] = countsDAC >> 8;
+			buf[1] = countsDAC;
+			HAL_I2C_Master_Transmit(&hi2c2, (0x60 << 1), buf, 2, 100);
+		#elif defined(MAINLOOP)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
@@ -161,6 +186,92 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+
+  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.ScanConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Rank = 1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C2_Init(void)
+{
+
+  /* USER CODE BEGIN I2C2_Init 0 */
+
+  /* USER CODE END I2C2_Init 0 */
+
+  /* USER CODE BEGIN I2C2_Init 1 */
+
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.ClockSpeed = 100000;
+  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C2_Init 2 */
+
+  /* USER CODE END I2C2_Init 2 */
+
 }
 
 /**
@@ -237,6 +348,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
@@ -270,15 +382,16 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		htim->Instance->PSC = psc - 1;
 		htim->Instance->CCR1 = ccr;
 
-		#if defined(CALLBACK) || defined(COUNTERCHECK)
-			Ret = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
+		#if defined(GRAPH) || defined(COUNTERCHECK)
+			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
 		#elif defined(MAINLOOP)
-			Ret = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
+			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 		#elif defined(ONLYTIMER)
-			Ret = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
+			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
+			RetADC = HAL_ADC_Start(&hadc1);
 		#endif
 
-		if (Ret == HAL_OK) {
+		if (RetTimer == HAL_OK && RetADC  == HAL_OK) {
 			HAL_Delay(200);
 			for (uint8_t i = 0; i < 10; i++) {
 				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
@@ -291,15 +404,15 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 
 HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
-			#if defined(CALLBACK)
-				pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-				sprintf(buffer, "%d\n", pinState);
-				CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
-			#elif defined(COUNTERCHECK)
-				sprintf(bufferCounter, "Currente counter: %lu\n"
-						"CCR: %d\n", htim->Instance->CNT, htim->Instance->CCR1);
-				CDC_Transmit_FS((uint8_t *)bufferCounter, strlen(bufferCounter));
-			#endif
+		#if defined(GRAPH)
+			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
+			sprintf(buffer, "%d\n", pinState);
+			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+		#elif defined(COUNTERCHECK)
+			sprintf(bufferCounter, "Currente counter: %lu\n"
+					"CCR: %d\n", htim->Instance->CNT, htim->Instance->CCR1);
+			CDC_Transmit_FS((uint8_t *)bufferCounter, strlen(bufferCounter));
+		#endif
 	}
 }
 

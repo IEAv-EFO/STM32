@@ -7729,7 +7729,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_str     0x000077a8    0x8facc ./Core/Src/i2c-lcd.o
                               0x93c11 (size before relaxing)
  .debug_str     0x00097274     0x1fc5 ./Core/Src/main.o
-                              0x98d9c (size before relaxing)
+                              0x98da2 (size before relaxing)
  .debug_str     0x00099239       0xf0 ./Core/Src/stm32f4xx_hal_msp.o
                               0x94631 (size before relaxing)
  .debug_str     0x00099329      0x49e ./Core/Src/stm32f4xx_it.o

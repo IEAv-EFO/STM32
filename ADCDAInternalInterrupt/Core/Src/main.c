@@ -33,7 +33,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ADCRES 12
-#define ZEROSALE 0
+#define ZEROSCALE 0
 #define MIDSCALE 1862
 #define FULLSCALE 4095
 /* USER CODE END PD */
