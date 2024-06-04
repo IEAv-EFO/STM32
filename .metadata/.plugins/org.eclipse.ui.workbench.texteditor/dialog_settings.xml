@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="PeriodElapsedCallback"/>
+		<item key="selection" value="ConvCpltCallback"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="PeriodElapsedCallback"/>
+			<item value="ConvCpltCallback"/>
 			<item value="callback"/>
+			<item value="GRAPH"/>
+			<item value="graph"/>
+			<item value="PeriodElapsedCallback"/>
 			<item value="PWM_PulseFinishedCallback"/>
 			<item value="flag"/>
 			<item value="tclock"/>
@@ -20,11 +23,9 @@
 			<item value="currentCCR"/>
 			<item value="base"/>
 			<item value="ccr"/>
-			<item value="compare"/>
-			<item value="bufferTimerClock"/>
-			<item value="high_time_new"/>
 		</list>
 		<list key="replacehistory">
+			<item value="FREQMETER"/>
 			<item value="\n\r"/>
 			<item value="\r\n"/>
 			<item value="systemClock"/>

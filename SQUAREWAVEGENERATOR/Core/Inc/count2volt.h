@@ -2,7 +2,7 @@
 #define COUNT2VOLT_H
 
 
-double count2volt(int res, int count);
+float count2volt(int res, int count);
 
 
 #endif

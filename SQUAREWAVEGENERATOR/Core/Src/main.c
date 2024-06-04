@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -33,12 +34,10 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define TWOVOLTS 1350
-#define THREEVOLTS 3870
-//#define GRAPH 		//For frequency measurement.It is needed to add the OTG_FS_UBS
-//#define COUNTERCHECK 	// For debug purposes
-//#define MAINLOOP
+#define THREEVOLTS 3880
+//#define FREQMETER 		//For frequency measurement.It is needed to add the OTG_FS_UBS
+//#define GRAPH
 #define EXERCICIO8
-#define ONLYTIMER
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -110,6 +109,7 @@ int main(void)
   MX_TIM3_Init();
   MX_ADC1_Init();
   MX_I2C2_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 	freqGen(&htim3, 100); // Frequency in Hz
   /* USER CODE END 2 */
@@ -126,11 +126,10 @@ int main(void)
 			else {
 				countsDAC = TWOVOLTS;
 			}
-
 			buf[0] = countsDAC >> 8;
 			buf[1] = countsDAC;
 			HAL_I2C_Master_Transmit(&hi2c2, (0x60 << 1), buf, 2, 100);
-		#elif defined(MAINLOOP)
+		#elif defined(GRAPH)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
@@ -382,11 +381,11 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		htim->Instance->PSC = psc - 1;
 		htim->Instance->CCR1 = ccr;
 
-		#if defined(GRAPH) || defined(COUNTERCHECK)
+		#if defined(FREQMETER)
 			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
-		#elif defined(MAINLOOP)
+		#elif defined(GRAPH)
 			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
-		#elif defined(ONLYTIMER)
+		#elif defined(EXERCICIO8)
 			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 			RetADC = HAL_ADC_Start(&hadc1);
 		#endif
@@ -404,7 +403,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 
 HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
-		#if defined(GRAPH)
+		#if defined(FREQMETER)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
