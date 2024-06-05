@@ -1,28 +1,17 @@
-15:44:31 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+14:28:33 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:404:1: warning: return type defaults to 'int' [-Wimplicit-int]
-  404 | HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
-      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:404:1: warning: conflicting types for 'HAL_TIM_PWM_PulseFinishedCallback'
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:2076:6: note: previous declaration of 'HAL_TIM_PWM_PulseFinishedCallback' with type 'void(TIM_HandleTypeDef *)'
- 2076 | void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim);
-      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "SQUAREWAVEGENERATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\SQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: SQUAREWAVEGENERATOR.elf
  
 arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
 arm-none-eabi-objdump -h -S SQUAREWAVEGENERATOR.elf  > "SQUAREWAVEGENERATOR.list"
    text	   data	    bss	    dec	    hex	filename
-  59844	    708	   9284	  69836	  110cc	SQUAREWAVEGENERATOR.elf
+  69156	    728	   9328	  79212	  1356c	SQUAREWAVEGENERATOR.elf
 Finished building: default.size.stdout
  
 Finished building: SQUAREWAVEGENERATOR.list
  
 
-15:44:33 Build Finished. 0 errors, 2 warnings. (took 1s.915ms)
+14:28:35 Build Finished. 0 errors, 0 warnings. (took 1s.636ms)
 

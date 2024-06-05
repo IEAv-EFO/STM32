@@ -1,13 +1,12 @@
 #include <math.h>
 #include <stdint.h>
 
-#define Vref 3.3 // Reference voltage (in volts)
-
+const float Vref = 3.3; // Reference voltage (in volts)
+float result;
 int max_count;
 
-double count2volt(int res, int count){
-
+float count2volt(int res, int count){
 	    max_count = pow(2, res) - 1;
-
-	    return(Vref / max_count * count);
+	    result = Vref / max_count * count;
+	    return result;
 }

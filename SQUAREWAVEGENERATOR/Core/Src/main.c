@@ -33,11 +33,12 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
-#define TWOVOLTS 1350
-#define THREEVOLTS 3880
+#define ADCRES 12
+#define ONEVOLT 1350
+#define THREEVOLTS 3885
 //#define FREQMETER 		//For frequency measurement.It is needed to add the OTG_FS_UBS
-//#define GRAPH
-#define EXERCICIO8
+#define GRAPH
+//#define EXERCICIO8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,9 +56,11 @@ TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
-char buffer[3], bufferCounter[40];
-int countsDAC;
+char buffer[20];
+int countsDAC, flag = 0;
 uint8_t buf[2];
+uint32_t adcValue;
+float volts;
 
 /* USER CODE END PV */
 
@@ -69,6 +72,7 @@ static void MX_ADC1_Init(void);
 static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
+float count2volt(int, int);
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
 /* USER CODE END PFP */
 
@@ -120,19 +124,26 @@ int main(void)
 
 		#if defined(EXERCICIO8)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-			if (pinState) {
+			if (pinState)
 				countsDAC = THREEVOLTS;
-			}
-			else {
+			else
 				countsDAC = TWOVOLTS;
-			}
 			buf[0] = countsDAC >> 8;
 			buf[1] = countsDAC;
 			HAL_I2C_Master_Transmit(&hi2c2, (0x60 << 1), buf, 2, 100);
 		#elif defined(GRAPH)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-			sprintf(buffer, "%d\n", pinState);
-			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+			if (pinState)
+				countsDAC = THREEVOLTS;
+			else
+				countsDAC = ONEVOLT;
+			buf[0] = countsDAC >> 8;
+			buf[1] = countsDAC;
+			HAL_I2C_Master_Transmit_IT(&hi2c2, (0x60 << 1), buf, sizeof(buf));
+			if (flag) {
+				//HAL_ADC_Start_IT(&hadc1);
+				flag = 0;
+			}
 		#endif
 
     /* USER CODE END WHILE */
@@ -211,7 +222,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -226,7 +237,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Channel = ADC_CHANNEL_0;
   sConfig.Rank = 1;
   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -383,11 +394,12 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 
 		#if defined(FREQMETER)
 			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
-		#elif defined(GRAPH)
-			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 		#elif defined(EXERCICIO8)
 			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 			RetADC = HAL_ADC_Start(&hadc1);
+		#elif defined(GRAPH)
+			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
+			RetADC = HAL_ADC_Start_IT(&hadc1);
 		#endif
 
 		if (RetTimer == HAL_OK && RetADC  == HAL_OK) {
@@ -401,20 +413,32 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 	}
 }
 
-HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
+void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
 		#if defined(FREQMETER)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
-		#elif defined(COUNTERCHECK)
-			sprintf(bufferCounter, "Currente counter: %lu\n"
-					"CCR: %d\n", htim->Instance->CNT, htim->Instance->CCR1);
-			CDC_Transmit_FS((uint8_t *)bufferCounter, strlen(bufferCounter));
 		#endif
 	}
 }
 
+void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c2) {
+    if (hi2c2->Instance == I2C2) {
+    	HAL_ADC_Start_IT(&hadc1);
+    }
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
+	if (hadc->Instance == ADC1) {
+		adcValue = HAL_ADC_GetValue(hadc);
+		HAL_ADC_Stop_IT(hadc);
+		volts = count2volt(ADCRES, adcValue);
+		sprintf(buffer, "%1.4f\n", volts);
+		CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
+		flag = 1;
+	}
+}
 /* USER CODE END 4 */
 
 /**

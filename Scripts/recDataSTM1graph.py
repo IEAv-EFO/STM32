@@ -13,11 +13,11 @@ def init_serial(port, baudrate):
 # Function to receive and process data
 def receive_data(ser):
     line = ser.readline().strip().decode()
-    line_filtered = ''.join(filter(lambda x: x.isdigit() or x in '.-', line))  # Filter numeric characters and tabs
+    line_filtered = ''.join(filter(lambda x: x.isdigit() or x in '.-', line))  # Filter numeric characters and dots and minus sign
     return line_filtered
 
 # Global variables
-max_data_points = 200  # Adjust as needed
+max_data_points = 1000  # Adjust as needed
 data_points1 = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
 
@@ -28,15 +28,18 @@ def update(frame):
         line_data = receive_data(ser)
         if line_data:
             # Extract values from the received data
-            value1= int(line_data)
-            data_points1.append(value1)  # Append instead of appendleft
+            try:
+                value1 = float(line_data)
+                data_points1.append(value1)  # Append instead of appendleft
 
-            # Update the plots with the new data points
-            line1.set_data(range(len(data_points1)), list(data_points1))  # Convert deque to list for plotting
-            ax1.relim()
-            ax1.autoscale_view()
+                # Update the plots with the new data points
+                line1.set_data(range(len(data_points1)), list(data_points1))  # Convert deque to list for plotting
+                ax1.relim()
+                ax1.autoscale_view()
+            except ValueError:
+                pass  # Ignore lines that can't be converted to float
 
-    return line1
+    return line1,
 
 # Function to toggle pause/resume
 def toggle_pause(event):
@@ -55,9 +58,9 @@ port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
-max_data_points = input("Enter the max data points (default: 200): ")
-max_data_points = int(max_data_points) if max_data_points else 200
-update_interval = input("Enter the interval in miliseconds (defalut: 100): ")
+max_data_points = input("Enter the max data points (default: 1000): ")
+max_data_points = int(max_data_points) if max_data_points else 500
+update_interval = input("Enter the interval in milliseconds (default: 100): ")
 update_interval = int(update_interval) if update_interval else 100
 ser = init_serial(port, baudrate)
 
@@ -74,7 +77,7 @@ data_points1 = deque(maxlen=max_data_points)
 line1, = ax1.plot([], [])
 
 # Create animation with a smaller interval for closer to real-time plotting
-ani = FuncAnimation(fig, update, frames=None, interval=update_interval, cache_frame_data=False)
+ani = FuncAnimation(fig, update, frames=None, interval=update_interval, blit=True, cache_frame_data=False)
 
 # Create a slider to change max_data_points
 slider_ax = plt.axes([0.93, 0.3, 0.03, 0.35], facecolor='red')  # Define slider position and size
@@ -85,9 +88,6 @@ slider.on_changed(update_max_data_points)  # Set slider update action
 button_pause_ax = plt.axes([0.8, 0.9, 0.1, 0.05])  # Define button position and size
 button_pause = Button(button_pause_ax, 'Pause', color='lightblue', hovercolor='skyblue')
 button_pause.on_clicked(toggle_pause)  # Set button click action
-
-# Adjust vertical spacing between subplots
-#plt.subplots_adjust(hspace=0.8)
 
 plt.show()
 
