@@ -17,7 +17,7 @@ def receive_data(ser):
     return line_filtered
 
 # Global variables
-max_data_points = 1000  # Adjust as needed
+max_data_points = 500  # Adjust as needed
 data_points1 = deque(maxlen=max_data_points)
 paused = False  # Variable to track pause/resume state
 
@@ -58,8 +58,8 @@ port = input("Enter the communication port (default: COM3): ")
 port = port if port else "COM3"  # Set default value if empty
 baudrate = input("Enter the baudrate (default: 9600): ")
 baudrate = int(baudrate) if baudrate else 9600  # Set default value if empty
-max_data_points = input("Enter the max data points (default: 1000): ")
-max_data_points = int(max_data_points) if max_data_points else 500
+max_data_points = input("Enter the max data points (default: 50): ")
+max_data_points = int(max_data_points) if max_data_points else 50
 update_interval = input("Enter the interval in milliseconds (default: 100): ")
 update_interval = int(update_interval) if update_interval else 100
 ser = init_serial(port, baudrate)
