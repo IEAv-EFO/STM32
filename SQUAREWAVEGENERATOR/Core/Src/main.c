@@ -36,7 +36,8 @@
 #define ADCRES 12
 #define ONEVOLT 1350
 #define THREEVOLTS 3885
-//#define FREQMETER 		//For frequency measurement.It is needed to add the OTG_FS_UBS
+//#define FREQMETER  // For frequency generation and measurement.
+					 // It is needed to add the OTG_FS_UBS if not yet.
 #define GRAPH
 //#define EXERCICIO8
 /* USER CODE END PD */
