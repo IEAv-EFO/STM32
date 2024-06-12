@@ -63,8 +63,7 @@ int16_t countsDAC, flag = 0;
 uint8_t buf[2];
 uint32_t adcValue;
 float volts;
-char buffer[7]; // It has to be 7 because the BLE
-                // prints out the trash unnecessary in the buffer.
+char buffer[20];
 
 /* USER CODE END PV */
 
