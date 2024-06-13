@@ -34,12 +34,12 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define ADCRES 12
-#define ONEVOLT 1350
-#define THREEVOLTS 3885
-//#define FREQMETER  // For frequency generation and measurement.
-					 // It is needed to add the OTG_FS_UBS if not yet.
-#define GRAPH
-//#define EXERCICIO8
+#define ONEVOLT 1350    // Nominal is 1242
+#define THREEVOLTS 3885 // Nominal is 3724
+#define FREQMETER // For frequency generation and measurement.
+					// It is needed to add the OTG_FS_UBS if not yet.
+//#define GRAPH // For plotting the squarewave (1.0 low and 3.0 high)
+#define EXERCICIO8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -59,9 +59,8 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
-int16_t countsDAC, flag = 0;
 uint8_t buf[2];
-uint32_t adcValue;
+int16_t countsDAC, adcValue, flag = 0;
 float volts;
 char buffer[20];
 
@@ -128,15 +127,6 @@ int main(void)
 	while (1) {
 
 		#if defined(EXERCICIO8)
-			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-			if (pinState)
-				countsDAC = THREEVOLTS;
-			else
-				countsDAC = TWOVOLTS;
-			buf[0] = countsDAC >> 8;
-			buf[1] = countsDAC;
-			HAL_I2C_Master_Transmit(&hi2c2, (0x60 << 1), buf, 2, 100);
-		#elif defined(GRAPH)
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			if (pinState)
 				countsDAC = THREEVOLTS;
@@ -431,22 +421,28 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 
 		#if defined(FREQMETER)
 			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
+			if (RetTimer == HAL_OK) {
+				HAL_Delay(200);
+				for (uint8_t i = 0; i < 10; i++) {
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+					HAL_Delay(200);
+				}
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+			}
 		#elif defined(EXERCICIO8)
 			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
-			RetADC = HAL_ADC_Start(&hadc1);
-		#elif defined(GRAPH)
-			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 			RetADC = HAL_ADC_Start_IT(&hadc1);
+			if (RetTimer == HAL_OK && RetADC  == HAL_OK) {
+				HAL_Delay(200);
+				for (uint8_t i = 0; i < 10; i++) {
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+					HAL_Delay(200);
+				}
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+			}
 		#endif
 
-		if (RetTimer == HAL_OK && RetADC  == HAL_OK) {
-			HAL_Delay(200);
-			for (uint8_t i = 0; i < 10; i++) {
-				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-				HAL_Delay(200);
-			}
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-		}
+
 	}
 }
 
@@ -480,7 +476,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		sprintf(buffer, "%1.4f\n\r", volts);
 		CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
 		HAL_UART_Transmit_IT(&huart1, (uint8_t *)buffer, sizeof(buffer));
-
 	}
 }
 /* USER CODE END 4 */
