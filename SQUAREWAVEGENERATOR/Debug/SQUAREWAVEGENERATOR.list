@@ -1430,7 +1430,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		#if defined(EXERCICIO8)
+		#ifdef EXERCICIO8
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
  80010bc:	2140      	movs	r1, #64	@ 0x40
  80010be:	4819      	ldr	r0, [pc, #100]	@ (8001124 <main+0x94>)
@@ -2173,9 +2173,11 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		uint32_t arr, ccr, psc = 1;
  8001520:	2301      	movs	r3, #1
  8001522:	61fb      	str	r3, [r7, #28]
+
 		uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
  8001524:	f005 f8e4 	bl	80066f0 <HAL_RCC_GetPCLK2Freq>
  8001528:	6178      	str	r0, [r7, #20]
+
 		while (1) {
 			arr = timerClock / (freq * psc);
  800152a:	683b      	ldr	r3, [r7, #0]
@@ -2312,10 +2314,10 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
  800160a:	b083      	sub	sp, #12
  800160c:	af00      	add	r7, sp, #0
  800160e:	6078      	str	r0, [r7, #4]
-		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-		sprintf(buffer, "%d\n", pinState);
-		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
-#endif
+			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
+			sprintf(buffer, "%d\n", pinState);
+			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+		#endif
 	}
 }
  8001610:	bf00      	nop

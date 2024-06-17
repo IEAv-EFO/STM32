@@ -6,8 +6,8 @@
 ../Core/Src/main.c:345:13:MX_USART1_UART_Init	2
 ../Core/Src/main.c:378:13:MX_GPIO_Init	1
 ../Core/Src/main.c:405:6:freqGen	7
-../Core/Src/main.c:449:6:HAL_TIM_PWM_PulseFinishedCallback	1
-../Core/Src/main.c:459:6:HAL_I2C_MasterTxCpltCallback	2
-../Core/Src/main.c:465:6:HAL_UART_TxCpltCallback	2
-../Core/Src/main.c:471:6:HAL_ADC_ConvCpltCallback	2
-../Core/Src/main.c:487:6:Error_Handler	1
+../Core/Src/main.c:451:6:HAL_TIM_PWM_PulseFinishedCallback	1
+../Core/Src/main.c:461:6:HAL_I2C_MasterTxCpltCallback	2
+../Core/Src/main.c:467:6:HAL_UART_TxCpltCallback	2
+../Core/Src/main.c:473:6:HAL_ADC_ConvCpltCallback	2
+../Core/Src/main.c:489:6:Error_Handler	1

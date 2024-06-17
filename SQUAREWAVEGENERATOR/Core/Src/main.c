@@ -126,7 +126,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		#if defined(EXERCICIO8)
+		#ifdef EXERCICIO8
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			if (pinState)
 				countsDAC = THREEVOLTS;
@@ -405,7 +405,9 @@ static void MX_GPIO_Init(void)
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 	if (htim->Instance == TIM3) {
 		uint32_t arr, ccr, psc = 1;
+
 		uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
+
 		while (1) {
 			arr = timerClock / (freq * psc);
 			if (arr <= ARRMAX) {
@@ -419,7 +421,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		htim->Instance->PSC = psc - 1;
 		htim->Instance->CCR1 = ccr;
 
-		#if defined(FREQMETER)
+		#ifdef FREQMETER
 			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
 			if (RetTimer == HAL_OK) {
 				HAL_Delay(200);
@@ -448,11 +450,11 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
-#if defined(FREQMETER)
-		pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-		sprintf(buffer, "%d\n", pinState);
-		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
-#endif
+		#ifdef FREQMETER
+			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
+			sprintf(buffer, "%d\n", pinState);
+			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+		#endif
 	}
 }
 
