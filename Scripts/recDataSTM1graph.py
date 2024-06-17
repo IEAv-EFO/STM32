@@ -76,8 +76,12 @@ data_points1 = deque(maxlen=max_data_points)
 # Initialize lines for each plot
 line1, = ax1.plot([], [])
 
+# Add some initial dummy data to avoid empty plot issues
+for _ in range(10):
+    data_points1.append(0)
+
 # Create animation with a smaller interval for closer to real-time plotting
-ani = FuncAnimation(fig, update, frames=None, interval=update_interval, blit=True, cache_frame_data=False)
+ani = FuncAnimation(fig, update, frames=None, interval=update_interval, blit=False, cache_frame_data=False)
 
 # Create a slider to change max_data_points
 slider_ax = plt.axes([0.93, 0.3, 0.03, 0.35], facecolor='red')  # Define slider position and size
@@ -88,6 +92,9 @@ slider.on_changed(update_max_data_points)  # Set slider update action
 button_pause_ax = plt.axes([0.8, 0.9, 0.1, 0.05])  # Define button position and size
 button_pause = Button(button_pause_ax, 'Pause', color='lightblue', hovercolor='skyblue')
 button_pause.on_clicked(toggle_pause)  # Set button click action
+
+# Force initial update to ensure the plot renders initially
+update(None)
 
 plt.show()
 
