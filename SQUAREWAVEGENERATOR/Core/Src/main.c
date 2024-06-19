@@ -22,11 +22,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usbd_def.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+
 
 /* USER CODE END PTD */
 
@@ -34,11 +35,10 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define ADCRES 12
-#define ONEVOLT 1350
-#define THREEVOLTS 3885
-//#define FREQMETER 		//For frequency measurement.It is needed to add the OTG_FS_UBS
-#define GRAPH
-//#define EXERCICIO8
+#define ONEVOLT 1350    // Nominal is 1242
+#define THREEVOLTS 3885 // Nominal is 3724
+//#define FREQMETER // For frequency generation and measurement.
+#define EXERCICIO8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,14 +53,17 @@ I2C_HandleTypeDef hi2c2;
 
 TIM_HandleTypeDef htim3;
 
+UART_HandleTypeDef huart1;
+
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
-char buffer[20];
-int countsDAC, flag = 0;
 uint8_t buf[2];
-uint32_t adcValue;
+int16_t countsDAC, adcValue, flag = 0, testUSB = 0;
 float volts;
+char buffer[20];
+USBD_SpeedTypeDef usbSpeed = USBD_SPEED_LOW;
+USBD_HandleTypeDef hUsb;
 
 /* USER CODE END PV */
 
@@ -70,8 +73,8 @@ static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_I2C2_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 float count2volt(int, int);
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
 /* USER CODE END PFP */
@@ -114,6 +117,7 @@ int main(void)
   MX_ADC1_Init();
   MX_I2C2_Init();
   MX_USB_DEVICE_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 	freqGen(&htim3, 100); // Frequency in Hz
   /* USER CODE END 2 */
@@ -122,16 +126,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		#if defined(EXERCICIO8)
-			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-			if (pinState)
-				countsDAC = THREEVOLTS;
-			else
-				countsDAC = TWOVOLTS;
-			buf[0] = countsDAC >> 8;
-			buf[1] = countsDAC;
-			HAL_I2C_Master_Transmit(&hi2c2, (0x60 << 1), buf, 2, 100);
-		#elif defined(GRAPH)
+		#ifdef EXERCICIO8
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			if (pinState)
 				countsDAC = THREEVOLTS;
@@ -141,7 +136,6 @@ int main(void)
 			buf[1] = countsDAC;
 			HAL_I2C_Master_Transmit_IT(&hi2c2, (0x60 << 1), buf, sizeof(buf));
 			if (flag) {
-				//HAL_ADC_Start_IT(&hadc1);
 				flag = 0;
 			}
 		#endif
@@ -344,6 +338,39 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -378,7 +405,9 @@ static void MX_GPIO_Init(void)
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 	if (htim->Instance == TIM3) {
 		uint32_t arr, ccr, psc = 1;
+
 		uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
+
 		while (1) {
 			arr = timerClock / (freq * psc);
 			if (arr <= ARRMAX) {
@@ -392,30 +421,36 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		htim->Instance->PSC = psc - 1;
 		htim->Instance->CCR1 = ccr;
 
-		#if defined(FREQMETER)
+		#ifdef FREQMETER
 			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
+			if (RetTimer == HAL_OK) {
+				HAL_Delay(200);
+				for (uint8_t i = 0; i < 10; i++) {
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+					HAL_Delay(200);
+				}
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+			}
 		#elif defined(EXERCICIO8)
-			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
-			RetADC = HAL_ADC_Start(&hadc1);
-		#elif defined(GRAPH)
+			usbSpeed = hUsb.dev_speed;
 			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
 			RetADC = HAL_ADC_Start_IT(&hadc1);
+			if (RetTimer == HAL_OK && RetADC  == HAL_OK && usbSpeed == USBD_SPEED_HIGH) {
+				HAL_Delay(200);
+				for (uint8_t i = 0; i < 10; i++) {
+					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+					HAL_Delay(200);
+				}
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+			}
 		#endif
 
-		if (RetTimer == HAL_OK && RetADC  == HAL_OK) {
-			HAL_Delay(200);
-			for (uint8_t i = 0; i < 10; i++) {
-				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-				HAL_Delay(200);
-			}
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-		}
 	}
 }
 
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
-		#if defined(FREQMETER)
+		#ifdef FREQMETER
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
 			sprintf(buffer, "%d\n", pinState);
 			CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
@@ -424,9 +459,15 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 }
 
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c2) {
-    if (hi2c2->Instance == I2C2) {
-    	HAL_ADC_Start_IT(&hadc1);
-    }
+	if (hi2c2->Instance == I2C2) {
+		HAL_ADC_Start_IT(&hadc1);
+	}
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+	if (huart->Instance == USART1) {
+		flag = 1;
+	}
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
@@ -434,9 +475,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		adcValue = HAL_ADC_GetValue(hadc);
 		HAL_ADC_Stop_IT(hadc);
 		volts = count2volt(ADCRES, adcValue);
-		sprintf(buffer, "%1.4f\n", volts);
-		CDC_Transmit_FS((uint8_t *)buffer, strlen(buffer));
-		flag = 1;
+		sprintf(buffer, "%1.4f\n\r", volts);
+		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+		HAL_UART_Transmit_IT(&huart1, (uint8_t*) buffer, sizeof(buffer));
 	}
 }
 /* USER CODE END 4 */

@@ -463,13 +463,13 @@ void avgDiff() {
 void seqLevels() {
 	line = 0;
 	for (int i = 0; i < 20; i++) {
-		if (i > 0 && i % 4 == 0) { // Deletes LCD for next four readings.
-			line = 0;	//Resets the line for its initial range (0 to 3) value.
-			lcd_clear();
+		if (i > 0 && i % 4 == 0) { 	// Deletes LCD for next four readings.
+			line = 0;				// Resets the line for its initial
+			lcd_clear();			// range (0 to 3).
 			HAL_Delay(100);
 		}
-		if (i > 9) {		// If greater than 9 we have to add one more digit.
-			lcd_put_cur(line, 10);
+		if (i > 9) {				// If greater than 9 we have to add
+			lcd_put_cur(line, 10);  //  one more digit, so column is 10 now.
 		} else {
 			lcd_put_cur(line, 9);	// Here no need for one more digit.
 		}
