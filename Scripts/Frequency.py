@@ -22,7 +22,8 @@ ser = init_serial(port, baudrate)
 last_value1 = None
 last_transition_time = None
 frequency_samples = []
-average_denominator = input("Enter the average denominator (default: 10): ")
+average_denominator = input("Enter the average denominator (default: 10
+): ")
 average_denominator = int(average_denominator) if average_denominator else 10
 
 try:
