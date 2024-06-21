@@ -1446,13 +1446,13 @@ int main(void)
  80010d2:	d004      	beq.n	80010de <main+0x4e>
 				countsDAC = THREEVOLTS;
  80010d4:	4b15      	ldr	r3, [pc, #84]	@ (800112c <main+0x9c>)
- 80010d6:	f640 722d 	movw	r2, #3885	@ 0xf2d
+ 80010d6:	f640 62c4 	movw	r2, #3780	@ 0xec4
  80010da:	801a      	strh	r2, [r3, #0]
  80010dc:	e003      	b.n	80010e6 <main+0x56>
 			else
 				countsDAC = ONEVOLT;
  80010de:	4b13      	ldr	r3, [pc, #76]	@ (800112c <main+0x9c>)
- 80010e0:	f240 5246 	movw	r2, #1350	@ 0x546
+ 80010e0:	f240 5214 	movw	r2, #1300	@ 0x514
  80010e4:	801a      	strh	r2, [r3, #0]
 			buf[0] = countsDAC >> 8;
  80010e6:	4b11      	ldr	r3, [pc, #68]	@ (800112c <main+0x9c>)
