@@ -6,6 +6,6 @@
 ../Core/Src/main.c:375:13:MX_DMA_Init	1
 ../Core/Src/main.c:392:13:MX_GPIO_Init	1
 ../Core/Src/main.c:425:6:avgDiff	3
-../Core/Src/main.c:463:6:seqLevels	5
-../Core/Src/main.c:491:6:HAL_ADC_ConvCpltCallback	2
-../Core/Src/main.c:502:6:Error_Handler	1
+../Core/Src/main.c:463:6:seqLevels	8
+../Core/Src/main.c:498:6:HAL_ADC_ConvCpltCallback	2
+../Core/Src/main.c:509:6:Error_Handler	1

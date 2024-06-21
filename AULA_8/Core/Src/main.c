@@ -436,8 +436,8 @@ void avgDiff() {
 		}
 	}
 
-	l1avg = evenAcc / 10.0;
-	l2avg = oddAcc / 10.0;
+	l1avg = evenAcc / (ADCBUFFERSIZE / 2);
+	l2avg = oddAcc / (ADCBUFFERSIZE / 2);
 	diff = l1avg - l2avg;
 
 	lcd_put_cur(0, 0);
@@ -462,16 +462,23 @@ void avgDiff() {
 
 void seqLevels() {
 	line = 0;
-	for (int i = 0; i < 20; i++) {
+	for (int i = 0; i < ADCBUFFERSIZE; i++) {
 		if (i > 0 && i % 4 == 0) { 	// Deletes LCD for next four readings.
 			line = 0;				// Resets the line for its initial
 			lcd_clear();			// range (0 to 3).
 			HAL_Delay(100);
 		}
-		if (i > 9) {				// If greater than 9 we have to add
-			lcd_put_cur(line, 10);  //  one more digit, so column is 10 now.
-		} else {
-			lcd_put_cur(line, 9);	// Here no need for one more digit.
+		if (i < 10) {
+			lcd_put_cur(line, 9);
+		}
+		else if (i > 9 && i < 100) {
+			lcd_put_cur(line, 10);
+		}
+		else if (i > 99) {
+			lcd_put_cur(line, 11);
+		}
+		else {
+			lcd_clear();
 		}
 
 		counts = bufferADC[i];
