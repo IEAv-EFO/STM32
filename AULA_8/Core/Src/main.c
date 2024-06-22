@@ -36,6 +36,7 @@
 /* USER CODE BEGIN PD */
 #define ADCBUFFERSIZE 20
 #define ADCRES 12
+//#define ROUNDRES
 //#define GRAPH
 /* USER CODE END PD */
 
@@ -56,9 +57,10 @@ TIM_HandleTypeDef htim2;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState extTrigger, PWMOutput, pinState;
 char bufferCDC[32]; // for debug purposes
-uint16_t counts, line, level, flag = 0, flagAVG = 1, flagLevels = 1;
+uint16_t  line, level, flag = 0, flagAVG = 1, flagLevels = 1;
 uint16_t buffer[32], bufferADC[ADCBUFFERSIZE];
-float adcValue, l1avg, l2avg, diff, evenAcc, oddAcc;
+uint32_t counts;
+float volts, l1avg, l2avg, diff, evenAcc, oddAcc;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -128,7 +130,7 @@ int main(void) {
 	HAL_Delay(100);
 
 	RetTimer = HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-	RetADC = HAL_ADC_Start_DMA(&hadc1, (uint32_t*) bufferADC, ADCBUFFERSIZE);
+	RetADC = HAL_ADC_Start_DMA(&hadc1, (uint32_t *) bufferADC, ADCBUFFERSIZE);
 	if (RetTimer == HAL_OK && RetADC == HAL_OK) {
 		HAL_Delay(200);
 		for (uint8_t i = 0; i < 10; i++) {
@@ -428,16 +430,15 @@ void avgDiff() {
 
 	for (int i = 0; i < ADCBUFFERSIZE; i++) {
 		counts = bufferADC[i];
-		adcValue = count2volt(ADCRES, counts);
-		if (i % 2 == 0) {
-			evenAcc += adcValue;
-		} else {
-			oddAcc += adcValue;
-		}
+		volts = count2volt(ADCRES, counts);
+		#ifdef ROUNDRES
+			volts = round(volts);
+		#endif
+		(i % 2 == 0) ? (evenAcc += volts) : (oddAcc += volts);
 	}
 
-	l1avg = evenAcc / (ADCBUFFERSIZE / 2);
-	l2avg = oddAcc / (ADCBUFFERSIZE / 2);
+	l1avg = evenAcc / (ADCBUFFERSIZE / 2.0);
+	l2avg = oddAcc / (ADCBUFFERSIZE / 2.0);
 	diff = l1avg - l2avg;
 
 	lcd_put_cur(0, 0);
@@ -482,12 +483,15 @@ void seqLevels() {
 		}
 
 		counts = bufferADC[i];
-		adcValue = count2volt(ADCRES, counts);
+		volts = count2volt(ADCRES, counts);
+		#ifdef ROUNDRES
+			volts = round(volts);
+		#endif
 		lcd_put_cur(line, 0);
 		level = i + 1;
 		sprintf(buffer, "Nivel%d = ", level);
 		lcd_send_string(buffer);
-		sprintf(buffer, "%1.4f", adcValue);
+		sprintf(buffer, "%1.4f", volts);
 		lcd_send_string(buffer);
 		HAL_Delay(1000);
 		line++;
