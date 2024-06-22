@@ -35,8 +35,8 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define ADCRES 12
-#define ONEVOLT 1300    // Nominal is 1242
-#define THREEVOLTS 3780 // Nominal is 3724
+#define ONEVOLT 1420 // Nominal is 1242
+#define THREEVOLTS 3920 // Nominal is 3724
 //#define FREQMETER // For frequency generation and measurement.
 #define EXERCICIO8
 /* USER CODE END PD */
@@ -59,7 +59,7 @@ UART_HandleTypeDef huart1;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
 uint8_t buf[2];
-int16_t countsDAC, adcValue, flag = 0, testUSB = 0;
+int16_t countsDAC, correction; adcValue, flag = 0, testUSB = 0;
 float volts;
 char buffer[20];
 USBD_SpeedTypeDef usbSpeed = USBD_SPEED_LOW;
@@ -128,10 +128,12 @@ int main(void)
 
 		#ifdef EXERCICIO8
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-			if (pinState)
+			if (pinState) {
 				countsDAC = THREEVOLTS;
-			else
+			}
+			else {
 				countsDAC = ONEVOLT;
+			}
 			buf[0] = countsDAC >> 8;
 			buf[1] = countsDAC;
 			HAL_I2C_Master_Transmit_IT(&hi2c2, (0x60 << 1), buf, sizeof(buf));
