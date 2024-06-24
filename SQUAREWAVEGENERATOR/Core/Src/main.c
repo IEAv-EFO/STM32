@@ -22,8 +22,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_def.h"
+#include <usbd_def.h>
 #include <math.h>
+#include <count2volt.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,8 +36,8 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define ADCRES 12
-#define ONEVOLT 1330 // Nominal is 1242
-#define THREEVOLTS  3830 // Nominal is 3724
+#define ONEVOLT 1241 // 1330 // Nominal is 1241
+#define THREEVOLTS 3723 // 3820 // Nominal is 3723
 //#define FREQMETER // For frequency generation only and measurement.
 #define EXERCICIO8
 /* USER CODE END PD */
@@ -59,7 +60,7 @@ UART_HandleTypeDef huart1;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState pinState;
 uint8_t buf[2];
-int16_t countsDAC, adcValue, error = 0;
+int16_t countsDAC, adcValue;
 float volts;
 char buffer[20];
 USBD_SpeedTypeDef usbSpeed = USBD_SPEED_LOW;
@@ -73,9 +74,9 @@ static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_I2C2_Init(void);
+
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-float count2volt(int, int);
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
 /* USER CODE END PFP */
 
@@ -118,9 +119,6 @@ int main(void) {
 	MX_USB_DEVICE_Init();
 	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
-	error = 0;
-	countsDAC = 0;
-	adcValue = 0;
 	freqGen(&htim3, 100); // Frequency in Hz
 	/* USER CODE END 2 */
 
@@ -138,7 +136,7 @@ int main(void) {
 
 		/* USER CODE END WHILE */
 
-		/* USER CODE BEGIN 3 */
+  		/* USER CODE BEGIN 3 */
 	}
 	/* USER CODE END 3 */
 }
@@ -454,6 +452,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		HAL_UART_Transmit_IT(&huart1, (uint8_t*) buffer, sizeof(buffer));
 	}
 }
+
 /* USER CODE END 4 */
 
 /**
