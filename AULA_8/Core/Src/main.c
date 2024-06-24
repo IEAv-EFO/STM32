@@ -37,7 +37,7 @@
 /* USER CODE BEGIN PD */
 #define ADCBUFFERSIZE 20
 #define ADCRES 12
-//#define ROUNDRES
+//#define ROUNDRES // for fun only
 //#define GRAPH
 /* USER CODE END PD */
 
@@ -58,7 +58,7 @@ TIM_HandleTypeDef htim2;
 HAL_StatusTypeDef RetTimer, RetADC;
 GPIO_PinState extTrigger, PWMOutput, pinState;
 char bufferCDC[32]; // for debug purposes
-uint16_t  line, level, flag = 0, flagAVG = 1, flagLevels = 1;
+uint16_t line, level, flag = 0, flagAVG = 1, flagLevels = 1;
 uint16_t buffer[32], bufferADC[ADCBUFFERSIZE];
 uint32_t counts;
 float volts, l1avg, l2avg, diff, evenAcc, oddAcc;
@@ -74,6 +74,7 @@ static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 void seqLevels();
 void avgDiff();
+void checkError(float l1avg, float l2avg);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -122,8 +123,9 @@ int main(void)
 	lcd_clear();
 	HAL_Delay(100);
 
+	/* Tests timer and ADC for perfect initialization */
 	RetTimer = HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-	RetADC = HAL_ADC_Start_DMA(&hadc1, (uint32_t *) bufferADC, ADCBUFFERSIZE);
+	RetADC = HAL_ADC_Start_DMA(&hadc1, (uint32_t*) bufferADC, ADCBUFFERSIZE);
 	if (RetTimer == HAL_OK && RetADC == HAL_OK) {
 		HAL_Delay(200);
 		for (uint8_t i = 0; i < 10; i++) {
@@ -147,7 +149,7 @@ int main(void)
 				lcd_clear();
 				lcd_put_cur(0, 1);
 				lcd_send_string("MEDIAS E DIFERENCA");
-				HAL_Delay(1500);
+				HAL_Delay(1200);
 				lcd_clear();
 				flagAVG = 0;
 				flagLevels = 1;
@@ -162,7 +164,7 @@ int main(void)
 			if (flagLevels) {
 				lcd_put_cur(0, 0);
 				lcd_send_string("SEQUENCIA DE NIVEIS");
-				HAL_Delay(1500);
+				HAL_Delay(1200);
 				flagLevels = 0;
 				flagAVG = 1;
 			}
@@ -340,7 +342,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 96-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 2550-1;
+  htim2.Init.Period = 2600-1;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -375,7 +377,7 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 2450;
+  sConfigOC.Pulse = 2500;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
@@ -425,6 +427,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_RESET);
+
   /*Configure GPIO pin : PC13 */
   GPIO_InitStruct.Pin = GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -437,6 +442,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB0 PB1 PB2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -451,7 +463,7 @@ void avgDiff() {
 	for (uint8_t i = 0; i < ADCBUFFERSIZE; i++) {
 		counts = bufferADC[i];
 		volts = count2volt(ADCRES, counts);
-		#ifdef ROUNDRES
+		#ifdef ROUNDRES // just for fun
 			volts = round(volts);
 		#endif
 		(i % 2 == 0) ? (evenAcc += volts) : (oddAcc += volts);
@@ -504,7 +516,7 @@ void seqLevels() {
 
 		counts = bufferADC[i];
 		volts = count2volt(ADCRES, counts);
-		#ifdef ROUNDRES
+		#ifdef ROUNDRES // for fun only
 			volts = round(volts);
 		#endif
 		lcd_put_cur(line, 0);
@@ -513,7 +525,7 @@ void seqLevels() {
 		lcd_send_string(buffer);
 		sprintf(buffer, "%1.4f", volts);
 		lcd_send_string(buffer);
-		HAL_Delay(1000);
+		HAL_Delay(800);
 		line++;
 	}
 	HAL_Delay(1000);
