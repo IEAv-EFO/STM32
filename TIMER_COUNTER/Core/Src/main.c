@@ -400,7 +400,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 		}
 
 		genFreq = (float) freq;
-		ARR = timerClock / psc / freq - 1;
+		ARR = arr - 1;
 		CCR = (ARR + 1) / 2;
 		PSC = psc;
 

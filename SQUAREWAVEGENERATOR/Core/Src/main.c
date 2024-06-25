@@ -38,8 +38,8 @@
 #define ADCRES 12
 #define ONEVOLT 1241 // 1330 // Nominal is 1241
 #define THREEVOLTS 3723 // 3820 // Nominal is 3723
-//#define FREQMETER // For frequency generation only and measurement.
-#define EXERCICIO8
+#define FREQMETER // For frequency generation only and measurement.
+//#define EXERCICIO8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -317,7 +317,7 @@ static void MX_TIM3_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1-1;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -397,51 +397,52 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
-	if (htim->Instance == TIM3) {
-		uint32_t arr, ccr, psc = 1;
+    if (htim->Instance == TIM3) {
+        uint32_t arr, ccr, psc = 1;
+        uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
 
-		uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
-
-		while (1) {
-			arr = timerClock / (freq * psc);
-			if (arr <= ARRMAX) {
-				break;
-			}
-			psc++;
-		}
-
-		ccr = (arr + 1) / 2;
-		htim->Instance->ARR = arr - 1;
-		htim->Instance->PSC = psc - 1;
-		htim->Instance->CCR1 = ccr;
-
-		#ifdef FREQMETER
-			RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
-			if (RetTimer == HAL_OK) {
-				HAL_Delay(200);
-				for (uint8_t i = 0; i < 10; i++) {
-					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-					HAL_Delay(200);
+        while (1) {
+        	if (timerClock % psc == 0) {
+        		arr = timerClock / (freq * psc);
+				if (arr <= ARRMAX) {
+					break;
 				}
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-			}
-		#elif defined(EXERCICIO8)
-			usbSpeed = hUsb.dev_speed;
-			RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
-			if (RetTimer == HAL_OK && usbSpeed == USBD_SPEED_HIGH) {
-				HAL_Delay(200);
-				for (uint8_t i = 0; i < 10; i++) {
-					HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-					HAL_Delay(200);
-				}
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-			}
-		#endif
+        	}
+            psc++;
+        }
 
-	}
+        ccr = arr / 2;
+
+        htim->Instance->ARR = arr - 1;
+        htim->Instance->PSC = psc - 1;
+        htim->Instance->CCR1 = ccr;
+
+        #ifdef FREQMETER
+            HAL_StatusTypeDef RetTimer = HAL_TIM_OC_Start_IT(htim, TIM_CHANNEL_1);
+            if (RetTimer == HAL_OK) {
+                HAL_Delay(200);
+                for (uint8_t i = 0; i < 5; i++) {
+                    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+                    HAL_Delay(200);
+                }
+                HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+            }
+        #elif defined(EXERCICIO8)
+            usbSpeed = hUsb.dev_speed;
+            HAL_StatusTypeDef RetTimer = HAL_TIM_OC_Start(htim, TIM_CHANNEL_1);
+            if (RetTimer == HAL_OK && usbSpeed == USBD_SPEED_HIGH) {
+                HAL_Delay(200);
+                for (uint8_t i = 0; i < 5; i++) {
+                    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+                    HAL_Delay(200);
+                }
+                HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+            }
+        #endif
+    }
 }
 
-void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
+void HAL_TIM_PWM_PulseFinishedCallbackq(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
 		#ifdef FREQMETER
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
@@ -463,6 +464,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		HAL_ADC_Stop_IT(hadc);
 		volts = count2volt(ADCRES, adcValue);
 		sprintf(buffer, "%1.4f\n\r", volts);
+		sprintf(buffer, "%1.4f\t%1.4f\t%1.4f\n\r", volts, volts, volts);
 		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
 		HAL_UART_Transmit_IT(&huart1, (uint8_t*) buffer, sizeof(buffer));
 	}

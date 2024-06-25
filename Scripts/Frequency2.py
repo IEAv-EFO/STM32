@@ -31,7 +31,9 @@ try:
             # Extract value from the received data
             value1 = int(line_data)  # Ensure the data is an integer
 
-            current_time = time.time()
+            #current_time = time.time()
+            current_time = time.perf_counter()
+
             if last_transition_time is not None:
                 period = current_time - last_transition_time
                 if period > 0:
