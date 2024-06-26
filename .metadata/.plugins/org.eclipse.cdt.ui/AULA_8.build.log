@@ -1,76 +1,10 @@
-21:57:14 **** Incremental Build of configuration Debug for project AULA_8 ****
+20:44:13 **** Incremental Build of configuration Debug for project AULA_8 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:120:9: warning: implicit declaration of function 'lcd_init' [-Wimplicit-function-declaration]
-  120 |         lcd_init();
-      |         ^~~~~~~~
-../Core/Src/main.c:122:9: warning: implicit declaration of function 'lcd_clear' [-Wimplicit-function-declaration]
-  122 |         lcd_clear();
-      |         ^~~~~~~~~
-../Core/Src/main.c:148:33: warning: implicit declaration of function 'lcd_put_cur' [-Wimplicit-function-declaration]
-  148 |                                 lcd_put_cur(0, 1);
-      |                                 ^~~~~~~~~~~
-../Core/Src/main.c:149:33: warning: implicit declaration of function 'lcd_send_string' [-Wimplicit-function-declaration]
-  149 |                                 lcd_send_string("MEDIAS E DIFERENCA");
-      |                                 ^~~~~~~~~~~~~~~
-../Core/Src/main.c: In function 'avgDiff':
-../Core/Src/main.c:467:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  467 |         sprintf(buffer, "%1.4f", l1avg);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:30,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../USB_DEVICE/App/usb_device.h:32,
-                 from ../Core/Src/main.c:21:
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:473:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  473 |         sprintf(buffer, "%1.4f", l2avg);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:479:17: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  479 |         sprintf(buffer, "%1.4f", diff);
-      |                 ^~~~~~
-      |                 |
-      |                 uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c: In function 'seqLevels':
-../Core/Src/main.c:512:25: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  512 |                 sprintf(buffer, "Nivel%d = ", level);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-../Core/Src/main.c:514:25: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-  514 |                 sprintf(buffer, "%1.4f", volts);
-      |                         ^~~~~~
-      |                         |
-      |                         uint16_t * {aka short unsigned int *}
-C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
-      |                  ^
-arm-none-eabi-gcc -o "AULA_8.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\AULA_8\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AULA_8.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: AULA_8.elf
- 
 arm-none-eabi-size  AULA_8.elf 
-arm-none-eabi-objdump -h -S AULA_8.elf  > "AULA_8.list"
    text	   data	    bss	    dec	    hex	filename
-  67596	    728	   9520	  77844	  13014	AULA_8.elf
+  67636	    728	   9520	  77884	  1303c	AULA_8.elf
 Finished building: default.size.stdout
  
-Finished building: AULA_8.list
- 
 
-21:57:15 Build Finished. 0 errors, 9 warnings. (took 1s.630ms)
+20:44:14 Build Finished. 0 errors, 0 warnings. (took 495ms)
 

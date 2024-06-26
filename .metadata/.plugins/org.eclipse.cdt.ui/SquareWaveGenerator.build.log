@@ -1,10 +1,29 @@
-16:51:28 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
-make -j4 all 
+21:40:18 **** Incremental Build of configuration Debug for project SQUAREWAVEGENERATOR ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:470:17: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  470 |                 CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:469:39: warning: '
+
+' directive writing 2 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
+  469 |                 sprintf(buffer, "%1.4f\n\r", volts);
+      |                                       ^~~~
+../Core/Src/main.c:469:17: note: 'sprintf' output between 6 and 318 bytes into a destination of size 6
+  469 |                 sprintf(buffer, "%1.4f\n\r", volts);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SQUAREWAVEGENERATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\SQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SQUAREWAVEGENERATOR.elf
+ 
 arm-none-eabi-size  SQUAREWAVEGENERATOR.elf 
+arm-none-eabi-objdump -h -S SQUAREWAVEGENERATOR.elf  > "SQUAREWAVEGENERATOR.list"
    text	   data	    bss	    dec	    hex	filename
-  73276	    728	   9384	  83388	  145bc	SQUAREWAVEGENERATOR.elf
+  73380	    728	  10112	  84220	  148fc	SQUAREWAVEGENERATOR.elf
 Finished building: default.size.stdout
  
+Finished building: SQUAREWAVEGENERATOR.list
+ 
 
-16:51:29 Build Finished. 0 errors, 0 warnings. (took 631ms)
+21:40:20 Build Finished. 0 errors, 2 warnings. (took 1s.597ms)
 

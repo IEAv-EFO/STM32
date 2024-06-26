@@ -23,7 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <usbd_def.h>
-#include <math.h>
 #include <count2volt.h>
 /* USER CODE END Includes */
 
@@ -38,8 +37,8 @@
 #define ADCRES 12
 #define ONEVOLT 1241 // 1330 // Nominal is 1241
 #define THREEVOLTS 3723 // 3820 // Nominal is 3723
-#define FREQMETER // For frequency generation only and measurement.
-//#define EXERCICIO8
+//#define FREQMETER // For frequency generation only and measurement.
+#define EXERCICIO8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -62,7 +61,7 @@ GPIO_PinState pinState;
 uint8_t buf[2];
 int16_t countsDAC, adcValue;
 float volts;
-char buffer[20];
+char buffer[6];
 USBD_SpeedTypeDef usbSpeed = USBD_SPEED_LOW;
 USBD_HandleTypeDef hUsb;
 
@@ -162,10 +161,10 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 12;
-  RCC_OscInitStruct.PLL.PLLN = 96;
+  RCC_OscInitStruct.PLL.PLLM = 15;
+  RCC_OscInitStruct.PLL.PLLN = 144;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 5;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -175,12 +174,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -207,7 +206,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
@@ -399,15 +398,19 @@ static void MX_GPIO_Init(void)
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
     if (htim->Instance == TIM3) {
         uint32_t arr, ccr, psc = 1;
-        uint32_t timerClock = HAL_RCC_GetPCLK2Freq();
-
+        uint32_t timerClock = HAL_RCC_GetPCLK2Freq(); // Alterei o clock do sistema para 25 MHz
+        											  // 25 MHz -> HSE (PLL Source)-> HSE (Sys Clock Mux)
+                                                      // Assim, o clock da USB vai direto saindo do HSE (PLL Source)
+        								              // passando pelos divisores.
+        											  // Dessa forma, a frequência gerada ficou correta.
+                                                      // O macete está em configurar o clock.
         while (1) {
-        	if (timerClock % psc == 0) {
+        	//if (timerClock % psc == 0) {
         		arr = timerClock / (freq * psc);
 				if (arr <= ARRMAX) {
 					break;
 				}
-        	}
+        	//}
             psc++;
         }
 
@@ -418,10 +421,10 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
         htim->Instance->CCR1 = ccr;
 
         #ifdef FREQMETER
-            HAL_StatusTypeDef RetTimer = HAL_TIM_OC_Start_IT(htim, TIM_CHANNEL_1);
+            HAL_StatusTypeDef RetTimer = HAL_TIM_PWM_Start_IT(htim, TIM_CHANNEL_1);
             if (RetTimer == HAL_OK) {
                 HAL_Delay(200);
-                for (uint8_t i = 0; i < 5; i++) {
+                for (uint8_t i = 0; i < 4; i++) {
                     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
                     HAL_Delay(200);
                 }
@@ -429,10 +432,10 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
             }
         #elif defined(EXERCICIO8)
             usbSpeed = hUsb.dev_speed;
-            HAL_StatusTypeDef RetTimer = HAL_TIM_OC_Start(htim, TIM_CHANNEL_1);
+            HAL_StatusTypeDef RetTimer = HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
             if (RetTimer == HAL_OK && usbSpeed == USBD_SPEED_HIGH) {
                 HAL_Delay(200);
-                for (uint8_t i = 0; i < 5; i++) {
+                for (uint8_t i = 0; i < 4; i++) {
                     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
                     HAL_Delay(200);
                 }
@@ -442,7 +445,7 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
     }
 }
 
-void HAL_TIM_PWM_PulseFinishedCallbackq(TIM_HandleTypeDef *htim) {
+void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM3) {
 		#ifdef FREQMETER
 			pinState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
@@ -464,7 +467,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		HAL_ADC_Stop_IT(hadc);
 		volts = count2volt(ADCRES, adcValue);
 		sprintf(buffer, "%1.4f\n\r", volts);
-		sprintf(buffer, "%1.4f\t%1.4f\t%1.4f\n\r", volts, volts, volts);
 		CDC_Transmit_FS((uint8_t*) buffer, strlen(buffer));
 		HAL_UART_Transmit_IT(&huart1, (uint8_t*) buffer, sizeof(buffer));
 	}
