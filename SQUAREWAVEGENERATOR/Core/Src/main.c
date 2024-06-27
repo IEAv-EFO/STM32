@@ -405,19 +405,21 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
         											  // Dessa forma, a frequência gerada ficou correta.
                                                       // O macete está em configurar o clock.
         while (1) {
-        	//if (timerClock % psc == 0) {
+        	if (timerClock % psc == 0) {
         		arr = timerClock / (freq * psc);
 				if (arr <= ARRMAX) {
+					psc-=1;
+					arr-=1;
 					break;
 				}
-        	//}
+        	}
             psc++;
         }
 
         ccr = arr / 2;
 
-        htim->Instance->ARR = arr - 1;
-        htim->Instance->PSC = psc - 1;
+        htim->Instance->ARR = arr;
+        htim->Instance->PSC = psc;
         htim->Instance->CCR1 = ccr;
 
         #ifdef FREQMETER

@@ -21,7 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <count2volt.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,9 +30,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ARRMAX 65535
-#define ADCRES 12
-#define START 0 // 1330 // Nominal is 1241
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,11 +48,8 @@ TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 uint8_t buf[2];
-uint32_t adcValue;
-uint32_t timerClock, arr, ccr, psc;
-
-float volts;
-char buffer[6];
+uint32_t adcValue, timerClock;
+const uint8_t factor = 1;
 
 /* USER CODE END PV */
 
@@ -109,24 +103,14 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	timerClock = HAL_RCC_GetPCLK2Freq();
-	RetTimer = HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-	RetADC = HAL_ADC_Start(&hadc1);
-	HAL_ADC_Start_IT(&hadc1);
-	if (RetTimer == HAL_OK && RetADC == HAL_OK) {
-		HAL_Delay(200);
-		for (uint8_t i = 0; i < 4; i++) {
-			HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-			HAL_Delay(200);
-		}
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-	}
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		sendToI2C(adcValue);
+		sendToI2C(4095);
+		HAL_Delay(100);
 
     /* USER CODE END WHILE */
 
@@ -205,7 +189,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -365,23 +349,7 @@ void sendToI2C(uint32_t counts) {
 	HAL_I2C_Master_Transmit_IT(&hi2c2, (0x60 << 1), buf, sizeof(buf));
 }
 
-void genFreq(uint32_t counts) {
-	psc = 1;
-	uint32_t freq = counts * 10;
-	while (1) {
-		if (timerClock % psc == 0) {
-			arr = timerClock / (freq * psc);
-			if (arr <= ARRMAX) {
-				break;
-			}
-			psc++;
-		}
-
-	}
-}
-
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c2) {
-
 	if (hi2c2->Instance == I2C2) {
 		HAL_ADC_Start_IT(&hadc1);
 	}
@@ -393,6 +361,30 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		HAL_ADC_Stop_IT(hadc);
 		genFreq(adcValue);
 	}
+}
+
+void genFreq(uint32_t counts) {
+	uint32_t psc = 1, arr, ccr;
+	uint32_t freq = counts * factor;
+	while (1) {
+		if (timerClock % psc == 0) {
+			arr = (timerClock / (freq * psc));
+			if (arr <= 0xFFFF) {
+				psc-=1;
+				arr-=1;
+				break;
+			}
+			psc++;
+		}
+	}
+
+	ccr = arr / 2;
+
+	htim3.Instance->PSC = psc;
+	htim3.Instance->ARR = arr;
+	htim3.Instance->CCR1 = ccr;
+
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 }
 
 /* USER CODE END 4 */

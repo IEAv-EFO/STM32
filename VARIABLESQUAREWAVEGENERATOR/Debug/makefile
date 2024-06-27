@@ -60,8 +60,8 @@ all: main-build
 main-build: VARIABLESQUAREWAVEGENERATOR.elf secondary-outputs
 
 # Tool invocations
-VARIABLESQUAREWAVEGENERATOR.elf VARIABLESQUAREWAVEGENERATOR.map: $(OBJS) $(USER_OBJS) C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\VARIABLESQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "VARIABLESQUAREWAVEGENERATOR.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\VARIABLESQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="VARIABLESQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+VARIABLESQUAREWAVEGENERATOR.elf VARIABLESQUAREWAVEGENERATOR.map: $(OBJS) $(USER_OBJS) C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\VARIABLESQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "VARIABLESQUAREWAVEGENERATOR.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\VARIABLESQUAREWAVEGENERATOR\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="VARIABLESQUAREWAVEGENERATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

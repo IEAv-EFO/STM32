@@ -41,6 +41,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TIMER_COUNTER\ Debug/activeLaun
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TIMER_COUNTER\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Test4TimerOC\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:VARIABLESQUAREWAVEGENERATOR\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:VARIABLESQUAREWAVEGENERATOR\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lcd160.2_CUSTOM_CHARS\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:stm32_i2cLcd\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SQUAREWAVEGENERATOR\ Debug\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
