@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_ADC"/>
+		<item key="selection" value="dutyCycle"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="dutyCycle"/>
+			<item value="flag"/>
 			<item value="hal_adc"/>
 			<item value="for (uint8_t"/>
 			<item value="oc_"/>
@@ -21,8 +23,6 @@
 			<item value="bufferCounter"/>
 			<item value="HAL_I2C_TxCpltCallback()"/>
 			<item value="HAL_I2C_MasterTxCpltCallback()"/>
-			<item value="ConvCpltCallback"/>
-			<item value="GRAPH"/>
 		</list>
 		<list key="replacehistory">
 			<item value="volts"/>

@@ -7,3 +7,8 @@
 1719502605443	Delete 7 resources
 1719513180144	Delete resource 'VARIABLESQUAREWAVEGENERATOR/Core/Inc/count2volt.h'
 1719513186667	Delete resource 'VARIABLESQUAREWAVEGENERATOR/Core/Src/count2volt.c'
+1719527574665	Delete 2 resources
+1719530057435	Delete resource 'Core'
+1719537388303	Rename resource 'TIMER_COUNTER'
+1719537400042	Delete resource 'FreqCounterAndGenerator/TIMER_COUNTER Debug.launch'
+1719537534081	Delete resource 'FreqCounterAndGenerator'
