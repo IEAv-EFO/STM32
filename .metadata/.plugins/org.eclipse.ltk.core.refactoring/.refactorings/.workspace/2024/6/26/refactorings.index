@@ -12,3 +12,5 @@
 1719537388303	Rename resource 'TIMER_COUNTER'
 1719537400042	Delete resource 'FreqCounterAndGenerator/TIMER_COUNTER Debug.launch'
 1719537534081	Delete resource 'FreqCounterAndGenerator'
+1719631124139	Rename resource 'FreqCounterAndGenerator'
+1719631133370	Delete resource 'FREQCOUNTERANDGENERATOR/FreqCounterAndGenerator.launch'

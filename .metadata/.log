@@ -5562,3 +5562,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-06-28 23:33:53.842
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-06-29 00:18:49.934
+!MESSAGE Indexed 'FREQCOUNTERANDGENERATOR' (37 sources, 141 headers) in 3.9 sec: 16,295 declarations; 85,625 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.23%)
