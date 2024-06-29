@@ -577,16 +577,14 @@ void print2LCD() {
 	lcd_put_cur(0, 0);
 	sprintf(bufferLCD, "%s", "Freq = ");
 	lcd_send_string(bufferLCD);
-
 	lcd_put_cur(0, 7);
 	sprintf(bufferLCD, "%s", bufferFreq);
 	lcd_send_string(bufferLCD);
 
 	lcd_put_cur(2, 0);
 	lcd_send_string("T = ");
-
 	lcd_put_cur(2, 4);
-	sprintf(bufferLCD, "%lu", period);
+	sprintf(bufferLCD, "%d", period);
 	lcd_send_string(bufferLCD);
 
 	length = countDigits(period);
