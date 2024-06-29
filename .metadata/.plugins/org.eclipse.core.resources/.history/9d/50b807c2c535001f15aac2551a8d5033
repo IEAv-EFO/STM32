@@ -442,23 +442,20 @@ void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
 	if (htim->Instance == TIM3) {
 		uint32_t arr, psc = 1;
 		while (1) {
-			if (timerClock % freq == 0) {
-				arr = (timerClock / (freq * psc)) - 1;
-				if (arr <= ARRMAX) {
-					break;
-				}
-				psc++;
+			arr = timerClock / (freq * psc);
+			if (arr <= ARRMAX) {
+				break;
 			}
+			psc++;
 		}
-		psc -= 1;
 
 		genFreq = (float) freq;
-		ARR = arr;
+		ARR = arr - 1;
 		CCR = (ARR + 1) / 2;
 		PSC = psc;
 
 		htim->Instance->ARR = ARR;
-		htim->Instance->PSC = psc;
+		htim->Instance->PSC = psc - 1;
 		htim->Instance->CCR1 = CCR;
 
 		HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
