@@ -167,21 +167,17 @@ int main(void)
 
 		#ifdef USB
 			#ifndef BT
-				#ifndef LCD
-					counter++;
-					//BufferCDC com CRLF para a porta USB
-					print2USB();
-				#endif
+				counter++;
+				//BufferCDC com CRLF para a porta USB
+				print2USB();
 			#endif
 		#endif
 
 		#ifdef BT
 			#ifndef USB
-				#ifndef LCD
-					counter++;
-					//BufferBT com LF para o bluetooth
-					print2BT();
-				#endif
+				counter++;
+				//BufferBT com LF para o bluetooth
+				print2BT();
 			#endif
 		#endif
 
@@ -194,7 +190,7 @@ int main(void)
 		#endif
 
 		if (flag) {
-			TIM2->CNT = 0;
+			//TIM2->CNT = 0;
 			flag = 0;
 		}
 
@@ -521,7 +517,7 @@ void freqConv(float freq, char Buf[], uint8_t dPlaces) {
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM2) {
-		flag = 1;
+		//flag = 1;
 		uint32_t arr = TIM3->ARR;
 		currentCount = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
 		if (lastCount != 0) {
@@ -539,6 +535,32 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 
 void btSend(char Buf[], uint16_t timeOut) {
 	HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+	void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+		if (htim->Instance == TIM3) {
+
+			uint32_t arr, psc = 1;
+			while (1) {
+				arr = (timerClock / (freq * psc)) - 1;
+				if (arr <= ARRMAX) {
+					break;
+				}
+				psc++;
+			}
+
+			psc-=1;
+
+			genFreq = (float) freq;
+			ARR = arr;
+			CCR = (ARR + 1) / 2;
+
+			htim->Instance->ARR = ARR;
+			htim->Instance->PSC = psc;
+			htim->Instance->CCR1 = CCR;
+
+			HAL_TIM_PWM_Start(htim, TIM_CHANNEL_1);
+		}
+		HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
+	}
 }
 
 void sendChar(char *c) {

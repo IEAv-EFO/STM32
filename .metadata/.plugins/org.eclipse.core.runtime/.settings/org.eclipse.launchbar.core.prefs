@@ -25,6 +25,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA7\ Debug/activeLa
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EXERCICIO_AULA7\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FREQUENCIMETRO\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FreqCounterAndGenerator/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FreqCounterAndGenerator/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HM-10_CC2541_ZS-040\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HM-10_CC2541_ZS-040\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LCD_CustomCharacter\ Debug/activeLaunchMode=run

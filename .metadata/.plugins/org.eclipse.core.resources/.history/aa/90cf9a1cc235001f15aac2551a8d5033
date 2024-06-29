@@ -167,21 +167,17 @@ int main(void)
 
 		#ifdef USB
 			#ifndef BT
-				#ifndef LCD
-					counter++;
-					//BufferCDC com CRLF para a porta USB
-					print2USB();
-				#endif
+				counter++;
+				//BufferCDC com CRLF para a porta USB
+				print2USB();
 			#endif
 		#endif
 
 		#ifdef BT
 			#ifndef USB
-				#ifndef LCD
-					counter++;
-					//BufferBT com LF para o bluetooth
-					print2BT();
-				#endif
+				counter++;
+				//BufferBT com LF para o bluetooth
+				print2BT();
 			#endif
 		#endif
 

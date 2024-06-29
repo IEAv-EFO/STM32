@@ -846,3 +846,2303 @@ Finished building: default.size.stdout
  
 Finished building: FreqCounterAndGenerator.list
  
+23:35:33 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:571:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  571 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:564:21: note: expected 'char *' but argument is of type 'char'
+  564 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:595:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:72: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:83: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:94: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:601:95: note: format string is defined here
+  601 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:602:76: note: format string is defined here
+  602 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:602:112: note: format string is defined here
+  602 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:606:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  606 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:611:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:48: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:59: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:70: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:611:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:617:56: note: format string is defined here
+  617 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:617:71: note: format string is defined here
+  617 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:618:52: note: format string is defined here
+  618 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:618:88: note: format string is defined here
+  618 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:636:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  636 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+      |              ^~~~~~~
+arm-none-eabi-gcc -o "FreqCounterAndGenerator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\FreqCounterAndGenerator\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreqCounterAndGenerator.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreqCounterAndGenerator.elf
+ 
+arm-none-eabi-size  FreqCounterAndGenerator.elf 
+arm-none-eabi-objdump -h -S FreqCounterAndGenerator.elf  > "FreqCounterAndGenerator.list"
+   text	   data	    bss	    dec	    hex	filename
+  57392	    708	   9476	  67576	  107f8	FreqCounterAndGenerator.elf
+Finished building: default.size.stdout
+ 
+Finished building: FreqCounterAndGenerator.list
+ 
+23:36:55 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:571:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  571 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:564:21: note: expected 'char *' but argument is of type 'char'
+  564 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:595:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:72: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:83: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  603 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:94: note: format string is defined here
+  597 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:601:95: note: format string is defined here
+  601 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:602:76: note: format string is defined here
+  602 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:595:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  595 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:602:112: note: format string is defined here
+  602 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:606:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  606 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:611:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:48: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:59: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  619 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:70: note: format string is defined here
+  613 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:611:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:617:56: note: format string is defined here
+  617 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:617:71: note: format string is defined here
+  617 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:618:52: note: format string is defined here
+  618 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:611:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  611 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:618:88: note: format string is defined here
+  618 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:636:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  636 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+      |              ^~~~~~~
+arm-none-eabi-gcc -o "FreqCounterAndGenerator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\FreqCounterAndGenerator\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreqCounterAndGenerator.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreqCounterAndGenerator.elf
+ 
+arm-none-eabi-size  FreqCounterAndGenerator.elf 
+arm-none-eabi-objdump -h -S FreqCounterAndGenerator.elf  > "FreqCounterAndGenerator.list"
+   text	   data	    bss	    dec	    hex	filename
+  57384	    708	   9476	  67568	  107f0	FreqCounterAndGenerator.elf
+Finished building: default.size.stdout
+ 
+Finished building: FreqCounterAndGenerator.list
+ 
+23:39:36 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'freqGen':
+../Core/Src/main.c:543:65: error: expected ')' before '_'
+  543 |                                 arr = (timerClock / (freq * psc)_- 1;
+      |                                       ~                         ^
+      |                                                                 )
+../Core/Src/main.c:547:39: error: expected ';' before '}' token
+  547 |                                 psc++;
+      |                                       ^
+      |                                       ;
+  548 |                         }
+      |                         ~              
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:573:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  573 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:566:21: note: expected 'char *' but argument is of type 'char'
+  566 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:597:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:72: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:83: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:94: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:95: note: format string is defined here
+  603 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:76: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:112: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:608:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  608 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:613:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:48: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:59: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:70: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:613:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:56: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:71: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:620:52: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:620:88: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:638:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  638 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+      |              ^~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:39:53 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'freqGen':
+../Core/Src/main.c:543:69: error: expected ')' before ';' token
+  543 |                                 arr = (timerClock / (freq * psc) - 1;
+      |                                       ~                             ^
+      |                                                                     )
+../Core/Src/main.c:547:39: error: expected ';' before '}' token
+  547 |                                 psc++;
+      |                                       ^
+      |                                       ;
+  548 |                         }
+      |                         ~              
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:573:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  573 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:566:21: note: expected 'char *' but argument is of type 'char'
+  566 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:597:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:72: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:83: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:94: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:95: note: format string is defined here
+  603 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:76: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:112: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:608:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  608 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:613:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:48: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:59: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:70: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:613:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:56: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:71: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:620:52: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:620:88: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:638:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  638 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+      |              ^~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:40:09 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:573:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  573 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:566:21: note: expected 'char *' but argument is of type 'char'
+  566 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:597:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:72: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:83: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:94: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:95: note: format string is defined here
+  603 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:76: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:112: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:608:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  608 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:613:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:48: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:59: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:70: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:613:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:56: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:71: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:620:52: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:620:88: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:638:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  638 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq) {
+      |              ^~~~~~~
+arm-none-eabi-gcc -o "FreqCounterAndGenerator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\FreqCounterAndGenerator\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreqCounterAndGenerator.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreqCounterAndGenerator.elf
+ 
+arm-none-eabi-size  FreqCounterAndGenerator.elf 
+arm-none-eabi-objdump -h -S FreqCounterAndGenerator.elf  > "FreqCounterAndGenerator.list"
+   text	   data	    bss	    dec	    hex	filename
+  57384	    708	   9476	  67568	  107f0	FreqCounterAndGenerator.elf
+Finished building: default.size.stdout
+ 
+Finished building: FreqCounterAndGenerator.list
+ 
+23:40:42 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:573:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  573 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:566:21: note: expected 'char *' but argument is of type 'char'
+  566 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:597:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:72: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:83: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  605 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:599:94: note: format string is defined here
+  599 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:95: note: format string is defined here
+  603 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:76: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:597:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  597 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  607 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:604:112: note: format string is defined here
+  604 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:608:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  608 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:613:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:48: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:59: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  621 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:615:70: note: format string is defined here
+  615 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:613:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:56: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:71: note: format string is defined here
+  619 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:620:52: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:613:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  613 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  623 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:620:88: note: format string is defined here
+  620 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:638:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  638 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:538:14: warning: 'freqGen' defined but not used [-Wunused-function]
+  538 |         void freqGen(TIM_HandleTypeDef *htim, uint32_t freq, uint8_t dPlaces) {
+      |              ^~~~~~~
+arm-none-eabi-gcc -o "FreqCounterAndGenerator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\FreqCounterAndGenerator\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreqCounterAndGenerator.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreqCounterAndGenerator.elf
+ 
+arm-none-eabi-size  FreqCounterAndGenerator.elf 
+arm-none-eabi-objdump -h -S FreqCounterAndGenerator.elf  > "FreqCounterAndGenerator.list"
+   text	   data	    bss	    dec	    hex	filename
+  57384	    708	   9476	  67568	  107f0	FreqCounterAndGenerator.elf
+Finished building: default.size.stdout
+ 
+Finished building: FreqCounterAndGenerator.list
+ 
+23:41:35 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:538:21: error: 'htim' undeclared (first use in this function); did you mean 'htim3'?
+  538 |                 if (htim->Instance == TIM3) {
+      |                     ^~~~
+      |                     htim3
+../Core/Src/main.c:538:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:542:54: error: 'freq' undeclared (first use in this function); did you mean 'free'?
+  542 |                                 arr = (timerClock / (freq * psc)) - 1;
+      |                                                      ^~~~
+      |                                                      free
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:563:1: error: expected identifier or '(' before '}' token
+  563 | }
+      | ^
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:572:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  572 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:565:21: note: expected 'char *' but argument is of type 'char'
+  565 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:596:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  604 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:598:72: note: format string is defined here
+  598 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:598:83: note: format string is defined here
+  598 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:598:94: note: format string is defined here
+  598 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  606 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:602:95: note: format string is defined here
+  602 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  606 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:76: note: format string is defined here
+  603 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:596:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  596 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  606 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:603:112: note: format string is defined here
+  603 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:607:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  607 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:612:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  620 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:614:48: note: format string is defined here
+  614 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:614:59: note: format string is defined here
+  614 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:614:70: note: format string is defined here
+  614 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:612:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  622 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:618:56: note: format string is defined here
+  618 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  622 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:618:71: note: format string is defined here
+  618 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  622 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:619:52: note: format string is defined here
+  619 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:612:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  612 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  622 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:619:88: note: format string is defined here
+  619 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:637:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  637 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:41:58 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:538:21: error: 'htim' undeclared (first use in this function); did you mean 'htim3'?
+  538 |                 if (htim->Instance == TIM3) {
+      |                     ^~~~
+      |                     htim3
+../Core/Src/main.c:538:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:541:54: error: 'freq' undeclared (first use in this function); did you mean 'free'?
+  541 |                                 arr = (timerClock / (freq * psc)) - 1;
+      |                                                      ^~~~
+      |                                                      free
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:570:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  570 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:563:21: note: expected 'char *' but argument is of type 'char'
+  563 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:594:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  602 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  602 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:596:72: note: format string is defined here
+  596 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  602 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:596:83: note: format string is defined here
+  596 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  602 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:596:94: note: format string is defined here
+  596 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:600:95: note: format string is defined here
+  600 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:601:76: note: format string is defined here
+  601 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:594:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  594 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  604 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:601:112: note: format string is defined here
+  601 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:605:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  605 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:610:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  618 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  618 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:612:48: note: format string is defined here
+  612 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  618 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:612:59: note: format string is defined here
+  612 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  618 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:612:70: note: format string is defined here
+  612 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:610:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:616:56: note: format string is defined here
+  616 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:616:71: note: format string is defined here
+  616 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:617:52: note: format string is defined here
+  617 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:610:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  610 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  620 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:617:88: note: format string is defined here
+  617 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:635:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  635 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:43:21 **** Incremental Build of configuration Debug for project FreqCounterAndGenerator ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'btSend':
+../Core/Src/main.c:537:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  537 |         HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
+      |                                    ^~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'btSendString':
+../Core/Src/main.c:547:26: warning: passing argument 1 of 'sendChar' makes pointer from integer without a cast [-Wint-conversion]
+  547 |                 sendChar(*Buf++);
+      |                          ^~~~~~
+      |                          |
+      |                          char
+../Core/Src/main.c:540:21: note: expected 'char *' but argument is of type 'char'
+  540 | void sendChar(char *c) {
+      |               ~~~~~~^
+../Core/Src/main.c: In function 'print2USB':
+../Core/Src/main.c:571:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+......
+  579 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                 ~~~~~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  579 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                      ~~~
+      |                                                                      |
+      |                                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:573:72: note: format string is defined here
+  573 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                       ~^
+      |                                                                        |
+      |                                                                        int
+      |                                                                       %ld
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  579 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                           ~~~
+      |                                                                           |
+      |                                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:573:83: note: format string is defined here
+  573 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                  ~^
+      |                                                                                   |
+      |                                                                                   int
+      |                                                                                  %ld
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  579 |                                                 counter, bufferFreq, PSC, ARR, CCR,
+      |                                                                                ~~~
+      |                                                                                |
+      |                                                                                uint32_t {aka long unsigned int}
+../Core/Src/main.c:573:94: note: format string is defined here
+  573 |                                                                 "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                                             ~^
+      |                                                                                              |
+      |                                                                                              int
+      |                                                                                             %ld
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  581 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                   ~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   uint32_t {aka long unsigned int}
+../Core/Src/main.c:577:95: note: format string is defined here
+  577 |                                                                 "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                                              ~^
+      |                                                                                               |
+      |                                                                                               int
+      |                                                                                              %ld
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  581 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                 ~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:578:76: note: format string is defined here
+  578 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+../Core/Src/main.c:571:49: warning: format '%d' expects argument of type 'int', but argument 13 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  571 |                                                 "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  581 |                                                 bufferTimerClock, currentCount, lastCountPrint, period);
+      |                                                                                                 ~~~~~~
+      |                                                                                                 |
+      |                                                                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:578:112: note: format string is defined here
+  578 |                                                                 "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                                               ~^
+      |                                                                                                                |
+      |                                                                                                                int
+      |                                                                                                               %ld
+../Core/Src/main.c:582:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  582 |                                 CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
+      |                                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'print2BT':
+../Core/Src/main.c:587:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                          ~^
+      |                           |
+      |                           int
+      |                          %ld
+......
+  595 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                         ~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  595 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                 ~~~
+      |                                                 |
+      |                                                 uint32_t {aka long unsigned int}
+../Core/Src/main.c:589:48: note: format string is defined here
+  589 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  595 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                      ~~~
+      |                                                      |
+      |                                                      uint32_t {aka long unsigned int}
+../Core/Src/main.c:589:59: note: format string is defined here
+  589 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  595 |                         counter, bufferGenFreq, PSC, ARR, CCR,
+      |                                                           ~~~
+      |                                                           |
+      |                                                           uint32_t {aka long unsigned int}
+../Core/Src/main.c:589:70: note: format string is defined here
+  589 |                                         "PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
+      |                                                                     ~^
+      |                                                                      |
+      |                                                                      int
+      |                                                                     %ld
+../Core/Src/main.c:587:25: warning: format '%s' expects argument of type 'char *', but argument 10 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  597 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                         ~~~~~~~~~~~~
+      |                         |
+      |                         uint32_t {aka long unsigned int}
+../Core/Src/main.c:593:56: note: format string is defined here
+  593 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                       ~^
+      |                                                        |
+      |                                                        char *
+      |                                                       %ld
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 11 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  597 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                       ~~~~~~~~~~~~~~
+      |                                       |
+      |                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:593:71: note: format string is defined here
+  593 |                                         "Timer Clock: %s\n\rNew CCR: %d\n\r"
+      |                                                                      ~^
+      |                                                                       |
+      |                                                                       int
+      |                                                                      %ld
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 12 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  597 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                       ~~~~~~
+      |                                                       |
+      |                                                       uint32_t {aka long unsigned int}
+../Core/Src/main.c:594:52: note: format string is defined here
+  594 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                   ~^
+      |                                                    |
+      |                                                    int
+      |                                                   %ld
+../Core/Src/main.c:587:25: warning: format '%d' expects argument of type 'int', but argument 13 has type 'char *' [-Wformat=]
+  587 |                         "%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  597 |                         currentCount, lastCountPrint, period, bufferFreq);
+      |                                                               ~~~~~~~~~~
+      |                                                               |
+      |                                                               char *
+../Core/Src/main.c:594:88: note: format string is defined here
+  594 |                                         "Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
+      |                                                                                       ~^
+      |                                                                                        |
+      |                                                                                        int
+      |                                                                                       %s
+../Core/Src/main.c: In function 'print2LCD':
+../Core/Src/main.c:612:30: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  612 |         sprintf(bufferLCD, "%d", period);
+      |                             ~^   ~~~~~~
+      |                              |   |
+      |                              int uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "FreqCounterAndGenerator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\FreqCounterAndGenerator\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreqCounterAndGenerator.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreqCounterAndGenerator.elf
+ 
+arm-none-eabi-size  FreqCounterAndGenerator.elf 
+arm-none-eabi-objdump -h -S FreqCounterAndGenerator.elf  > "FreqCounterAndGenerator.list"
+   text	   data	    bss	    dec	    hex	filename
+  57400	    708	   9476	  67584	  10800	FreqCounterAndGenerator.elf
+Finished building: default.size.stdout
+ 
+Finished building: FreqCounterAndGenerator.list
+ 

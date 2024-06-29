@@ -5547,3 +5547,18 @@ java.lang.Exception: The project description file (.project) for 'FreqCounterAnd
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-06-27 22:19:12.347
 !MESSAGE Indexed 'FreqCounterAndGenerator' (37 sources, 141 headers) in 2.37 sec: 16,301 declarations; 85,669 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.23%)
+!SESSION 2024-06-28 23:33:14.129 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-06-28 23:33:38.900
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-06-28 23:33:38.911
+!MESSAGE Log4j2 initialized with config file C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-06-28 23:33:53.842
+!MESSAGE Started RMI Server, listening on port 41337
