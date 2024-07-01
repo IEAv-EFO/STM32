@@ -102,6 +102,12 @@ int main(void)
   MX_ADC1_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+	for (uint8_t i = 0; i < 6; i++) {
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+		HAL_Delay(200);
+	}
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+
 	timerClock = HAL_RCC_GetPCLK2Freq();
   /* USER CODE END 2 */
 

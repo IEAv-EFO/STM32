@@ -1,0 +1,10 @@
+15:48:00 **** Incremental Build of configuration Debug for project FREQUENCYCOUNTERANDGENERATOR ****
+make -j4 all 
+arm-none-eabi-size  FREQUENCYCOUNTERANDGENERATOR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57400	    708	   9476	  67584	  10800	FREQUENCYCOUNTERANDGENERATOR.elf
+Finished building: default.size.stdout
+ 
+
+15:48:01 Build Finished. 0 errors, 0 warnings. (took 611ms)
+
