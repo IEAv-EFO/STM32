@@ -32,9 +32,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define DESIRED_BAUDRATE 19200 // Mude aqui para a velocidade desejada
-							  // da UART do módulo BLE, compile e grave
-							  // o firmware no STM32
+#define DESIRED_BAUDRATE 19200
+// Mude aqui a diretiva DESIRED_BAUDRATE
+// para a velocidade desejada da UART do
+// módulo BLE, compile e grave o firmware
+// no STM32
 
 #define RESPONSE_BUFFER_SIZE 100
 #define PRINT_BUFFER_SIZE 500
