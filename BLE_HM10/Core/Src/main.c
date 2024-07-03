@@ -116,11 +116,13 @@ int main(void)
 	 */
 
 	// Send AT command and receive response to a char buffer
-	sendATCommand("AT\r\n", 100); 				// Check if module is responsive
-	sendATCommand("AT+NAME\r\n", 100);
-    sendATCommand("AT+PIN\r\n", 100);
-    sendATCommand("AT+TYPE\r\n", 100);
-    sendATCommand("AT+ROLE\r\n", 100);
+	sendATCommand("AT\r\n", 200); 				// Check if module is responsive
+	sendATCommand("AT+BAUD8\r\n", 200); 			// Check if module is responsive
+	sendATCommand("AT+NAME\r\n", 200);
+	//sendATCommand("AT+NAMEHM10\r\n", 200);
+    sendATCommand("AT+TYPE\r\n", 200);
+    sendATCommand("AT+ROLE\r\n", 200);
+	sendATCommand("AT+HELP\r\n", 5000);
     //sendATCommand("AT+HELP\r\n", 6000);
 	//sendATCommand("AT+BAUD8\r\n", 100);// BAUD1=1200, BAUD2=2400, ..., BARD7=57600, BAUD8=115200, ..., BAUD12=132400 bps.
 
@@ -225,7 +227,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;

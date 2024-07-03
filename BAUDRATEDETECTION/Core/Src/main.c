@@ -48,7 +48,7 @@ UART_HandleTypeDef huart1;
 #define RESPONSE_BUFFER_SIZE 100
 char rxBuffer[RESPONSE_BUFFER_SIZE];
 char received_char;
-baudRate[] = {1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
+int baudRate[] = {1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

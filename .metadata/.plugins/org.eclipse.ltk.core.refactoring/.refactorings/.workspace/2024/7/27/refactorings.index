@@ -2,3 +2,11 @@
 1719858917402	Delete 2 resources
 1719859386314	Rename resource 'FREQCOUNTERANDGENERATOR'
 1719859416445	Delete resource 'FREQUENCYCOUNTERANDGENERATOR/FreqCounterAndGenerator.launch'
+1719922792523	Delete resource 'USB_DEVICE'
+1719925270438	Delete resource 'USB_DEVICE'
+1719932211180	Delete resource 'USB_DEVICE'
+1720024380216	Rename resource 'BaudDetectAndChange'
+1720024388401	Delete resource 'BaudRateDetectAndChange/BaudDetectAndChange Debug.launch'
+1720024392645	Delete resource 'BaudRateDetectAndChange/Debug'
+1720024448829	Rename resource 'BaudRateDetectAndChange'
+1720024457678	Delete resource 'BAUDRATEDETECTANDCHANGE/Debug'

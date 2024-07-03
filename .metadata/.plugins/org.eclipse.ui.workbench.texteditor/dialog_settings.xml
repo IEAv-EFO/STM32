@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="duty"/>
+		<item key="selection" value="CDC"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="duty"/>
-			<item value="dutyCycle"/>
-			<item value="flag"/>
-			<item value="hal_adc"/>
-			<item value="for (uint8_t"/>
-			<item value="oc_"/>
-			<item value="timerClock"/>
-			<item value="adcValue"/>
-			<item value="DEVICE_FS"/>
-			<item value="USB"/>
-			<item value="mx"/>
+			<item value="cdc"/>
+			<item value="PRINT_BUFFER_SIZE"/>
+			<item value="desiredbaudrate"/>
+			<item value="diserdbaudrate"/>
+			<item value="RESPONSE_BUFFER_SIZE"/>
+			<item value="baudRateCode"/>
+			<item value="desiredBaudRate"/>
+			<item value="bufferCDC"/>
+			<item value="huart2"/>
+			<item value="usart1"/>
+			<item value="huart1"/>
+			<item value="usart"/>
+			<item value="USE_HAL_UART_REGISTER_CALLBACKS"/>
 			<item value="TxCpltCallback"/>
 			<item value="callback"/>
-			<item value="bufferCounter"/>
-			<item value="HAL_I2C_TxCpltCallback()"/>
 		</list>
 		<list key="replacehistory">
+			<item value="DESIREDBAUDRATE"/>
+			<item value="bufferUSB"/>
+			<item value="huart1"/>
+			<item value="usart2"/>
+			<item value="huart2"/>
 			<item value="volts"/>
 			<item value="FREQMETER"/>
 			<item value="\n\r"/>
@@ -33,8 +38,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1115"/>
-		<item key="DIALOG_Y_ORIGIN" value="108"/>
+		<item key="DIALOG_X_ORIGIN" value="654"/>
+		<item key="DIALOG_Y_ORIGIN" value="370"/>
 		<item key="DIALOG_WIDTH" value="455"/>
 		<item key="DIALOG_HEIGHT" value="299"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

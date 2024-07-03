@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001844b  00000000  00000000  0001f8ec  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000125eb  00000000  00000000  00037d37  2**0
+ 17 .debug_line   000125ec  00000000  00000000  00037d37  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00089c65  00000000  00000000  0004a322  2**0
+ 18 .debug_str    00089c65  00000000  00000000  0004a323  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d3f87  2**0
+ 19 .comment      00000043  00000000  00000000  000d3f88  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00003c54  00000000  00000000  000d3fcc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -991,9 +991,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
  80008dc:	4619      	mov	r1, r3
  80008de:	4805      	ldr	r0, [pc, #20]	@ (80008f4 <HAL_UART_MspInit+0x8c>)
  80008e0:	f000 fa5e 	bl	8000da0 <HAL_GPIO_Init>
-  /* USER CODE BEGIN USART1_MspInit 1 */
 
   /* USER CODE END USART1_MspInit 1 */
+
   }
 
 }
