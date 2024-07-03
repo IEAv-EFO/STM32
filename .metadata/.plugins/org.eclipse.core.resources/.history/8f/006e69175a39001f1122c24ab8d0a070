@@ -1,8 +1,0 @@
-../Core/Src/main.c:82:5:main	2
-../Core/Src/main.c:146:6:SystemClock_Config	3
-../Core/Src/main.c:189:13:MX_USART1_UART_Init	2
-../Core/Src/main.c:220:13:MX_GPIO_Init	1
-../Core/Src/main.c:234:10:detectBaudRate	3
-../Core/Src/main.c:258:9:testBaudRate	2
-../Core/Src/main.c:273:6:changeBaudRate	1
-../Core/Src/main.c:313:6:Error_Handler	1

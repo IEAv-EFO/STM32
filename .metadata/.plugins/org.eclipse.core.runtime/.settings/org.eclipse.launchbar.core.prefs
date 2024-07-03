@@ -38,6 +38,8 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LCD_CustomCharacter\ Debug/acti
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LCD_CustomCharacter\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OUTPUT_COMPARE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OUTPUT_COMPARE\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PWM_TIMER_USB\ Debug\ (1)/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PWM_TIMER_USB\ Debug\ (1)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLAVE_MODE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLAVE_MODE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SQUAREWAVEGENERATOR\ Debug\ (1)/activeLaunchMode=run
