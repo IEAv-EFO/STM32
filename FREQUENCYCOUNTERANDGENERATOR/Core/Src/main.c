@@ -614,7 +614,7 @@ void print2LCD() {
 
 	length = countDigits(period);
 	lcd_put_cur(2, (length + 4 + 1));
-	lcd_send_string("Ciclos");
+	lcd_send_string("ciclos");
 
 	lcd_put_cur(3, 0);
 	lcd_send_string("Clock = ");
