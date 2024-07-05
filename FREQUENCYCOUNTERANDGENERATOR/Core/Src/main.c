@@ -75,7 +75,7 @@ static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
 void freqConv(float freq, char Buf[], uint8_t dPlaces);
-void btSendString(const char *Buf);
+void btSendString(char *Buf);
 void lcd_init(void);   // initialize lcd
 void lcd_send_cmd(char cmd);  // send command to the lcd
 void lcd_send_data(char data);  // send data to the lcd
@@ -629,7 +629,7 @@ void print2BT() {
 	#endif
 }
 
-void btSendString(const char *Buf) {
+void btSendString(char *Buf) {
 	if (flagBT) {
 		HAL_UART_Transmit_IT(&huart2, (uint8_t*) Buf, strlen(Buf));
 		flagBT = 0;
