@@ -32,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define DESIRED_BAUDRATE 19200
+#define DESIRED_BAUDRATE 115200
 // Mude aqui a diretiva DESIRED_BAUDRATE
 // para a velocidade desejada da UART do
 // módulo BLE, compile e grave o firmware

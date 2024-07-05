@@ -27,25 +27,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000a174  2**0
                   CONTENTS, READONLY
- 12 .debug_info   000112fb  00000000  00000000  0000a1a4  2**0
+ 12 .debug_info   000112fd  00000000  00000000  0000a1a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00002f84  00000000  00000000  0001b49f  2**0
+ 13 .debug_abbrev 00002f62  00000000  00000000  0001b4a1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000d98  00000000  00000000  0001e428  2**3
+ 14 .debug_aranges 00000d98  00000000  00000000  0001e408  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 00000a3e  00000000  00000000  0001f1c0  2**0
+ 15 .debug_rnglists 00000a3e  00000000  00000000  0001f1a0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001844b  00000000  00000000  0001fbfe  2**0
+ 16 .debug_macro  0001844b  00000000  00000000  0001fbde  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00012630  00000000  00000000  00038049  2**0
+ 17 .debug_line   0001262e  00000000  00000000  00038029  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00089cab  00000000  00000000  0004a679  2**0
+ 18 .debug_str    00089cac  00000000  00000000  0004a657  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d4324  2**0
+ 19 .comment      00000043  00000000  00000000  000d4303  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003cb0  00000000  00000000  000d4368  2**2
+ 20 .debug_frame  00003cb0  00000000  00000000  000d4348  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000078  00000000  00000000  000d8018  2**0
+ 21 .debug_line_str 00000078  00000000  00000000  000d7ff8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -987,11 +987,11 @@ uint8_t testBaudRate(uint32_t bRate) {
 	uint8_t r;
 	if (bRate != DESIRED_BAUDRATE) {
  8000968:	687b      	ldr	r3, [r7, #4]
- 800096a:	f5b3 4f96 	cmp.w	r3, #19200	@ 0x4b00
+ 800096a:	f5b3 3fe1 	cmp.w	r3, #115200	@ 0x1c200
  800096e:	d011      	beq.n	8000994 <testBaudRate+0x34>
 		sprintf(bufferUSB, "Desired Baudrate: %lu\r\nCurrent Baudrate: %lu\r\n", DESIRED_BAUDRATE, bRate);
  8000970:	687b      	ldr	r3, [r7, #4]
- 8000972:	f44f 4296 	mov.w	r2, #19200	@ 0x4b00
+ 8000972:	f44f 32e1 	mov.w	r2, #115200	@ 0x1c200
  8000976:	490b      	ldr	r1, [pc, #44]	@ (80009a4 <testBaudRate+0x44>)
  8000978:	480b      	ldr	r0, [pc, #44]	@ (80009a8 <testBaudRate+0x48>)
  800097a:	f007 f835 	bl	80079e8 <siprintf>
@@ -1029,18 +1029,16 @@ void changeBaudRate() {
  80009ac:	b580      	push	{r7, lr}
  80009ae:	af00      	add	r7, sp, #0
 			break;
-		case 9600:
-			sprintf(baudRateString, "AT+BAUD4\r\n");
+		case 57600:
+			sprintf(baudRateString, "AT+BAUD7\r\n");
 			break;
-		case 19200:
-			sprintf(baudRateString, "AT+BAUD5\r\n");
+		case 115200:
+			sprintf(baudRateString, "AT+BAUD8\r\n");
  80009b0:	490b      	ldr	r1, [pc, #44]	@ (80009e0 <changeBaudRate+0x34>)
  80009b2:	480c      	ldr	r0, [pc, #48]	@ (80009e4 <changeBaudRate+0x38>)
  80009b4:	f007 f818 	bl	80079e8 <siprintf>
 			break;
  80009b8:	bf00      	nop
-			sprintf(baudRateString, "AT+BAUD8\r\n");
-			break;
 		default:
 			sprintf(baudRateString, "AT+BAUD4\r\n");
 	}
@@ -1055,7 +1053,7 @@ void changeBaudRate() {
  80009ca:	f002 fb6f 	bl	80030ac <HAL_UART_Transmit>
 	huart1.Init.BaudRate = DESIRED_BAUDRATE;
  80009ce:	4b06      	ldr	r3, [pc, #24]	@ (80009e8 <changeBaudRate+0x3c>)
- 80009d0:	f44f 4296 	mov.w	r2, #19200	@ 0x4b00
+ 80009d0:	f44f 32e1 	mov.w	r2, #115200	@ 0x1c200
  80009d4:	605a      	str	r2, [r3, #4]
 	HAL_UART_Init(&huart1);
  80009d6:	4804      	ldr	r0, [pc, #16]	@ (80009e8 <changeBaudRate+0x3c>)

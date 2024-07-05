@@ -34,8 +34,10 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
-//#define USB
-//#define BT
+//#define FREQGENON
+#define FREQGENOFF
+#define USB
+#define BT
 #define LCD
 /* USER CODE END PD */
 
@@ -55,12 +57,12 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef retTimer;
 GPIO_PinState pinState;
-char bufferCDC[500], bufferBT[500], bufferLCD[50];
+char bufferCDC[1000], bufferBT[1000], bufferLCD[50];
 char bufferGenFreq[20], bufferFreq[20], bufferTimerClock[20];
-uint8_t length, flag = 0;
+uint8_t length, flag = 0, flagBT = 1;
 uint32_t period, desiredFreq, periodPrint, PSC, ARR, CCR, counter = 0;
 uint32_t timerClock, desiredFreqperiod, currentCount, lastCountPrint, lastCount = 0;
-float genFreq, frequency, freqPrint;
+float dCycle, genFreq, frequency, freqPrint;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,8 +75,7 @@ static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 void freqGen(TIM_HandleTypeDef *htim, uint32_t freq);
 void freqConv(float freq, char Buf[], uint8_t dPlaces);
-void sendChar(char *c);
-void btSendString(char *Buf);
+void btSendString(const char *Buf);
 void lcd_init(void);   // initialize lcd
 void lcd_send_cmd(char cmd);  // send command to the lcd
 void lcd_send_data(char data);  // send data to the lcd
@@ -145,9 +146,12 @@ int main(void)
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 	}
 
-	//freqGen(&htim3, desiredFreq);
+	#ifdef FREQGENON
+		freqGen(&htim3, desiredFreq);
+		freqConv(genFreq, bufferGenFreq, 4);
+	#endif
+
 	freqConv(timerClock, bufferTimerClock, 2);
-	//freqConv(genFreq, bufferGenFreq, 4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -155,32 +159,20 @@ int main(void)
 	while (1) {
 		freqConv(frequency, bufferFreq, 4);
 
-		#ifdef USB
-			#ifndef BT
-				#ifndef LCD
-					counter++;
-					//BufferCDC com CRLF para a porta USB
-					print2USB();
-				#endif
-			#endif
+		dCycle = (CCR / (float) (ARR + 1)) * 100.0;
+
+		#ifdef USB && #undef BT && #undef LCD
+			//BufferCDC com CRLF para a porta USB
+			print2USB();
 		#endif
 
-		#ifdef BT
-			#ifndef USB
-				#ifndef LCD
-					counter++;
-					//BufferBT com LF para o bluetooth
-					print2BT();
-				#endif
-			#endif
+		#ifdef BT && #undef USB && #undef LCD
+			//BufferBT com LF para o bluetooth
+			print2BT();
 		#endif
 
-		#ifdef LCD
-			#ifndef USB
-				#ifndef BT
-					print2LCD();
-				#endif
-			#endif
+		#ifdef LCD && #undef USB && #undef BT
+			print2LCD();
 		#endif
 
 		if (flag) {
@@ -188,7 +180,7 @@ int main(void)
 			flag = 0;
 		}
 
-		HAL_Delay(1000);
+		HAL_Delay(1500);
 
     /* USER CODE END WHILE */
 
@@ -231,12 +223,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -531,22 +523,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 	}
 }
 
-void btSend(char Buf[], uint16_t timeOut) {
-	HAL_UART_Transmit(&huart2, Buf, strlen(Buf), 100);
-}
-
-void sendChar(char *c) {
-	HAL_UART_Transmit(&huart2, (uint8_t*) c, 1, 10);
-}
-
-void btSendString(char *Buf) {
-	// Loop through each character in the string until the null terminator
-	while (*Buf) {
-		sendChar(*Buf++);
-		HAL_Delay(2);
-	}
-}
-
 int countDigits(int number) {
 	if (number == 0) {
 		return 1;
@@ -562,38 +538,6 @@ int countDigits(int number) {
 		count++;
 	}
 	return count;
-}
-
-void print2USB() {
-	sprintf(bufferCDC,
-			"%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
-					"Frequency: %s\n\r"
-					"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
-					"Duty cycle (CCR / (ARR+1)): %.2f %%\n\r\n\r"
-					"Frequency Counter (Timer2)\n\r"
-					"Frequency: %s\n\r"
-					"Timer Clock: %s\n\rNew CCR: %d\n\r"
-					"Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
-			counter, bufferFreq, PSC, ARR, CCR,
-			(CCR / (float) (ARR + 1)) * 100.0, bufferGenFreq, bufferTimerClock,
-			currentCount, lastCountPrint, period);
-	CDC_Transmit_FS(bufferCDC, sizeof(bufferCDC));
-}
-
-void print2BT() {
-	sprintf(bufferBT,
-			"%d\n\r#########################\n\rFrequency Generator (Timer 3)\n\r"
-					"Frequency: %s\n\r"
-					"PSC: %d\n\rARR: %d\n\rCCR: %d\n\r"
-					"Duty cycle (CCR / (ARR+1)): %.2f %%\n\r\n\r"
-					"Frequency Counter (Timer2)\n\r"
-					"Frequency: %s\n\r"
-					"Timer Clock: %s\n\rNew CCR: %d\n\r"
-					"Old CCR: %d\n\rDiff CCR (T in clock pulses): %d\n\r\n\r",
-			counter, bufferGenFreq, PSC, ARR, CCR,
-			(CCR / (float) (ARR + 1)) * 100.0, bufferTimerClock, currentCount,
-			lastCountPrint, period, bufferFreq);
-	btSendString(bufferBT);
 }
 
 void print2LCD() {
@@ -623,6 +567,81 @@ void print2LCD() {
 	sprintf(bufferLCD, "%s", bufferTimerClock);
 	lcd_send_string(bufferLCD);
 }
+
+void print2USB() {
+	#ifdef FREQGENON
+		sprintf(bufferCDC,
+				"\n\r#########################\r\n"
+				"FREQUENCY GENERATOR (Timer 3)\n\r"
+				"Frequency: %s\n\r"
+				"PSC: %lu\n\rARR: %lu\n\rCCR: %lu\n\r"
+				"Duty cycle (CCR / (ARR+1)): %.2f %%\n\r\n\r"
+				"Frequency Counter (Timer2)\n\r"
+				"Frequency: %s\n\r"
+				"Timer Clock: %s\n\rNew CCR: %lu\n\r"
+				"Old CCR: %lu\n\rDiff CCR (T in clock pulses): %lu\n\r",
+				bufferFreq, PSC, ARR, CCR, dCycle, bufferGenFreq, bufferTimerClock,
+				currentCount, lastCountPrint, period);
+	#endif
+	#ifdef FREQGENOFF
+		sprintf(bufferCDC,
+				"########################\r\n"
+				"FREQUENCY COUNTER (Timer 2)\r\n"
+				"Frequency: %s\r\n"
+				"Timer Clock: %s\r\n"
+				"New CCR: %lu\r\n"
+				"Old CCR: %lu\r\n"
+				"Diff CCR (T): %lu\r\n",
+				bufferFreq, bufferTimerClock,
+				currentCount, lastCountPrint, period);
+	#endif
+	CDC_Transmit_FS(bufferCDC, strlen(bufferCDC));
+}
+
+void print2BT() {
+	#ifdef FREQGENON
+		sprintf(bufferBT,
+				"#########################\n\r"
+				"Frequency Generator (Timer 3)\n"
+				"Frequency: %s\n\r"
+				"PSC: %lu\n\rARR: %lu\n\rCCR: %lu\n\r"
+				"Duty cycle (CCR / (ARR+1)): %.2f %%\n\r\n\r"
+				"Frequency Counter (Timer2)\n\r"
+				"Frequency: %s\n\r"
+				"Timer Clock: %s\n\rNew CCR: %lu\n\r"
+				"Old CCR: %lu\n\rDiff CCR (T in clock pulses): \n\r",
+				bufferFreq, PSC, ARR, CCR, dCycle, bufferGenFreq, bufferTimerClock,
+				currentCount, lastCountPrint, period);
+		btSendString(bufferBT, timeOut);
+	#endif
+	#ifdef FREQGENOFF
+		sprintf(bufferBT,
+				"\r\n########################\r\n"
+				"FREQUENCY COUNTER (Timer 2)\r\n"
+				"Frequency: %s\r\n"
+				"Timer Clock: %s\r\n"
+				"New CCR: %lu\r\n"
+				"Old CCR: %lu\r\n"
+				"Diff CCR (T): %lu",
+				bufferFreq, bufferTimerClock,
+				currentCount, lastCountPrint, period);
+		btSendString(bufferBT);
+	#endif
+}
+
+void btSendString(const char *Buf) {
+	if (flagBT) {
+		HAL_UART_Transmit_IT(&huart2, (uint8_t*) Buf, strlen(Buf));
+		flagBT = 0;
+	}
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+    if (huart->Instance == USART2) {
+    	flagBT = 1;
+    }
+}
+
 /* USER CODE END 4 */
 
 /**
