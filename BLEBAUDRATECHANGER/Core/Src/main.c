@@ -18,11 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define PRINT_BUFFER_SIZE 500
+#define RESPONSE_BUFFER_SIZE 100
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -44,30 +44,35 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint8_t flag = 1;
-GPIO_PinState pa6, pa7, pa8, pa9, pa10;
-char testAT[] = "AT\r\n";
-char baudRateString[7] = {"AT+BAUD"};
-uint32_t baudRates[5] = {
+uint8_t flag6 = 0;  // pushbutton 1 no protoboard
+uint8_t flag7 = 0;  // pushbutton 2 no protoboard
+uint8_t flag8 = 0;  // pushbutton 3 no protoboard
+uint8_t flag9 = 0;  // pushbutton 4 no protoboard
+uint8_t flag10 = 0; // pushbutton 5 no protoboard
+uint8_t flag0 = 0;  // pushbutton "KEY" no STM32
+uint8_t timeOut = 200;
+uint32_t detectedBR;
+char rxBuffer[100];
+char testAT[] = "AT\r\n"; // O BLE HM-10 retorna "OK"
+uint32_t baudRates[] = {
+		1200,
+		2400,
+		4800,
 		9600,
 		19200,
 		38400,
 		57600,
 		115200
 };
-const char * baudrates[] = {
-		"AT+BAUD4\r\n", // 9600 Normalmente padrão
-		"AT+BAUD5\r\n", // 19200
-		"AT+BAUD6\r\n", // 38400
-		"AT+BAUD7\r\n", // 57600
-		"AT+BAUD8\r\n"  // 115200
-};
-uint16_t pins[5] = {
-		GPIO_PIN_6,
-		GPIO_PIN_7,
-		GPIO_PIN_8,
-		GPIO_PIN_9,
-		GPIO_PIN_10,
+char * baudRateCodes[] = {
+		"AT+BAUD1\r\n", // 1200
+		"AT+BAUD2\r\n", // 2400
+		"AT+BAUD3\r\n", // 4800
+		"AT+BAUD4\r\n", // 9600   Botão 1 PA6 Normalmente padrão
+		"AT+BAUD5\r\n", // 19200  Botão 2 PA7
+		"AT+BAUD6\r\n", // 38400  Botão 3 PA8
+		"AT+BAUD7\r\n", // 57600  Botão 4 PA9
+		"AT+BAUD8\r\n"  // 115200 Botão 5 PA10
 };
 
 /* USER CODE END PV */
@@ -77,8 +82,10 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-void changeBaudRate(uint8_t bRateCode);
-void showSelectedBR();
+uint32_t detectBaudRate();
+void changeBaudRate(uint8_t bRateCode, char * Buf);
+void blinkTest(uint8_t, uint16_t);
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 
 /* USER CODE END PFP */
 
@@ -117,41 +124,158 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  HAL_Delay(1000);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  uint8_t index = 6;
-	  while (1) {
-		  pa6 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6);
-		  pa7 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7);
-		  pa8 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
-		  pa9 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_9);
-		  pa10 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
+	while (1) {
 
-	  }
+		if (flag0) {
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+			// Se flag0 então pode-se alterar a baudrate
+			if (flag6) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[3]) {
+					blinkTest(10, 50);
+				} else {
+					changeBaudRate(3, baudRateCodes[3]); // "AT+BAUD4\r\n" 9600
+					HAL_Delay(200);
+					detectedBR = detectBaudRate();
+					if (detectedBR == baudRates[3]) {
+						blinkTest(4, 300);
+					} else {
+						blinkTest(10, 50);
+					}
+				}
+				NVIC_SystemReset(); // Reseta o STM32
+			}
+			if (flag7) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[4]) {
+					blinkTest(10, 50);
+				} else {
+					changeBaudRate(4, baudRateCodes[4]); // "AT+BAUD5\r\n" 19200
+					HAL_Delay(200);
+					detectedBR = detectBaudRate();
+					if (detectedBR == baudRates[4]) {
+						blinkTest(5, 300);
+					} else {
+						blinkTest(10, 50);
+					}
+				}
+				NVIC_SystemReset(); // Reseta o STM32
+			}
+			if (flag8) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[5]) {
+					blinkTest(10, 50);
+				} else {
+					changeBaudRate(5, baudRateCodes[5]); // "AT+BAUD6\r\n" 38400
+					HAL_Delay(200);
+					detectedBR = detectBaudRate();
+					if (detectedBR == baudRates[5]) {
+						blinkTest(6, 300);
+					} else {
+						blinkTest(10, 50);
+					}
+				}
+				NVIC_SystemReset(); // Reseta o STM32
+			}
+			if (flag9) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[6]) {
+					blinkTest(10, 50);
+				} else {
+					changeBaudRate(6, baudRateCodes[6]); // "AT+BAUD7\r\n" 57600
+					HAL_Delay(200);
+					detectedBR = detectBaudRate();
+					if (detectedBR == baudRates[6]) {
+						blinkTest(7, 300);
+					} else {
+						blinkTest(10, 50);
+					}
+				}
+				NVIC_SystemReset(); // Reseta o STM32
+			}
+			if (flag10) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[7]) {
+					blinkTest(10, 50);
+				} else {
+					changeBaudRate(7, baudRateCodes[7]); // "AT+BAUD48\r\r" 115200
+					HAL_Delay(200);
+					detectedBR = detectBaudRate();
+					if (detectedBR == baudRates[7]) {
+						blinkTest(8, 300);
+					} else {
+						blinkTest(10, 50);
+					}
+				}
+				NVIC_SystemReset(); // Reseta o STM32
+			}
 
+		}
+		else {
+			// Não se pode altera  a baudrate.
+			// Somente a verificação está habilitada.
+			if (flag6) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[3]) {
+					blinkTest(4, 300);
+				} else {
+					blinkTest(10, 50);
+				}
+				flag6 = 0;
+			}
 
-/*
-	  for (uint8_t i = 6; i < 11; i++) {
-		  if (HAL_GPIO_ReadPin(GPIOA, pins[i]) == GPIO_PIN_SET) {
-			  if (flag) {
-				  changeBaudRate(i);
-			  }
+			if (flag7) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[4]) {
+					blinkTest(5, 300);
+				} else {
+					blinkTest(10, 50);
+				}
+				flag7 = 0;
+			}
 
-		  }
-	  }
-*/
+			if (flag8) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[5]) {
+					blinkTest(6, 300);
+				} else {
+					blinkTest(10, 50);
+				}
+				flag8 = 0;
+			}
 
-	  /* USER CODE END WHILE */
+			if (flag9) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[6]) {
+					blinkTest(7, 300);
+				} else {
+					blinkTest(10, 50);
+				}
+				flag9 = 0;
+			}
+
+			if (flag10) {
+				detectedBR = detectBaudRate();
+				if (detectedBR == baudRates[7]) {
+					blinkTest(8, 300);
+				} else {
+					blinkTest(10, 50);
+				}
+				flag10 = 0;
+			}
+		}
+
+    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -172,12 +296,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 15;
-  RCC_OscInitStruct.PLL.PLLN = 144;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 100;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 5;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -189,12 +314,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -245,54 +370,131 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
-  /*Configure GPIO pins : PA6 PA7 PA8 PA9
-                           PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
-                          |GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PC13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PA0 PA6 PA7 PA8
+                           PA9 PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8
+                          |GPIO_PIN_9|GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-void changeBaudRate(uint8_t bRateCode) {
-	char buffer[10];
-	sprintf(buffer, "%s%d\r\n", baudRateString, bRateCode);
-	if (flag) {
-		HAL_UART_Transmit_IT(&huart2, (uint8_t*) buffer, strlen(buffer));
-		switch (bRateCode) {
-			case 6:
-				huart2.Init.BaudRate = baudRates[0];
-				break;
-			case 7:
-				huart2.Init.BaudRate = baudRates[1];
-				break;
-			case 8:
-				huart2.Init.BaudRate = baudRates[2];
-				break;
-			case 9:
-				huart2.Init.BaudRate = baudRates[3];
-				break;
-			case 10:
-				huart2.Init.BaudRate = baudRates[4];
-				break;
-			default:
-				huart2.Init.BaudRate = baudRates[0];
-		}
+
+uint32_t detectBaudRate() {
+	uint32_t br;
+	for (int i = 0; i < 8; i++) {
+		br = baudRates[i];
+		huart2.Init.BaudRate = baudRates[i];
 		HAL_UART_Init(&huart2);
-		flag = 0;
+		memset(rxBuffer, 0, sizeof(rxBuffer));
+		HAL_UART_Transmit(&huart2, (uint8_t *)testAT, strlen(testAT), timeOut);
+		HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
+		if (strstr(rxBuffer, "OK") != NULL) {
+			return br;
+		}
+		br = 0;
 	}
+
+	return br;
 }
 
-void UART_TxCpltCallback(UART_HandleTypeDef *huart) {
-	if (huart->Instance == USART2_IRQHandler()) {
-		flag = 1;
+void changeBaudRate(uint8_t bRateCode, char *Buf) {
+	HAL_UART_Transmit(&huart2, (uint8_t*) Buf, strlen(Buf), timeOut);
+	switch (bRateCode) {
+		case 0:
+			huart2.Init.BaudRate = baudRates[0];
+			break;
+		case 1:
+			huart2.Init.BaudRate = baudRates[1];
+			break;
+		case 2:
+			huart2.Init.BaudRate = baudRates[2];
+			break;
+		case 3:
+			huart2.Init.BaudRate = baudRates[3];
+			break;
+		case 4:
+			huart2.Init.BaudRate = baudRates[4];
+			break;
+		case 5:
+			huart2.Init.BaudRate = baudRates[5];
+			break;
+		case 6:
+			huart2.Init.BaudRate = baudRates[6];
+			break;
+		case 7:
+			huart2.Init.BaudRate = baudRates[7];
+			break;
+		default:
+			huart2.Init.BaudRate = baudRates[3];
+			break;
+	}
+	HAL_UART_Init(&huart2);
+}
+
+
+void blinkTest(uint8_t bCode, uint16_t dly) {
+	uint8_t nBlink;
+	HAL_Delay(dly);
+	for (uint8_t i = 0; i < 2 * bCode; i++) {
+		// Multiplica por 2 porque são nBlink vezes acesos e nBlink vezes apagado
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+		HAL_Delay(dly);
+	}
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	switch(GPIO_Pin) {
+		case GPIO_PIN_0: // Alterna entre alteração ou somente verificação da baudrate
+			flag0 = 1;
+			break;
+		case GPIO_PIN_6:
+			flag6 = 1;
+			break;
+		case GPIO_PIN_7:
+			flag7 = 1;
+			break;
+		case GPIO_PIN_8:
+			flag8 = 1;
+			break;
+		case GPIO_PIN_9:
+			flag9 = 1;
+			break;
+		case GPIO_PIN_10:
+			flag10 = 1;
+			break;
+		default:
+			break;
 	}
 }
 
