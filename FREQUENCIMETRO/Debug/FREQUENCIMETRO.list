@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000175bb  00000000  00000000  00019b9c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000f785  00000000  00000000  00031157  2**0
+ 17 .debug_line   0000f786  00000000  00000000  00031157  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00090631  00000000  00000000  000408dc  2**0
+ 18 .debug_str    00090631  00000000  00000000  000408dd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d0f0d  2**0
+ 19 .comment      00000043  00000000  00000000  000d0f0e  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00004ca4  00000000  00000000  000d0f50  2**2
+ 20 .debug_frame  00004ca4  00000000  00000000  000d0f54  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006f  00000000  00000000  000d5bf4  2**0
+ 21 .debug_line_str 0000006f  00000000  00000000  000d5bf8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1612,30 +1612,30 @@ int main(void)
   MX_I2C1_Init();
  80011b4:	f000 f9aa 	bl	800150c <MX_I2C1_Init>
   /* USER CODE BEGIN 2 */
-  lcd_init();
+	lcd_init();
  80011b8:	f7ff ff9a 	bl	80010f0 <lcd_init>
-  HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
+	HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
  80011bc:	2100      	movs	r1, #0
  80011be:	488e      	ldr	r0, [pc, #568]	@ (80013f8 <main+0x258>)
  80011c0:	f002 f996 	bl	80034f0 <HAL_TIM_IC_Start_IT>
-  CLOCK=HAL_RCC_GetSysClockFreq();
+	CLOCK = HAL_RCC_GetSysClockFreq();
  80011c4:	f002 f806 	bl	80031d4 <HAL_RCC_GetSysClockFreq>
  80011c8:	4603      	mov	r3, r0
  80011ca:	4a8c      	ldr	r2, [pc, #560]	@ (80013fc <main+0x25c>)
  80011cc:	6013      	str	r3, [r2, #0]
+  /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  lcd_send_cmd(Linha_1);
+	while (1) {
+		lcd_send_cmd(Linha_1);
  80011ce:	2080      	movs	r0, #128	@ 0x80
  80011d0:	f7ff ff2e 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string("Freq =" );
+		lcd_send_string("Freq =");
  80011d4:	488a      	ldr	r0, [pc, #552]	@ (8001400 <main+0x260>)
  80011d6:	f7ff ffc2 	bl	800115e <lcd_send_string>
 
-	  if(frequencia<1000)
+		if (frequencia < 1000) {
  80011da:	4b8a      	ldr	r3, [pc, #552]	@ (8001404 <main+0x264>)
  80011dc:	e9d3 0100 	ldrd	r0, r1, [r3]
  80011e0:	f04f 0200 	mov.w	r2, #0
@@ -1644,28 +1644,27 @@ int main(void)
  80011ea:	4603      	mov	r3, r0
  80011ec:	2b00      	cmp	r3, #0
  80011ee:	d012      	beq.n	8001216 <main+0x76>
-	  {
-	  sprintf(valor_string,"%.1f",frequencia);
+			sprintf(valor_string, "%.1f", frequencia);
  80011f0:	4b84      	ldr	r3, [pc, #528]	@ (8001404 <main+0x264>)
  80011f2:	e9d3 2300 	ldrd	r2, r3, [r3]
  80011f6:	4985      	ldr	r1, [pc, #532]	@ (800140c <main+0x26c>)
  80011f8:	4885      	ldr	r0, [pc, #532]	@ (8001410 <main+0x270>)
  80011fa:	f003 ff6d 	bl	80050d8 <siprintf>
-	  lcd_send_cmd(Linha_1+7);
+			lcd_send_cmd(Linha_1 + 7);
  80011fe:	2087      	movs	r0, #135	@ 0x87
  8001200:	f7ff ff16 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(valor_string);
+			lcd_send_string(valor_string);
  8001204:	4882      	ldr	r0, [pc, #520]	@ (8001410 <main+0x270>)
  8001206:	f7ff ffaa 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_1+12);
+			lcd_send_cmd(Linha_1 + 12);
  800120a:	208c      	movs	r0, #140	@ 0x8c
  800120c:	f7ff ff10 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(" [Hz]");
+			lcd_send_string(" [Hz]");
  8001210:	4880      	ldr	r0, [pc, #512]	@ (8001414 <main+0x274>)
  8001212:	f7ff ffa4 	bl	800115e <lcd_send_string>
-	  }
+		}
 
-	  if((frequencia>=1000)&(frequencia<=9999))
+		if ((frequencia >= 1000) & (frequencia <= 9999)) {
  8001216:	4b7b      	ldr	r3, [pc, #492]	@ (8001404 <main+0x264>)
  8001218:	e9d3 0100 	ldrd	r0, r1, [r3]
  800121c:	2301      	movs	r3, #1
@@ -1696,8 +1695,7 @@ int main(void)
  8001258:	b2db      	uxtb	r3, r3
  800125a:	2b00      	cmp	r3, #0
  800125c:	d019      	beq.n	8001292 <main+0xf2>
-	  {
-	  sprintf(valor_string,"%.3f",frequencia/1000);
+			sprintf(valor_string, "%.3f", frequencia / 1000);
  800125e:	4b69      	ldr	r3, [pc, #420]	@ (8001404 <main+0x264>)
  8001260:	e9d3 0100 	ldrd	r0, r1, [r3]
  8001264:	f04f 0200 	mov.w	r2, #0
@@ -1708,21 +1706,21 @@ int main(void)
  8001272:	4969      	ldr	r1, [pc, #420]	@ (8001418 <main+0x278>)
  8001274:	4866      	ldr	r0, [pc, #408]	@ (8001410 <main+0x270>)
  8001276:	f003 ff2f 	bl	80050d8 <siprintf>
-	  lcd_send_cmd(Linha_1+7);
+			lcd_send_cmd(Linha_1 + 7);
  800127a:	2087      	movs	r0, #135	@ 0x87
  800127c:	f7ff fed8 	bl	8001030 <lcd_send_cmd>
-      lcd_send_string(valor_string);
+			lcd_send_string(valor_string);
  8001280:	4863      	ldr	r0, [pc, #396]	@ (8001410 <main+0x270>)
  8001282:	f7ff ff6c 	bl	800115e <lcd_send_string>
-      lcd_send_cmd(Linha_1+12);
+			lcd_send_cmd(Linha_1 + 12);
  8001286:	208c      	movs	r0, #140	@ 0x8c
  8001288:	f7ff fed2 	bl	8001030 <lcd_send_cmd>
-      lcd_send_string(" [KHz]");
+			lcd_send_string(" [KHz]");
  800128c:	4863      	ldr	r0, [pc, #396]	@ (800141c <main+0x27c>)
  800128e:	f7ff ff66 	bl	800115e <lcd_send_string>
-	  }
+		}
 
-	  if((frequencia>=10000)&(frequencia<=99999))
+		if ((frequencia >= 10000) & (frequencia <= 99999)) {
  8001292:	4b5c      	ldr	r3, [pc, #368]	@ (8001404 <main+0x264>)
  8001294:	e9d3 0100 	ldrd	r0, r1, [r3]
  8001298:	2301      	movs	r3, #1
@@ -1753,8 +1751,7 @@ int main(void)
  80012d4:	b2db      	uxtb	r3, r3
  80012d6:	2b00      	cmp	r3, #0
  80012d8:	d019      	beq.n	800130e <main+0x16e>
-	  {
-	  sprintf(valor_string,"%.3f",frequencia/1000);
+			sprintf(valor_string, "%.3f", frequencia / 1000);
  80012da:	4b4a      	ldr	r3, [pc, #296]	@ (8001404 <main+0x264>)
  80012dc:	e9d3 0100 	ldrd	r0, r1, [r3]
  80012e0:	f04f 0200 	mov.w	r2, #0
@@ -1765,21 +1762,21 @@ int main(void)
  80012ee:	494a      	ldr	r1, [pc, #296]	@ (8001418 <main+0x278>)
  80012f0:	4847      	ldr	r0, [pc, #284]	@ (8001410 <main+0x270>)
  80012f2:	f003 fef1 	bl	80050d8 <siprintf>
-	  lcd_send_cmd(Linha_1+7);
+			lcd_send_cmd(Linha_1 + 7);
  80012f6:	2087      	movs	r0, #135	@ 0x87
  80012f8:	f7ff fe9a 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(valor_string);
+			lcd_send_string(valor_string);
  80012fc:	4844      	ldr	r0, [pc, #272]	@ (8001410 <main+0x270>)
  80012fe:	f7ff ff2e 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_1+13);
+			lcd_send_cmd(Linha_1 + 13);
  8001302:	208d      	movs	r0, #141	@ 0x8d
  8001304:	f7ff fe94 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(" [KHz]");
+			lcd_send_string(" [KHz]");
  8001308:	4844      	ldr	r0, [pc, #272]	@ (800141c <main+0x27c>)
  800130a:	f7ff ff28 	bl	800115e <lcd_send_string>
-	  }
+		}
 
-	  if(frequencia>=100000)
+		if (frequencia >= 100000) {
  800130e:	4b3d      	ldr	r3, [pc, #244]	@ (8001404 <main+0x264>)
  8001310:	e9d3 0100 	ldrd	r0, r1, [r3]
  8001314:	a336      	add	r3, pc, #216	@ (adr r3, 80013f0 <main+0x250>)
@@ -1788,8 +1785,7 @@ int main(void)
  800131e:	4603      	mov	r3, r0
  8001320:	2b00      	cmp	r3, #0
  8001322:	d019      	beq.n	8001358 <main+0x1b8>
-	  {
-	  sprintf(valor_string,"%.1f",frequencia/1000);
+			sprintf(valor_string, "%.1f", frequencia / 1000);
  8001324:	4b37      	ldr	r3, [pc, #220]	@ (8001404 <main+0x264>)
  8001326:	e9d3 0100 	ldrd	r0, r1, [r3]
  800132a:	f04f 0200 	mov.w	r2, #0
@@ -1800,56 +1796,56 @@ int main(void)
  8001338:	4934      	ldr	r1, [pc, #208]	@ (800140c <main+0x26c>)
  800133a:	4835      	ldr	r0, [pc, #212]	@ (8001410 <main+0x270>)
  800133c:	f003 fecc 	bl	80050d8 <siprintf>
-	  lcd_send_cmd(Linha_1+7);
+			lcd_send_cmd(Linha_1 + 7);
  8001340:	2087      	movs	r0, #135	@ 0x87
  8001342:	f7ff fe75 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(valor_string);
+			lcd_send_string(valor_string);
  8001346:	4832      	ldr	r0, [pc, #200]	@ (8001410 <main+0x270>)
  8001348:	f7ff ff09 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_1+13);
+			lcd_send_cmd(Linha_1 + 13);
  800134c:	208d      	movs	r0, #141	@ 0x8d
  800134e:	f7ff fe6f 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(" [KHz]");
+			lcd_send_string(" [KHz]");
  8001352:	4832      	ldr	r0, [pc, #200]	@ (800141c <main+0x27c>)
  8001354:	f7ff ff03 	bl	800115e <lcd_send_string>
-	  }
+		}
 
-	  lcd_send_cmd(Linha_3);
+		lcd_send_cmd(Linha_3);
  8001358:	2094      	movs	r0, #148	@ 0x94
  800135a:	f7ff fe69 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string("T = " );
+		lcd_send_string("T = ");
  800135e:	4830      	ldr	r0, [pc, #192]	@ (8001420 <main+0x280>)
  8001360:	f7ff fefd 	bl	800115e <lcd_send_string>
-	  sprintf(valor_string,"%li",diferenca);
+		sprintf(valor_string, "%li", diferenca);
  8001364:	4b2f      	ldr	r3, [pc, #188]	@ (8001424 <main+0x284>)
  8001366:	681b      	ldr	r3, [r3, #0]
  8001368:	461a      	mov	r2, r3
  800136a:	492f      	ldr	r1, [pc, #188]	@ (8001428 <main+0x288>)
  800136c:	4828      	ldr	r0, [pc, #160]	@ (8001410 <main+0x270>)
  800136e:	f003 feb3 	bl	80050d8 <siprintf>
-	  lcd_send_cmd(Linha_3+4);
+		lcd_send_cmd(Linha_3 + 4);
  8001372:	2098      	movs	r0, #152	@ 0x98
  8001374:	f7ff fe5c 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string(valor_string);
+		lcd_send_string(valor_string);
  8001378:	4825      	ldr	r0, [pc, #148]	@ (8001410 <main+0x270>)
  800137a:	f7ff fef0 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_3+12);
+		lcd_send_cmd(Linha_3 + 12);
  800137e:	20a0      	movs	r0, #160	@ 0xa0
  8001380:	f7ff fe56 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string("Ciclos" );
+		lcd_send_string("Ciclos");
  8001384:	4829      	ldr	r0, [pc, #164]	@ (800142c <main+0x28c>)
  8001386:	f7ff feea 	bl	800115e <lcd_send_string>
 
-	  lcd_send_cmd(Linha_4);
+		lcd_send_cmd(Linha_4);
  800138a:	20d4      	movs	r0, #212	@ 0xd4
  800138c:	f7ff fe50 	bl	8001030 <lcd_send_cmd>
-	  lcd_send_string("Clock = " );
+		lcd_send_string("Clock = ");
  8001390:	4827      	ldr	r0, [pc, #156]	@ (8001430 <main+0x290>)
  8001392:	f7ff fee4 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_4+8);
+		lcd_send_cmd(Linha_4 + 8);
  8001396:	20dc      	movs	r0, #220	@ 0xdc
  8001398:	f7ff fe4a 	bl	8001030 <lcd_send_cmd>
-	  sprintf(valor_string,"%li",CLOCK/1000000);
+		sprintf(valor_string, "%li", CLOCK / 1000000);
  800139c:	4b17      	ldr	r3, [pc, #92]	@ (80013fc <main+0x25c>)
  800139e:	681b      	ldr	r3, [r3, #0]
  80013a0:	4a24      	ldr	r2, [pc, #144]	@ (8001434 <main+0x294>)
@@ -1859,23 +1855,23 @@ int main(void)
  80013aa:	491f      	ldr	r1, [pc, #124]	@ (8001428 <main+0x288>)
  80013ac:	4818      	ldr	r0, [pc, #96]	@ (8001410 <main+0x270>)
  80013ae:	f003 fe93 	bl	80050d8 <siprintf>
-	  lcd_send_string(valor_string);
+		lcd_send_string(valor_string);
  80013b2:	4817      	ldr	r0, [pc, #92]	@ (8001410 <main+0x270>)
  80013b4:	f7ff fed3 	bl	800115e <lcd_send_string>
-	  lcd_send_string(" [MHz]" );
+		lcd_send_string(" [MHz]");
  80013b8:	481f      	ldr	r0, [pc, #124]	@ (8001438 <main+0x298>)
  80013ba:	f7ff fed0 	bl	800115e <lcd_send_string>
-	  lcd_send_cmd(Linha_4+12);
+		lcd_send_cmd(Linha_4 + 12);
  80013be:	20e0      	movs	r0, #224	@ 0xe0
  80013c0:	f7ff fe36 	bl	8001030 <lcd_send_cmd>
 
-	  HAL_Delay(1000);
+		HAL_Delay(1000);
  80013c4:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
  80013c8:	f000 fc4e 	bl	8001c68 <HAL_Delay>
 
-	  lcd_clear();
+		lcd_clear();
  80013cc:	f7ff fedc 	bl	8001188 <lcd_clear>
-	  lcd_send_cmd(Linha_1);
+		lcd_send_cmd(Linha_1);
  80013d0:	e6fd      	b.n	80011ce <main+0x2e>
  80013d2:	bf00      	nop
  80013d4:	f3af 8000 	nop.w
@@ -2328,19 +2324,17 @@ static void MX_GPIO_Init(void)
 080016b4 <HAL_TIM_IC_CaptureCallback>:
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
  80016b4:	b5b0      	push	{r4, r5, r7, lr}
  80016b6:	b082      	sub	sp, #8
  80016b8:	af00      	add	r7, sp, #0
  80016ba:	6078      	str	r0, [r7, #4]
-if(htim->Channel==HAL_TIM_ACTIVE_CHANNEL_1)
+	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) {
  80016bc:	687b      	ldr	r3, [r7, #4]
  80016be:	7f1b      	ldrb	r3, [r3, #28]
  80016c0:	2b01      	cmp	r3, #1
  80016c2:	d14e      	bne.n	8001762 <HAL_TIM_IC_CaptureCallback+0xae>
-{
-	switch(flag)
+		switch (flag) {
  80016c4:	4b29      	ldr	r3, [pc, #164]	@ (800176c <HAL_TIM_IC_CaptureCallback+0xb8>)
  80016c6:	781b      	ldrb	r3, [r3, #0]
  80016c8:	2b00      	cmp	r3, #0
@@ -2348,38 +2342,36 @@ if(htim->Channel==HAL_TIM_ACTIVE_CHANNEL_1)
  80016cc:	2b01      	cmp	r3, #1
  80016ce:	d00b      	beq.n	80016e8 <HAL_TIM_IC_CaptureCallback+0x34>
  80016d0:	e02f      	b.n	8001732 <HAL_TIM_IC_CaptureCallback+0x7e>
-	{
-	case 0:
-		CCR_anter=HAL_TIM_ReadCapturedValue(htim,TIM_CHANNEL_1);
+		case 0:
+			CCR_anter = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
  80016d2:	2100      	movs	r1, #0
  80016d4:	6878      	ldr	r0, [r7, #4]
  80016d6:	f002 fa79 	bl	8003bcc <HAL_TIM_ReadCapturedValue>
  80016da:	4603      	mov	r3, r0
  80016dc:	4a24      	ldr	r2, [pc, #144]	@ (8001770 <HAL_TIM_IC_CaptureCallback+0xbc>)
  80016de:	6013      	str	r3, [r2, #0]
-		flag=1;
+			flag = 1;
  80016e0:	4b22      	ldr	r3, [pc, #136]	@ (800176c <HAL_TIM_IC_CaptureCallback+0xb8>)
  80016e2:	2201      	movs	r2, #1
  80016e4:	701a      	strb	r2, [r3, #0]
-		break;
+			break;
  80016e6:	e025      	b.n	8001734 <HAL_TIM_IC_CaptureCallback+0x80>
-
-	case 1:
-		CCR_atual=HAL_TIM_ReadCapturedValue(htim,TIM_CHANNEL_1);
+		case 1:
+			CCR_atual = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
  80016e8:	2100      	movs	r1, #0
  80016ea:	6878      	ldr	r0, [r7, #4]
  80016ec:	f002 fa6e 	bl	8003bcc <HAL_TIM_ReadCapturedValue>
  80016f0:	4603      	mov	r3, r0
  80016f2:	4a20      	ldr	r2, [pc, #128]	@ (8001774 <HAL_TIM_IC_CaptureCallback+0xc0>)
  80016f4:	6013      	str	r3, [r2, #0]
-		if(CCR_atual>CCR_anter)
+			if (CCR_atual > CCR_anter)
  80016f6:	4b1f      	ldr	r3, [pc, #124]	@ (8001774 <HAL_TIM_IC_CaptureCallback+0xc0>)
  80016f8:	681a      	ldr	r2, [r3, #0]
  80016fa:	4b1d      	ldr	r3, [pc, #116]	@ (8001770 <HAL_TIM_IC_CaptureCallback+0xbc>)
  80016fc:	681b      	ldr	r3, [r3, #0]
  80016fe:	429a      	cmp	r2, r3
  8001700:	d907      	bls.n	8001712 <HAL_TIM_IC_CaptureCallback+0x5e>
-			diferenca=CCR_atual-CCR_anter;
+				diferenca = CCR_atual - CCR_anter;
  8001702:	4b1c      	ldr	r3, [pc, #112]	@ (8001774 <HAL_TIM_IC_CaptureCallback+0xc0>)
  8001704:	681a      	ldr	r2, [r3, #0]
  8001706:	4b1a      	ldr	r3, [pc, #104]	@ (8001770 <HAL_TIM_IC_CaptureCallback+0xbc>)
@@ -2389,7 +2381,7 @@ if(htim->Channel==HAL_TIM_ACTIVE_CHANNEL_1)
  800170e:	6013      	str	r3, [r2, #0]
  8001710:	e007      	b.n	8001722 <HAL_TIM_IC_CaptureCallback+0x6e>
 			else
-				diferenca=((0xFFFFFFFF-CCR_anter)+CCR_atual);
+				diferenca = ((0xFFFFFFFF - CCR_anter) + CCR_atual);
  8001712:	4b18      	ldr	r3, [pc, #96]	@ (8001774 <HAL_TIM_IC_CaptureCallback+0xc0>)
  8001714:	681a      	ldr	r2, [r3, #0]
  8001716:	4b16      	ldr	r3, [pc, #88]	@ (8001770 <HAL_TIM_IC_CaptureCallback+0xbc>)
@@ -2398,24 +2390,23 @@ if(htim->Channel==HAL_TIM_ACTIVE_CHANNEL_1)
  800171c:	3b01      	subs	r3, #1
  800171e:	4a16      	ldr	r2, [pc, #88]	@ (8001778 <HAL_TIM_IC_CaptureCallback+0xc4>)
  8001720:	6013      	str	r3, [r2, #0]
-        __HAL_TIM_SET_COUNTER(htim,0);
+			__HAL_TIM_SET_COUNTER(htim, 0);
  8001722:	687b      	ldr	r3, [r7, #4]
  8001724:	681b      	ldr	r3, [r3, #0]
  8001726:	2200      	movs	r2, #0
  8001728:	625a      	str	r2, [r3, #36]	@ 0x24
-		flag=0;
+			flag = 0;
  800172a:	4b10      	ldr	r3, [pc, #64]	@ (800176c <HAL_TIM_IC_CaptureCallback+0xb8>)
  800172c:	2200      	movs	r2, #0
  800172e:	701a      	strb	r2, [r3, #0]
-	    break;
+			break;
  8001730:	e000      	b.n	8001734 <HAL_TIM_IC_CaptureCallback+0x80>
-
-	default:
-	__NOP();
+		default:
+			__NOP();
  8001732:	bf00      	nop
-	}
+		}
 
-frequencia=((double)CLOCK/(double)diferenca);
+		frequencia = ((double) CLOCK / (double) diferenca);
  8001734:	4b11      	ldr	r3, [pc, #68]	@ (800177c <HAL_TIM_IC_CaptureCallback+0xc8>)
  8001736:	681b      	ldr	r3, [r3, #0]
  8001738:	4618      	mov	r0, r3
@@ -2435,7 +2426,7 @@ frequencia=((double)CLOCK/(double)diferenca);
  800175a:	460b      	mov	r3, r1
  800175c:	4908      	ldr	r1, [pc, #32]	@ (8001780 <HAL_TIM_IC_CaptureCallback+0xcc>)
  800175e:	e9c1 2300 	strd	r2, r3, [r1]
-}
+	}
 }
  8001762:	bf00      	nop
  8001764:	3708      	adds	r7, #8
@@ -2468,9 +2459,9 @@ __STATIC_FORCEINLINE void __disable_irq(void)
 }
  800178a:	bf00      	nop
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
  800178c:	bf00      	nop
  800178e:	e7fd      	b.n	800178c <Error_Handler+0x8>
 
@@ -2611,9 +2602,9 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
  8001852:	f403 1300 	and.w	r3, r3, #2097152	@ 0x200000
  8001856:	60fb      	str	r3, [r7, #12]
  8001858:	68fb      	ldr	r3, [r7, #12]
-  /* USER CODE BEGIN I2C1_MspInit 1 */
 
   /* USER CODE END I2C1_MspInit 1 */
+
   }
 
 }
@@ -2715,9 +2706,9 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     HAL_NVIC_EnableIRQ(TIM2_IRQn);
  80018f4:	201c      	movs	r0, #28
  80018f6:	f000 fad2 	bl	8001e9e <HAL_NVIC_EnableIRQ>
-  /* USER CODE BEGIN TIM2_MspInit 1 */
 
   /* USER CODE END TIM2_MspInit 1 */
+
   }
 
 }
