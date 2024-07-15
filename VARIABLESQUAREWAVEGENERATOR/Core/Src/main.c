@@ -48,7 +48,7 @@ TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN PV */
 HAL_StatusTypeDef RetTimer, RetADC;
 uint8_t buf[2];
-uint32_t adcValue, timerClock;
+uint32_t adcValue, timerClock, frequency;
 const uint8_t factor = 1;
 
 /* USER CODE END PV */
@@ -109,13 +109,15 @@ int main(void)
 
 	timerClock = HAL_RCC_GetPCLK2Freq();
 
-	sendToI2C(1000);
-	genFreq(1000);
+	//sendToI2C(4095);
+	//genFreq(1100);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
+
+		sendToI2C(4095);
 
 		HAL_Delay(1000);
 
@@ -360,7 +362,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 	if (hadc->Instance == ADC1) {
 		adcValue = HAL_ADC_GetValue(hadc);
 		HAL_ADC_Stop_IT(hadc);
-		//genFreq(adcValue);
+		frequency = 100 + (adcValue * 10000 / 4095);
+		genFreq(frequency);
+
 	}
 }
 
@@ -370,7 +374,7 @@ void genFreq(uint32_t counts) {
 	while (1) {
 		if (timerClock % psc == 0) {
 			arr = (timerClock / (freq * psc));
-			if (arr <= 0xFFFF) {
+			if (arr <= 0xFFFF) { // 65535
 				psc -= 1;
 				arr -= 1;
 				break;

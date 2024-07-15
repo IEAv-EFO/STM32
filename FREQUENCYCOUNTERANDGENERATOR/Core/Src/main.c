@@ -36,9 +36,9 @@
 #define ARRMAX 65535
 //#define FREQGENON
 #define FREQGENOFF
+#define LCD
 #define USB
 #define BT
-#define LCD
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -166,6 +166,10 @@ int main(void)
 
 		dCycle = (CCR / (float) (ARR + 1)) * 100.0;
 
+		#ifdef LCD && #undef USB && #undef BT
+			print2LCD();
+		#endif
+
 		#ifdef USB && #undef BT && #undef LCD
 			//BufferCDC com CRLF para a porta USB
 			print2USB();
@@ -174,10 +178,6 @@ int main(void)
 		#ifdef BT && #undef USB && #undef LCD
 			//BufferBT com LF para o bluetooth
 			print2BT();
-		#endif
-
-		#ifdef LCD && #undef USB && #undef BT
-			print2LCD();
 		#endif
 
 		if (flag) {
