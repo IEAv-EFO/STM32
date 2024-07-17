@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include <math.h>
 #include "count2volt.h"
+#include "usbd_cdc_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,8 +62,7 @@ char bufferCDC[1000], bufferBT[1000], bufferLCD[50];
 char bufferGenFreq[20], bufferFreq[20], bufferTimerClock[20];
 uint8_t length, flag = 0, flagBT = 1;
 uint32_t period, desiredFreq, periodPrint, PSC, ARR, CCR, counter = 0;
-uint32_t timerClock, desiredFreqperiod, currentCount, lastCountPrint,
-		lastCount = 0;
+uint32_t timerClock, desiredFreqperiod, currentCount, lastCountPrint, lastCount = 0;
 float dCycle, genFreq, frequency, freqPrint;
 /* USER CODE END PV */
 
@@ -162,6 +162,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
+
 		freqConv(frequency, bufferFreq, 4);
 
 		dCycle = (CCR / (float) (ARR + 1)) * 100.0;
@@ -186,6 +187,8 @@ int main(void)
 		}
 
 		HAL_Delay(1000);
+
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
     /* USER CODE END WHILE */
 
@@ -230,7 +233,7 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
@@ -515,14 +518,17 @@ int countDigits(int number) {
 	}
 
 	int count = 0;
+
 	// Handle negative numbers
 	if (number < 0) {
 		number = -number;
 	}
+
 	while (number != 0) {
 		number /= 10;
 		count++;
 	}
+
 	return count;
 }
 
@@ -543,6 +549,7 @@ void print2LCD() {
 	lcd_send_string(bufferLCD);
 
 	length = countDigits(period);
+	HAL_Delay(10);
 	lcd_put_cur(2, (length + 4 + 1));
 	lcd_send_string("ciclos");
 
