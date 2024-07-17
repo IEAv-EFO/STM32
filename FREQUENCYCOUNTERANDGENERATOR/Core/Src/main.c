@@ -167,6 +167,8 @@ int main(void)
 
 		dCycle = (CCR / (float) (ARR + 1)) * 100.0;
 
+		length = countDigits(period);
+
 		#ifdef LCD && #undef USB && #undef BT
 			print2LCD();
 		#endif

@@ -2061,10 +2061,10 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 		HAL_ADC_Stop_IT(hadc);
  800143e:	6878      	ldr	r0, [r7, #4]
  8001440:	f000 fc76 	bl	8001d30 <HAL_ADC_Stop_IT>
-		frequency = 40 + (adcValue * maxFreq / 4095);
+		frequency = 60 + (adcValue * maxFreq / 4095);
  8001444:	4b0d      	ldr	r3, [pc, #52]	@ (800147c <HAL_ADC_ConvCpltCallback+0x5c>)
  8001446:	681b      	ldr	r3, [r3, #0]
- 8001448:	f242 7210 	movw	r2, #10000	@ 0x2710
+ 8001448:	f644 6220 	movw	r2, #20000	@ 0x4e20
  800144c:	fb03 f202 	mul.w	r2, r3, r2
  8001450:	4b0b      	ldr	r3, [pc, #44]	@ (8001480 <HAL_ADC_ConvCpltCallback+0x60>)
  8001452:	fba3 1302 	umull	r1, r3, r3, r2
@@ -2072,10 +2072,10 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
  8001458:	0852      	lsrs	r2, r2, #1
  800145a:	4413      	add	r3, r2
  800145c:	0adb      	lsrs	r3, r3, #11
- 800145e:	3328      	adds	r3, #40	@ 0x28
+ 800145e:	333c      	adds	r3, #60	@ 0x3c
  8001460:	4a08      	ldr	r2, [pc, #32]	@ (8001484 <HAL_ADC_ConvCpltCallback+0x64>)
  8001462:	6013      	str	r3, [r2, #0]
-		// 40 -> empírico
+		// 60 -> empírico
 		genFreq(frequency);
  8001464:	4b07      	ldr	r3, [pc, #28]	@ (8001484 <HAL_ADC_ConvCpltCallback+0x64>)
  8001466:	681b      	ldr	r3, [r3, #0]

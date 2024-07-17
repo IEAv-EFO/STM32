@@ -30,7 +30,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define maxFreq 10000
+#define maxFreq 20000
 // Define here the maximum frequency
 // For values greater than 50000 the sysclock must be 100 MHz
 /* USER CODE END PD */
@@ -363,8 +363,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 	if (hadc->Instance == ADC1) {
 		adcValue = HAL_ADC_GetValue(hadc);
 		HAL_ADC_Stop_IT(hadc);
-		frequency = 40 + (adcValue * maxFreq / 4095);
-		// 40 -> empírico
+		frequency = 60 + (adcValue * maxFreq / 4095);
+		// 60 -> empírico
 		genFreq(frequency);
 
 	}
