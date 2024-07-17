@@ -363,7 +363,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
 	if (hadc->Instance == ADC1) {
 		adcValue = HAL_ADC_GetValue(hadc);
 		HAL_ADC_Stop_IT(hadc);
-		frequency = 100 + (adcValue * maxFreq / 4095);
+		frequency = 40 + (adcValue * maxFreq / 4095);
+		// 40 -> empírico
 		genFreq(frequency);
 
 	}

@@ -7,5 +7,5 @@
 ../Core/Src/main.c:350:6:sendToI2C	1
 ../Core/Src/main.c:356:6:HAL_I2C_MasterTxCpltCallback	2
 ../Core/Src/main.c:362:6:HAL_ADC_ConvCpltCallback	2
-../Core/Src/main.c:372:6:genFreq	3
-../Core/Src/main.c:403:6:Error_Handler	1
+../Core/Src/main.c:373:6:genFreq	3
+../Core/Src/main.c:404:6:Error_Handler	1

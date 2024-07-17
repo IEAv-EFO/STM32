@@ -548,7 +548,7 @@ void print2LCD() {
 	sprintf(bufferLCD, "%lu", period);
 	lcd_send_string(bufferLCD);
 
-	length = countDigits(period);
+	//length = countDigits(period);
 	HAL_Delay(10);
 	lcd_put_cur(2, (length + 4 + 1));
 	lcd_send_string("ciclos");
