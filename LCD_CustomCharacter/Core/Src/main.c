@@ -57,7 +57,8 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void create_custom_char (uint8_t loc, char *data);
+void display_custom_char (uint8_t loc);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -98,6 +99,10 @@ int main(void) {
 	lcd_init();
 	/* USER CODE BEGIN 2 */
 
+	lcd_clear();
+
+/*
+
 	char cc1[] = { 0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00 };  // smiley
 	char cc2[] = { 0x0E, 0x0E, 0x04, 0x0E, 0x15, 0x04, 0x0A, 0x0A };  // Robo
 	char cc3[] = { 0x08, 0x0C, 0x0E, 0x0F, 0x0E, 0x0C, 0x08, 0x00 };  // arrow
@@ -107,7 +112,62 @@ int main(void) {
 	char cc7[] = { 0x0E, 0x10, 0x17, 0x12, 0x12, 0x12, 0x10, 0x0E };  // CT
 	char cc8[] = { 0x04, 0x04, 0x1F, 0x04, 0x04, 0x00, 0x1F, 0x00 };  // +-
 
-	/*
+*/
+
+	const char glyphs[][8] = { // Each is an eighth of the number digit                        // Custom character definitions
+	      { 0x1F, 0x1F, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00 }, // char 1
+	      { 0x18, 0x1C, 0x1E, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F }, // char 2
+	      { 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x0F, 0x07, 0x03 }, // char 3
+	      { 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x1F, 0x1F }, // char 4
+	      { 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1E, 0x1C, 0x18 }, // char 5
+	      { 0x1F, 0x1F, 0x1F, 0x00, 0x00, 0x00, 0x1F, 0x1F }, // char 6
+	      { 0x1F, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x1F, 0x1F }, // char 7
+	      { 0x03, 0x07, 0x0F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F }  // char 8
+	};
+
+	create_custom_char(0, glyphs[0]);
+	create_custom_char(1, glyphs[1]);
+	create_custom_char(2, glyphs[2]);
+	create_custom_char(3, glyphs[3]);
+	create_custom_char(4, glyphs[4]);
+	create_custom_char(5, glyphs[5]);
+	create_custom_char(6, glyphs[6]);
+	create_custom_char(7, glyphs[7]);
+
+/*
+
+	lcd_put_cur(0, 0);
+	lcd_send_string("Custom characters");
+	HAL_Delay(200);
+	lcd_put_cur(1, 1);
+
+*/
+	lcd_put_cur(0, 0);
+	display_custom_char(7);
+	lcd_put_cur(0,1);
+	display_custom_char(0);
+	lcd_put_cur(0, 2);
+	display_custom_char(1);
+	lcd_put_cur(1,0);
+	display_custom_char(2);
+	lcd_put_cur(1, 1);
+	display_custom_char(3);
+	lcd_put_cur(1, 2);
+	display_custom_char(4);
+
+/*	for (int i = 0; i < 8; i++) {
+		display_custom_char(i);
+		HAL_Delay(300);
+	}*/
+
+	//HAL_Delay(1000);
+	//lcd_clear();
+	//HAL_Delay(1000);
+
+
+
+
+/*
 
 	// store the chars into the CGRAM
 	lcd_send_cmd(0x40);
@@ -144,6 +204,9 @@ int main(void) {
 
 */
 
+
+/*
+
 	lcd_clear();
 
 	for(int i = 0; i < 20; i++) {
@@ -174,12 +237,17 @@ int main(void) {
 		}
 	}
 
+*/
+
 
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
+
+
+
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
@@ -280,6 +348,80 @@ static void MX_GPIO_Init(void) {
 }
 
 /* USER CODE BEGIN 4 */
+
+void create_custom_char (uint8_t loc, char  *data) {
+	switch (loc) {
+		case 0:
+			lcd_send_cmd(0x40);
+			break;
+		case 1:
+			lcd_send_cmd(0x40+8);
+			break;
+		case 2:
+			lcd_send_cmd(0x40+16);
+			break;
+		case 3:
+			lcd_send_cmd(0x40+24);
+			break;
+		case 4:
+			lcd_send_cmd(0x40+32);
+			break;
+		case 5:
+			lcd_send_cmd(0x40+40);
+			break;
+		case 6:
+			lcd_send_cmd(0x40+48);
+			break;
+		case 7:
+			lcd_send_cmd(0x40+56);
+			break;
+		default:
+			break;
+	}
+
+	uint8_t cc_data[8];
+	for (int i = 0; i < 8; i++) {
+		cc_data[i] = *data++;
+	}
+
+	for (int i = 0; i < 8; i++) {
+		lcd_send_data(cc_data[i]);
+	}
+
+}
+
+void display_custom_char (uint8_t loc) {
+	switch (loc)
+			{
+		case 0:
+			lcd_send_data(0);
+			break;
+		case 1:
+			lcd_send_data(1);
+			break;
+		case 2:
+			lcd_send_data(2);
+			break;
+		case 3:
+			lcd_send_data(3);
+			break;
+		case 4:
+			lcd_send_data(4);
+			break;
+		case 5:
+			lcd_send_data(5);
+			break;
+		case 6:
+			lcd_send_data(6);
+			break;
+		case 7:
+			lcd_send_data(7);
+			break;
+		default:
+			break;
+	}
+}
+
 /* USER CODE END 4 */
 
 /**
