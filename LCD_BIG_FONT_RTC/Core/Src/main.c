@@ -154,6 +154,7 @@ int writeBigChar(char ch, uint8_t y, uint8_t x);
 void writeBigString(char *str, uint8_t y, uint8_t x);
 void setTime(uint8_t hours, uint8_t minutes, uint8_t seconds);
 void updateTime(void);
+const char* Get_WeekDay_String(uint8_t weekDay);
 void setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year);
 void updateDate(void);
 /* USER CODE END PFP */
@@ -213,8 +214,8 @@ int main(void) {
 
 	lcd_send_string(0, 0, "EFO-S");
 
-	setDate(RTC_WEEKDAY_SUNDAY, RTC_MONTH_JULY, 20, 24);
-	setTime(12, 6, 20);
+	setDate(RTC_WEEKDAY_SUNDAY, RTC_MONTH_JULY, 21, 24);
+	setTime(13, 38, 40);
 
 	HAL_Delay(200);
 
@@ -562,8 +563,28 @@ void updateTime(void) {
 		Error_Handler();
 	}
 
-	sprintf(bufferTimer, "%02d:%02d:%02d", sTime.Hours, sTime.Minutes,
-			sTime.Seconds);
+	sprintf(bufferTimer, "%02d:%02d:%02d", sTime.Hours, sTime.Minutes, sTime.Seconds);
+}
+
+const char* Get_WeekDay_String(uint8_t weekDay) {
+	switch (weekDay) {
+		case RTC_WEEKDAY_MONDAY:
+			return "Seg";
+		case RTC_WEEKDAY_TUESDAY:
+			return "Ter";
+		case RTC_WEEKDAY_WEDNESDAY:
+			return "Qua";
+		case RTC_WEEKDAY_THURSDAY:
+			return "Qui";
+		case RTC_WEEKDAY_FRIDAY:
+			return "Sex";
+		case RTC_WEEKDAY_SATURDAY:
+			return "Sab";
+		case RTC_WEEKDAY_SUNDAY:
+			return "Dom";
+		default:
+			return "Unk";
+	}
 }
 
 void setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year) {
@@ -586,7 +607,8 @@ void updateDate(void) {
 		Error_Handler();
 	}
 
-	sprintf(bufferDate, "%02d/%02d/%04d", sDate.Date, sDate.Month, (2000 + sDate.Year));
+    const char* weekDayString = Get_WeekDay_String(sDate.WeekDay);
+    sprintf(bufferDate, "%02d/%02d/%04d %s", sDate.Date, sDate.Month, 2000 + sDate.Year, weekDayString);
 }
 
 // Interrupção callback ocorre de 1 em 1s (1 Hz) configurado no CubeMX
@@ -595,7 +617,7 @@ void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc) {
 	updateDate();
 	updateTime();
 
-	lcd_send_string(0, 10, bufferDate);
+	lcd_send_string(0, 6, bufferDate);
 	writeBigString(bufferTimer, 2, 0);
 }
 
