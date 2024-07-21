@@ -21,6 +21,7 @@ void lcd_send_cmd(char cmd) {
 void lcd_send_data(char data) {
 	char data_u, data_l;
 	uint8_t data_t[4];
+
 	data_u = (data & 0xf0);
 	data_l = ((data << 4) & 0xf0);
 	data_t[0] = data_u | 0x0D;  //en=1, rs=0
@@ -91,7 +92,26 @@ void lcd_init(void) {
 	lcd_send_cmd(0x0C); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
 }
 
-void lcd_send_string(char *str) {
+void lcd_send_string(uint8_t row, uint8_t col, char *str) {
+
+	switch (row) {
+	case 0:
+
+		col += (0x00 | 0x80);
+		break;
+	case 1:
+		col += (0x40 | 0x80);
+		break;
+	case 2:
+		col += (0x14 | 0x80);
+		break;
+	case 3:
+		col += (0x54 | 0x80);
+		break;
+	}
+
+	lcd_send_cmd(col);
+
 	while (*str)
 		lcd_send_data(*str++);
 }
