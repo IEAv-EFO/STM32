@@ -214,8 +214,8 @@ int main(void) {
 
 	lcd_send_string(0, 0, "EFO-S");
 
-	setDate(RTC_WEEKDAY_SUNDAY, RTC_MONTH_JULY, 21, 24);
-	setTime(13, 38, 40);
+	setDate(RTC_WEEKDAY_SATURDAY, RTC_MONTH_AUGUST, 24, 24);
+	setTime(18, 57, 40);
 
 	HAL_Delay(200);
 
