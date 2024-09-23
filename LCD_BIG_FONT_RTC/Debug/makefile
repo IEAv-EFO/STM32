@@ -60,8 +60,8 @@ all: main-build
 main-build: LCD_BIG_FONT_RTC.elf secondary-outputs
 
 # Tool invocations
-LCD_BIG_FONT_RTC.elf LCD_BIG_FONT_RTC.map: $(OBJS) $(USER_OBJS) C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\LCD_BIG_FONT_RTC\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LCD_BIG_FONT_RTC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ACER\STM32CubeIDE\workspace_1.14.1\LCD_BIG_FONT_RTC\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_BIG_FONT_RTC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LCD_BIG_FONT_RTC.elf LCD_BIG_FONT_RTC.map: $(OBJS) $(USER_OBJS) C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\LCD_BIG_FONT_RTC\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LCD_BIG_FONT_RTC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\fariaslcfs\STM32CubeIDE\workspace_1.14.1\LCD_BIG_FONT_RTC\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_BIG_FONT_RTC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
