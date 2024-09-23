@@ -827,29 +827,16 @@ int main(void) {
  80007e2:	2000      	movs	r0, #0
  80007e4:	f7ff ffa8 	bl	8000738 <lcd_send_string>
 
-<<<<<<< HEAD
-	setDate(RTC_WEEKDAY_SATURDAY, RTC_MONTH_AUGUST, 24, 24);
+	setDate(RTC_WEEKDAY_MONDAY, RTC_MONTH_SEPTEMBER, 23, 24);
  80007e8:	2318      	movs	r3, #24
- 80007ea:	2218      	movs	r2, #24
- 80007ec:	2108      	movs	r1, #8
- 80007ee:	2006      	movs	r0, #6
- 80007f0:	f000 fb44 	bl	8000e7c <setDate>
-	setTime(18, 57, 40);
- 80007f4:	2228      	movs	r2, #40	@ 0x28
- 80007f6:	2139      	movs	r1, #57	@ 0x39
- 80007f8:	2012      	movs	r0, #18
-=======
-	setDate(RTC_WEEKDAY_MONDAY, RTC_MONTH_AUGUST, 5, 24);
- 80007e8:	2318      	movs	r3, #24
- 80007ea:	2205      	movs	r2, #5
- 80007ec:	2108      	movs	r1, #8
+ 80007ea:	2217      	movs	r2, #23
+ 80007ec:	2109      	movs	r1, #9
  80007ee:	2001      	movs	r0, #1
  80007f0:	f000 fb44 	bl	8000e7c <setDate>
-	setTime(13, 23, 40);
- 80007f4:	2228      	movs	r2, #40	@ 0x28
- 80007f6:	2117      	movs	r1, #23
- 80007f8:	200d      	movs	r0, #13
->>>>>>> 5c360a606ad7992a935c962b9a0090bd1665b8cc
+	setTime(8, 57, 0);
+ 80007f4:	2200      	movs	r2, #0
+ 80007f6:	2139      	movs	r1, #57	@ 0x39
+ 80007f8:	2008      	movs	r0, #8
  80007fa:	f000 faa1 	bl	8000d40 <setTime>
 
 	HAL_Delay(200);
