@@ -827,9 +827,9 @@ int main(void) {
  80007e2:	2000      	movs	r0, #0
  80007e4:	f7ff ffa8 	bl	8000738 <lcd_send_string>
 
-	setDate(RTC_WEEKDAY_MONDAY, RTC_MONTH_SEPTEMBER, 23, 24);
+	setDate(RTC_WEEKDAY_MONDAY, RTC_MONTH_SEPTEMBER, 30, 24);
  80007e8:	2318      	movs	r3, #24
- 80007ea:	2217      	movs	r2, #23
+ 80007ea:	221e      	movs	r2, #30
  80007ec:	2109      	movs	r1, #9
  80007ee:	2001      	movs	r0, #1
  80007f0:	f000 fb44 	bl	8000e7c <setDate>
