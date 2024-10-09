@@ -35,8 +35,8 @@
 /* USER CODE BEGIN PD */
 #define ARRMAX 65535
 #define ADCRES 12
-#define ONEVOLT 1241 // 1330 // Nominal is 1241
-#define THREEVOLTS 3723 // 3820 // Nominal is 3723
+#define ONEVOLT 1066 // Nominal is 1241
+#define THREEVOLTS 3174 // Nominal is 3723
 //#define FREQMETER // For frequency generation only and measurement.
 #define EXERCICIO8
 /* USER CODE END PD */
