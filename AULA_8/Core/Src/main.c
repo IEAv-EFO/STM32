@@ -176,6 +176,8 @@ int main(void)
 			lcd_clear();
 			HAL_Delay(1000);
 		}
+
+		HAL_Delay(2000);
 	}
 	/*
 
