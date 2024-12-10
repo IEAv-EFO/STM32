@@ -1,0 +1,17 @@
+../Core/Src/main.c:171:5:main	8	static
+../Core/Src/main.c:252:6:SystemClock_Config	88	static
+../Core/Src/main.c:297:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:329:13:MX_RTC_Init	32	static
+../Core/Src/main.c:395:13:MX_GPIO_Init	24	static
+../Core/Src/main.c:411:6:create_custome_set_of_glyphs	16	static
+../Core/Src/main.c:420:6:create_custom_char	32	static
+../Core/Src/main.c:461:6:display_custom_char	16	static
+../Core/Src/main.c:494:5:writeBigChar	16	static
+../Core/Src/main.c:516:6:writeBigString	24	static
+../Core/Src/main.c:540:6:setTime	40	static
+../Core/Src/main.c:555:6:updateTime	40	static
+../Core/Src/main.c:569:13:Get_WeekDay_String	16	static
+../Core/Src/main.c:590:6:setDate	32	static
+../Core/Src/main.c:603:6:updateDate	24	static
+../Core/Src/main.c:616:6:HAL_RTCEx_WakeUpTimerEventCallback	16	static
+../Core/Src/main.c:630:6:Error_Handler	4	static,ignoring_inline_asm

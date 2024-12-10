@@ -56,6 +56,10 @@
 
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
+<<<<<<< HEAD
+=======
+extern ADC_HandleTypeDef hadc1;
+>>>>>>> ba589f88c5c0d3c41fc62e627c44f500e650f5d9
 extern I2C_HandleTypeDef hi2c2;
 extern TIM_HandleTypeDef htim3;
 extern UART_HandleTypeDef huart1;
@@ -202,6 +206,23 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+<<<<<<< HEAD
+=======
+  * @brief This function handles ADC1 global interrupt.
+  */
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+
+  /* USER CODE END ADC_IRQn 1 */
+}
+
+/**
+>>>>>>> ba589f88c5c0d3c41fc62e627c44f500e650f5d9
   * @brief This function handles TIM3 global interrupt.
   */
 void TIM3_IRQHandler(void)

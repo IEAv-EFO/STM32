@@ -55,6 +55,10 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+<<<<<<< HEAD
+=======
+void ADC_IRQHandler(void);
+>>>>>>> ba589f88c5c0d3c41fc62e627c44f500e650f5d9
 void TIM3_IRQHandler(void);
 void I2C2_EV_IRQHandler(void);
 void USART1_IRQHandler(void);

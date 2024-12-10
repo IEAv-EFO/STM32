@@ -224,7 +224,11 @@ static void MX_ADC1_Init(void)
 
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
+<<<<<<< HEAD
   sConfig.Channel = ADC_CHANNEL_0;
+=======
+  sConfig.Channel = ADC_CHANNEL_1;
+>>>>>>> ba589f88c5c0d3c41fc62e627c44f500e650f5d9
   sConfig.Rank = 1;
   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
