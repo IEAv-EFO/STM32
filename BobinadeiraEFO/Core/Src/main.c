@@ -48,12 +48,14 @@
 char response[128];
 
 // Comando a ser enviado
-const uint8_t * command = "1PA30\n";
+uint8_t command[] = "1PA30\n";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+
+extern uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -97,12 +99,20 @@ int main(void)
 
   // HAL_Delay(3000);
 
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < 5; i++) {
 	  HAL_Delay(250);
 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
   }
 
-  CDC_Transmit_FS(command, strlen(command));
+
+  HAL_Delay(2000);
+
+  CDC_Transmit_FS(command, strlen((char *)command));
+
+  for (int i = 0; i < 5; i++) {
+	  HAL_Delay(250);
+	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  }
 
   /* USER CODE END 2 */
 
