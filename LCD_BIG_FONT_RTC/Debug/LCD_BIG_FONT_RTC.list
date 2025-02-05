@@ -827,16 +827,16 @@ int main(void)
  80007e2:	2000      	movs	r0, #0
  80007e4:	f7ff ffa8 	bl	8000738 <lcd_send_string>
 
-	setDate(RTC_WEEKDAY_TUESDAY, RTC_MONTH_JANUARY, 04, 25);
+	setDate(RTC_WEEKDAY_WEDNESDAY, RTC_MONTH_FEBRUARY, 05, 25);
  80007e8:	2319      	movs	r3, #25
- 80007ea:	2204      	movs	r2, #4
- 80007ec:	2101      	movs	r1, #1
- 80007ee:	2002      	movs	r0, #2
+ 80007ea:	2205      	movs	r2, #5
+ 80007ec:	2102      	movs	r1, #2
+ 80007ee:	2003      	movs	r0, #3
  80007f0:	f000 fb44 	bl	8000e7c <setDate>
-	setTime(9, 31, 0);
- 80007f4:	2200      	movs	r2, #0
- 80007f6:	211f      	movs	r1, #31
- 80007f8:	2009      	movs	r0, #9
+	setTime(11, 29, 40);
+ 80007f4:	2228      	movs	r2, #40	@ 0x28
+ 80007f6:	211d      	movs	r1, #29
+ 80007f8:	200b      	movs	r0, #11
  80007fa:	f000 faa1 	bl	8000d40 <setTime>
 
 	HAL_Delay(200);
