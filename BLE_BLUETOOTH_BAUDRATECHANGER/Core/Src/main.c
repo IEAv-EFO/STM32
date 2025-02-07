@@ -33,7 +33,7 @@
 /* USER CODE BEGIN PD */
 #define PRINT_BUFFER_SIZE 500
 #define RESPONSE_BUFFER_SIZE 100
-// #define BLE
+//#define BLE
 #define BLUETOOTH
 /* USER CODE END PD */
 
@@ -246,7 +246,9 @@ int main(void)
 				#ifdef BLE
 					changeBaudRate(7, BLE_baudRateCodes[7]); // "AT+BAUD48\r\r" 115200
 				#endif
-
+				#ifdef BLUETOOTH
+					changeBaudRate(7, BLUETOOTH_baudRateCodes[7]); // "AT+BAUD48\r\r" 115200
+				#endif
 					HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[7]) {
@@ -383,12 +385,13 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-#ifdef BLUETOOTH
-  huart2.Init.BaudRate = 38400;
-#endif
 #ifdef BLE
   huart2.Init.BaudRate = 9600;
 #endif
+#ifdef BLUETOOTH
+  huart2.Init.BaudRate = 38400;
+#endif
+//  huart2.Init.BaudRate = 38400;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -497,6 +500,7 @@ uint32_t detectBaudRate() {
 
 void changeBaudRate(uint8_t bRateCode, char *Buf) {
 	HAL_UART_Transmit(&huart2, (uint8_t*) Buf, strlen(Buf), timeOut);
+#ifdef BLE
 	switch (bRateCode) {
 	case 0:
 		huart2.Init.BaudRate = baudRates[0];
@@ -527,6 +531,7 @@ void changeBaudRate(uint8_t bRateCode, char *Buf) {
 		break;
 	}
 	HAL_UART_Init(&huart2);
+#endif
 }
 
 void blinkTest(uint8_t bCode, uint16_t dly) {
