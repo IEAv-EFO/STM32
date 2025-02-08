@@ -145,6 +145,8 @@ int main(void)
 
 		// Flag5 acionada por ação do usuário
 		// por meio de chave externa no protoboard.
+
+
 		if (flag5) {
 			#define BLE
 		}
