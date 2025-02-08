@@ -143,6 +143,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
+		// Flag5 acionada por ação do usuário
+		// por meio de chave externa no protoboard.
 		if (flag5) {
 			#define BLE
 		}
