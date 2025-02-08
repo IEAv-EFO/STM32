@@ -567,7 +567,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 		flag0 = 1;
 		break;
 	case GPIO_PIN_5:
-		flag5 = 1;
+		flag5 = 0;
 		break;
 	case GPIO_PIN_6: // PA6 9600
 		flag6 = 1;
