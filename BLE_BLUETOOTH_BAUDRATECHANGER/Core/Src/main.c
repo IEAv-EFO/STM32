@@ -33,7 +33,7 @@
 /* USER CODE BEGIN PD */
 #define PRINT_BUFFER_SIZE 500
 #define RESPONSE_BUFFER_SIZE 100
-//#define BLE
+#define BLE
 //#define BLUETOOTH
 /* USER CODE END PD */
 
@@ -46,19 +46,12 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint8_t flag5 = 1;  // Pushbutton ble/blu no protoboard
-					// PA5 no terra --> HC05
-					// PA5 aberto --> BT05
-					// Colocar uma chave 1 polo 2 posições (não é pushbutton) no
-					// protoboard com 1 polo ligado ao GND ou VCC e outro polo
-					// ligado ao PA5. Essa chave selecionará entre BT-05(BLE)
-					// e HC-05(Bluetooth).
+uint8_t flag0 = 0;  // Pushbutton "KEY" no STM32
 uint8_t flag6 = 0;  // Pushbutton 1 no protoboard
 uint8_t flag7 = 0;  // Pushbutton 2 no protoboard
 uint8_t flag8 = 0;  // Pushbutton 3 no protoboard
 uint8_t flag9 = 0;  // Pushbutton 4 no protoboard
 uint8_t flag10 = 0; // Pushbutton 5 no protoboard
-uint8_t flag0 = 0;  // Pushbutton "KEY" no STM32
 uint8_t timeOut = 200;
 uint32_t detectedBR;
 char rxBuffer[100];
@@ -66,6 +59,7 @@ char testAT[] = "AT\r\n"; // O BLE HM-10 retorna "OK"
 char testBluetooth[] = "AT+UART?\r\n";
 uint32_t baudRates[] = { 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200 };
 
+#ifdef BLE
 char *BLE_baudRateCodes[] = {
 		"AT+BAUD1\r\n", // 1200
 		"AT+BAUD2\r\n", // 2400
@@ -76,8 +70,9 @@ char *BLE_baudRateCodes[] = {
 		"AT+BAUD7\r\n", // 57600  Botão 4 PA9
 		"AT+BAUD8\r\n"  // 115200 Botão 5 PA10
 		};
+#endif
 
-
+#ifdef BLUETOOTH
 char *BLUETOOTH_baudRateCodes[] = {
 		"AT+UART=1200,0,0\r\n", // 1200
 		"AT+UART=2400,0,0\r\n", // 2400
@@ -88,7 +83,7 @@ char *BLUETOOTH_baudRateCodes[] = {
 		"AT+UART=57600,0,0\r\n", // 57600  Botão 4 PA9
 		"AT+UART=115200,0,0\r\n"  // 115200 Botão 5 PA10
 		};
-
+#endif
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -147,10 +142,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-		// Flag5 acionada por ação do usuário
-		// por meio de chave externa no protoboard.
-
-
 		if (flag0) {
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 			// LED apagado indicando mode de alteração
@@ -161,12 +152,12 @@ int main(void)
 					blinkTest(10, 50); // Pisca rápido indicando que a baudrate selecionda
 				}                      // já é a baudrate atual do BLE
 				else {
-					if (flag5) {
+					#ifdef BLUETOOTH {
 						changeBaudRate(3, BLUETOOTH_baudRateCodes[3]); // "AT+UART=9600,0,0\r\n" 9600
-					}
-					else {
+					#endif
+					#ifdef BLE
 						changeBaudRate(3, BLE_baudRateCodes[3]); // "AT+BAUD4\r\n" 9600
-					}
+					#endif
 					HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[3]) {
@@ -176,7 +167,7 @@ int main(void)
 						blinkTest(10, 50); // Pisca rápido indicando que a baudrate selecionda
 					}					   // já é a baudrate atual do BLE
 				}
-				NVIC_SystemReset(); // Reseta o STM32
+				NVIC_SystemReset();
 			}
 			if (flag7) {
 				detectedBR = detectBaudRate();
@@ -184,12 +175,12 @@ int main(void)
 					blinkTest(10, 50);
 				}
 				else {
-					if (flag5) {
-						changeBaudRate(4, BLUETOOTH_baudRateCodes[4]); // "AT+UART=19200,0,0\r\n" 19200
-					}
-					else {
-						changeBaudRate(4, BLE_baudRateCodes[4]); // "AT+BAUD5\r\n" 19200
-					}
+					#ifdef BLUETOOTH {
+						changeBaudRate(4, BLUETOOTH_baudRateCodes[4]); // "AT+UART=9600,0,0\r\n" 9600
+					#endif
+					#ifdef BLE
+						changeBaudRate(4, BLE_baudRateCodes[4]); // "AT+BAUD4\r\n" 9600
+					#endif
 					HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[4]) {
@@ -199,7 +190,7 @@ int main(void)
 						blinkTest(10, 50);
 					}
 				}
-				NVIC_SystemReset(); // Reseta o STM32
+				NVIC_SystemReset();
 			}
 			if (flag8) {
 				detectedBR = detectBaudRate();
@@ -207,12 +198,12 @@ int main(void)
 					blinkTest(10, 50);
 				}
 				else {
-					if (flag5) {
-						changeBaudRate(5, BLUETOOTH_baudRateCodes[5]); // "AT+UART=38400,0,0\r\n" 38400
-					}
-					else {
-						changeBaudRate(5, BLE_baudRateCodes[5]); // "AT+BAUD6\r\n" 38400
-					}
+					#ifdef BLUETOOTH {
+						changeBaudRate(5, BLUETOOTH_baudRateCodes[5]); // "AT+UART=9600,0,0\r\n" 9600
+					#endif
+					#ifdef BLE
+						changeBaudRate(5, BLE_baudRateCodes[5]); // "AT+BAUD4\r\n" 9600
+					#endif
 						HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[5]) {
@@ -222,7 +213,7 @@ int main(void)
 						blinkTest(10, 50);
 					}
 				}
-				NVIC_SystemReset(); // Reseta o STM32
+				NVIC_SystemReset();
 			}
 			if (flag9) {
 				detectedBR = detectBaudRate();
@@ -230,12 +221,12 @@ int main(void)
 					blinkTest(10, 50);
 				}
 				else {
-					if (flag5) {
-						changeBaudRate(6, BLUETOOTH_baudRateCodes[6]); // "AT+UART=5700,0,0\r\n" 57600
-					}
-					else {
-						changeBaudRate(6, BLE_baudRateCodes[6]); // "AT+BAUD7\r\n" 57600
-					}
+					#ifdef BLUETOOTH {
+						changeBaudRate(6, BLUETOOTH_baudRateCodes[6]); // "AT+UART=9600,0,0\r\n" 9600
+					#endif
+					#ifdef BLE
+						changeBaudRate(6, BLE_baudRateCodes[6]); // "AT+BAUD4\r\n" 9600
+					#endif
 					HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[6]) {
@@ -245,7 +236,7 @@ int main(void)
 						blinkTest(10, 50);
 					}
 				}
-				NVIC_SystemReset(); // Reseta o STM32
+				NVIC_SystemReset();
 			}
 			if (flag10) {
 				detectedBR = detectBaudRate();
@@ -253,12 +244,12 @@ int main(void)
 					blinkTest(10, 50);
 				}
 				else {
-					if (flag5) {
-						changeBaudRate(7, BLUETOOTH_baudRateCodes[7]); // "AT+UART=115200,0,0\r\r" 115200
-					}
-					else {
-						changeBaudRate(7, BLE_baudRateCodes[7]); // "AT+BAUD48\r\r" 115200
-					}
+					#ifdef BLUETOOTH {
+						changeBaudRate(7, BLUETOOTH_baudRateCodes[7]); // "AT+UART=9600,0,0\r\n" 9600
+					#endif
+					#ifdef BLE
+						changeBaudRate(7, BLE_baudRateCodes[7]); // "AT+BAUD4\r\n" 9600
+					#endif
 					HAL_Delay(200);
 					detectedBR = detectBaudRate();
 					if (detectedBR == baudRates[7]) {
@@ -268,7 +259,7 @@ int main(void)
 						blinkTest(10, 50);
 					}
 				}
-				NVIC_SystemReset(); // Reseta o STM32
+				NVIC_SystemReset();
 			}
 
 		}
@@ -395,13 +386,12 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  if (flag5) {
-	  huart2.Init.BaudRate = 38400;
-  }
-  else {
-	  huart2.Init.BaudRate = 9600;
-  }
+#ifdef BLUETOOTH
   huart2.Init.BaudRate = 38400;
+#endif
+#ifdef BLE
+  huart2.Init.BaudRate = 9600;
+#endif
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -482,48 +472,43 @@ static void MX_GPIO_Init(void)
 
 uint32_t detectBaudRate() {
 	int br;
-
-	if (flag5) {
-		for (int i = 0; i < 8; i++) {
-			br = baudRates[i];
-	//		huart2.Init.BaudRate = baudRates[i];
-	//		HAL_UART_Init(&huart2);
-			char str[32];
-			memset(rxBuffer, 0, sizeof(rxBuffer));
-			HAL_UART_Transmit(&huart2, (uint8_t*) testBluetooth, strlen(testBluetooth), timeOut);
-			HAL_UART_Receive(&huart2, (uint8_t*) rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
-			sprintf(str, "%d", br);
-			if (strstr(rxBuffer, str) != NULL) {
-				// Se na string rxBuffer existir um substring "OK"
-				return br;
-			}
-			br = 0;
+#ifdef BLUETOOTH
+	for (int i = 0; i < 8; i++) {
+		br = baudRates[i];
+		char str[32];
+		memset(rxBuffer, 0, sizeof(rxBuffer));
+		HAL_UART_Transmit(&huart2, (uint8_t*) testBluetooth, strlen(testBluetooth), timeOut);
+		HAL_UART_Receive(&huart2, (uint8_t*) rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
+		sprintf(str, "%d", br);
+		if (strstr(rxBuffer, str) != NULL) {
+			// Se na string rxBuffer existir um substring "OK"
+			return br;
 		}
-
+		br = 0;
 	}
-	else {
-		for (int i = 0; i < 8; i++) {
-			br = baudRates[i];
-			huart2.Init.BaudRate = baudRates[i];
-			HAL_UART_Init(&huart2);
-			memset(rxBuffer, 0, sizeof(rxBuffer));
-			HAL_UART_Transmit(&huart2, (uint8_t*) testAT, strlen(testAT), timeOut);
-			HAL_UART_Receive(&huart2, (uint8_t*) rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
-			if (strstr(rxBuffer, "OK") != NULL) {
-				// Se na string rxBuffer existir um substring "OK"
-				return br;
-			}
-			br = 0;
+#endif
+
+#ifdef BLE
+	for (int i = 0; i < 8; i++) {
+		br = baudRates[i];
+		huart2.Init.BaudRate = baudRates[i];
+		HAL_UART_Init(&huart2);
+		memset(rxBuffer, 0, sizeof(rxBuffer));
+		HAL_UART_Transmit(&huart2, (uint8_t*) testAT, strlen(testAT), timeOut);
+		HAL_UART_Receive(&huart2, (uint8_t*) rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
+		if (strstr(rxBuffer, "OK") != NULL) {
+			// Se na string rxBuffer existir um substring "OK"
+			return br;
 		}
+		br = 0;
 	}
-
+#endif
 	return br;
 }
 
 void changeBaudRate(uint8_t bRateCode, char *Buf) {
-	HAL_UART_Transmit(&huart2, (uint8_t*) Buf, strlen(Buf), timeOut);
-	if (!flag5) {
-		switch (bRateCode) {
+#ifdef BLE
+	switch (bRateCode) {
 		case 0:
 			huart2.Init.BaudRate = baudRates[0];
 			break;
@@ -552,9 +537,9 @@ void changeBaudRate(uint8_t bRateCode, char *Buf) {
 			huart2.Init.BaudRate = baudRates[3];
 			break;
 		}
-	}
-
 	HAL_UART_Init(&huart2);
+#endif
+	HAL_UART_Transmit(&huart2, (uint8_t*) Buf, strlen(Buf), timeOut);
  }
 
 void blinkTest(uint8_t bCode, uint16_t dly) {
@@ -572,12 +557,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	switch (GPIO_Pin) {
 	case GPIO_PIN_0: // Alterna entre alteração ou somente verificação da baudrate
 		flag0 = 1;
-		break;
-	case GPIO_PIN_4: // BT05 Terra no PA5 e aberto no PA4
-		flag5 = 1;
-		break;
-	case GPIO_PIN_5: // HC05 Terra no PA4 e aberto no PA%
-		flag5 = 0;
 		break;
 	case GPIO_PIN_6: // PA6 9600
 		flag6 = 1;
