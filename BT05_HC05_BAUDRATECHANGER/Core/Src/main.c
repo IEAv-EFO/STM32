@@ -33,8 +33,8 @@
 /* USER CODE BEGIN PD */
 #define PRINT_BUFFER_SIZE 500
 #define RESPONSE_BUFFER_SIZE 100
-#define BT05
-//#define HC05
+//#define BT05
+#define HC05
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
