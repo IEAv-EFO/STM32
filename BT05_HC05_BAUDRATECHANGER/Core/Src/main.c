@@ -656,7 +656,8 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 // main.c completo escrito para o HC05 e BT05, mas com seleção via diretivas
-// de compilação: #define BT05 e #define HC05
+// de compilação: #define BT05 e #define HC05.
+// Não há necessidade de alterar os dispositivos no protoboard.
 
 
 //
