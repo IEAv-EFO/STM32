@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usbd_cdc_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +32,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define RX_BUFFER_SIZE 1  // Tamanho do buffer de recepção (um byte por vez)
+#define TX_BUFFER_SIZE 50     // Tamanho máximo do buffer para a transmissão
 #define RESPONSE_BUFFER_SIZE 10000
 /* USER CODE END PD */
 
@@ -41,12 +43,13 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
+uint8_t rxBuffer[RX_BUFFER_SIZE];
+char assembledBuffer[TX_BUFFER_SIZE] = "";  // Buffer para montar a mensagem recebida
 char *command;
-char rxBuffer[128];
 char received_char;
 char *commands[] = {
     "AT\r\n",
@@ -61,10 +64,12 @@ char *commands[] = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_USART1_UART_Init(void);
+static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
+void USART2_Transmit(uint8_t* data, uint16_t size);
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
-void sendATCommand(const char *command, uint32_t timeOut);
+void sendATCommand(const uint8_t *command, uint32_t timeOut);
 void USART_SendChar(char ch);
 char USART_ReceiveChar(void);
 /* USER CODE END PFP */
@@ -104,7 +109,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
-  MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
 	HAL_Delay(3000);
@@ -212,35 +217,39 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief USART1 Initialization Function
+  * @brief USART2 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_USART1_UART_Init(void)
+static void MX_USART2_UART_Init(void)
 {
 
-  /* USER CODE BEGIN USART1_Init 0 */
+  /* USER CODE BEGIN USART2_Init 0 */
 
-  /* USER CODE END USART1_Init 0 */
+  /* USER CODE END USART2_Init 0 */
 
-  /* USER CODE BEGIN USART1_Init 1 */
+  /* USER CODE BEGIN USART2_Init 1 */
 
-  /* USER CODE END USART1_Init 1 */
-  huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart1) != HAL_OK)
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 9600;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN USART1_Init 2 */
+  // Habilita a interrupção de recepção (RX)
 
-  /* USER CODE END USART1_Init 2 */
+  HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);  // Começa a escutar na interrupção
+
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
 
 }
 
@@ -264,31 +273,63 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    if (huart->Instance == USART2) {
+        // Filtra caracteres de controle ('\n' e '\r')
+        if (rxBuffer[0] != '\n' && rxBuffer[0] != '\r') {
+            // Adiciona o byte recebido ao buffer de montagem
+            size_t len = strlen(assembledBuffer);
+            if (len < TX_BUFFER_SIZE - 1) {  // Garante espaço para mais um caractere e o terminador nulo
+                assembledBuffer[len] = rxBuffer[0];
+                assembledBuffer[len + 1] = '\0';  // Adiciona o terminador nulo
+            }
+        }
 
+        // Verifica se o final do comando foi atingido, por exemplo, ao receber '\n'
+        if (rxBuffer[0] == '\n') {
+            // Concatena "_rx" ao comando completo
+            if (strlen(assembledBuffer) + 3 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
+                strncat(assembledBuffer, "_rx", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
+            }
+
+            // Transmite o comando modificado
+            USART2_Transmit((uint8_t *)assembledBuffer, strlen(assembledBuffer));
+
+            // Limpa o buffer montado para a próxima mensagem
+            memset(assembledBuffer, 0, TX_BUFFER_SIZE);
+        }
+
+        // Reinicia a recepção para o próximo byte
+        HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);
+    }
 }
 
-void sendATCommand(const char *command, uint32_t timeOut) {
+// Função para transmitir dados via USART2
+void USART2_Transmit(uint8_t* data, uint16_t size) {
+    HAL_UART_Transmit(&huart2, data, size, HAL_MAX_DELAY);  // Transmite os dados
+}
+
+void sendATCommand(const uint8_t *command, uint32_t timeOut) {
 	char response[RESPONSE_BUFFER_SIZE];
 	memset(response, 0, RESPONSE_BUFFER_SIZE);
 
 	// Send the AT command
-	HAL_UART_Transmit(&huart1, command, strlen(command), timeOut);
+	HAL_UART_Transmit(&huart2, command, strlen(command), timeOut);
 	CDC_Transmit_FS(command, strlen(command));
 
 	// Wait for response
-	HAL_UART_Receive(&huart1, response, RESPONSE_BUFFER_SIZE, timeOut);
+	HAL_UART_Receive(&huart2, response, RESPONSE_BUFFER_SIZE, timeOut);
 	CDC_Transmit_FS(response, strlen(response));
 }
 
 // Send a character via USART
 void USART_SendChar(char ch) {
-	HAL_UART_Transmit(&huart1, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
+	HAL_UART_Transmit(&huart2, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
 }
 
 // Receive a character via USART
 char USART_ReceiveChar(void) {
 	uint8_t ch;
-	HAL_UART_Receive(&huart1, &ch, 1, HAL_MAX_DELAY);
+	HAL_UART_Receive(&huart2, &ch, 1, HAL_MAX_DELAY);
 	return (char) ch;
 }
 
