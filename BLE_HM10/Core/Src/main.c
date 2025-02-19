@@ -288,7 +288,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
         if (rxBuffer[0] == '\n') {
             // Concatena "_rx" ao comando completo
             if (strlen(assembledBuffer) + 3 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
-                strncat(assembledBuffer, "_rx", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
+                strncat(assembledBuffer, "_rx\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
             }
 
             // Transmite o comando modificado
