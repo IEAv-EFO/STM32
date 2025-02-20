@@ -32,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define RESPONSE_BUFFER_SIZE 100
+#define RESPONSE_BUFFER_SIZE 200
 #define PRINT_BUFFER_SIZE 200
 /* USER CODE END PD */
 
@@ -45,7 +45,6 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-#define RESPONSE_BUFFER_SIZE 200
 char rxBuffer[RESPONSE_BUFFER_SIZE];
 char received_char;
 int baudRate[] = {1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
@@ -99,29 +98,30 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_Delay(2000);
 
 //	const char *command1 = "AT+UART=115200,1,0\r\n";
-//	const char *command1 = "AT+BAUD";
-//	HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 200);
-//	HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, strlen(rxBuffer), 200);
-//    char buffer[PRINT_BUFFER_SIZE];
-    //snprintf(buffer, strlen(buffer), "%s", rxBuffer);
-//    CDC_Transmit_FS((uint8_t*)rxBuffer, strlen(rxBuffer));
+	const char *command1 = "AT+NAMEHC-6";
+    memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
+    HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 800);
+    HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, 800);
+    char buffer[PRINT_BUFFER_SIZE];
+    snprintf(buffer, PRINT_BUFFER_SIZE, "Response: %s\r\n", rxBuffer);
+    CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
 
-
-	for (int i = 0; i < 8; i++) {
-		huart2.Init.BaudRate = baudRate[i];
-		HAL_UART_Init(&huart2);
-		sendATCommand("AT", 800); // HC-06
-//		sendATCommand("AT\r\n", 200); // Todos os outros
-		// Para o HC-05, deve-se colocar no modo AT pressionando o botão e soltando depois de alimentá-lo
-		// Para o HC-05, no modo AT, a velocidade é sempre 38400. Quando se muda a velocidade, muda-se a velocidade de operação
-		// Para o HC-05, altera-se a velocidade com: AT+UART=baudrate,0,0
-		// Para o HC-06 - que é só opera em modo slave - não se deve acrescentar \r\n e o timeOut deve ser >= 600
-		// Para o HC-06, a baudrate padrão -e 9600
-		// Para o HC-06, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
-		// Para o HM-10, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
-	}
+//	for (int i = 0; i < 8; i++) {
+//		huart2.Init.BaudRate = baudRate[i];
+//		HAL_UART_Init(&huart2);
+//		sendATCommand("AT", 800); // HC-06
+////		sendATCommand("AT\r\n", 200); // Todos os outros
+//		// Para o HC-05, deve-se colocar no modo AT pressionando o botão e soltando depois de alimentá-lo
+//		// Para o HC-05, no modo AT, a velocidade é sempre 38400. Quando se muda a velocidade, muda-se a velocidade de operação
+//		// Para o HC-05, altera-se a velocidade com: AT+UART=baudrate,0,0
+//		// Para o HC-06 - que é só opera em modo slave - não se deve acrescentar \r\n e o timeOut deve ser >= 600
+//		// Para o HC-06, a baudrate padrão -e 9600
+//		// Para o HC-06, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
+//		// Para o HM-10, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
+//	}
 
 //	HAL_UART_Transmit(&huart2, "AT+UART=115200,1,0\r\n", strlen("AT+UART=115200,1,0\r\n"), 200);
 //	HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, timeOut);
@@ -203,7 +203,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 9600;
+  huart2.Init.BaudRate = 115200;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
