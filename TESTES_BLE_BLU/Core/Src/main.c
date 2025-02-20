@@ -69,7 +69,7 @@ static void MX_USART2_UART_Init(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 void USART2_Transmit(uint8_t* data, uint16_t size);
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
-void sendATCommand(const uint8_t *command, uint32_t timeOut);
+void sendATCommand(const char *command, uint32_t timeOut);
 void USART_SendChar(char ch);
 char USART_ReceiveChar(void);
 /* USER CODE END PFP */
@@ -112,7 +112,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	HAL_Delay(3000);
+  HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);
 
 	/*
 	 * Esse módulo HM-10 já fica automaticamente no modo de comandos AT.
@@ -121,14 +121,9 @@ int main(void)
 	 */
 
 	// Send AT command and receive response to a char buffer
-	sendATCommand("AT\r\n", 200); 				// Check if module is responsive
-	sendATCommand("AT+BAUD8\r\n", 200); 			// Check if module is responsive
-	sendATCommand("AT+NAME\r\n", 200);
-	//sendATCommand("AT+NAMEHM10\r\n", 200);
-    sendATCommand("AT+TYPE\r\n", 200);
-    sendATCommand("AT+ROLE\r\n", 200);
-	sendATCommand("AT+HELP\r\n", 5000);
-    //sendATCommand("AT+HELP\r\n", 6000);
+//	const char * cmd = "AT\r\n";
+//	sendATCommand(cmd, 200); 				// Check if module is responsive
+
 	//sendATCommand("AT+BAUD8\r\n", 100);// BAUD1=1200, BAUD2=2400, ..., BARD7=57600, BAUD8=115200, ..., BAUD12=132400 bps.
 
 	/*
@@ -154,15 +149,16 @@ int main(void)
 
 	while (1) {
 
-/*		// Check if data is available in USART2 receive buffer
-		if (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_RXNE) == SET) {
-			// Read the received character
-			received_char = USART_ReceiveChar();
+//		HAL_Delay(10);
 
-			// Echo back the received character
-			USART_SendChar(received_char);
-		}*/
-
+		///*		// Check if data is available in USART2 receive buffer
+//		if (__HAL_UART_GET_FLAG(&huart2, UART_FLAG_RXNE) == SET) {
+//			// Read the received character
+//			received_char = USART_ReceiveChar();
+//
+//			// Echo back the received character
+//			USART_SendChar(received_char);
+//		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -232,7 +228,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 9600;
+  huart2.Init.BaudRate = 115200;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -287,7 +283,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
         // Verifica se o final do comando foi atingido, por exemplo, ao receber '\n'
         if (rxBuffer[0] == '\n') {
             // Concatena "_rx" ao comando completo
-            if (strlen(assembledBuffer) + 3 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
+            if (strlen(assembledBuffer) + 4 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
                 strncat(assembledBuffer, "_rx\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
             }
 
@@ -308,17 +304,17 @@ void USART2_Transmit(uint8_t* data, uint16_t size) {
     HAL_UART_Transmit(&huart2, data, size, HAL_MAX_DELAY);  // Transmite os dados
 }
 
-void sendATCommand(const uint8_t *command, uint32_t timeOut) {
+void sendATCommand(const char *command, uint32_t timeOut) {
 	char response[RESPONSE_BUFFER_SIZE];
 	memset(response, 0, RESPONSE_BUFFER_SIZE);
 
 	// Send the AT command
-	HAL_UART_Transmit(&huart2, command, strlen(command), timeOut);
-	CDC_Transmit_FS(command, strlen(command));
+	HAL_UART_Transmit(&huart2, (uint8_t *)command, strlen(command), timeOut);
+	CDC_Transmit_FS((uint8_t *)command, strlen(command));
 
 	// Wait for response
-	HAL_UART_Receive(&huart2, response, RESPONSE_BUFFER_SIZE, timeOut);
-	CDC_Transmit_FS(response, strlen(response));
+	HAL_UART_Receive(&huart2, (uint8_t *)response, RESPONSE_BUFFER_SIZE, timeOut);
+	CDC_Transmit_FS((uint8_t *)response, strlen(response));
 }
 
 // Send a character via USART

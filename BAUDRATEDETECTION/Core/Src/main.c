@@ -101,7 +101,11 @@ int main(void)
   HAL_Delay(2000);
 
 //	const char *command1 = "AT+UART=115200,1,0\r\n";
-	const char *command1 = "AT+NAMEHC-6";
+  const char *command1 = "AT";
+  const char *command1 = "AT+NAMEname";
+  const char *command1 = "AT+BAUDx" // x = 1 (1200), ..., =8(115200)
+  const char *command1 = 'AT+PIN123"
+  	  const char *command1 = "AT+NAMEHC-6";
     memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
     HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 800);
     HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, 800);
@@ -118,7 +122,7 @@ int main(void)
 //		// Para o HC-05, no modo AT, a velocidade é sempre 38400. Quando se muda a velocidade, muda-se a velocidade de operação
 //		// Para o HC-05, altera-se a velocidade com: AT+UART=baudrate,0,0
 //		// Para o HC-06 - que é só opera em modo slave - não se deve acrescentar \r\n e o timeOut deve ser >= 600
-//		// Para o HC-06, a baudrate padrão -e 9600
+//		// Para o HC-06, a baudrate padrão e 9600
 //		// Para o HC-06, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
 //		// Para o HM-10, altera-se velocidade com: AT+BAUDx (x=1(1200), ..., x=8(115200)
 //	}
