@@ -283,8 +283,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
         // Verifica se o final do comando foi atingido, por exemplo, ao receber '\n'
         if (rxBuffer[0] == '\n') {
             // Concatena "_rx" ao comando completo
-            if (strlen(assembledBuffer) + 4 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
-                strncat(assembledBuffer, "_rx\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
+            if (strlen(assembledBuffer) + 5 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
+                strncat(assembledBuffer, "_rx\r\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
             }
 
             // Transmite o comando modificado
