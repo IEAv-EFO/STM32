@@ -98,19 +98,16 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_Delay(2000);
-
 //	const char *command1 = "AT+UART=115200,1,0\r\n";
-  const char *command1 = "AT";
-  const char *command1 = "AT+NAMEname";
-  const char *command1 = "AT+BAUDx" // x = 1 (1200), ..., =8(115200)
-  const char *command1 = 'AT+PIN123"
-  	  const char *command1 = "AT+NAMEHC-6";
+  	const char *command1 = "AT+NAME\r\n";
     memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
-    HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 800);
-    HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, 800);
-    char buffer[PRINT_BUFFER_SIZE];
-    snprintf(buffer, PRINT_BUFFER_SIZE, "Response: %s\r\n", rxBuffer);
+    char buffer[256];
+
+	HAL_Delay(3000);
+
+    HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 300);
+    HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, 300);
+    snprintf(buffer, 256, "Response: %s\r\n", rxBuffer);
     CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
 
 //	for (int i = 0; i < 8; i++) {
@@ -207,7 +204,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 38400;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
