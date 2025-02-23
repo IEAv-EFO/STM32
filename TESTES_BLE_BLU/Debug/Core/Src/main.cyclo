@@ -2,9 +2,9 @@
 ../Core/Src/main.c:174:6:SystemClock_Config	3
 ../Core/Src/main.c:220:13:MX_USART2_UART_Init	2
 ../Core/Src/main.c:257:13:MX_GPIO_Init	1
-../Core/Src/main.c:271:6:HAL_UART_RxCpltCallback	7
-../Core/Src/main.c:303:6:USART2_Transmit	1
-../Core/Src/main.c:307:6:sendATCommand	1
-../Core/Src/main.c:321:6:USART_SendChar	1
-../Core/Src/main.c:326:6:USART_ReceiveChar	1
-../Core/Src/main.c:338:6:Error_Handler	1
+../Core/Src/main.c:271:6:HAL_UART_RxCpltCallback	6
+../Core/Src/main.c:304:6:USART2_Transmit	1
+../Core/Src/main.c:308:6:sendATCommand	1
+../Core/Src/main.c:322:6:USART_SendChar	1
+../Core/Src/main.c:327:6:USART_ReceiveChar	1
+../Core/Src/main.c:339:6:Error_Handler	1

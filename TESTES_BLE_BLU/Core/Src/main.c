@@ -270,8 +270,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     if (huart->Instance == USART2) {
-        // Filtra caracteres de controle ('\n' e '\r')
-        if (rxBuffer[0] != '\n' && rxBuffer[0] != '\r') {
+        // Filtra o caracter de controle ('\r') ESP301 recebe comando com \r e reponde com \r\n
+        if (rxBuffer[0] != '\r') {
             // Adiciona o byte recebido ao buffer de montagem
             size_t len = strlen(assembledBuffer);
             if (len < TX_BUFFER_SIZE - 1) {  // Garante espaço para mais um caractere e o terminador nulo
@@ -281,10 +281,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
         }
 
         // Verifica se o final do comando foi atingido, por exemplo, ao receber '\n'
-        if (rxBuffer[0] == '\n') {
+        if (rxBuffer[0] == '\r') {
             // Concatena "_rx" ao comando completo
             if (strlen(assembledBuffer) + 5 < TX_BUFFER_SIZE) {  // Garante espaço para "_rx"
-                strncat(assembledBuffer, "_rx\r\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
+                // Simulando a resposta do ESP301 (\r\n)
+            	strncat(assembledBuffer, "_rx\r\n", TX_BUFFER_SIZE - strlen(assembledBuffer) - 1);
             }
 
             // Transmite o comando modificado
