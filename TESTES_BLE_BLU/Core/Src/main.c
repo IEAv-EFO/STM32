@@ -43,6 +43,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
@@ -64,10 +65,11 @@ char *commands[] = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
-void USART2_Transmit(uint8_t* data, uint16_t size);
+void USART1_Transmit(uint8_t* data, uint16_t size);
 extern uint8_t CDC_Transmit_FS(uint8_t *Buf, uint16_t Len);
 void sendATCommand(const char *command, uint32_t timeOut);
 void USART_SendChar(char ch);
@@ -110,9 +112,11 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   MX_USART2_UART_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);
+//  HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);
+  HAL_UART_Receive_IT(&huart1, rxBuffer, RX_BUFFER_SIZE);
 
 	/*
 	 * Esse módulo HM-10 já fica automaticamente no modo de comandos AT.
@@ -213,6 +217,39 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * @brief USART2 Initialization Function
   * @param None
   * @retval None
@@ -228,7 +265,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -239,10 +276,6 @@ static void MX_USART2_UART_Init(void)
   {
     Error_Handler();
   }
-  // Habilita a interrupção de recepção (RX)
-
-  HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);  // Começa a escutar na interrupção
-
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
@@ -269,7 +302,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
-    if (huart->Instance == USART2) {
+    if (huart->Instance == USART1) {
         // Filtra o caracter de controle ('\r') ESP301 recebe comando com \r e reponde com \r\n
         if (rxBuffer[0] != '\r') {
             // Adiciona o byte recebido ao buffer de montagem
@@ -289,20 +322,20 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
             }
 
             // Transmite o comando modificado
-            USART2_Transmit((uint8_t *)assembledBuffer, strlen(assembledBuffer));
+            USART1_Transmit((uint8_t *)assembledBuffer, strlen(assembledBuffer));
 
             // Limpa o buffer montado para a próxima mensagem
             memset(assembledBuffer, 0, TX_BUFFER_SIZE);
         }
 
         // Reinicia a recepção para o próximo byte
-        HAL_UART_Receive_IT(&huart2, rxBuffer, RX_BUFFER_SIZE);
+        HAL_UART_Receive_IT(&huart1, rxBuffer, RX_BUFFER_SIZE);
     }
 }
 
 // Função para transmitir dados via USART2
-void USART2_Transmit(uint8_t* data, uint16_t size) {
-    HAL_UART_Transmit(&huart2, data, size, HAL_MAX_DELAY);  // Transmite os dados
+void USART1_Transmit(uint8_t* data, uint16_t size) {
+    HAL_UART_Transmit(&huart1, data, size, HAL_MAX_DELAY);  // Transmite os dados
 }
 
 void sendATCommand(const char *command, uint32_t timeOut) {
@@ -310,23 +343,23 @@ void sendATCommand(const char *command, uint32_t timeOut) {
 	memset(response, 0, RESPONSE_BUFFER_SIZE);
 
 	// Send the AT command
-	HAL_UART_Transmit(&huart2, (uint8_t *)command, strlen(command), timeOut);
+	HAL_UART_Transmit(&huart1, (uint8_t *)command, strlen(command), timeOut);
 	CDC_Transmit_FS((uint8_t *)command, strlen(command));
 
 	// Wait for response
-	HAL_UART_Receive(&huart2, (uint8_t *)response, RESPONSE_BUFFER_SIZE, timeOut);
+	HAL_UART_Receive(&huart1, (uint8_t *)response, RESPONSE_BUFFER_SIZE, timeOut);
 	CDC_Transmit_FS((uint8_t *)response, strlen(response));
 }
 
 // Send a character via USART
 void USART_SendChar(char ch) {
-	HAL_UART_Transmit(&huart2, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
+	HAL_UART_Transmit(&huart1, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
 }
 
 // Receive a character via USART
 char USART_ReceiveChar(void) {
 	uint8_t ch;
-	HAL_UART_Receive(&huart2, &ch, 1, HAL_MAX_DELAY);
+	HAL_UART_Receive(&huart1, (uint8_t*) &ch, 1, HAL_MAX_DELAY);
 	return (char) ch;
 }
 
