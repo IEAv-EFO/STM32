@@ -31,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define BUFFER_SIZE 64
+#define TX_TIMEOUT 100 // Timeout de transmissão em ms
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -44,11 +45,14 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+// Buffers para recepção com tamanho ajustado
+uint8_t usart1_rx_buffer[BUFFER_SIZE];
+uint8_t usart2_rx_buffer[BUFFER_SIZE];
 
-// Buffers para recepção e transmissão
-uint8_t usart1_rx_buffer[1]; // Buffer para receber da USART1 (Bluetooth)
-uint8_t usart2_rx_buffer[1]; // Buffer para receber da USART2 (RS232)
-
+// Variáveis para controle de ring buffer
+uint16_t usart1_head = 0, usart1_tail = 0;
+uint16_t usart2_head = 0, usart2_tail = 0;
+volatile uint8_t error_flag = 0; // Indicador de erro
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,8 +61,10 @@ static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart);
 /* USER CODE BEGIN PFP */
-
+static void Process_USART1_Data(void);
+static void Process_USART2_Data(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -72,7 +78,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -99,18 +104,17 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-
-
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
+  // Piscar LED para indicar inicialização
   for (int i = 0; i < 6; i++) {
-	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-	  HAL_Delay(250);
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_Delay(250);
   }
 
   // Inicia recepção com interrupção em ambas as UARTs
-  HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1); // Recepção USART1 (Bluetooth)
-  HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1); // Recepção USART2 (RS232)
+  HAL_UART_Receive_IT(&huart1, &usart1_rx_buffer[usart1_head], 1);
+  HAL_UART_Receive_IT(&huart2, &usart2_rx_buffer[usart2_head], 1);
 
   /* USER CODE END 2 */
 
@@ -121,6 +125,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    // Processa dados recebidos
+    Process_USART1_Data();
+    Process_USART2_Data();
+
+    // Pisca LED lentamente se houver erro
+    if (error_flag) {
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+      HAL_Delay(500);
+    }
   }
   /* USER CODE END 3 */
 }
@@ -177,7 +190,6 @@ void SystemClock_Config(void)
   */
 static void MX_USART1_UART_Init(void)
 {
-
   /* USER CODE BEGIN USART1_Init 0 */
 
   /* USER CODE END USART1_Init 0 */
@@ -200,7 +212,6 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
 /**
@@ -210,7 +221,6 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_USART2_UART_Init(void)
 {
-
   /* USER CODE BEGIN USART2_Init 0 */
 
   /* USER CODE END USART2_Init 0 */
@@ -233,7 +243,6 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
-
 }
 
 /**
@@ -244,8 +253,8 @@ static void MX_USART2_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -262,24 +271,79 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
 
-// Callback chamado quando dado é recebido
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
-    if (huart->Instance == USART1) {
-        // Dado recebido pela USART1 (Bluetooth)
-        HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, HAL_MAX_DELAY); // Transmite para USART2 (RS232)
-        HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1); // Reinicia recepção na USART1
+/**
+  * @brief  Callback chamado quando um dado é recebido por interrupção
+  * @param  huart: Ponteiro para a estrutura UART
+  * @retval None
+  */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if (huart->Instance == USART1) {
+    // Incrementa head do ring buffer USART1
+    usart1_head = (usart1_head + 1) % BUFFER_SIZE;
+    // Reinicia recepção para o próximo byte
+    HAL_UART_Receive_IT(&huart1, &usart1_rx_buffer[usart1_head], 1);
+  }
+  else if (huart->Instance == USART2) {
+    // Incrementa head do ring buffer USART2
+    usart2_head = (usart2_head + 1) % BUFFER_SIZE;
+    // Reinicia recepção para o próximo byte
+    HAL_UART_Receive_IT(&huart2, &usart2_rx_buffer[usart2_head], 1);
+  }
+}
+
+/**
+  * @brief  Callback chamado em caso de erro na UART
+  * @param  huart: Ponteiro para a estrutura UART
+  * @retval None
+  */
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if (huart->Instance == USART1 || huart->Instance == USART2) {
+    // Limpa flags de erro
+    __HAL_UART_CLEAR_FLAG(huart, UART_FLAG_ORE | UART_FLAG_PE | UART_FLAG_FE);
+    // Reinicia recepção
+    HAL_UART_Receive_IT(huart, huart->Instance == USART1 ? &usart1_rx_buffer[usart1_head] : &usart2_rx_buffer[usart2_head], 1);
+    error_flag = 1; // Sinaliza erro para o loop principal
+  }
+}
+
+/**
+  * @brief  Processa e transmite dados recebidos pela USART1
+  * @param  None
+  * @retval None
+  */
+static void Process_USART1_Data(void)
+{
+  while (usart1_tail != usart1_head) {
+    if (HAL_UART_Transmit(&huart2, &usart1_rx_buffer[usart1_tail], 1, TX_TIMEOUT) != HAL_OK) {
+      error_flag = 1; // Sinaliza erro de transmissão
+      break;
     }
-    else if (huart->Instance == USART2) {
-        // Dado recebido pela USART2 (RS232)
-        HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, HAL_MAX_DELAY); // Transmite para USART1 (Bluetooth)
-        HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1); // Reinicia recepção na USART2
+    usart1_tail = (usart1_tail + 1) % BUFFER_SIZE;
+  }
+}
+
+/**
+  * @brief  Processa e transmite dados recebidos pela USART2
+  * @param  None
+  * @retval None
+  */
+static void Process_USART2_Data(void)
+{
+  while (usart2_tail != usart2_head) {
+    if (HAL_UART_Transmit(&huart1, &usart2_rx_buffer[usart2_tail], 1, TX_TIMEOUT) != HAL_OK) {
+      error_flag = 1; // Sinaliza erro de transmissão
+      break;
     }
+    usart2_tail = (usart2_tail + 1) % BUFFER_SIZE;
+  }
 }
 
 /* USER CODE END 4 */
@@ -315,3 +379,34 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+
+
+
+/*
+
+	Principais Mudanças Implementadas
+	Buffers Maiores e Ring Buffer:
+	Buffers aumentados para 64 bytes (BUFFER_SIZE).
+	Uso de variáveis head e tail para gerenciar o ring buffer, evitando perda de dados.
+	Timeout na Transmissão:
+	Substituído HAL_MAX_DELAY por TX_TIMEOUT (100 ms), com verificação de erro.
+	Tratamento de Erros:
+	Adicionada a função HAL_UART_ErrorCallback para limpar erros de UART (overrun, paridade, framing) e reiniciar a recepção.
+	Variável error_flag sinaliza erros, piscando o LED lentamente no loop principal.
+	Processamento no Loop Principal:
+	Funções Process_USART1_Data e Process_USART2_Data transmitem os dados acumulados no ring buffer, evitando bloqueios na callback.
+	Estrutura de Comentários Mantida:
+	Preservada a organização do STM32CubeIDE para compatibilidade com futuras alterações no CubeMX.
+	Funcionamento
+	Inicialização: O LED pisca 6 vezes, e as USARTs iniciam recepção por interrupção.
+	Recepção: Dados são armazenados nos buffers circulares via HAL_UART_RxCpltCallback.
+	Transmissão: O loop principal processa e envia os dados, respeitando o controle de fluxo da USART2 (RTS/CTS).
+	Erros: Em caso de falha (UART ou transmissão), o LED pisca a 500 ms, indicando problema.
+	Testes Recomendados
+	Envie dados contínuos pelo HC-05 e RS232 para verificar se o ring buffer suporta a taxa.
+	Desconecte o conversor RS232 e confirme que o sistema não trava (timeout de 100 ms evita bloqueio).
+	Induza erros (ex.: desconectar TX/RX) e observe o LED piscando.
+
+
+*/

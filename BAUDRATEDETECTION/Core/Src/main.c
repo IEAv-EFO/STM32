@@ -18,11 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_cdc_if.h"
+//#include "usbd_cdc_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,8 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define RESPONSE_BUFFER_SIZE 200
-#define PRINT_BUFFER_SIZE 200
+#define RESPONSE_BUFFER_SIZE 64
+#define PRINT_BUFFER_SIZE 64
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,6 +41,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
@@ -54,6 +54,7 @@ int baudRate[] = {1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void sendATCommand(const char *command, uint32_t timeOut);
 void USART_SendChar(char ch);
@@ -94,21 +95,22 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USB_DEVICE_Init();
   MX_USART2_UART_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
 //	const char *command1 = "AT+UART=115200,1,0\r\n";
-  	const char *command1 = "AT+NAME\r\n";
-    memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
-    char buffer[256];
+//  	const char *command1 = "AT+NAME\r\n";
+  	const char command1[] = "AT\r\n";
+//    memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
+//    char buffer[256];
 
-	HAL_Delay(3000);
+//	HAL_Delay(1000);
 
-    HAL_UART_Transmit(&huart2, (uint8_t *)command1, strlen(command1), 300);
-    HAL_UART_Receive(&huart2, (uint8_t *)rxBuffer, RESPONSE_BUFFER_SIZE, 300);
-    snprintf(buffer, 256, "Response: %s\r\n", rxBuffer);
-    CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
+    HAL_UART_Transmit(&huart1, (uint8_t *)command1, strlen(command1), 300);
+    HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, strlen(rxBuffer), 300);
+//    snprintf(buffer, 256, "Response: %s\r\n", rxBuffer);
+//    CDC_Transmit_FS((uint8_t*)buffer, strlen(buffer));
 
 //	for (int i = 0; i < 8; i++) {
 //		huart2.Init.BaudRate = baudRate[i];
@@ -135,13 +137,15 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	while (0) {
+	while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 	}
   /* USER CODE END 3 */
 }
+
+
 
 /**
   * @brief System Clock Configuration
@@ -186,6 +190,39 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 38400;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
 }
 
 /**
