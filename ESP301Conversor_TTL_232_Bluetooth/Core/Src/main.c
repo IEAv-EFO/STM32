@@ -60,8 +60,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
-void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart);
 /* USER CODE BEGIN PFP */
 static void Process_USART1_Data(void);
 static void Process_USART2_Data(void);
@@ -78,6 +76,7 @@ static void Process_USART2_Data(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -190,6 +189,7 @@ void SystemClock_Config(void)
   */
 static void MX_USART1_UART_Init(void)
 {
+
   /* USER CODE BEGIN USART1_Init 0 */
 
   /* USER CODE END USART1_Init 0 */
@@ -198,7 +198,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 19200;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -212,6 +212,7 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
 }
 
 /**
@@ -221,6 +222,7 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_USART2_UART_Init(void)
 {
+
   /* USER CODE BEGIN USART2_Init 0 */
 
   /* USER CODE END USART2_Init 0 */
@@ -229,7 +231,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 19200;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -243,6 +245,7 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
+
 }
 
 /**
@@ -253,8 +256,8 @@ static void MX_USART2_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-  /* USER CODE END MX_GPIO_Init_1 */
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -271,8 +274,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-  /* USER CODE END MX_GPIO_Init_2 */
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -379,34 +382,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-
-
-
-/*
-
-	Principais Mudanças Implementadas
-	Buffers Maiores e Ring Buffer:
-	Buffers aumentados para 64 bytes (BUFFER_SIZE).
-	Uso de variáveis head e tail para gerenciar o ring buffer, evitando perda de dados.
-	Timeout na Transmissão:
-	Substituído HAL_MAX_DELAY por TX_TIMEOUT (100 ms), com verificação de erro.
-	Tratamento de Erros:
-	Adicionada a função HAL_UART_ErrorCallback para limpar erros de UART (overrun, paridade, framing) e reiniciar a recepção.
-	Variável error_flag sinaliza erros, piscando o LED lentamente no loop principal.
-	Processamento no Loop Principal:
-	Funções Process_USART1_Data e Process_USART2_Data transmitem os dados acumulados no ring buffer, evitando bloqueios na callback.
-	Estrutura de Comentários Mantida:
-	Preservada a organização do STM32CubeIDE para compatibilidade com futuras alterações no CubeMX.
-	Funcionamento
-	Inicialização: O LED pisca 6 vezes, e as USARTs iniciam recepção por interrupção.
-	Recepção: Dados são armazenados nos buffers circulares via HAL_UART_RxCpltCallback.
-	Transmissão: O loop principal processa e envia os dados, respeitando o controle de fluxo da USART2 (RTS/CTS).
-	Erros: Em caso de falha (UART ou transmissão), o LED pisca a 500 ms, indicando problema.
-	Testes Recomendados
-	Envie dados contínuos pelo HC-05 e RS232 para verificar se o ring buffer suporta a taxa.
-	Desconecte o conversor RS232 e confirme que o sistema não trava (timeout de 100 ms evita bloqueio).
-	Induza erros (ex.: desconectar TX/RX) e observe o LED piscando.
-
-
-*/
