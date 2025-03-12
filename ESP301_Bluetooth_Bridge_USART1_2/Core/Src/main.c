@@ -16,6 +16,7 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
@@ -44,11 +45,8 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
-// Buffers para recepção e transmissão
 uint8_t usart1_rx_buffer[1]; // Buffer para receber da USART1 (Bluetooth)
-uint8_t usart2_rx_buffer[1]; // Buffer para receber da USART2 (RS232)
-
+uint8_t usart2_rx_buffer[1]; // Buffer para receber da USART2 (ESP301)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,7 +69,6 @@ static void MX_USART2_UART_Init(void);
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -97,16 +94,21 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  // Configura prioridades das interrupções no NVIC para máxima responsividade
+  HAL_NVIC_SetPriority(USART1_IRQn, 0, 0); // Prioridade máxima para USART1
+  HAL_NVIC_SetPriority(USART2_IRQn, 0, 0); // Prioridade máxima para USART2
+  HAL_NVIC_EnableIRQ(USART1_IRQn);
+  HAL_NVIC_EnableIRQ(USART2_IRQn);
 
+  // Piscar LED para indicar inicialização
   for (int i = 0; i < 8; i++) {
-	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-	  HAL_Delay(100);
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_Delay(100);
   }
 
   // Inicia recepção com interrupção em ambas as UARTs
-  HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1); // Recepção USART1 (Bluetooth)
-  HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1); // Recepção USART2 (RS232)
-
+  HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1); // USART1 (Bluetooth)
+  HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1); // USART2 (ESP301)
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -172,7 +174,6 @@ void SystemClock_Config(void)
   */
 static void MX_USART1_UART_Init(void)
 {
-
   /* USER CODE BEGIN USART1_Init 0 */
 
   /* USER CODE END USART1_Init 0 */
@@ -195,7 +196,6 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
 /**
@@ -205,7 +205,6 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_USART2_UART_Init(void)
 {
-
   /* USER CODE BEGIN USART2_Init 0 */
 
   /* USER CODE END USART2_Init 0 */
@@ -228,7 +227,6 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
-
 }
 
 /**
@@ -239,8 +237,8 @@ static void MX_USART2_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -257,26 +255,29 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
-// Callback chamado quando dado é recebido
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
-    if (huart->Instance == USART1) {
-        // Reinicia recepção na USART2, os dados serão automaticamente transferidos entre as USARTs pelos pinos cruzados
-        HAL_UART_Transmit_IT(&huart2, usart1_rx_buffer, 1);
-    	HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1);
-    }
-    else if (huart->Instance == USART2) {
-        // Reinicia recepção na USART1
-    	HAL_UART_Transmit_IT(&huart1, usart2_rx_buffer, 1);
-    	HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1);
-    }
+/**
+  * @brief  Callback chamado quando um dado é recebido por interrupção
+  * @param  huart: Ponteiro para a estrutura UART
+  * @retval None
+  */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if (huart->Instance == USART1) {
+    // Recebeu do Bluetooth, retransmite para ESP301
+    HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, 5);
+    HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1);
+  }
+  else if (huart->Instance == USART2) {
+    // Recebeu do ESP301, retransmite para Bluetooth
+    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 5);
+    HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1);
+  }
 }
-
 /* USER CODE END 4 */
 
 /**
