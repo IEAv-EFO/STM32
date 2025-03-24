@@ -847,8 +847,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80007b6:	4293      	cmp	r3, r2
  80007b8:	d10b      	bne.n	80007d2 <HAL_UART_RxCpltCallback+0x2a>
     // Recebeu do Bluetooth, retransmite para ESP301
-    HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, 5);
- 80007ba:	2305      	movs	r3, #5
+    HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, 10);
+ 80007ba:	230a      	movs	r3, #10
  80007bc:	2201      	movs	r2, #1
  80007be:	4910      	ldr	r1, [pc, #64]	@ (8000800 <HAL_UART_RxCpltCallback+0x58>)
  80007c0:	4810      	ldr	r0, [pc, #64]	@ (8000804 <HAL_UART_RxCpltCallback+0x5c>)
@@ -860,7 +860,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80007cc:	f001 fa81 	bl	8001cd2 <HAL_UART_Receive_IT>
   else if (huart->Instance == USART2) {
     // Recebeu do ESP301, retransmite para Bluetooth
-    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 5);
+    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 10);
     HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1);
   }
 }
@@ -871,8 +871,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80007d6:	4a0d      	ldr	r2, [pc, #52]	@ (800080c <HAL_UART_RxCpltCallback+0x64>)
  80007d8:	4293      	cmp	r3, r2
  80007da:	d10a      	bne.n	80007f2 <HAL_UART_RxCpltCallback+0x4a>
-    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 5);
- 80007dc:	2305      	movs	r3, #5
+    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 10);
+ 80007dc:	230a      	movs	r3, #10
  80007de:	2201      	movs	r2, #1
  80007e0:	490b      	ldr	r1, [pc, #44]	@ (8000810 <HAL_UART_RxCpltCallback+0x68>)
  80007e2:	4809      	ldr	r0, [pc, #36]	@ (8000808 <HAL_UART_RxCpltCallback+0x60>)

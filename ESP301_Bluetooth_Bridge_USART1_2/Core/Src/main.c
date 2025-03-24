@@ -269,12 +269,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart->Instance == USART1) {
     // Recebeu do Bluetooth, retransmite para ESP301
-    HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, 5);
+    HAL_UART_Transmit(&huart2, usart1_rx_buffer, 1, 10);
     HAL_UART_Receive_IT(&huart1, usart1_rx_buffer, 1);
   }
   else if (huart->Instance == USART2) {
     // Recebeu do ESP301, retransmite para Bluetooth
-    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 5);
+    HAL_UART_Transmit(&huart1, usart2_rx_buffer, 1, 10);
     HAL_UART_Receive_IT(&huart2, usart2_rx_buffer, 1);
   }
 }
