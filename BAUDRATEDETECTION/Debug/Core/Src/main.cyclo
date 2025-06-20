@@ -1,0 +1,9 @@
+../Core/Src/main.c:74:5:main	1
+../Core/Src/main.c:166:6:SystemClock_Config	3
+../Core/Src/main.c:212:13:MX_USART1_UART_Init	2
+../Core/Src/main.c:245:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:278:13:MX_GPIO_Init	1
+../Core/Src/main.c:293:6:sendATCommand	2
+../Core/Src/main.c:309:6:USART_SendChar	1
+../Core/Src/main.c:314:6:USART_ReceiveChar	1
+../Core/Src/main.c:325:6:Error_Handler	1

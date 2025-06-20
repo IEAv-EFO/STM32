@@ -1,0 +1,10 @@
+12:04:32 **** Incremental Build of configuration Debug for project BAUDRATEDETECTION ****
+make -j8 all 
+arm-none-eabi-size  BAUDRATEDETECTION.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8764	     12	   1780	  10556	   293c	BAUDRATEDETECTION.elf
+Finished building: default.size.stdout
+ 
+
+12:04:34 Build Finished. 0 errors, 0 warnings. (took 1s.527ms)
+

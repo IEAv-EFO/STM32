@@ -1,0 +1,362 @@
+2024-04-08 21:08:21,665 | topics | INFO | started session
+2024-04-08 21:08:21,665 | topics | INFO | Cleared all topics and received data
+2024-04-08 21:08:21,666 | cli | INFO | Module path : C:\Users\ACER\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\pytelemetrycli
+2024-04-08 21:08:21,666 | cli | WARNING | Module version : not found.
+2024-04-08 21:08:43,404 | cli | WARNING | Already disconnected. Continuing happily. E : 'NoneType' object has no attribute 'close'
+2024-04-08 21:08:43,405 | topics | INFO | Cleared all topics and received data
+2024-04-08 21:08:43,405 | cli | INFO | Cleared all topics for new session.
+2024-04-08 21:08:43,405 | cli | INFO | Cleared all stats for new session.
+2024-04-08 21:08:43,405 | topics | INFO | new:topic baudspeed
+2024-04-08 21:08:43,405 | topics | INFO | new:topic baudspeed_avg
+2024-04-08 21:08:43,406 | topics | INFO | new:topic rx_in_waiting
+2024-04-08 21:08:43,406 | topics | INFO | new:topic rx_in_waiting_max
+2024-04-08 21:08:43,406 | topics | INFO | new:topic rx_in_waiting_avg
+2024-04-08 21:08:43,438 | cli | INFO | Connected to com4 at 9600 (bauds).
+
+2024-04-08 21:08:43,472 | topics | DEBUG | new sample | baudspeed 12595.329513096442
+2024-04-08 21:08:43,473 | topics | DEBUG | new sample | baudspeed_avg 599.7775958617353
+2024-04-08 21:08:43,473 | topics | DEBUG | new sample | rx_in_waiting 570
+2024-04-08 21:08:43,473 | topics | DEBUG | new sample | rx_in_waiting_max 570
+2024-04-08 21:08:43,473 | topics | DEBUG | new sample | rx_in_waiting_avg 74.47032306536438
+2024-04-08 21:08:43,524 | topics | DEBUG | new sample | baudspeed 25863.701666070658
+2024-04-08 21:08:43,524 | topics | DEBUG | new sample | baudspeed_avg 1802.8215992050173
+2024-04-08 21:08:43,524 | topics | DEBUG | new sample | rx_in_waiting 1345
+2024-04-08 21:08:43,524 | topics | DEBUG | new sample | rx_in_waiting_max 1345
+2024-04-08 21:08:43,524 | topics | DEBUG | new sample | rx_in_waiting_avg 189.97302096851308
+2024-04-08 21:08:43,636 | topics | DEBUG | new sample | baudspeed 27319.512212773658
+2024-04-08 21:08:43,636 | topics | DEBUG | new sample | baudspeed_avg 3017.9021046130474
+2024-04-08 21:08:43,636 | topics | DEBUG | new sample | rx_in_waiting 3060
+2024-04-08 21:08:43,636 | topics | DEBUG | new sample | rx_in_waiting_max 3060
+2024-04-08 21:08:43,636 | topics | DEBUG | new sample | rx_in_waiting_avg 450.8845645168301
+2024-04-08 21:08:43,882 | topics | DEBUG | new sample | baudspeed 27335.352697417133
+2024-04-08 21:08:43,882 | topics | DEBUG | new sample | baudspeed_avg 4175.875942365623
+2024-04-08 21:08:43,882 | topics | DEBUG | new sample | rx_in_waiting 6725
+2024-04-08 21:08:43,882 | topics | DEBUG | new sample | rx_in_waiting_max 6725
+2024-04-08 21:08:43,882 | topics | DEBUG | new sample | rx_in_waiting_avg 1021.2586950153001
+2024-04-08 21:08:44,398 | topics | DEBUG | new sample | baudspeed 28612.263693981477
+2024-04-08 21:08:44,399 | topics | DEBUG | new sample | baudspeed_avg 5339.5134543473305
+2024-04-08 21:08:44,399 | topics | DEBUG | new sample | rx_in_waiting 14765
+2024-04-08 21:08:44,399 | topics | DEBUG | new sample | rx_in_waiting_max 14765
+2024-04-08 21:08:44,399 | topics | DEBUG | new sample | rx_in_waiting_avg 2270.6897227411823
+2024-04-08 21:08:45,490 | topics | DEBUG | new sample | baudspeed 28322.02373176193
+2024-04-08 21:08:45,490 | topics | DEBUG | new sample | baudspeed_avg 6433.918705652788
+2024-04-08 21:08:45,490 | topics | DEBUG | new sample | rx_in_waiting 30930
+2024-04-08 21:08:45,490 | topics | DEBUG | new sample | rx_in_waiting_max 30930
+2024-04-08 21:08:45,490 | topics | DEBUG | new sample | rx_in_waiting_avg 4876.081566128348
+2024-04-08 21:08:47,715 | topics | DEBUG | new sample | baudspeed 29402.29653325653
+2024-04-08 21:08:47,715 | topics | DEBUG | new sample | baudspeed_avg 7527.650983157729
+2024-04-08 21:08:47,715 | topics | DEBUG | new sample | rx_in_waiting 65425
+2024-04-08 21:08:47,715 | topics | DEBUG | new sample | rx_in_waiting_max 65425
+2024-04-08 21:08:47,715 | topics | DEBUG | new sample | rx_in_waiting_avg 10380.528696480316
+2024-04-08 21:08:50,088 | topics | DEBUG | new sample | baudspeed 28901.714599753115
+2024-04-08 21:08:50,088 | topics | DEBUG | new sample | baudspeed_avg 8545.463536328938
+2024-04-08 21:08:50,088 | topics | DEBUG | new sample | rx_in_waiting 68560
+2024-04-08 21:08:50,088 | topics | DEBUG | new sample | rx_in_waiting_max 68560
+2024-04-08 21:08:50,088 | topics | DEBUG | new sample | rx_in_waiting_avg 15669.571542254835
+2024-04-08 21:08:52,768 | topics | DEBUG | new sample | baudspeed 28777.684163820017
+2024-04-08 21:08:52,768 | topics | DEBUG | new sample | baudspeed_avg 9508.902613828515
+2024-04-08 21:08:52,768 | topics | DEBUG | new sample | rx_in_waiting 77130
+2024-04-08 21:08:52,768 | topics | DEBUG | new sample | rx_in_waiting_max 77130
+2024-04-08 21:08:52,769 | topics | DEBUG | new sample | rx_in_waiting_avg 21256.88322023167
+2024-04-08 21:08:56,051 | topics | DEBUG | new sample | baudspeed 29099.248697237872
+2024-04-08 21:08:56,052 | topics | DEBUG | new sample | baudspeed_avg 10441.776236848007
+2024-04-08 21:08:56,052 | topics | DEBUG | new sample | rx_in_waiting 95540
+2024-04-08 21:08:56,052 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:08:56,052 | topics | DEBUG | new sample | rx_in_waiting_avg 28009.893836574247
+2024-04-08 21:08:58,321 | topics | DEBUG | new sample | baudspeed 29220.315825700913
+2024-04-08 21:08:58,321 | topics | DEBUG | new sample | baudspeed_avg 11335.992407745764
+2024-04-08 21:08:58,321 | topics | DEBUG | new sample | rx_in_waiting 66335
+2024-04-08 21:08:58,322 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:08:58,322 | topics | DEBUG | new sample | rx_in_waiting_avg 31493.99439688568
+2024-04-08 21:09:00,713 | topics | DEBUG | new sample | baudspeed 28448.960731148825
+2024-04-08 21:09:00,713 | topics | DEBUG | new sample | baudspeed_avg 12150.895661241148
+2024-04-08 21:09:00,713 | topics | DEBUG | new sample | rx_in_waiting 68055
+2024-04-08 21:09:00,713 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:00,714 | topics | DEBUG | new sample | rx_in_waiting_avg 34817.72217898698
+2024-04-08 21:09:03,337 | topics | DEBUG | new sample | baudspeed 29547.93215601684
+2024-04-08 21:09:03,337 | topics | DEBUG | new sample | baudspeed_avg 12979.32597051618
+2024-04-08 21:09:03,337 | topics | DEBUG | new sample | rx_in_waiting 77510
+2024-04-08 21:09:03,338 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:03,338 | topics | DEBUG | new sample | rx_in_waiting_avg 38698.83834453362
+2024-04-08 21:09:06,542 | topics | DEBUG | new sample | baudspeed 28929.190848595754
+2024-04-08 21:09:06,542 | topics | DEBUG | new sample | baudspeed_avg 13738.843345662826
+2024-04-08 21:09:06,542 | topics | DEBUG | new sample | rx_in_waiting 92725
+2024-04-08 21:09:06,542 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:06,542 | topics | DEBUG | new sample | rx_in_waiting_avg 43610.307585939656
+2024-04-08 21:09:08,952 | topics | DEBUG | new sample | baudspeed 28641.00193965159
+2024-04-08 21:09:08,953 | topics | DEBUG | new sample | baudspeed_avg 14448.469945376579
+2024-04-08 21:09:08,953 | topics | DEBUG | new sample | rx_in_waiting 69030
+2024-04-08 21:09:08,953 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:08,953 | topics | DEBUG | new sample | rx_in_waiting_avg 45921.18871449059
+2024-04-08 21:09:11,413 | topics | DEBUG | new sample | baudspeed 29193.294316040076
+2024-04-08 21:09:11,413 | topics | DEBUG | new sample | baudspeed_avg 15150.604439217697
+2024-04-08 21:09:11,413 | topics | DEBUG | new sample | rx_in_waiting 71850
+2024-04-08 21:09:11,413 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:11,414 | topics | DEBUG | new sample | rx_in_waiting_avg 48278.35337680963
+2024-04-08 21:09:14,293 | topics | DEBUG | new sample | baudspeed 28508.270261880607
+2024-04-08 21:09:14,293 | topics | DEBUG | new sample | baudspeed_avg 15786.683764106405
+2024-04-08 21:09:14,293 | topics | DEBUG | new sample | rx_in_waiting 82110
+2024-04-08 21:09:14,293 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:14,294 | topics | DEBUG | new sample | rx_in_waiting_avg 51353.95761528148
+2024-04-08 21:09:17,392 | topics | DEBUG | new sample | baudspeed 29000.41249946325
+2024-04-08 21:09:17,393 | topics | DEBUG | new sample | baudspeed_avg 16415.90894198054
+2024-04-08 21:09:17,393 | topics | DEBUG | new sample | rx_in_waiting 89850
+2024-04-08 21:09:17,393 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:17,393 | topics | DEBUG | new sample | rx_in_waiting_avg 54853.59783207407
+2024-04-08 21:09:19,939 | topics | DEBUG | new sample | baudspeed 28231.104834462174
+2024-04-08 21:09:19,939 | topics | DEBUG | new sample | baudspeed_avg 16978.537317812996
+2024-04-08 21:09:19,939 | topics | DEBUG | new sample | rx_in_waiting 71910
+2024-04-08 21:09:19,939 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:19,939 | topics | DEBUG | new sample | rx_in_waiting_avg 56404.179847340056
+2024-04-08 21:09:22,952 | topics | DEBUG | new sample | baudspeed 28464.518170126525
+2024-04-08 21:09:22,952 | topics | DEBUG | new sample | baudspeed_avg 17525.48878697078
+2024-04-08 21:09:22,952 | topics | DEBUG | new sample | rx_in_waiting 85770
+2024-04-08 21:09:22,952 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:22,952 | topics | DEBUG | new sample | rx_in_waiting_avg 59073.79986121823
+2024-04-08 21:09:25,803 | topics | DEBUG | new sample | baudspeed 28898.22704416326
+2024-04-08 21:09:25,804 | topics | DEBUG | new sample | baudspeed_avg 18067.047751599
+2024-04-08 21:09:25,804 | topics | DEBUG | new sample | rx_in_waiting 82395
+2024-04-08 21:09:25,804 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:25,804 | topics | DEBUG | new sample | rx_in_waiting_avg 61193.90896474384
+2024-04-08 21:09:28,315 | topics | DEBUG | new sample | baudspeed 28467.200894078193
+2024-04-08 21:09:28,316 | topics | DEBUG | new sample | baudspeed_avg 18562.2931393361
+2024-04-08 21:09:28,316 | topics | DEBUG | new sample | rx_in_waiting 71515
+2024-04-08 21:09:28,316 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:28,316 | topics | DEBUG | new sample | rx_in_waiting_avg 62132.18996794894
+2024-04-08 21:09:31,288 | topics | DEBUG | new sample | baudspeed 28471.98900852789
+2024-04-08 21:09:31,288 | topics | DEBUG | new sample | baudspeed_avg 19034.183418821423
+2024-04-08 21:09:31,288 | topics | DEBUG | new sample | rx_in_waiting 84625
+2024-04-08 21:09:31,288 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:31,288 | topics | DEBUG | new sample | rx_in_waiting_avg 64176.990879953584
+2024-04-08 21:09:34,269 | topics | DEBUG | new sample | baudspeed 28731.47769974866
+2024-04-08 21:09:34,269 | topics | DEBUG | new sample | baudspeed_avg 19495.959336960816
+2024-04-08 21:09:34,269 | topics | DEBUG | new sample | rx_in_waiting 85655
+2024-04-08 21:09:34,269 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:34,270 | topics | DEBUG | new sample | rx_in_waiting_avg 66129.53716359417
+2024-04-08 21:09:36,731 | topics | DEBUG | new sample | baudspeed 28902.769454736237
+2024-04-08 21:09:36,731 | topics | DEBUG | new sample | baudspeed_avg 19943.902675902504
+2024-04-08 21:09:36,731 | topics | DEBUG | new sample | rx_in_waiting 71135
+2024-04-08 21:09:36,731 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:36,731 | topics | DEBUG | new sample | rx_in_waiting_avg 66584.57923963106
+2024-04-08 21:09:39,559 | topics | DEBUG | new sample | baudspeed 28656.392047106434
+2024-04-08 21:09:39,559 | topics | DEBUG | new sample | baudspeed_avg 20358.78312215031
+2024-04-08 21:09:39,560 | topics | DEBUG | new sample | rx_in_waiting 81075
+2024-04-08 21:09:39,560 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:39,560 | topics | DEBUG | new sample | rx_in_waiting_avg 67901.89021784642
+2024-04-08 21:09:42,788 | topics | DEBUG | new sample | baudspeed 28860.916541637973
+2024-04-08 21:09:42,789 | topics | DEBUG | new sample | baudspeed_avg 20763.64661831639
+2024-04-08 21:09:42,789 | topics | DEBUG | new sample | rx_in_waiting 93170
+2024-04-08 21:09:42,789 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:42,789 | topics | DEBUG | new sample | rx_in_waiting_avg 70198.99110713312
+2024-04-08 21:09:45,271 | topics | DEBUG | new sample | baudspeed 28245.979164750403
+2024-04-08 21:09:45,271 | topics | DEBUG | new sample | baudspeed_avg 21119.94816814658
+2024-04-08 21:09:45,271 | topics | DEBUG | new sample | rx_in_waiting 70140
+2024-04-08 21:09:45,271 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:45,271 | topics | DEBUG | new sample | rx_in_waiting_avg 70193.62827921192
+2024-04-08 21:09:45,988 | cli | WARNING | Topic 'windows' unknown. Type 'ls' to list all available topics.
+
+2024-04-08 21:09:48,151 | topics | DEBUG | new sample | baudspeed 28572.4755200854
+2024-04-08 21:09:48,151 | topics | DEBUG | new sample | baudspeed_avg 21474.83042300081
+2024-04-08 21:09:48,151 | topics | DEBUG | new sample | rx_in_waiting 82295
+2024-04-08 21:09:48,151 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:48,151 | topics | DEBUG | new sample | rx_in_waiting_avg 71293.75298110174
+2024-04-08 21:09:51,257 | topics | DEBUG | new sample | baudspeed 29001.08932929912
+2024-04-08 21:09:51,257 | topics | DEBUG | new sample | baudspeed_avg 21833.22370425311
+2024-04-08 21:09:51,257 | topics | DEBUG | new sample | rx_in_waiting 90055
+2024-04-08 21:09:51,257 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:51,257 | topics | DEBUG | new sample | rx_in_waiting_avg 72999.32089191068
+2024-04-08 21:09:53,693 | topics | DEBUG | new sample | baudspeed 28905.883250772233
+2024-04-08 21:09:53,693 | topics | DEBUG | new sample | baudspeed_avg 22170.017015992114
+2024-04-08 21:09:53,693 | topics | DEBUG | new sample | rx_in_waiting 70420
+2024-04-08 21:09:53,693 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:53,693 | topics | DEBUG | new sample | rx_in_waiting_avg 72764.83717446426
+2024-04-08 21:09:56,493 | topics | DEBUG | new sample | baudspeed 29042.47210008677
+2024-04-08 21:09:56,493 | topics | DEBUG | new sample | baudspeed_avg 22497.276781901382
+2024-04-08 21:09:56,493 | topics | DEBUG | new sample | rx_in_waiting 81325
+2024-04-08 21:09:56,494 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:56,494 | topics | DEBUG | new sample | rx_in_waiting_avg 73543.03379496752
+2024-04-08 21:09:59,735 | topics | DEBUG | new sample | baudspeed 29291.44562063776
+2024-04-08 21:09:59,735 | topics | DEBUG | new sample | baudspeed_avg 22820.80863136502
+2024-04-08 21:09:59,735 | topics | DEBUG | new sample | rx_in_waiting 94970
+2024-04-08 21:09:59,735 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:09:59,735 | topics | DEBUG | new sample | rx_in_waiting_avg 75490.93981360683
+2024-04-08 21:10:02,170 | topics | DEBUG | new sample | baudspeed 28648.79843601183
+2024-04-08 21:10:02,170 | topics | DEBUG | new sample | baudspeed_avg 23098.33195539582
+2024-04-08 21:10:02,170 | topics | DEBUG | new sample | rx_in_waiting 69765
+2024-04-08 21:10:02,170 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:02,170 | topics | DEBUG | new sample | rx_in_waiting_avg 74970.39983055167
+2024-04-08 21:10:04,985 | topics | DEBUG | new sample | baudspeed 28823.754323603825
+2024-04-08 21:10:04,985 | topics | DEBUG | new sample | baudspeed_avg 23370.971115786677
+2024-04-08 21:10:04,986 | topics | DEBUG | new sample | rx_in_waiting 81145
+2024-04-08 21:10:04,986 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:04,986 | topics | DEBUG | new sample | rx_in_waiting_avg 75531.72711868334
+2024-04-08 21:10:08,590 | topics | DEBUG | new sample | baudspeed 26268.069938566405
+2024-04-08 21:10:08,590 | topics | DEBUG | new sample | baudspeed_avg 23508.92820258571
+2024-04-08 21:10:08,590 | topics | DEBUG | new sample | rx_in_waiting 94700
+2024-04-08 21:10:08,590 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:08,590 | topics | DEBUG | new sample | rx_in_waiting_avg 77274.29738062121
+2024-04-08 21:10:11,570 | topics | DEBUG | new sample | baudspeed 25694.623034284017
+2024-04-08 21:10:11,570 | topics | DEBUG | new sample | baudspeed_avg 23613.00890885706
+2024-04-08 21:10:11,570 | topics | DEBUG | new sample | rx_in_waiting 76550
+2024-04-08 21:10:11,570 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:11,570 | topics | DEBUG | new sample | rx_in_waiting_avg 77208.4521642011
+2024-04-08 21:10:14,929 | topics | DEBUG | new sample | baudspeed 26614.029071172525
+2024-04-08 21:10:14,930 | topics | DEBUG | new sample | baudspeed_avg 23755.914630872085
+2024-04-08 21:10:14,930 | topics | DEBUG | new sample | rx_in_waiting 89400
+2024-04-08 21:10:14,930 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:14,930 | topics | DEBUG | new sample | rx_in_waiting_avg 78316.77469472826
+2024-04-08 21:10:17,558 | topics | DEBUG | new sample | baudspeed 27643.434937973165
+2024-04-08 21:10:17,558 | topics | DEBUG | new sample | baudspeed_avg 23941.034645495944
+2024-04-08 21:10:17,559 | topics | DEBUG | new sample | rx_in_waiting 72680
+2024-04-08 21:10:17,559 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:17,559 | topics | DEBUG | new sample | rx_in_waiting_avg 77804.34063157115
+2024-04-08 21:10:20,981 | topics | DEBUG | new sample | baudspeed 26647.27767905305
+2024-04-08 21:10:20,982 | topics | DEBUG | new sample | baudspeed_avg 24069.903361379616
+2024-04-08 21:10:20,982 | topics | DEBUG | new sample | rx_in_waiting 91220
+2024-04-08 21:10:20,982 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:20,982 | topics | DEBUG | new sample | rx_in_waiting_avg 79023.94602870104
+2024-04-08 21:10:23,514 | topics | DEBUG | new sample | baudspeed 26838.437608719745
+2024-04-08 21:10:23,514 | topics | DEBUG | new sample | baudspeed_avg 24201.73832553867
+2024-04-08 21:10:23,514 | topics | DEBUG | new sample | rx_in_waiting 67960
+2024-04-08 21:10:23,514 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:23,514 | topics | DEBUG | new sample | rx_in_waiting_avg 78018.13275336458
+2024-04-08 21:10:26,689 | topics | DEBUG | new sample | baudspeed 23758.855087622607
+2024-04-08 21:10:26,690 | topics | DEBUG | new sample | baudspeed_avg 24180.648647542665
+2024-04-08 21:10:26,690 | topics | DEBUG | new sample | rx_in_waiting 75440
+2024-04-08 21:10:26,690 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:26,690 | topics | DEBUG | new sample | rx_in_waiting_avg 77783.75704851326
+2024-04-08 21:10:31,021 | topics | DEBUG | new sample | baudspeed 21783.910400101435
+2024-04-08 21:10:31,022 | topics | DEBUG | new sample | baudspeed_avg 24066.518254807368
+2024-04-08 21:10:31,022 | topics | DEBUG | new sample | rx_in_waiting 94375
+2024-04-08 21:10:31,022 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:31,022 | topics | DEBUG | new sample | rx_in_waiting_avg 79292.05186228479
+2024-04-08 21:10:34,905 | topics | DEBUG | new sample | baudspeed 22899.945101513098
+2024-04-08 21:10:34,905 | topics | DEBUG | new sample | baudspeed_avg 24010.967152269546
+2024-04-08 21:10:34,905 | topics | DEBUG | new sample | rx_in_waiting 88950
+2024-04-08 21:10:34,905 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:34,905 | topics | DEBUG | new sample | rx_in_waiting_avg 80170.04714753163
+2024-04-08 21:10:37,439 | topics | DEBUG | new sample | baudspeed 26116.841649812868
+2024-04-08 21:10:37,439 | topics | DEBUG | new sample | baudspeed_avg 24111.2468902478
+2024-04-08 21:10:37,439 | topics | DEBUG | new sample | rx_in_waiting 66185
+2024-04-08 21:10:37,439 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:37,440 | topics | DEBUG | new sample | rx_in_waiting_avg 78898.67922502875
+2024-04-08 21:10:40,527 | topics | DEBUG | new sample | baudspeed 25681.57850721353
+2024-04-08 21:10:40,527 | topics | DEBUG | new sample | baudspeed_avg 24186.024586293785
+2024-04-08 21:10:40,527 | topics | DEBUG | new sample | rx_in_waiting 79285
+2024-04-08 21:10:40,527 | topics | DEBUG | new sample | rx_in_waiting_max 95540
+2024-04-08 21:10:40,527 | topics | DEBUG | new sample | rx_in_waiting_avg 78933.79929548068
+2024-04-08 21:10:44,898 | topics | DEBUG | new sample | baudspeed 25252.066033592753
+2024-04-08 21:10:44,898 | topics | DEBUG | new sample | baudspeed_avg 24236.788464736594
+2024-04-08 21:10:44,898 | topics | DEBUG | new sample | rx_in_waiting 110385
+2024-04-08 21:10:44,898 | topics | DEBUG | new sample | rx_in_waiting_max 110385
+2024-04-08 21:10:44,898 | topics | DEBUG | new sample | rx_in_waiting_avg 81792.9993595279
+2024-04-08 21:10:55,172 | topics | DEBUG | new sample | baudspeed 25485.780411348394
+2024-04-08 21:10:55,173 | topics | DEBUG | new sample | baudspeed_avg 24296.264271718108
+2024-04-08 21:10:55,173 | topics | DEBUG | new sample | rx_in_waiting 261835
+2024-04-08 21:10:55,173 | topics | DEBUG | new sample | rx_in_waiting_max 261835
+2024-04-08 21:10:55,173 | topics | DEBUG | new sample | rx_in_waiting_avg 98160.45396320717
+2024-04-08 21:11:07,537 | topics | DEBUG | new sample | baudspeed 25315.96645189902
+2024-04-08 21:11:07,538 | topics | DEBUG | new sample | baudspeed_avg 24344.82151839339
+2024-04-08 21:11:07,538 | topics | DEBUG | new sample | rx_in_waiting 313030
+2024-04-08 21:11:07,538 | topics | DEBUG | new sample | rx_in_waiting_max 313030
+2024-04-08 21:11:07,538 | topics | DEBUG | new sample | rx_in_waiting_avg 117694.04905746107
+2024-04-08 21:11:20,573 | topics | DEBUG | new sample | baudspeed 28109.549929482047
+2024-04-08 21:11:20,573 | topics | DEBUG | new sample | baudspeed_avg 24524.094299873803
+2024-04-08 21:11:20,573 | topics | DEBUG | new sample | rx_in_waiting 366445
+2024-04-08 21:11:20,573 | topics | DEBUG | new sample | rx_in_waiting_max 366445
+2024-04-08 21:11:20,573 | topics | DEBUG | new sample | rx_in_waiting_avg 140307.77187041915
+2024-04-08 21:11:30,764 | topics | DEBUG | new sample | baudspeed 27978.285839792887
+2024-04-08 21:11:30,764 | topics | DEBUG | new sample | baudspeed_avg 24688.57961129852
+2024-04-08 21:11:30,764 | topics | DEBUG | new sample | rx_in_waiting 285120
+2024-04-08 21:11:30,764 | topics | DEBUG | new sample | rx_in_waiting_max 366445
+2024-04-08 21:11:30,764 | topics | DEBUG | new sample | rx_in_waiting_avg 153472.51988219924
+2024-04-08 21:11:42,582 | cli | WARNING | User requested connect without desconnecting first.
+2024-04-08 21:11:42,582 | topics | INFO | Cleared all topics and received data
+2024-04-08 21:11:42,582 | cli | INFO | Cleared all topics for new session.
+2024-04-08 21:11:42,582 | cli | INFO | Cleared all stats for new session.
+2024-04-08 21:11:42,582 | topics | INFO | new:topic baudspeed
+2024-04-08 21:11:42,583 | topics | INFO | new:topic baudspeed_avg
+2024-04-08 21:11:42,583 | topics | INFO | new:topic rx_in_waiting
+2024-04-08 21:11:42,583 | topics | INFO | new:topic rx_in_waiting_max
+2024-04-08 21:11:42,583 | topics | INFO | new:topic rx_in_waiting_avg
+2024-04-08 21:11:42,614 | cli | INFO | Connected to com4 at 9600 (bauds).
+
+2024-04-08 21:11:42,632 | topics | DEBUG | new sample | baudspeed 7743.770344350922
+2024-04-08 21:11:42,632 | topics | DEBUG | new sample | baudspeed_avg 368.75096877861534
+2024-04-08 21:11:42,632 | topics | DEBUG | new sample | rx_in_waiting 285
+2024-04-08 21:11:42,632 | topics | DEBUG | new sample | rx_in_waiting_max 285
+2024-04-08 21:11:42,632 | topics | DEBUG | new sample | rx_in_waiting_avg 34.39894815927874
+2024-04-08 21:11:42,709 | topics | DEBUG | new sample | baudspeed 28114.8293574005
+2024-04-08 21:11:42,709 | topics | DEBUG | new sample | baudspeed_avg 1689.992796808229
+2024-04-08 21:11:42,709 | topics | DEBUG | new sample | rx_in_waiting 1420
+2024-04-08 21:11:42,709 | topics | DEBUG | new sample | rx_in_waiting_max 1420
+2024-04-08 21:11:42,709 | topics | DEBUG | new sample | rx_in_waiting_avg 219.0900398010568
+2024-04-08 21:11:42,812 | topics | DEBUG | new sample | baudspeed 30143.350291404156
+2024-04-08 21:11:42,812 | topics | DEBUG | new sample | baudspeed_avg 3044.914582265178
+2024-04-08 21:11:42,812 | topics | DEBUG | new sample | rx_in_waiting 3105
+2024-04-08 21:11:42,813 | topics | DEBUG | new sample | rx_in_waiting_max 3105
+2024-04-08 21:11:42,813 | topics | DEBUG | new sample | rx_in_waiting_avg 481.44549072823344
+2024-04-08 21:11:43,023 | topics | DEBUG | new sample | baudspeed 29381.799446591816
+2024-04-08 21:11:43,023 | topics | DEBUG | new sample | baudspeed_avg 4299.051956756923
+2024-04-08 21:11:43,023 | topics | DEBUG | new sample | rx_in_waiting 6200
+2024-04-08 21:11:43,023 | topics | DEBUG | new sample | rx_in_waiting_max 6200
+2024-04-08 21:11:43,023 | topics | DEBUG | new sample | rx_in_waiting_avg 1001.3140824802123
+2024-04-08 21:11:43,483 | topics | DEBUG | new sample | baudspeed 27465.282203730654
+2024-04-08 21:11:43,484 | topics | DEBUG | new sample | baudspeed_avg 5402.205778041386
+2024-04-08 21:11:43,484 | topics | DEBUG | new sample | rx_in_waiting 12635
+2024-04-08 21:11:43,484 | topics | DEBUG | new sample | rx_in_waiting_max 12635
+2024-04-08 21:11:43,484 | topics | DEBUG | new sample | rx_in_waiting_avg 2058.9218931638297
+2024-04-08 21:11:44,471 | topics | DEBUG | new sample | baudspeed 27963.504289405086
+2024-04-08 21:11:44,471 | topics | DEBUG | new sample | baudspeed_avg 6476.5533262015615
+2024-04-08 21:11:44,471 | topics | DEBUG | new sample | rx_in_waiting 27630
+2024-04-08 21:11:44,471 | topics | DEBUG | new sample | rx_in_waiting_max 27630
+2024-04-08 21:11:44,471 | topics | DEBUG | new sample | rx_in_waiting_avg 4383.565357421664
+2024-04-08 21:11:46,624 | topics | DEBUG | new sample | baudspeed 27501.426347346234
+2024-04-08 21:11:46,624 | topics | DEBUG | new sample | baudspeed_avg 7477.737755779878
+2024-04-08 21:11:46,624 | topics | DEBUG | new sample | rx_in_waiting 59215
+2024-04-08 21:11:46,624 | topics | DEBUG | new sample | rx_in_waiting_max 59215
+2024-04-08 21:11:46,624 | topics | DEBUG | new sample | rx_in_waiting_avg 9368.241234019695
+2024-04-08 21:11:51,188 | topics | DEBUG | new sample | baudspeed 28286.287565811635
+2024-04-08 21:11:51,188 | topics | DEBUG | new sample | baudspeed_avg 8468.621080067105
+2024-04-08 21:11:51,188 | topics | DEBUG | new sample | rx_in_waiting 129080
+2024-04-08 21:11:51,188 | topics | DEBUG | new sample | rx_in_waiting_max 129080
+2024-04-08 21:11:51,188 | topics | DEBUG | new sample | rx_in_waiting_avg 20251.12839456336
+2024-04-08 21:12:00,577 | topics | DEBUG | new sample | baudspeed 29144.225363270856
+2024-04-08 21:12:00,577 | topics | DEBUG | new sample | baudspeed_avg 9453.173664981568
+2024-04-08 21:12:00,578 | topics | DEBUG | new sample | rx_in_waiting 273650
+2024-04-08 21:12:00,578 | topics | DEBUG | new sample | rx_in_waiting_max 273650
+2024-04-08 21:12:00,578 | topics | DEBUG | new sample | rx_in_waiting_avg 43287.38944960305
+2024-04-08 21:12:11,053 | topics | DEBUG | new sample | baudspeed 28432.911977341297
+2024-04-08 21:12:11,053 | topics | DEBUG | new sample | baudspeed_avg 10356.970727474889
+2024-04-08 21:12:11,053 | topics | DEBUG | new sample | rx_in_waiting 297845
+2024-04-08 21:12:11,053 | topics | DEBUG | new sample | rx_in_waiting_max 297845
+2024-04-08 21:12:11,053 | topics | DEBUG | new sample | rx_in_waiting_avg 66428.99040873004
+2024-04-08 21:12:11,055 | cli | INFO | Disconnected.
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : rx_bytes : 811915
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : tx_bytes : 0
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : rx_chunks : 811915
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : tx_chunks : 0
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : rx_in_waiting : 297845
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : rx_in_waiting_avg : 66428.99040873004
+2024-04-08 21:12:11,056 | cli | INFO | Raw IO : rx_in_waiting_max : 297845
+2024-04-08 21:12:11,056 | cli | INFO | IO speeds : baudspeed : 28432.911977341297
+2024-04-08 21:12:11,057 | cli | INFO | IO speeds : baudspeed_avg : 10356.970727474889
+2024-04-08 21:12:11,057 | cli | INFO | IO speeds : baudratio : 2.961761664306385
+2024-04-08 21:12:11,057 | cli | INFO | IO speeds : baudratio_avg : 1.0788511174453008
+2024-04-08 21:12:11,057 | cli | INFO | Framing : rx_processed_bytes : 811915
+2024-04-08 21:12:11,057 | cli | INFO | Framing : rx_discarded_bytes : 811915
+2024-04-08 21:12:11,057 | cli | INFO | Framing : rx_escaped_bytes : 0
+2024-04-08 21:12:11,057 | cli | INFO | Framing : rx_complete_frames : 0
+2024-04-08 21:12:11,057 | cli | INFO | Framing : rx_uncomplete_frames : 0
+2024-04-08 21:12:11,058 | cli | INFO | Framing : tx_processed_bytes : 0
+2024-04-08 21:12:11,058 | cli | INFO | Framing : tx_encoded_frames : 0
+2024-04-08 21:12:11,058 | cli | INFO | Framing : tx_escaped_bytes : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_decoded_frames : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_corrupted_crc : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_corrupted_header : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_corrupted_eol : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_corrupted_topic : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : rx_corrupted_payload : 0
+2024-04-08 21:12:11,058 | cli | INFO | Protocol : tx_encoded_frames : 0
+2024-04-08 21:12:11,059 | cli | INFO | Logged session statistics.
+2024-04-08 21:12:11,059 | cli | INFO | Application quit.
